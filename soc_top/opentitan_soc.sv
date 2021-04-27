@@ -21,13 +21,6 @@ module opentitan_soc #(
   input clk_i,
   input rst_ni,
 
-  // instruction memory interface 
-  input  tlul_pkg::tl_d2h_t tl_i_i,
-  output tlul_pkg::tl_h2d_t tl_i_o,
-
-  // data memory interface 
-  input  tlul_pkg::tl_d2h_t tl_d_i,
-  output tlul_pkg::tl_h2d_t tl_d_o,
   input  logic              test_en_i,     // enable all clock gates for testing
   input  logic [31:0]       hart_id_i,
   input  logic [31:0]       boot_addr_i,
@@ -67,6 +60,14 @@ module opentitan_soc #(
   logic [31:0] data_wdata;
   logic [31:0] data_rdata;
   logic        data_err;
+  
+  // instruction memory interface 
+  tlul_pkg::tl_d2h_t tl_i_i;
+  tlul_pkg::tl_h2d_t tl_i_o;
+
+  // data memory interface 
+  tlul_pkg::tl_d2h_t tl_d_i;
+  tlul_pkg::tl_h2d_t tl_d_o;
 
   tlul_pkg::tl_h2d_t xbar_to_iccm;
   tlul_pkg::tl_d2h_t iccm_to_xbar;
@@ -269,22 +270,22 @@ xbar_periph periph_switch (
   .tl_plic_i  (plic_resp)
 );
 
-instr_mem_tlul iccm (
-  .clk_i    (clk_i),
-  .rst_ni   (rst_ni),
-
-  // tl-ul insterface
-  .xbar_to_iccm   (xbar_to_iccm),
-  .iccm_to_xbar   (iccm_to_xbar)
-);
-
-data_mem_tlul dccm(
-  .clk_i    (clk_i),
-  .rst_ni   (rst_ni),
-
-  // tl-ul insterface
-  .xbar_to_dccm   (xbar_to_dccm),
-  .dccm_to_xbar   (dccm_to_xbar)
-);
+// instr_mem_tlul iccm (
+//   .clk_i    (clk_i),
+//   .rst_ni   (rst_ni),
+// 
+//   // tl-ul insterface
+//   .xbar_to_iccm   (xbar_to_iccm),
+//   .iccm_to_xbar   (iccm_to_xbar)
+// );
+// 
+// data_mem_tlul dccm(
+//   .clk_i    (clk_i),
+//   .rst_ni   (rst_ni),
+// 
+//   // tl-ul insterface
+//   .xbar_to_dccm   (xbar_to_dccm),
+//   .dccm_to_xbar   (dccm_to_xbar)
+// );
 
 endmodule
