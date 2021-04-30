@@ -38,12 +38,12 @@ module xbar_periph (
   // import tl_periph_pkg::*;
   import xbar_pkg::*;
   
-  always_comb begin : instruction_memory
-    if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-      tl_iccm_o = tl_if_i;
-      tl_if_o   = tl_iccm_i;
-    end
-  end
+  // always_comb begin : instruction_memory
+  //   if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
+  //     tl_iccm_o = tl_if_i;
+  //     tl_if_o   = tl_iccm_i;
+  //   end
+  // end
 
   tlul_pkg::tl_h2d_t tl_s1n_10_us_h2d;
   tlul_pkg::tl_d2h_t tl_s1n_10_us_d2h;
@@ -96,7 +96,7 @@ module xbar_periph (
     
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_ICCM) begin
       dev_sel_s1n_10 = 4'd0;
-
+    
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
       dev_sel_s1n_10 = 4'd1;
 
@@ -122,6 +122,7 @@ module xbar_periph (
       dev_sel_s1n_10 = 4'd8;
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
+      
       dev_sel_s1n_10 = 4'd9;
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
