@@ -190,13 +190,13 @@ module ibex_if_stage (
 	localparam [2:0] ibex_pkg_PC_JUMP = 1;
 	always @(*) begin : fetch_addr_mux
 		case (pc_mux_internal)
-			ibex_pkg_PC_BOOT: fetch_addr_n = {boot_addr_i[31:8], 8'h80};
+			ibex_pkg_PC_BOOT: fetch_addr_n = {boot_addr_i[31:8], 8'h00};
 			ibex_pkg_PC_JUMP: fetch_addr_n = branch_target_ex_i;
 			ibex_pkg_PC_EXC: fetch_addr_n = exc_pc;
 			ibex_pkg_PC_ERET: fetch_addr_n = csr_mepc_i;
 			ibex_pkg_PC_DRET: fetch_addr_n = csr_depc_i;
-			ibex_pkg_PC_BP: fetch_addr_n = (BranchPredictor ? predict_branch_pc : {boot_addr_i[31:8], 8'h80});
-			default: fetch_addr_n = {boot_addr_i[31:8], 8'h80};
+			ibex_pkg_PC_BP: fetch_addr_n = (BranchPredictor ? predict_branch_pc : {boot_addr_i[31:8], 8'h00});
+			default: fetch_addr_n = {boot_addr_i[31:8], 8'h00};
 		endcase
 	end
 	assign csr_mtvec_init_o = (pc_mux_i == ibex_pkg_PC_BOOT) & pc_set_i;

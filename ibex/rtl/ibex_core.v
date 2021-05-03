@@ -1,3 +1,4 @@
+/* verilator lint_off LITENDIAN */
 module ibex_core (
 	clk_i,
 	rst_ni,
@@ -247,7 +248,7 @@ module ibex_core (
 	wire [(0 >= (PMPNumRegions - 1) ? ((2 - PMPNumRegions) * 34) + (((PMPNumRegions - 1) * 34) - 1) : (PMPNumRegions * 34) - 1):(0 >= (PMPNumRegions - 1) ? (PMPNumRegions - 1) * 34 : 0)] csr_pmp_addr;
 	wire [(0 >= (PMPNumRegions - 1) ? ((2 - PMPNumRegions) * 6) + (((PMPNumRegions - 1) * 6) - 1) : (PMPNumRegions * 6) - 1):(0 >= (PMPNumRegions - 1) ? (PMPNumRegions - 1) * 6 : 0)] csr_pmp_cfg;
 	wire [2:0] csr_pmp_mseccfg;
-	wire [0:1] pmp_req_err;
+	wire [1:0] pmp_req_err;
 	wire instr_req_out;
 	wire data_req_out;
 	wire csr_save_if;
@@ -769,3 +770,4 @@ module ibex_core (
 	assign unused_instr_new_id = instr_new_id;
 	assign unused_instr_done_wb = instr_done_wb;
 endmodule
+/* verilator lint_on LITENDIAN */
