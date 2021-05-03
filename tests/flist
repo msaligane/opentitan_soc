@@ -55,7 +55,7 @@ $IBEX_COLLAB/ibex/rtl/ibex_top.v
 $IBEX_COLLAB/ibex/rtl/ibex_wb_stage.v
 $IBEX_COLLAB/ip/prim/rtl/prim_util_pkg.sv
 
-//$IBEX_COLLAB/src/tempsens/tlul_adapter_tempsensor.sv
+$IBEX_COLLAB/ip/tempsens/tlul_adapter_tempsensor.sv
 
 $IBEX_COLLAB/ip/prim/rtl/prim_arbiter_ppc.sv
 $IBEX_COLLAB/soc_top/prim_clock_gating.sv

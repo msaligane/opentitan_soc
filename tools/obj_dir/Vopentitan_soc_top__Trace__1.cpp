@@ -14,7 +14,7 @@ void Vopentitan_soc_top::traceCleanup(void* userp, VerilatedVcd* /*unused*/) {
     {
         vlSymsp->__Vm_activity = false;
         __Vilp = 0U;
-        while ((__Vilp <= 0x5eU)) {
+        while ((__Vilp <= 0x60U)) {
             vlTOPp->__Vm_traceActivity[__Vilp] = 0U;
             __Vilp = ((IData)(1U) + __Vilp);
         }

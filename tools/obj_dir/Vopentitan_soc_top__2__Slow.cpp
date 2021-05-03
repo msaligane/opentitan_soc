@@ -14,7 +14,7 @@ void Vopentitan_soc_top::_eval_initial(Vopentitan_soc_top__Syms* __restrict vlSy
     // Body
     vlSymsp->TOP__rv_plic_reg_pkg._initial__TOP__rv_plic_reg_pkg__1(vlSymsp);
     __Vilp = 0U;
-    while ((__Vilp <= 0x5eU)) {
+    while ((__Vilp <= 0x60U)) {
         vlTOPp->__Vm_traceActivity[__Vilp] = 1U;
         __Vilp = ((IData)(1U) + __Vilp);
     }
@@ -42,7 +42,7 @@ void Vopentitan_soc_top::_eval_settle(Vopentitan_soc_top__Syms* __restrict vlSym
     // Body
     vlTOPp->_settle__TOP__2(vlSymsp);
     __Vilp = 0U;
-    while ((__Vilp <= 0x5eU)) {
+    while ((__Vilp <= 0x60U)) {
         vlTOPp->__Vm_traceActivity[__Vilp] = 1U;
         __Vilp = ((IData)(1U) + __Vilp);
     }
@@ -70,7 +70,6 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     opentitan_soc_top__DOT__dcdc_to_xbar = VL_RAND_RESET_Q(52);
     VL_RAND_RESET_W(86, opentitan_soc_top__DOT__xbar_to_pll1);
     opentitan_soc_top__DOT__pll1_to_xbar = VL_RAND_RESET_Q(52);
-    VL_RAND_RESET_W(86, opentitan_soc_top__DOT__xbar_to_tsen1);
     opentitan_soc_top__DOT__tsen1_to_xbar = VL_RAND_RESET_Q(52);
     VL_RAND_RESET_W(86, opentitan_soc_top__DOT__xbar_to_tsen2);
     opentitan_soc_top__DOT__tsen2_to_xbar = VL_RAND_RESET_Q(52);
@@ -79,6 +78,10 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     opentitan_soc_top__DOT__intr_gpio = VL_RAND_RESET_I(32);
     opentitan_soc_top__DOT__gpio_intr = VL_RAND_RESET_I(32);
     opentitan_soc_top__DOT__intr_timer = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__rdata_i = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__error_i = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__CLK_REF = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__CLK_LC = VL_RAND_RESET_I(1);
     opentitan_soc_top__DOT__u_top__DOT__scan_rst_ni = VL_RAND_RESET_I(1);
     opentitan_soc_top__DOT__u_top__DOT__instr_req = VL_RAND_RESET_I(1);
     opentitan_soc_top__DOT__u_top__DOT__data_req = VL_RAND_RESET_I(1);
@@ -476,7 +479,6 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     opentitan_soc_top__DOT__periph_switch__DOT__tl_ldo2_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_dcdc_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_pll1_i = VL_RAND_RESET_Q(52);
-    opentitan_soc_top__DOT__periph_switch__DOT__tl_tsen1_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_tsen2_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_dap_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_us_d2h = VL_RAND_RESET_Q(52);
@@ -1257,6 +1259,28 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__13__KET____DOT__gen_nodes__DOT__sel = VL_RAND_RESET_I(1);
     opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__14__KET____DOT__gen_nodes__DOT__sel = VL_RAND_RESET_I(1);
     opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__15__KET____DOT__gen_nodes__DOT__sel = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__outstanding = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__a_ack = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__rdata = VL_RAND_RESET_I(32);
+    opentitan_soc_top__DOT__u_tempsense__DOT__error = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__malformed_meta_err = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__reqid = VL_RAND_RESET_I(8);
+    opentitan_soc_top__DOT__u_tempsense__DOT__reqsz = VL_RAND_RESET_I(2);
+    opentitan_soc_top__DOT__u_tempsense__DOT__rspop = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__wr_req = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__CLK_SEL = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__RESET_REGn = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__SEL_CONV_TIME_REG = VL_RAND_RESET_I(4);
+    opentitan_soc_top__DOT__u_tempsense__DOT__en_REG = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__DOUT_REG = VL_RAND_RESET_I(24);
+    opentitan_soc_top__DOT__u_tempsense__DOT__DONE_REG = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT____Vcellout__u_tempsenseInst__DOUT = VL_RAND_RESET_I(24);
+    opentitan_soc_top__DOT__u_tempsense__DOT__DONE = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__u_tempsenseInst__DOT__out = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__u_tempsenseInst__DOT__outb = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__u_err__DOT__addr_sz_chk = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__u_err__DOT__mask_chk = VL_RAND_RESET_I(1);
+    opentitan_soc_top__DOT__u_tempsense__DOT__u_err__DOT__fulldata_chk = VL_RAND_RESET_I(1);
     __Vfunc_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__sv2v_cast_12__2__Vfuncout = VL_RAND_RESET_I(12);
     __Vfunc_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__sv2v_cast_12__2__inp = VL_RAND_RESET_I(12);
     __Vfunc_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__sv2v_cast_6__3__Vfuncout = VL_RAND_RESET_I(6);
@@ -2133,6 +2157,7 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     __Vtable6_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_be[29] = 1U;
     __Vtable6_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_be[30] = 8U;
     __Vtable6_opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_be[31] = 8U;
+    __Vdly__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__num_req_outstanding = VL_RAND_RESET_I(17);
     __Vdly__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__DOT__err_resp__DOT__err_rsp_pending = VL_RAND_RESET_I(1);
     __Vdly__opentitan_soc_top__DOT__gpio_32__DOT__cio_gpio_q = VL_RAND_RESET_I(32);
     __Vdly__opentitan_soc_top__DOT__gpio_32__DOT__cio_gpio_en_q = VL_RAND_RESET_I(32);
@@ -2177,7 +2202,7 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     __Vchglast__TOP__opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree = VL_RAND_RESET_Q(63);
     VL_RAND_RESET_W(378, __Vchglast__TOP__opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree);
     VL_RAND_RESET_W(189, __Vchglast__TOP__opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree);
-    for (int __Vi0=0; __Vi0<95; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<97; ++__Vi0) {
         __Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }
