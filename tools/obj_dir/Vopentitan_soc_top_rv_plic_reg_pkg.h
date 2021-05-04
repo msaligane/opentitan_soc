@@ -7,6 +7,7 @@
 
 #include "verilated_heavy.h"
 #include "verilated_threads.h"
+#include "Vopentitan_soc_top__Dpi.h"
 
 //==========
 

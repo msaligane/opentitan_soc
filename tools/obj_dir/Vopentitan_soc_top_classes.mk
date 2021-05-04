@@ -28,31 +28,40 @@ VM_CLASSES_FAST += \
 	Vopentitan_soc_top \
 	Vopentitan_soc_top__1 \
 	Vopentitan_soc_top__2 \
-	Vopentitan_soc_top_rv_plic_reg_pkg \
+	Vopentitan_soc_top__3 \
+	Vopentitan_soc_top_tlul_socket_1n__pi2 \
+	Vopentitan_soc_top_tlul_socket_m1__pi3 \
 	Vopentitan_soc_top_gpio_reg_pkg \
+	Vopentitan_soc_top_rv_plic_reg_pkg \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	Vopentitan_soc_top__Slow \
 	Vopentitan_soc_top__1__Slow \
 	Vopentitan_soc_top__2__Slow \
-	Vopentitan_soc_top_rv_plic_reg_pkg__Slow \
+	Vopentitan_soc_top_tlul_socket_1n__pi2__Slow \
+	Vopentitan_soc_top_tlul_socket_m1__pi3__Slow \
 	Vopentitan_soc_top_gpio_reg_pkg__Slow \
+	Vopentitan_soc_top_rv_plic_reg_pkg__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
+	Vopentitan_soc_top__Dpi \
 	Vopentitan_soc_top__Trace \
 	Vopentitan_soc_top__Trace__1 \
+	Vopentitan_soc_top__Trace__2 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
 	Vopentitan_soc_top__Syms \
 	Vopentitan_soc_top__Trace__Slow \
 	Vopentitan_soc_top__Trace__1__Slow \
+	Vopentitan_soc_top__Trace__2__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \
 	verilated \
+	verilated_dpi \
 	verilated_vcd_c \
 	verilated_threads \
 

@@ -1,6 +1,16 @@
-module opentitan_soc_top(
+module opentitan_soc_top #(
+  parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
+  parameter logic DirectDmiTap = 1'b1
+)(
   input logic clk_i,
   input logic rst_ni,
+
+  // jtag interface 
+  input               jtag_tck_i,
+  input               jtag_tms_i,
+  input               jtag_trst_ni,
+  input               jtag_tdi_i,
+  output              jtag_tdo_o,
 
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
@@ -51,6 +61,13 @@ module opentitan_soc_top(
   tlul_pkg::tl_h2d_t plic_req;
   tlul_pkg::tl_d2h_t plic_resp;
 
+  // Added for JTAG interface
+  tlul_pkg::tl_h2d_t dbgrom_to_xbar;
+  tlul_pkg::tl_d2h_t xbar_to_dbgrom;
+
+  tlul_pkg::tl_h2d_t dm_to_xbar;
+  tlul_pkg::tl_d2h_t xbar_to_dm;  
+
   // interrupt vector
   logic [32:0] intr_vector;  // size depend on number of interrupts 
                              // increses on adding peripherals 
@@ -89,7 +106,7 @@ module opentitan_soc_top(
   //     .DmHaltAddr       (), 
   //     .DmExceptionAddr  () 
   // )
-   u_top (
+  u_top (
       .clk_i  (clk_i),
       .rst_ni (rst_ni),
       .ram_cfg_i (1'b1),
@@ -134,11 +151,14 @@ module opentitan_soc_top(
     .tl_lsu_i  (lsu_to_xbar),
     .tl_lsu_o  (xbar_to_lsu),
 
+    .tl_dm_sba_i (dm_to_xbar),
+    .tl_dm_sba_o (xbar_to_dm),
+
     /* Device interfaces */
-  .tl_iccm_o (xbar_to_iccm),
-  .tl_iccm_i (iccm_to_xbar),
-  .tl_dccm_o (xbar_to_dccm),
-  .tl_dccm_i (dccm_to_xbar),
+    .tl_iccm_o (xbar_to_iccm),
+    .tl_iccm_i (iccm_to_xbar),
+    .tl_dccm_o (xbar_to_dccm),
+    .tl_dccm_i (dccm_to_xbar),
 
     // GPIOs
     .tl_gpio_o  (xbar_to_gpio),
@@ -174,7 +194,12 @@ module opentitan_soc_top(
 
     // PLIC
     .tl_plic_o  (plic_req),
-    .tl_plic_i  (plic_resp)
+    .tl_plic_i  (plic_resp),
+
+    // For JTAG Debug ROM
+    .tl_debug_rom_o (xbar_to_dbgrom),
+    .tl_debug_rom_i (dbgrom_to_xbar)
+
   );
 
   //GPIO module
@@ -228,20 +253,78 @@ module opentitan_soc_top(
   );
 tlul_adapter_tempsensor u_tempsense( 
   .clk_i				   (clk_i),
-  .rst_ni       		           (rst_ni),
+  .rst_ni          (rst_ni),
   
   .tl_i					   (xbar_to_tsen1),
-  .tl_o                    (tsen1_to_xbar),
+  .tl_o            (tsen1_to_xbar),
   
-  .re_o   				   (re_o),
+  .re_o   			   (re_o),
   .we_o					   (we_o),
   .addr_o				   (addr_o),
-  .wdata_o     			   (wdata_o),
-  .be_o    				   (be_o),
-  .rdata_i				   (rdata_i),
-  .error_i      		   (error_i),
-  .CLK_REF				   (CLK_REF),
+  .wdata_o  		   (wdata_o),
+  .be_o    			   (be_o),
+  .rdata_i			   (rdata_i),
+  .error_i      	 (error_i),
+  .CLK_REF				 (CLK_REF),
   .CLK_LC				   (CLK_LC)
 );
+
+  // jtag interfaces (COPIED FROM AZADI) 
+
+  jtag_pkg::jtag_req_t jtag_req;
+  jtag_pkg::jtag_rsp_t jtag_rsp;
+  logic unused_jtag_tdo_oe_o;
+
+  assign jtag_req.tck         = jtag_tck_i;
+  assign jtag_req.tms         = jtag_tms_i;
+  assign jtag_req.trst_n      = jtag_trst_ni;
+  assign jtag_req.tdi         = jtag_tdi_i;
+  assign jtag_tdo_o           = jtag_rsp.tdo;
+  assign unused_jtag_tdo_oe_o = jtag_rsp.tdo_oe;
+
+  logic dbg_req;
+  logic dbg_rst;
+
+  rv_dm #(
+  .NrHarts(1),
+  .IdcodeValue(JTAG_ID),
+  .DirectDmiTap (DirectDmiTap)
+  ) debug_module (
+  .clk_i(clk_i),         // clock
+  .rst_ni(rst_ni),       // asynchronous reset active low, connect PoR
+                                          // here, not the system reset
+  .testmode_i(),
+  .ndmreset_o(dbg_rst),  // non-debug module reset
+  .dmactive_o(),         // debug module is active
+  .debug_req_o(dbg_req), // async debug request
+  .unavailable_i(1'b0),  // communicate whether the hart is unavailable
+                                            // (e.g.: power down)
+
+  // bus device with debug memory, for an execution based technique
+  .tl_d_i(dbgrom_to_xbar),
+  .tl_d_o(xbar_to_dbgrom),
+
+  // bus host, for system bus accesses
+  .tl_h_o(dm_to_xbar),
+  .tl_h_i(xbar_to_dm),
+
+  .jtag_req_i(jtag_req),
+  .jtag_rsp_o(jtag_rsp)
+);
+
+
+// logic [63:0] clk_count;
+
+// always_ff @(posedge clk_i) begin
+//   if(!rst_ni) begin
+//     clk_count <= 0;
+//   end
+//   else begin  
+//     clk_count <= clk_count + 1;
+//     if(clk_count >= 'd10000) begin
+//       $finish;
+//     end
+//   end
+// end
 
 endmodule

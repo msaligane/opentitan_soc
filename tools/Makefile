@@ -1,5 +1,5 @@
 # Directory
-TBDIR = ${IBEX_COLLAB}/tests
+TBDIR = ${OPENTITAN_ROOT}/tests
 TEST_DIR = ${TBDIR}/asm
 HEX_DIR = ${TBDIR}/hex
 
@@ -19,16 +19,18 @@ OBJDUMP_FLAGS = --disassemble-all --disassemble-zeroes --section=.text --section
 VERILATOR = verilator
 
 
-TBFILES = $(IBEX_COLLAB)/soc_top/opentitan_soc_top.sv
+TBFILES = $(OPENTITAN_ROOT)/soc_top/opentitan_soc_top.sv
 # Package imports
-defines = $(IBEX_COLLAB)/ip/prim/rtl/prim_pkg.sv
-defines = $(IBEX_COLLAB)/ip/prim/rtl/prim_util_pkg.sv
-defines += $(IBEX_COLLAB)/soc_top/top_pkg.sv
-defines += $(IBEX_COLLAB)/ibex/rtl/ibex_pkg.sv
-defines += $(IBEX_COLLAB)/ip/tlul/rtl/tlul_pkg.sv
-defines += $(IBEX_COLLAB)/ip/xbar/xbar_pkg.sv
-defines += $(IBEX_COLLAB)/ip/rv_plic/rtl/rv_plic_reg_pkg.sv
-defines += $(IBEX_COLLAB)/ip/gpio/rtl/gpio_reg_pkg.sv
+defines  = $(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_pkg.sv
+defines += $(OPENTITAN_ROOT)/ip/gpio/rtl/gpio_reg_pkg.sv
+defines += $(OPENTITAN_ROOT)/rv_dm/rtl/jtag_pkg.sv
+defines += $(OPENTITAN_ROOT)/pulp_riscv_dbg/src/dm_pkg.sv
+defines += $(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_reg_pkg.sv
+defines += $(OPENTITAN_ROOT)/ip/prim/rtl/prim_pkg.sv
+defines += $(OPENTITAN_ROOT)/ip/prim/rtl/prim_util_pkg.sv
+defines += $(OPENTITAN_ROOT)/soc_top/top_pkg.sv
+defines += $(OPENTITAN_ROOT)/ibex/rtl/ibex_pkg.sv
+defines += $(OPENTITAN_ROOT)/ip/xbar/xbar_pkg.sv
 
 # CFLAGS for verilator generated Makefiles. Without -std=c++11 it
 # complains for `auto` variables
@@ -49,10 +51,10 @@ clean:
 
 verilator-build: ${TBFILES} sim_main.cpp
 	$(VERILATOR) --cc -CFLAGS ${CFLAGS} $(defines) \
-	  -I${IBEX_COLLAB}/tests -f ${IBEX_COLLAB}/tests/flist \
+	  -I${OPENTITAN_ROOT}/tests -f ${OPENTITAN_ROOT}/tests/flist \
 	  --trace --trace-structs --trace-params --trace-max-array 1024 -CFLAGS -DVL_DEBUG -Wno-IMPLICIT -Wno-UNSIGNED -Wno-PINMISSING -Wno-UNOPTTHREADS -Wno-MODDUP -Wno-WIDTH -Wno-UNOPTFLAT -Wno-BLKANDNBLK --threads 4 -Wno-ALWCOMBORDER ${TBFILES} -LDFLAGS -lpthread --top-module opentitan_soc_top \
 	  -exe sim_main.cpp dmidpi.c jtagdpi.c tcp_server.c --autoflush --trace -DSYNTHESIS
-#	cp ${IBEX_COLLAB}/tests/sim_main.cpp obj_dir/
+#	cp ${OPENTITAN_ROOT}/tests/sim_main.cpp obj_dir/
 	$(MAKE) -C obj_dir/ -f Vopentitan_soc_top.mk $(VERILATOR_MAKE_FLAGS)
 	touch verilator-build
 
@@ -71,7 +73,7 @@ build:
 	$(RISCV_PREFIX)elf2hex --bit-width 32 --input $(TEST_DIR)/output/$(TEST).merl --output $(TEST_DIR)/output/program.hex
 
 help:
-	@echo Make sure the environment variable IBEX_COLLAB is set.
+	@echo Make sure the environment variable OPENTITAN_ROOT is set.
 	@echo Possible targets: verilator vcs irun vlog help clean all verilator-build irun-build vcs-build program.hex
 
 .PHONY: help build clean verilator

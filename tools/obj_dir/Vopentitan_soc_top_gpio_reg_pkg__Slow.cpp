@@ -5,6 +5,8 @@
 #include "Vopentitan_soc_top_gpio_reg_pkg.h"
 #include "Vopentitan_soc_top__Syms.h"
 
+#include "verilated_dpi.h"
+
 //==========
 
 Vopentitan_soc_top_gpio_reg_pkg::Vopentitan_soc_top_gpio_reg_pkg(const char* _vcname__)
