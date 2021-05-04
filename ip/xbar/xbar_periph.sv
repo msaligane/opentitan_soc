@@ -47,8 +47,8 @@ module xbar_periph (
   
   always_comb begin
     if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-   assign   tl_iccm_o = tl_if_i;
-   assign   tl_if_o   = tl_iccm_i;
+   assign   s1n_sm1_1[0] = tl_if_i;
+   assign   tl_if_o      = sm1_s1n_1[0];
     end
   end
 
@@ -58,11 +58,11 @@ module xbar_periph (
   tl_h2d_t tl_s1n_11_us_h2d ;
   tl_d2h_t tl_s1n_11_us_d2h ;
 
-  tl_h2d_t tl_s1n_10_ds_h2d [11];
-  tl_d2h_t tl_s1n_10_ds_d2h [11];
+  tl_h2d_t tl_s1n_10_ds_h2d [13];
+  tl_d2h_t tl_s1n_10_ds_d2h [13];
 
-  tl_h2d_t tl_s1n_11_ds_h2d [11];
-  tl_d2h_t tl_s1n_11_ds_d2h [11];
+  tl_h2d_t tl_s1n_11_ds_h2d [13];
+  tl_d2h_t tl_s1n_11_ds_d2h [13];
 
   // Create steering signal
   logic [3:0] dev_sel_s1n_10;
@@ -104,59 +104,63 @@ module xbar_periph (
   tlul_pkg::tl_h2d_t s1n_sm1_12[2];
   tlul_pkg::tl_d2h_t sm1_s1n_12[2];
 
+  // ICCM
+  assign s1n_sm1_1[1] = tl_s1n_11_ds_h2d[0];
+  assign tl_s1n_11_ds_d2h[0] = sm1_s1n_1[1];
+
   // DCCM
-  assign s1n_sm1_2[0] = tl_s1n_10_ds_h2d[0];
-  assign s1n_sm1_2[1] = tl_s1n_11_ds_h2d[0];
-  assign tl_s1n_10_ds_d2h[0] = sm1_s1n_2[0];
-  assign tl_s1n_11_ds_d2h[0] = sm1_s1n_2[1];
+  assign s1n_sm1_2[0] = tl_s1n_10_ds_h2d[1];
+  assign s1n_sm1_2[1] = tl_s1n_11_ds_h2d[1];
+  assign tl_s1n_10_ds_d2h[1] = sm1_s1n_2[0];
+  assign tl_s1n_11_ds_d2h[1] = sm1_s1n_2[1];
 
   // GPIO
-  assign s1n_sm1_3[0] = tl_s1n_10_ds_h2d[1];
-  assign s1n_sm1_3[1] = tl_s1n_11_ds_h2d[1];
-  assign tl_s1n_10_ds_d2h[1] = sm1_s1n_3[0];
-  assign tl_s1n_11_ds_d2h[1] = sm1_s1n_3[1];
+  assign s1n_sm1_3[0] = tl_s1n_10_ds_h2d[2];
+  assign s1n_sm1_3[1] = tl_s1n_11_ds_h2d[2];
+  assign tl_s1n_10_ds_d2h[2] = sm1_s1n_3[0];
+  assign tl_s1n_11_ds_d2h[2] = sm1_s1n_3[1];
 
   // LDO1
-  assign s1n_sm1_4[0] = tl_s1n_10_ds_h2d[2];
-  assign s1n_sm1_4[1] = tl_s1n_11_ds_h2d[2];
-  assign tl_s1n_10_ds_d2h[2] = sm1_s1n_4[0];
-  assign tl_s1n_11_ds_d2h[2] = sm1_s1n_4[1];
+  assign s1n_sm1_4[0] = tl_s1n_10_ds_h2d[3];
+  assign s1n_sm1_4[1] = tl_s1n_11_ds_h2d[3];
+  assign tl_s1n_10_ds_d2h[3] = sm1_s1n_4[0];
+  assign tl_s1n_11_ds_d2h[3] = sm1_s1n_4[1];
 
   // LDO2
-  assign s1n_sm1_5[0] = tl_s1n_10_ds_h2d[3];
-  assign s1n_sm1_5[1] = tl_s1n_11_ds_h2d[3];
-  assign tl_s1n_10_ds_d2h[3] = sm1_s1n_5[0];
-  assign tl_s1n_11_ds_d2h[3] = sm1_s1n_5[1];
+  assign s1n_sm1_5[0] = tl_s1n_10_ds_h2d[4];
+  assign s1n_sm1_5[1] = tl_s1n_11_ds_h2d[4];
+  assign tl_s1n_10_ds_d2h[4] = sm1_s1n_5[0];
+  assign tl_s1n_11_ds_d2h[4] = sm1_s1n_5[1];
 
   // DCDC
-  assign s1n_sm1_6[0] = tl_s1n_10_ds_h2d[4];
-  assign s1n_sm1_6[1] = tl_s1n_11_ds_h2d[4];
-  assign tl_s1n_10_ds_d2h[4] = sm1_s1n_6[0];
-  assign tl_s1n_10_ds_d2h[4] = sm1_s1n_6[1];
+  assign s1n_sm1_6[0] = tl_s1n_10_ds_h2d[5];
+  assign s1n_sm1_6[1] = tl_s1n_11_ds_h2d[5];
+  assign tl_s1n_10_ds_d2h[5] = sm1_s1n_6[0];
+  assign tl_s1n_10_ds_d2h[5] = sm1_s1n_6[1];
 
   // PLL1
-  assign s1n_sm1_7[0] = tl_s1n_10_ds_h2d[5];
-  assign s1n_sm1_7[1] = tl_s1n_11_ds_h2d[5];
-  assign tl_s1n_10_ds_d2h[5] = sm1_s1n_7[0];
-  assign tl_s1n_11_ds_d2h[5] = sm1_s1n_7[1];
+  assign s1n_sm1_7[0] = tl_s1n_10_ds_h2d[6];
+  assign s1n_sm1_7[1] = tl_s1n_11_ds_h2d[6];
+  assign tl_s1n_10_ds_d2h[6] = sm1_s1n_7[0];
+  assign tl_s1n_11_ds_d2h[6] = sm1_s1n_7[1];
 
   // TSEN1
-  assign s1n_sm1_8[0] = tl_s1n_10_ds_h2d[6];
-  assign s1n_sm1_8[1] = tl_s1n_11_ds_h2d[6];
-  assign tl_s1n_10_ds_d2h[6] = sm1_s1n_8[0];
-  assign tl_s1n_11_ds_d2h[6] = sm1_s1n_8[1];
+  assign s1n_sm1_8[0] = tl_s1n_10_ds_h2d[7];
+  assign s1n_sm1_8[1] = tl_s1n_11_ds_h2d[7];
+  assign tl_s1n_10_ds_d2h[8] = sm1_s1n_8[0];
+  assign tl_s1n_11_ds_d2h[8] = sm1_s1n_8[1];
 
   // TSEN2
-  assign s1n_sm1_9[0] = tl_s1n_10_ds_h2d[7];
-  assign s1n_sm1_9[1] = tl_s1n_11_ds_h2d[7];
-  assign tl_s1n_10_ds_d2h[7] = sm1_s1n_9[0];
-  assign tl_s1n_11_ds_d2h[7] = sm1_s1n_9[1];
+  assign s1n_sm1_9[0] = tl_s1n_10_ds_h2d[9];
+  assign s1n_sm1_9[1] = tl_s1n_11_ds_h2d[9];
+  assign tl_s1n_10_ds_d2h[9] = sm1_s1n_9[0];
+  assign tl_s1n_11_ds_d2h[9] = sm1_s1n_9[1];
 
   // DAP
-  assign s1n_sm1_10[0] = tl_s1n_10_ds_h2d[8];
-  assign s1n_sm1_10[1] = tl_s1n_11_ds_h2d[8];
-  assign tl_s1n_10_ds_d2h[8] = sm1_s1n_10[0];
-  assign tl_s1n_11_ds_d2h[8] = sm1_s1n_10[1];
+  assign s1n_sm1_10[0] = tl_s1n_10_ds_h2d[10];
+  assign s1n_sm1_10[1] = tl_s1n_11_ds_h2d[10];
+  assign tl_s1n_10_ds_d2h[10] = sm1_s1n_10[0];
+  assign tl_s1n_11_ds_d2h[10] = sm1_s1n_10[1];
 
   // PLIC
   assign s1n_sm1_11[0] = tl_s1n_10_ds_h2d[9];
@@ -178,79 +182,82 @@ module xbar_periph (
 
   always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_10 = 4'd11;
+    dev_sel_s1n_10 = 4'd12;
 
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
-      dev_sel_s1n_10 = 4'd0;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
       dev_sel_s1n_10 = 4'd1;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
       dev_sel_s1n_10 = 4'd2;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO2)) == ADDR_SPACE_LDO2) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
       dev_sel_s1n_10 = 4'd3;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCDC)) == ADDR_SPACE_DCDC) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO2)) == ADDR_SPACE_LDO2) begin
       dev_sel_s1n_10 = 4'd4;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLL1)) == ADDR_SPACE_PLL1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCDC)) == ADDR_SPACE_DCDC) begin
       dev_sel_s1n_10 = 4'd5;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN1)) == ADDR_SPACE_TSEN1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLL1)) == ADDR_SPACE_PLL1) begin
       dev_sel_s1n_10 = 4'd6;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN2)) == ADDR_SPACE_TSEN2) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN1)) == ADDR_SPACE_TSEN1) begin
       dev_sel_s1n_10 = 4'd7;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN2)) == ADDR_SPACE_TSEN2) begin
       dev_sel_s1n_10 = 4'd8;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
       dev_sel_s1n_10 = 4'd9;
+
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
+      dev_sel_s1n_10 = 4'd10;
     
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
-      dev_sel_s1n_10 = 4'd10;
+      dev_sel_s1n_10 = 4'd11;
     end    
   end
 
   always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_11 = 4'd11;
+    dev_sel_s1n_11 = 4'd12;
 
-    if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
+    if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
       dev_sel_s1n_11 = 4'd0;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
+    
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
       dev_sel_s1n_11 = 4'd1;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
       dev_sel_s1n_11 = 4'd2;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO2)) == ADDR_SPACE_LDO2) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
       dev_sel_s1n_11 = 4'd3;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCDC)) == ADDR_SPACE_DCDC) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO2)) == ADDR_SPACE_LDO2) begin
       dev_sel_s1n_11 = 4'd4;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLL1)) == ADDR_SPACE_PLL1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCDC)) == ADDR_SPACE_DCDC) begin
       dev_sel_s1n_11 = 4'd5;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN1)) == ADDR_SPACE_TSEN1) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLL1)) == ADDR_SPACE_PLL1) begin
       dev_sel_s1n_11 = 4'd6;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN2)) == ADDR_SPACE_TSEN2) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN1)) == ADDR_SPACE_TSEN1) begin
       dev_sel_s1n_11 = 4'd7;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN2)) == ADDR_SPACE_TSEN2) begin
       dev_sel_s1n_11 = 4'd8;
 
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
       dev_sel_s1n_11 = 4'd9;
+
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
+      dev_sel_s1n_11 = 4'd10;
     
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
-      dev_sel_s1n_11 = 4'd10;
+      dev_sel_s1n_11 = 4'd11;
     end    
   end
 
@@ -260,7 +267,7 @@ module xbar_periph (
     .HRspDepth (4'h0),
     .DReqDepth (52'h0),
     .DRspDepth (52'h0),
-    .N         (11)
+    .N         (13)
   ) u_s1n_10 (
     .clk_i        (clk_i),
     .rst_ni       (rst_ni),
@@ -276,7 +283,7 @@ module xbar_periph (
     .HRspDepth (4'h0),
     .DReqDepth (52'h0),
     .DRspDepth (52'h0),
-    .N         (11)
+    .N         (13)
   ) u_s1n_11 (
     .clk_i        (clk_i),
     .rst_ni       (rst_ni),

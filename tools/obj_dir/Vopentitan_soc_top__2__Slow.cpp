@@ -7,295 +7,8 @@
 
 #include "verilated_dpi.h"
 
-void Vopentitan_soc_top::_settle__TOP__39(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__39\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[1U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [1U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[2U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [2U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[3U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [3U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[4U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [4U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[5U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [5U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[6U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [6U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[7U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [7U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[8U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [8U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[9U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [9U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xaU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xaU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xbU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xbU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xcU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xcU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xdU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xdU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xeU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xeU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0xfU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0xfU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x10U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x10U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x11U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x11U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x12U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x12U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x13U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x13U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x14U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x14U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x15U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x15U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x16U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x16U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x17U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x17U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x18U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x18U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x19U] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x19U];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1aU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1aU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1bU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1bU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1cU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1cU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1dU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1dU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1eU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1eU];
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i[0x1fU] 
-        = vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__prio
-        [0x1fU];
-}
-
-void Vopentitan_soc_top::_settle__TOP__40(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__40\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__hw2reg[6U] 
-        = ((0x1fffffU & vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__hw2reg[6U]) 
-           | (0xffe00000U & ((IData)((((QData)((IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event 
-                                                        | ((vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xeU] 
-                                                            << 0x15U) 
-                                                           | (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xdU] 
-                                                              >> 0xbU))))) 
-                                       << 1U) | (QData)((IData)(
-                                                                (0U 
-                                                                 != vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event))))) 
-                             << 0x15U)));
-    vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__hw2reg[7U] 
-        = (0x3fffffU & ((0x1fffffU & ((IData)((((QData)((IData)(
-                                                                (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event 
-                                                                 | ((vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xeU] 
-                                                                     << 0x15U) 
-                                                                    | (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xdU] 
-                                                                       >> 0xbU))))) 
-                                                << 1U) 
-                                               | (QData)((IData)(
-                                                                 (0U 
-                                                                  != vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event))))) 
-                                      >> 0xbU)) | (0xffe00000U 
-                                                   & ((IData)(
-                                                              ((((QData)((IData)(
-                                                                                (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event 
-                                                                                | ((vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xeU] 
-                                                                                << 0x15U) 
-                                                                                | (vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__reg2hw[0xdU] 
-                                                                                >> 0xbU))))) 
-                                                                 << 1U) 
-                                                                | (QData)((IData)(
-                                                                                (0U 
-                                                                                != vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__intr_hw__DOT__new_event)))) 
-                                                               >> 0x20U)) 
-                                                      << 0x15U))));
-}
-
-void Vopentitan_soc_top::_settle__TOP__41(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__41\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
-        = ((0x1fffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U]) 
-           | (0xe0000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0U] << 0x1dU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xfffffff8U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-           [1U]);
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xffffffc7U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xfffffff8U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [2U] << 3U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xfffffe3fU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xffffffc0U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [3U] << 6U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xfffff1ffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xfffffe00U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [4U] << 9U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xffff8fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xfffff000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [5U] << 0xcU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xfffc7fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xffff8000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [6U] << 0xfU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xffe3ffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xfffc0000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [7U] << 0x12U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xff1fffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xffe00000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [8U] << 0x15U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xf8ffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xff000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [9U] << 0x18U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0xc7ffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xf8000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xaU] << 0x1bU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
-        = ((0x3fffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U]) 
-           | (0xc0000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xbU] << 0x1eU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xfffffffeU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0x3fffffffU & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xbU] >> 2U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xfffffff1U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xfffffffeU & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xcU] << 1U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xffffff8fU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xfffffff0U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xdU] << 4U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xfffffc7fU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xffffff80U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xeU] << 7U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xffffe3ffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xfffffc00U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0xfU] << 0xaU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xffff1fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xffffe000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x10U] << 0xdU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xfff8ffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xffff0000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x11U] << 0x10U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xffc7ffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xfff80000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x12U] << 0x13U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xfe3fffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xffc00000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x13U] << 0x16U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0xf1ffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xfe000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x14U] << 0x19U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0x8fffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0xf0000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x15U] << 0x1cU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
-        = ((0x7fffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U]) 
-           | (0x80000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x16U] << 0x1fU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1ffffffcU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1fffffffU & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x16U] >> 1U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1fffffe3U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1ffffffcU & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x17U] << 2U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1fffff1fU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1fffffe0U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x18U] << 5U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1ffff8ffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1fffff00U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x19U] << 8U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1fffc7ffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1ffff800U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1aU] << 0xbU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1ffe3fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1fffc000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1bU] << 0xeU)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1ff1ffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1ffe0000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1cU] << 0x11U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1f8fffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1ff00000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1dU] << 0x14U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x1c7fffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1f800000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1eU] << 0x17U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
-        = ((0x3ffffffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U]) 
-           | (0x1c000000U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT____Vcellinp__gen_target__BRA__0__KET____DOT__u_target__prio_i
-                             [0x1fU] << 0x1aU)));
-}
-
-void Vopentitan_soc_top::_settle__TOP__42(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__42\n"); );
+void Vopentitan_soc_top::_settle__TOP__31(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__31\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__u_reg__DOT__u_intr_state__DOT__wr_data 
@@ -307,6 +20,18 @@ void Vopentitan_soc_top::_settle__TOP__42(Vopentitan_soc_top__Syms* __restrict v
                ? (~ ((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO.tl_d_o[1U] 
                       << 0x1fU) | (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO.tl_d_o[0U] 
                                    >> 1U))) : 0xffffffffU));
+    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__fetch_err 
+        = (1U & ((1U & vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__instr_addr_q)
+                  ? ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid_q))
+                      ? ((((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__err_q) 
+                           >> 1U) & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__unaligned_is_compressed))) 
+                         | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__err_q))
+                      : (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid_q) 
+                          & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__err_q)) 
+                         | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__instr_or_pmp_err) 
+                            & ((~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid_q)) 
+                               | (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__unaligned_is_compressed))))))
+                  : (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__err)));
     vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__u_reg__DOT__reg_rdata_next = 0U;
     if ((1U & ((((((((IData)(vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
                      | ((IData)(vlTOPp->opentitan_soc_top__DOT__gpio_32__DOT__u_reg__DOT__addr_hit) 
@@ -414,6 +139,10 @@ void Vopentitan_soc_top::_settle__TOP__42(Vopentitan_soc_top__Syms* __restrict v
             }
         }
     }
+    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__addr_incr_two 
+        = ((1U & vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__instr_addr_q)
+            ? (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__unaligned_is_compressed)
+            : (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__aligned_is_compressed));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__0__KET____DOT__gen_level__BRA__0__KET____DOT__gen_nodes__DOT__sel 
         = (1U & ((IData)((4ULL == (6ULL & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree))) 
                  | ((IData)((6ULL == (6ULL & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree))) 
@@ -734,19 +463,27 @@ void Vopentitan_soc_top::_settle__TOP__42(Vopentitan_soc_top__Syms* __restrict v
                     & ((7U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
                               >> 0x1aU)) > (7U & (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
                                                   >> 0x17U))))));
+    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__valid_raw 
+        = (1U & ((1U & vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__instr_addr_q)
+                  ? ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__unaligned_is_compressed)
+                      ? (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid)
+                      : (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid_q) 
+                          >> 1U) | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid_q) 
+                                    & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_valid))))
+                  : (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__valid)));
 }
 
-void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__43\n"); );
+void Vopentitan_soc_top::_settle__TOP__32(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__32\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
-    CData/*31:0*/ __Vtemp179;
-    CData/*31:0*/ __Vtemp194;
-    CData/*31:0*/ __Vtemp195;
-    CData/*31:0*/ __Vtemp227;
-    CData/*31:0*/ __Vtemp228;
-    CData/*31:0*/ __Vtemp242;
+    CData/*31:0*/ __Vtemp186;
+    CData/*31:0*/ __Vtemp201;
+    CData/*31:0*/ __Vtemp202;
+    CData/*31:0*/ __Vtemp234;
+    CData/*31:0*/ __Vtemp235;
+    CData/*31:0*/ __Vtemp249;
     // Body
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
         = ((0x7ffffffffffffffeULL & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree) 
@@ -922,7 +659,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                         & (IData)((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0xbU))))))) 
               << 5U));
-    __Vtemp179 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp186 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[3U] 
                                 << 0x18U) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U] 
                                              >> 8U))) 
@@ -940,7 +677,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                               << 0x1cU)))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[1U] 
         = ((0xfffffff0U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[1U]) 
-           | (0x3fffffffU & (__Vtemp179 >> 2U)));
+           | (0x3fffffffU & (__Vtemp186 >> 2U)));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[0U] 
         = ((0xfffc7fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[0U]) 
            | (0x38000U & ((((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__2__KET____DOT__gen_level__BRA__2__KET____DOT__gen_nodes__DOT__sel))) 
@@ -1079,7 +816,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                         & (IData)((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x15U))))))) 
               << 0xaU));
-    __Vtemp194 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp201 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U] 
                                 << 0x1cU) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U] 
                                              >> 4U))) 
@@ -1101,8 +838,8 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                                     >> 2U)))))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U] 
         = ((0xfffffffcU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[2U]) 
-           | (0xfffffffU & (__Vtemp194 >> 4U)));
-    __Vtemp195 = (7U & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
+           | (0xfffffffU & (__Vtemp201 >> 4U)));
+    __Vtemp202 = (7U & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__3__KET____DOT__gen_nodes__DOT__sel))) 
                          & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[3U] 
                              << 0x1eU) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
                                           >> 2U))) 
@@ -1124,7 +861,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                                     >> 1U)))))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[1U] 
         = ((0xfffffffeU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[1U]) 
-           | (0x3fffffffU & (__Vtemp195 >> 2U)));
+           | (0x3fffffffU & (__Vtemp202 >> 2U)));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
         = ((0x7ffffffffffff7ffULL & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree) 
            | ((QData)((IData)((1U & (((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__3__KET____DOT__gen_level__BRA__4__KET____DOT__gen_nodes__DOT__sel) 
@@ -1443,7 +1180,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                         & (IData)((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x2bU))))))) 
               << 0x15U));
-    __Vtemp227 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp234 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[9U] 
                                 << 0x18U) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[8U] 
                                              >> 8U))) 
@@ -1461,8 +1198,8 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                               << 0x1cU)))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U] 
         = ((0xfffffff0U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[4U]) 
-           | (0x3fffffffU & (__Vtemp227 >> 2U)));
-    __Vtemp228 = (7U & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
+           | (0x3fffffffU & (__Vtemp234 >> 2U)));
+    __Vtemp235 = (7U & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__6__KET____DOT__gen_nodes__DOT__sel))) 
                          & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[5U] 
                              << 0x1cU) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[4U] 
                                           >> 4U))) 
@@ -1480,7 +1217,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                               << 0x1eU)))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
         = ((0xfffffffcU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U]) 
-           | (0x7fffffffU & (__Vtemp228 >> 1U)));
+           | (0x7fffffffU & (__Vtemp235 >> 1U)));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
         = ((0x7fffffffffbfffffULL & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree) 
            | ((QData)((IData)((1U & (((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__7__KET____DOT__gen_nodes__DOT__sel) 
@@ -1624,7 +1361,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                         & (IData)((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__is_tree 
                                                    >> 0x35U))))))) 
               << 0x1aU));
-    __Vtemp242 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 
+    __Vtemp249 = (0x3fU & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 
                             & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[0xbU] 
                                 << 0x1cU) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[0xaU] 
                                              >> 4U))) 
@@ -1646,7 +1383,7 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                                     >> 2U)))))));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U] 
         = ((0xfffffffcU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree[5U]) 
-           | (0xfffffffU & (__Vtemp242 >> 4U)));
+           | (0xfffffffU & (__Vtemp249 >> 4U)));
     vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U] 
         = ((0xfffe3fffU & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree[2U]) 
            | (0x1c000U & ((0xffffc000U & (((- (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__gen_tree__BRA__4__KET____DOT__gen_level__BRA__11__KET____DOT__gen_nodes__DOT__sel))) 
@@ -1771,8 +1508,24 @@ void Vopentitan_soc_top::_settle__TOP__43(Vopentitan_soc_top__Syms* __restrict v
                                               << 3U)))));
 }
 
-void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__44\n"); );
+void Vopentitan_soc_top::_settle__TOP__33(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__33\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__instr_addr_d 
+        = (0x7fffffffU & ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__pc_set)
+                           ? (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__pc_set)
+                                ? (0xfffffffeU & vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__fetch_addr_n)
+                                : 0U) >> 1U) : (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__instr_addr_q 
+                                                + (
+                                                   (2U 
+                                                    & ((~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__addr_incr_two)) 
+                                                       << 1U)) 
+                                                   | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__gen_prefetch_buffer__DOT__prefetch_buffer_i__DOT__fifo_i__DOT__addr_incr_two)))));
+}
+
+void Vopentitan_soc_top::_settle__TOP__34(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__34\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__data_interface__DOT__genblk1__DOT__source_d 
@@ -1981,169 +1734,6 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
             }
         }
     }
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_q;
-    if ((((~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__i_fifo__DOT__gen_normal_fifo__DOT__full)) 
-          & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT__i_cdc_req__DOT__empty))) 
-         & (2U == (3U & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                 >> 0x20U)))))) {
-        if ((1U & (~ (((((((((4U <= (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U)))) 
-                             & (5U >= (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                            | (0x10U == (0x7fU & (IData)(
-                                                         (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                          >> 0x22U))))) 
-                           | (0x11U == (0x7fU & (IData)(
-                                                        (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                         >> 0x22U))))) 
-                          | (0x12U == (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                         | (0x16U == (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))) 
-                        | (0x17U == (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U))))) 
-                       | (0x18U == (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U))))) 
-                      | ((0x20U <= (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U)))) 
-                         & (0x27U >= (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))))))) {
-            if ((0x38U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                            >> 0x22U))))) {
-                if ((0x39U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                >> 0x22U))))) {
-                    if ((0x3aU != (0x7fU & (IData)(
-                                                   (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                    >> 0x22U))))) {
-                        if ((0x3cU == (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) {
-                            if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-                                    = ((0xffffffff00000000ULL 
-                                        & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
-                                       | (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o)));
-                            }
-                        } else {
-                            if ((0x3dU == (0x7fU & (IData)(
-                                                           (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                            >> 0x22U))))) {
-                                if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-                                        = ((0xffffffffULL 
-                                            & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
-                                           | ((QData)((IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o))) 
-                                              << 0x20U));
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                       >> 0x33U)))) {
-        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-            = (QData)((IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                               >> 2U)));
-    }
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d 
-        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q;
-    if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-            vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-        } else {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-            } else {
-                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                                   >> 0x33U)))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-                }
-            }
-        }
-    } else {
-        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                                   >> 0x33U)))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-                }
-            } else {
-                if ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 4U;
-                }
-            }
-        } else {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                if ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 3U;
-                }
-            } else {
-                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_write_valid) 
-                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                        >> 0x14U))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
-                }
-                if (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_write_valid) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 2U;
-                }
-                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_read_valid) 
-                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                        >> 0xfU))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
-                }
-            }
-        }
-    }
-    if (((3U < (7U & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                      >> 0x11U))) & (0U != (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q)))) {
-        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-    }
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
-        = (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q);
-    if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-        if ((1U & (~ ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q) 
-                      >> 1U)))) {
-            if ((1U & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q)))) {
-                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                                   >> 0x33U)))) {
-                    if ((0x10000U & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q)) {
-                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
-                            = ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q) 
-                               + ((IData)(1U) << (7U 
-                                                  & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                                                     >> 0x11U))));
-                    }
-                }
-            }
-        }
-    } else {
-        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
-                                   >> 0x33U)))) {
-                    if ((0x10000U & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q)) {
-                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
-                            = ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q) 
-                               + ((IData)(1U) << (7U 
-                                                  & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                                                     >> 0x11U))));
-                    }
-                }
-            }
-        }
-    }
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_rdata_ext 
         = ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_type_q))
             ? ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__rdata_offset_q))
@@ -2277,6 +1867,12 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
                                                     : (IData)(
                                                               (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10.tl_h_o 
                                                                >> 2U))))));
+}
+
+void Vopentitan_soc_top::_settle__TOP__35(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__35\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_or_pmp_err 
         = (1U & (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__lsu_err_q) 
                   | (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10.tl_h_o 
@@ -2337,67 +1933,12 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
         = (((IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10.tl_h_o 
                      >> 0x33U)) | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__pmp_err_q)) 
            & (0U == (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__ls_fsm_cs)));
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
-        = (QData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs));
-    if ((((~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__i_fifo__DOT__gen_normal_fifo__DOT__full)) 
-          & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT__i_cdc_req__DOT__empty))) 
-         & (2U == (3U & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                 >> 0x20U)))))) {
-        if ((1U & (~ (((((((((4U <= (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U)))) 
-                             & (5U >= (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                            | (0x10U == (0x7fU & (IData)(
-                                                         (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                          >> 0x22U))))) 
-                           | (0x11U == (0x7fU & (IData)(
-                                                        (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                         >> 0x22U))))) 
-                          | (0x12U == (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                         | (0x16U == (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))) 
-                        | (0x17U == (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U))))) 
-                       | (0x18U == (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U))))) 
-                      | ((0x20U <= (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U)))) 
-                         & (0x27U >= (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))))))) {
-            if ((0x38U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                            >> 0x22U))))) {
-                if ((0x39U == (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                >> 0x22U))))) {
-                    if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
-                            = ((0xffffffff00000000ULL 
-                                & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d) 
-                               | (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o)));
-                    }
-                } else {
-                    if ((0x3aU == (0x7fU & (IData)(
-                                                   (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                    >> 0x22U))))) {
-                        if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                            vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
-                                = ((0xffffffffULL & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d) 
-                                   | ((QData)((IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o))) 
-                                      << 0x20U));
-                        }
-                    }
-                }
-            }
-        }
-    }
+}
+
+void Vopentitan_soc_top::_settle__TOP__36(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__36\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__wb_stage_i__DOT__rf_wdata_wb_mux[1U] 
         = vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_rdata_ext;
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__wb_stage_i__DOT__rf_wdata_wb_mux_we 
@@ -2407,6 +1948,12 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
                             >> 0x33U))) & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_or_pmp_err))) 
                & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_we_q))) 
               << 1U));
+}
+
+void Vopentitan_soc_top::_settle__TOP__37(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vopentitan_soc_top::_settle__TOP__37\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__lsu_load_err 
         = (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_or_pmp_err) 
             & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__load_store_unit_i__DOT__data_we_q))) 
@@ -2648,6 +2195,169 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
         = ((0x3fffffffU & vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__gen_regfile_ff__DOT__register_file_i__DOT__we_a_dec) 
            | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__gen_regfile_ff__DOT__register_file_i__DOT____Vlvbound1) 
               << 0x1eU));
+    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
+        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_q;
+    if ((((~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__i_fifo__DOT__gen_normal_fifo__DOT__full)) 
+          & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT__i_cdc_req__DOT__empty))) 
+         & (2U == (3U & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                 >> 0x20U)))))) {
+        if ((1U & (~ (((((((((4U <= (0x7fU & (IData)(
+                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                      >> 0x22U)))) 
+                             & (5U >= (0x7fU & (IData)(
+                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                        >> 0x22U))))) 
+                            | (0x10U == (0x7fU & (IData)(
+                                                         (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                          >> 0x22U))))) 
+                           | (0x11U == (0x7fU & (IData)(
+                                                        (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                         >> 0x22U))))) 
+                          | (0x12U == (0x7fU & (IData)(
+                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                        >> 0x22U))))) 
+                         | (0x16U == (0x7fU & (IData)(
+                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                       >> 0x22U))))) 
+                        | (0x17U == (0x7fU & (IData)(
+                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                      >> 0x22U))))) 
+                       | (0x18U == (0x7fU & (IData)(
+                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                     >> 0x22U))))) 
+                      | ((0x20U <= (0x7fU & (IData)(
+                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                     >> 0x22U)))) 
+                         & (0x27U >= (0x7fU & (IData)(
+                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                       >> 0x22U))))))))) {
+            if ((0x38U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                            >> 0x22U))))) {
+                if ((0x39U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                >> 0x22U))))) {
+                    if ((0x3aU != (0x7fU & (IData)(
+                                                   (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                    >> 0x22U))))) {
+                        if ((0x3cU == (0x7fU & (IData)(
+                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                        >> 0x22U))))) {
+                            if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
+                                    = ((0xffffffff00000000ULL 
+                                        & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
+                                       | (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o)));
+                            }
+                        } else {
+                            if ((0x3dU == (0x7fU & (IData)(
+                                                           (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                            >> 0x22U))))) {
+                                if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
+                                        = ((0xffffffffULL 
+                                            & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
+                                           | ((QData)((IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o))) 
+                                              << 0x20U));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                       >> 0x33U)))) {
+        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
+            = (QData)((IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                               >> 2U)));
+    }
+    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d 
+        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q;
+    if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+            vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
+        } else {
+            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
+            } else {
+                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                                   >> 0x33U)))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
+                }
+            }
+        }
+    } else {
+        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                                   >> 0x33U)))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
+                }
+            } else {
+                if ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 4U;
+                }
+            }
+        } else {
+            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                if ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 3U;
+                }
+            } else {
+                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_write_valid) 
+                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
+                        >> 0x14U))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
+                }
+                if (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_write_valid) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 2U;
+                }
+                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_read_valid) 
+                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
+                        >> 0xfU))) {
+                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
+                }
+            }
+        }
+    }
+    if (((3U < (7U & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
+                      >> 0x11U))) & (0U != (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q)))) {
+        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
+    }
+    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
+        = (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q);
+    if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+        if ((1U & (~ ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q) 
+                      >> 1U)))) {
+            if ((1U & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q)))) {
+                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                                   >> 0x33U)))) {
+                    if ((0x10000U & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q)) {
+                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
+                            = ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q) 
+                               + ((IData)(1U) << (7U 
+                                                  & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
+                                                     >> 0x11U))));
+                    }
+                }
+            }
+        }
+    } else {
+        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                if ((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11.tl_h_o 
+                                   >> 0x33U)))) {
+                    if ((0x10000U & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q)) {
+                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
+                            = ((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q) 
+                               + ((IData)(1U) << (7U 
+                                                  & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
+                                                     >> 0x11U))));
+                    }
+                }
+            }
+        }
+    }
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__perf_instr_ret_wb 
         = ((((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__wb_stage_i__DOT__g_writeback_stage__DOT__wb_valid_q) 
              & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__wb_stage_i__DOT__g_writeback_stage__DOT__wb_done)) 
@@ -2668,6 +2378,67 @@ void Vopentitan_soc_top::_settle__TOP__44(Vopentitan_soc_top__Syms* __restrict v
            & ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__gen_stall_mem__DOT__outstanding_memory_access) 
               | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__lsu_req_dec) 
                  & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__lsu_req_done)))));
+    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
+        = (QData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs));
+    if ((((~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__i_fifo__DOT__gen_normal_fifo__DOT__full)) 
+          & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT__i_cdc_req__DOT__empty))) 
+         & (2U == (3U & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                 >> 0x20U)))))) {
+        if ((1U & (~ (((((((((4U <= (0x7fU & (IData)(
+                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                      >> 0x22U)))) 
+                             & (5U >= (0x7fU & (IData)(
+                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                        >> 0x22U))))) 
+                            | (0x10U == (0x7fU & (IData)(
+                                                         (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                          >> 0x22U))))) 
+                           | (0x11U == (0x7fU & (IData)(
+                                                        (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                         >> 0x22U))))) 
+                          | (0x12U == (0x7fU & (IData)(
+                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                        >> 0x22U))))) 
+                         | (0x16U == (0x7fU & (IData)(
+                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                       >> 0x22U))))) 
+                        | (0x17U == (0x7fU & (IData)(
+                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                      >> 0x22U))))) 
+                       | (0x18U == (0x7fU & (IData)(
+                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                     >> 0x22U))))) 
+                      | ((0x20U <= (0x7fU & (IData)(
+                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                     >> 0x22U)))) 
+                         & (0x27U >= (0x7fU & (IData)(
+                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                       >> 0x22U))))))))) {
+            if ((0x38U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                            >> 0x22U))))) {
+                if ((0x39U == (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                >> 0x22U))))) {
+                    if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
+                            = ((0xffffffff00000000ULL 
+                                & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d) 
+                               | (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o)));
+                    }
+                } else {
+                    if ((0x3aU == (0x7fU & (IData)(
+                                                   (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
+                                                    >> 0x22U))))) {
+                        if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
+                            vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d 
+                                = ((0xffffffffULL & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_d) 
+                                   | ((QData)((IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o))) 
+                                      << 0x20U));
+                        }
+                    }
+                }
+            }
+        }
+    }
     vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__ex_block_i__DOT__gen_multdiv_fast__DOT__multdiv_i__DOT__mult_hold = 0U;
     if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__ex_block_i__DOT__gen_multdiv_fast__DOT__multdiv_i__DOT__gen_mult_fast__DOT__mult_state_q))) {
         if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__ex_block_i__DOT__gen_multdiv_fast__DOT__multdiv_i__DOT__gen_mult_fast__DOT__mult_state_q))) {
@@ -4312,16 +4083,16 @@ void Vopentitan_soc_top::_eval_initial(Vopentitan_soc_top__Syms* __restrict vlSy
     // Body
     vlSymsp->TOP__gpio_reg_pkg._initial__TOP__gpio_reg_pkg__1(vlSymsp);
     __Vilp = 0U;
-    while ((__Vilp <= 0x7cU)) {
+    while ((__Vilp <= 0x7aU)) {
         vlTOPp->__Vm_traceActivity[__Vilp] = 1U;
         __Vilp = ((IData)(1U) + __Vilp);
     }
     vlSymsp->TOP__rv_plic_reg_pkg._initial__TOP__rv_plic_reg_pkg__1(vlSymsp);
     vlTOPp->_initial__TOP__1(vlSymsp);
-    vlTOPp->__Vclklast__TOP__clk_i = vlTOPp->clk_i;
-    vlTOPp->__Vclklast__TOP__rst_ni = vlTOPp->rst_ni;
     vlTOPp->__Vclklast__TOP__opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__clk 
         = vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__clk;
+    vlTOPp->__Vclklast__TOP__rst_ni = vlTOPp->rst_ni;
+    vlTOPp->__Vclklast__TOP__clk_i = vlTOPp->clk_i;
     vlTOPp->__Vclklast__TOP__opentitan_soc_top__DOT__debug_module__DOT____Vcellinp__dap__tck_i 
         = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT____Vcellinp__dap__tck_i;
     vlTOPp->__Vclklast__TOP____VinpClk__TOP__opentitan_soc_top__DOT__debug_module__DOT____Vcellinp__dap__trst_ni 
@@ -4346,313 +4117,313 @@ void Vopentitan_soc_top::_eval_settle(Vopentitan_soc_top__Syms* __restrict vlSym
     // Body
     vlTOPp->_settle__TOP__2(vlSymsp);
     __Vilp = 0U;
-    while ((__Vilp <= 0x7cU)) {
+    while ((__Vilp <= 0x7aU)) {
         vlTOPp->__Vm_traceActivity[__Vilp] = 1U;
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__1(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2__2(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1__3(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1__4(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1__4(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP__6(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM__7(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC__8(vlSymsp);
     vlTOPp->_settle__TOP__3(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__3(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2__4(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1__5(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1__8(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP__7(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1__8(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM__9(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC__10(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__9(vlSymsp);
     vlTOPp->_settle__TOP__4(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlTOPp->_settle__TOP__5(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__12(vlSymsp);
-    vlTOPp->_settle__TOP__6(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__20(vlSymsp);
-    vlTOPp->_settle__TOP__7(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO__21(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC__22(vlSymsp);
-    vlTOPp->_settle__TOP__8(vlSymsp);
+    vlTOPp->_settle__TOP__5(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO__17(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC__18(vlSymsp);
+    vlTOPp->_settle__TOP__6(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__4(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlTOPp->_settle__TOP__9(vlSymsp);
+    vlTOPp->_settle__TOP__7(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__4(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__33(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__33(vlSymsp);
-    vlTOPp->_settle__TOP__10(vlSymsp);
+    vlTOPp->_settle__TOP__8(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
+    vlTOPp->_settle__TOP__9(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__5(vlSymsp);
+    vlTOPp->_settle__TOP__10(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__21(vlSymsp);
     vlTOPp->_settle__TOP__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__22(vlSymsp);
     vlTOPp->_settle__TOP__12(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
     vlTOPp->_settle__TOP__13(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
     vlTOPp->_settle__TOP__14(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlTOPp->_settle__TOP__15(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__30(vlSymsp);
-    vlTOPp->_settle__TOP__16(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__31(vlSymsp);
-    vlTOPp->_settle__TOP__17(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__32(vlSymsp);
-    vlTOPp->_settle__TOP__18(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__33(vlSymsp);
-    vlTOPp->_settle__TOP__19(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__34(vlSymsp);
-    vlTOPp->_settle__TOP__20(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__35(vlSymsp);
-    vlTOPp->_settle__TOP__21(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlTOPp->_settle__TOP__22(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__6(vlSymsp);
-    vlTOPp->_settle__TOP__23(vlSymsp);
+    vlTOPp->_settle__TOP__15(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__7(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__8(vlSymsp);
-    vlTOPp->_settle__TOP__24(vlSymsp);
+    vlTOPp->_settle__TOP__16(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__9(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__9(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__11(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__11(vlSymsp);
-    vlTOPp->_settle__TOP__25(vlSymsp);
+    vlTOPp->_settle__TOP__17(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__13(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__14(vlSymsp);
-    vlTOPp->_settle__TOP__26(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__15(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__16(vlSymsp);
-    vlTOPp->_settle__TOP__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__17(vlSymsp);
-    vlTOPp->_settle__TOP__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__18(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__19(vlSymsp);
-    vlTOPp->_settle__TOP__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__1(vlSymsp);
-    vlTOPp->_settle__TOP__30(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__2(vlSymsp);
-    vlTOPp->_settle__TOP__31(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__11(vlSymsp);
-    vlTOPp->_settle__TOP__32(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__70(vlSymsp);
-    vlTOPp->_settle__TOP__33(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__76(vlSymsp);
+    vlTOPp->_settle__TOP__18(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__16(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__16(vlSymsp);
+    vlTOPp->_settle__TOP__19(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__19(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__19(vlSymsp);
+    vlTOPp->_settle__TOP__20(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__20(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__20(vlSymsp);
+    vlTOPp->_settle__TOP__21(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlTOPp->_settle__TOP__22(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__47(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__59(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1__65(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__75(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__75(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__75(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__78(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__96(vlSymsp);
-    vlTOPp->_settle__TOP__34(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__23(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__26(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__27(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__29(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__163(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__166(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__185(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__188(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__207(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__210(vlSymsp);
-    vlTOPp->_settle__TOP__35(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__36(vlSymsp);
-    vlTOPp->_settle__TOP__36(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__21(vlSymsp);
-    vlTOPp->_settle__TOP__37(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__21(vlSymsp);
-    vlTOPp->_settle__TOP__38(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__23(vlSymsp);
-    vlTOPp->_settle__TOP__39(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM__86(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__90(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__102(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__114(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__126(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__160(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__183(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__195(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__205(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__208(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlTOPp->_settle__TOP__23(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__220(vlSymsp);
+    vlTOPp->_settle__TOP__24(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__221(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__GPIO._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__LDO2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLL1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN1._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__TSEN2._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DAP._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DEBUG_ROM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__DCDC._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlTOPp->_settle__TOP__25(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__233(vlSymsp);
+    vlTOPp->_settle__TOP__26(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__234(vlSymsp);
+    vlTOPp->_settle__TOP__27(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__ICCM__235(vlSymsp);
+    vlTOPp->_settle__TOP__28(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__22(vlSymsp);
+    vlTOPp->_settle__TOP__29(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__23(vlSymsp);
-    vlTOPp->_settle__TOP__40(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__25(vlSymsp);
-    vlTOPp->_settle__TOP__41(vlSymsp);
+    vlTOPp->_settle__TOP__30(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__22(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__25(vlSymsp);
-    vlTOPp->_settle__TOP__42(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__27(vlSymsp);
+    vlTOPp->_settle__TOP__31(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__23(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__27(vlSymsp);
-    vlTOPp->_settle__TOP__43(vlSymsp);
+    vlTOPp->_settle__TOP__32(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__28(vlSymsp);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__29(vlSymsp);
+    vlTOPp->_settle__TOP__33(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__25(vlSymsp);
     vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__30(vlSymsp);
-    vlTOPp->_settle__TOP__44(vlSymsp);
+    vlTOPp->_settle__TOP__34(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__27(vlSymsp);
+    vlTOPp->_settle__TOP__35(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__28(vlSymsp);
+    vlTOPp->_settle__TOP__36(vlSymsp);
+    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11._settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__30(vlSymsp);
+    vlTOPp->_settle__TOP__37(vlSymsp);
 }
 
 void Vopentitan_soc_top::_ctor_var_reset() {
@@ -4669,7 +4440,6 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     gpio_o = VL_RAND_RESET_I(20);
     VL_RAND_RESET_W(86, opentitan_soc_top__DOT__ifu_to_xbar);
     opentitan_soc_top__DOT__xbar_to_ifu = VL_RAND_RESET_Q(52);
-    VL_RAND_RESET_W(86, opentitan_soc_top__DOT__xbar_to_iccm);
     opentitan_soc_top__DOT__iccm_to_xbar = VL_RAND_RESET_Q(52);
     VL_RAND_RESET_W(86, opentitan_soc_top__DOT__lsu_to_xbar);
     opentitan_soc_top__DOT__dccm_to_xbar = VL_RAND_RESET_Q(52);
@@ -5097,16 +4867,16 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     opentitan_soc_top__DOT__periph_switch__DOT__tl_pll1_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_tsen2_i = VL_RAND_RESET_Q(52);
     opentitan_soc_top__DOT__periph_switch__DOT__tl_dap_i = VL_RAND_RESET_Q(52);
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         VL_RAND_RESET_W(86, opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[__Vi0]);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[__Vi0] = VL_RAND_RESET_Q(52);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         VL_RAND_RESET_W(86, opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_h2d[__Vi0]);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[__Vi0] = VL_RAND_RESET_Q(52);
     }
     opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = VL_RAND_RESET_I(4);
@@ -5183,16 +4953,16 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     for (int __Vi0=0; __Vi0<2; ++__Vi0) {
         opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_12[__Vi0] = VL_RAND_RESET_Q(52);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[__Vi0] = VL_RAND_RESET_Q(52);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         VL_RAND_RESET_W(86, opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[__Vi0]);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i[__Vi0] = VL_RAND_RESET_Q(52);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         VL_RAND_RESET_W(86, opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_11__tl_d_o[__Vi0]);
     }
     for (int __Vi0=0; __Vi0<2; ++__Vi0) {
@@ -7517,8 +7287,6 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     __Vtable8_opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_jtag_tap__DOT__tap_state_d[29] = 0xeU;
     __Vtable8_opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_jtag_tap__DOT__tap_state_d[30] = 0xfU;
     __Vtable8_opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_jtag_tap__DOT__tap_state_d[31] = 2U;
-    __Vdly__opentitan_soc_top__DOT__gpio_32__DOT__cio_gpio_q = VL_RAND_RESET_I(32);
-    __Vdly__opentitan_soc_top__DOT__gpio_32__DOT__cio_gpio_en_q = VL_RAND_RESET_I(32);
     __Vdly__opentitan_soc_top__DOT__iccm__DOT__inst_mem__DOT__u_reqfifo__DOT__gen_normal_fifo__DOT__fifo_wptr = VL_RAND_RESET_I(2);
     __Vdly__opentitan_soc_top__DOT__iccm__DOT__inst_mem__DOT__u_sramreqfifo__DOT__gen_normal_fifo__DOT__fifo_wptr = VL_RAND_RESET_I(2);
     __Vdly__opentitan_soc_top__DOT__iccm__DOT__inst_mem__DOT__u_rspfifo__DOT__gen_normal_fifo__DOT__fifo_wptr = VL_RAND_RESET_I(2);
@@ -7575,7 +7343,7 @@ void Vopentitan_soc_top::_ctor_var_reset() {
     VL_RAND_RESET_W(378, __Vchglast__TOP__opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__id_tree);
     VL_RAND_RESET_W(189, __Vchglast__TOP__opentitan_soc_top__DOT__intr_controller__DOT__gen_target__BRA__0__KET____DOT__u_target__DOT__max_tree);
     __Vchglast__TOP__opentitan_soc_top__DOT__debug_module__DOT____Vcellinp__dap__trst_ni = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<125; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<123; ++__Vi0) {
         __Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

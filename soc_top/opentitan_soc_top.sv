@@ -251,23 +251,24 @@ module opentitan_soc_top #(
 
     .msip_o     ()
   );
-tlul_adapter_tempsensor u_tempsense( 
-  .clk_i				   (clk_i),
-  .rst_ni          (rst_ni),
-  
-  .tl_i					   (xbar_to_tsen1),
-  .tl_o            (tsen1_to_xbar),
-  
-  .re_o   			   (re_o),
-  .we_o					   (we_o),
-  .addr_o				   (addr_o),
-  .wdata_o  		   (wdata_o),
-  .be_o    			   (be_o),
-  .rdata_i			   (rdata_i),
-  .error_i      	 (error_i),
-  .CLK_REF				 (CLK_REF),
-  .CLK_LC				   (CLK_LC)
-);
+
+  tlul_adapter_tempsensor u_tempsense( 
+    .clk_i				   (clk_i),
+    .rst_ni          (rst_ni),
+    
+    .tl_i					   (xbar_to_tsen1),
+    .tl_o            (tsen1_to_xbar),
+    
+    .re_o   			   (re_o),
+    .we_o					   (we_o),
+    .addr_o				   (addr_o),
+    .wdata_o  		   (wdata_o),
+    .be_o    			   (be_o),
+    .rdata_i			   (rdata_i),
+    .error_i      	 (error_i),
+    .CLK_REF				 (CLK_REF),
+    .CLK_LC				   (CLK_LC)
+  );
 
   // jtag interfaces (COPIED FROM AZADI) 
 

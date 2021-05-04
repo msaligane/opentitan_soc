@@ -535,44 +535,6 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                       this->__PVT__tl_u_o
                                       [0xaU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
-    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [0U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [1U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [2U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [3U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [4U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [5U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [6U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [7U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [8U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [9U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xaU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xbU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
     this->__PVT__tl_u_o[0xbU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
                                       [0xbU][2U]) | 
                                      (0x200000U & (
@@ -615,6 +577,136 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                       this->__PVT__tl_u_o
                                       [0xbU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xcU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [0U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [1U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [2U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [3U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [4U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [5U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [6U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [7U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [8U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [9U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xaU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xbU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xdU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
 }
 
 void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__15(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
@@ -630,7 +722,13 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                                                    ((IData)(this->__PVT__err_resp__DOT__err_req_pending) 
                                                                     & (~ 
                                                                        this->__PVT__tl_u_o
-                                                                       [0xbU][0U]))))))));
+                                                                       [0xdU][0U]))))))));
+}
+
+void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__16(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__16\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U] 
         = ((1U & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U]) 
            | (0xfffffffeU & this->__PVT__tl_u_o[0U][0U]));
@@ -840,13 +938,57 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
     this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U] 
         = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U]) 
            | (1U & this->__PVT__tl_u_o[0xaU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((1U & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (0xfffffffeU & this->__PVT__tl_u_o[0xbU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[1U] 
+        = ((1U & this->__PVT__tl_u_o[0xbU][1U]) | (0xfffffffeU 
+                                                   & this->__PVT__tl_u_o
+                                                   [0xbU][1U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
+                            [0xbU][2U]) | (0x1ffffeU 
+                                           & this->__PVT__tl_u_o
+                                           [0xbU][2U]))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x200000U & this->__PVT__tl_u_o[0xbU][2U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (1U & this->__PVT__tl_u_o[0xbU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((1U & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (0xfffffffeU & this->__PVT__tl_u_o[0xcU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[1U] 
+        = ((1U & this->__PVT__tl_u_o[0xcU][1U]) | (0xfffffffeU 
+                                                   & this->__PVT__tl_u_o
+                                                   [0xcU][1U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
+                            [0xcU][2U]) | (0x1ffffeU 
+                                           & this->__PVT__tl_u_o
+                                           [0xcU][2U]))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x200000U & this->__PVT__tl_u_o[0xcU][2U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (1U & this->__PVT__tl_u_o[0xcU][0U]));
 }
 
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__18(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__18\n"); );
+void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__19(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__19\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__err_resp__tl_h_o;
+    this->__PVT__tl_u_i[0xdU] = this->__Vcellout__err_resp__tl_h_o;
+}
+
+void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__20(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__20\n"); );
+    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     this->tl_d_o[0U][0U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U];
     this->tl_d_o[0U][1U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[1U];
     this->tl_d_o[0U][2U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U];
@@ -880,10 +1022,16 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
     this->tl_d_o[0xaU][0U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U];
     this->tl_d_o[0xaU][1U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[1U];
     this->tl_d_o[0xaU][2U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U];
+    this->tl_d_o[0xbU][0U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U];
+    this->tl_d_o[0xbU][1U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[1U];
+    this->tl_d_o[0xbU][2U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U];
+    this->tl_d_o[0xcU][0U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U];
+    this->tl_d_o[0xcU][1U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[1U];
+    this->tl_d_o[0xcU][2U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U];
 }
 
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__21(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__21\n"); );
+void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__22(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__22\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o 
@@ -1250,6 +1398,74 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                              [0xaU] 
                                              >> 0x33U))))) 
               << 0x33U));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xbU])))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xbU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xbU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xbU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xbU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xbU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xcU])))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xcU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xcU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xcU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xcU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xcU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
 }
 
 void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__23(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
@@ -1267,13 +1483,15 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
     this->__PVT__tl_u_i[8U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[9U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[0xaU] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_u_i[0xcU] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o;
 }
 
 void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__25(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__25\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xdU];
     if ((0U == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0U];
     }
@@ -1307,8 +1525,14 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
     if ((0xaU == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xaU];
     }
+    if ((0xbU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    }
+    if ((0xcU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xcU];
+    }
     this->__PVT__hfifo_reqready = (1U & (IData)(this->__PVT__tl_u_i
-                                                [0xbU]));
+                                                [0xdU]));
     if ((0U == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
         this->__PVT__hfifo_reqready = (1U & (IData)(
                                                     this->__PVT__tl_u_i
@@ -1363,6 +1587,16 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
         this->__PVT__hfifo_reqready = (1U & (IData)(
                                                     this->__PVT__tl_u_i
                                                     [0xaU]));
+    }
+    if ((0xbU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xbU]));
+    }
+    if ((0xcU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xcU]));
     }
     if (this->__PVT__hold_all_requests) {
         this->__PVT__hfifo_reqready = 0U;
@@ -1873,44 +2107,6 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                       this->__PVT__tl_u_o
                                       [0xaU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
-    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [0U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [1U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [2U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [3U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [4U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [5U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [6U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [7U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [8U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [9U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xaU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xbU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
     this->__PVT__tl_u_o[0xbU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
                                       [0xbU][2U]) | 
                                      (0x200000U & (
@@ -1953,6 +2149,136 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                       this->__PVT__tl_u_o
                                       [0xbU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xcU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [0U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [1U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [2U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [3U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [4U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [5U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [6U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [7U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [8U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [9U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xaU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xbU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xdU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
     this->__Vcellout__err_resp__tl_h_o = ((0xffffffffffffeULL 
                                            & this->__Vcellout__err_resp__tl_h_o) 
                                           | (IData)((IData)(
@@ -1962,307 +2288,7 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DO
                                                                    ((IData)(this->__PVT__err_resp__DOT__err_req_pending) 
                                                                     & (~ 
                                                                        this->__PVT__tl_u_o
-                                                                       [0xbU][0U]))))))));
-}
-
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__16(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__16\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[0U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[0U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [0U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [0U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [0U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[0U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[0U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[1U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[1U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [1U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [1U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [1U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[1U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[1U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[2U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[2U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [2U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [2U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [2U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[2U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[2U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[3U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[3U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [3U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [3U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [3U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[3U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[3U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[4U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[4U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [4U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [4U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [4U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[4U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[4U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[5U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[5U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [5U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [5U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [5U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[5U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[5U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[6U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[6U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [6U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [6U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [6U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[6U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[6U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[7U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[7U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [7U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [7U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [7U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[7U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[7U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[8U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[8U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [8U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [8U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [8U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[8U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[8U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[9U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[9U][1U]) | (0xfffffffeU 
-                                                 & this->__PVT__tl_u_o
-                                                 [9U][1U]));
-    this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [9U][2U]) | (0x1ffffeU 
-                                         & this->__PVT__tl_u_o
-                                         [9U][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[9U][2U]));
-    this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[9U][0U]));
-    this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((1U & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (0xfffffffeU & this->__PVT__tl_u_o[0xaU][0U]));
-    this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[1U] 
-        = ((1U & this->__PVT__tl_u_o[0xaU][1U]) | (0xfffffffeU 
-                                                   & this->__PVT__tl_u_o
-                                                   [0xaU][1U]));
-    this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
-                            [0xaU][2U]) | (0x1ffffeU 
-                                           & this->__PVT__tl_u_o
-                                           [0xaU][2U]))));
-    this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U] 
-        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U]) 
-           | (0x200000U & this->__PVT__tl_u_o[0xaU][2U]));
-    this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U] 
-        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U]) 
-           | (1U & this->__PVT__tl_u_o[0xaU][0U]));
-}
-
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__17(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__17\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__err_resp__tl_h_o;
-}
-
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__19(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__19\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    this->tl_d_o[0U][0U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[0U][1U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[0U][2U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[1U][0U] = this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[1U][1U] = this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[1U][2U] = this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[2U][0U] = this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[2U][1U] = this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[2U][2U] = this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[3U][0U] = this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[3U][1U] = this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[3U][2U] = this->__Vcellout__gen_dfifo__BRA__3__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[4U][0U] = this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[4U][1U] = this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[4U][2U] = this->__Vcellout__gen_dfifo__BRA__4__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[5U][0U] = this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[5U][1U] = this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[5U][2U] = this->__Vcellout__gen_dfifo__BRA__5__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[6U][0U] = this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[6U][1U] = this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[6U][2U] = this->__Vcellout__gen_dfifo__BRA__6__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[7U][0U] = this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[7U][1U] = this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[7U][2U] = this->__Vcellout__gen_dfifo__BRA__7__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[8U][0U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[8U][1U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[8U][2U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[9U][0U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[9U][1U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[9U][2U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_d_o[2U];
-    this->tl_d_o[0xaU][0U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U];
-    this->tl_d_o[0xaU][1U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[1U];
-    this->tl_d_o[0xaU][2U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U];
-}
-
-void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__29(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__29\n"); );
-    Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    this->__PVT__accept_t_req = (1U & ((this->__PVT__tl_t_o[2U] 
-                                        >> 0x15U) & (IData)(this->__PVT__tl_t_i)));
-    this->__PVT__accept_t_rsp = (1U & ((IData)((this->__PVT__tl_t_i 
-                                                >> 0x33U)) 
-                                       & this->__PVT__tl_t_o[0U]));
-    this->tl_h_o = ((0xffffffffffffeULL & this->tl_h_o) 
-                    | (IData)((IData)((1U & (IData)(this->__PVT__tl_t_i)))));
-    this->tl_h_o = ((0x8000000000001ULL & this->tl_h_o) 
-                    | (((QData)((IData)((0x1ffffU & (IData)(
-                                                            (this->__PVT__tl_t_i 
-                                                             >> 0x22U))))) 
-                        << 0x22U) | (((QData)((IData)(
-                                                      ((1U 
-                                                        == 
-                                                        (7U 
-                                                         & (IData)(
-                                                                   (this->__PVT__tl_t_i 
-                                                                    >> 0x30U))))
-                                                        ? (IData)(
-                                                                  (this->__PVT__tl_t_i 
-                                                                   >> 2U))
-                                                        : 0U))) 
-                                      << 2U) | ((QData)((IData)(
-                                                                (1U 
-                                                                 & (IData)(
-                                                                           (this->__PVT__tl_t_i 
-                                                                            >> 1U))))) 
-                                                << 1U))));
-    this->tl_h_o = ((0x7ffffffffffffULL & this->tl_h_o) 
-                    | ((QData)((IData)((1U & (IData)(
-                                                     (this->__PVT__tl_t_i 
-                                                      >> 0x33U))))) 
-                       << 0x33U));
+                                                                       [0xdU][0U]))))))));
 }
 
 void Vopentitan_soc_top_tlul_socket_1n__pi2::_ctor_var_reset() {
@@ -2272,10 +2298,10 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_ctor_var_reset() {
     rst_ni = VL_RAND_RESET_I(1);
     VL_RAND_RESET_W(86, tl_h_i);
     tl_h_o = VL_RAND_RESET_Q(52);
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         VL_RAND_RESET_W(86, tl_d_o[__Vi0]);
     }
-    for (int __Vi0=0; __Vi0<11; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<13; ++__Vi0) {
         tl_d_i[__Vi0] = VL_RAND_RESET_Q(52);
     }
     dev_select_i = VL_RAND_RESET_I(4);
@@ -2286,10 +2312,10 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_ctor_var_reset() {
     __PVT__hold_all_requests = VL_RAND_RESET_I(1);
     __PVT__accept_t_req = VL_RAND_RESET_I(1);
     __PVT__accept_t_rsp = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<12; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<14; ++__Vi0) {
         VL_RAND_RESET_W(86, __PVT__tl_u_o[__Vi0]);
     }
-    for (int __Vi0=0; __Vi0<12; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<14; ++__Vi0) {
         __PVT__tl_u_i[__Vi0] = VL_RAND_RESET_Q(52);
     }
     __PVT__tl_t_p = VL_RAND_RESET_Q(52);
@@ -2317,6 +2343,10 @@ void Vopentitan_soc_top_tlul_socket_1n__pi2::_ctor_var_reset() {
     __Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_h_o = VL_RAND_RESET_Q(52);
     VL_RAND_RESET_W(86, __Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o);
     __Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_h_o = VL_RAND_RESET_Q(52);
+    VL_RAND_RESET_W(86, __Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o);
+    __Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o = VL_RAND_RESET_Q(52);
+    VL_RAND_RESET_W(86, __Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o);
+    __Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o = VL_RAND_RESET_Q(52);
     VL_RAND_RESET_W(88, fifo_h__DOT____Vcellinp__reqfifo__wdata_i);
     __PVT__err_resp__DOT__err_opcode = VL_RAND_RESET_I(3);
     __PVT__err_resp__DOT__err_source = VL_RAND_RESET_I(8);

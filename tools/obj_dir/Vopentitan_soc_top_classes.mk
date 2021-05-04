@@ -29,6 +29,7 @@ VM_CLASSES_FAST += \
 	Vopentitan_soc_top__1 \
 	Vopentitan_soc_top__2 \
 	Vopentitan_soc_top__3 \
+	Vopentitan_soc_top__4 \
 	Vopentitan_soc_top_tlul_socket_1n__pi2 \
 	Vopentitan_soc_top_tlul_socket_m1__pi3 \
 	Vopentitan_soc_top_gpio_reg_pkg \

@@ -21,74 +21,12 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_settle__TOP__opentit
                                              << 0x33U));
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__31(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__31\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__34(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__34\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    this->__Vdly__num_req_outstanding = this->__PVT__num_req_outstanding;
-    this->__Vdly__err_resp__DOT__err_rsp_pending = this->__PVT__err_resp__DOT__err_rsp_pending;
     if (vlTOPp->rst_ni) {
-        if (this->__PVT__accept_t_req) {
-            if ((1U & (~ (IData)(this->__PVT__accept_t_rsp)))) {
-                this->__Vdly__num_req_outstanding = 
-                    (0x1ffffU & ((IData)(1U) + this->__PVT__num_req_outstanding));
-            }
-        } else {
-            if (this->__PVT__accept_t_rsp) {
-                this->__Vdly__num_req_outstanding = 
-                    (0x1ffffU & (this->__PVT__num_req_outstanding 
-                                 - (IData)(1U)));
-            }
-        }
-    } else {
-        this->__Vdly__num_req_outstanding = 0U;
-    }
-    if (vlTOPp->rst_ni) {
-        if ((1U & ((this->__PVT__tl_u_o[0xbU][2U] >> 0x15U) 
-                   & (IData)(this->__Vcellout__err_resp__tl_h_o)))) {
-            this->__PVT__err_resp__DOT__err_opcode 
-                = (7U & (this->__PVT__tl_u_o[0xbU][2U] 
-                         >> 0x12U));
-        }
-    } else {
-        this->__PVT__err_resp__DOT__err_opcode = 4U;
-    }
-    if (vlTOPp->rst_ni) {
-        if ((1U & ((this->__PVT__tl_u_o[0xbU][2U] >> 0x15U) 
-                   & (IData)(this->__Vcellout__err_resp__tl_h_o)))) {
-            this->__PVT__err_resp__DOT__err_source 
-                = (0xffU & (this->__PVT__tl_u_o[0xbU][2U] 
-                            >> 5U));
-        }
-    } else {
-        this->__PVT__err_resp__DOT__err_source = 0U;
-    }
-    if (vlTOPp->rst_ni) {
-        if ((1U & ((this->__PVT__tl_u_o[0xbU][2U] >> 0x15U) 
-                   & (IData)(this->__Vcellout__err_resp__tl_h_o)))) {
-            this->__PVT__err_resp__DOT__err_size = 
-                (3U & (this->__PVT__tl_u_o[0xbU][2U] 
-                       >> 0xdU));
-        }
-    } else {
-        this->__PVT__err_resp__DOT__err_size = 0U;
-    }
-    this->__Vdly__err_resp__DOT__err_rsp_pending = 
-        ((IData)(vlTOPp->rst_ni) & (((IData)(this->__PVT__err_resp__DOT__err_req_pending) 
-                                     | (IData)(this->__PVT__err_resp__DOT__err_rsp_pending)) 
-                                    & (~ this->__PVT__tl_u_o
-                                       [0xbU][0U])));
-    if (vlTOPp->rst_ni) {
-        if (this->__PVT__accept_t_req) {
-            this->__PVT__dev_select_outstanding = (0xfU 
-                                                   & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]);
-        }
-    } else {
-        this->__PVT__dev_select_outstanding = 0U;
-    }
-    this->__PVT__num_req_outstanding = this->__Vdly__num_req_outstanding;
-    if (vlTOPp->rst_ni) {
-        if ((1U & ((this->__PVT__tl_u_o[0xbU][2U] >> 0x15U) 
+        if ((1U & ((this->__PVT__tl_u_o[0xdU][2U] >> 0x15U) 
                    & (IData)(this->__Vcellout__err_resp__tl_h_o)))) {
             this->__PVT__err_resp__DOT__err_req_pending = 1U;
         } else {
@@ -101,60 +39,60 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__openti
     }
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__32(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__32\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__35(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__35\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__PVT__tl_t_o[2U] = ((0x1fffffU & this->__PVT__tl_t_o[2U]) 
                                | (0x200000U & vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U]));
     this->__PVT__tl_t_o[0U] = ((0xfffffffeU & this->__PVT__tl_t_o[0U]) 
                                | (1U & vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[0U]));
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0xbU;
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0xcU;
     if ((0x10000000U == (0xffff0000U & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                          << 0x1bU) 
                                         | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                            >> 5U))))) {
-        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0U;
+        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 1U;
     } else {
         if ((0x40080000U == (0xffff0000U & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                              << 0x1bU) 
                                             | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                >> 5U))))) {
-            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 1U;
+            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 2U;
         } else {
             if ((0x40090000U == (0xffff0000U & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                                  << 0x1bU) 
                                                 | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                    >> 5U))))) {
-                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 2U;
+                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 3U;
             } else {
                 if ((0x400a0000U == (0xffff0000U & 
                                      ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                        << 0x1bU) | 
                                       (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                        >> 5U))))) {
-                    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 3U;
+                    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 4U;
                 } else {
                     if ((0x400b0000U == (0xffff0000U 
                                          & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                              << 0x1bU) 
                                             | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                >> 5U))))) {
-                        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 4U;
+                        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 5U;
                     } else {
                         if ((0x400c0000U == (0xffff0000U 
                                              & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                                  << 0x1bU) 
                                                 | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                    >> 5U))))) {
-                            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 5U;
+                            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 6U;
                         } else {
                             if ((0x400d0000U == (0xffff0000U 
                                                  & ((vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[2U] 
                                                      << 0x1bU) 
                                                     | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                        >> 5U))))) {
-                                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 6U;
+                                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 7U;
                             } else {
                                 if ((0x400e0000U == 
                                      (0xffff0000U & 
@@ -162,7 +100,7 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                         << 0x1bU) | 
                                        (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                         >> 5U))))) {
-                                    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 7U;
+                                    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 8U;
                                 } else {
                                     if ((0x400f0000U 
                                          == (0xffff0000U 
@@ -170,7 +108,7 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                  << 0x1bU) 
                                                 | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                    >> 5U))))) {
-                                        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 8U;
+                                        vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 9U;
                                     } else {
                                         if ((0x40050000U 
                                              == (0xffff0000U 
@@ -178,7 +116,7 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                      << 0x1bU) 
                                                     | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                        >> 5U))))) {
-                                            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 9U;
+                                            vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0xaU;
                                         } else {
                                             if ((0x10040000U 
                                                  == 
@@ -187,7 +125,7 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                       << 0x1bU) 
                                                      | (vlTOPp->opentitan_soc_top__DOT__lsu_to_xbar[1U] 
                                                         >> 5U))))) {
-                                                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0xaU;
+                                                vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__dev_sel_s1n_10 = 0xbU;
                                             }
                                         }
                                     }
@@ -649,44 +587,6 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                       this->__PVT__tl_u_o
                                       [0xaU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
-    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [0U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [1U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [2U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [3U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [4U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [5U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [6U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [7U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [8U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
-                                    [9U][0U]) | (1U 
-                                                 & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xaU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
-    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
-                                      this->__PVT__tl_u_o
-                                      [0xbU][0U]) | 
-                                     (1U & this->__PVT__tl_t_o[0U]));
     this->__PVT__tl_u_o[0xbU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
                                       [0xbU][2U]) | 
                                      (0x200000U & (
@@ -728,6 +628,136 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     this->__PVT__tl_u_o[0xbU][1U] = ((0xfffffffeU & 
                                       this->__PVT__tl_u_o
                                       [0xbU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xcU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xcU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][1U]) | 
+                                     (1U & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [0U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[1U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [1U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[2U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [2U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[3U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [3U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[4U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [4U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[5U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [5U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[6U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [6U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[7U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [7U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[8U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [8U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[9U][0U] = ((0xfffffffeU & this->__PVT__tl_u_o
+                                    [9U][0U]) | (1U 
+                                                 & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xaU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xaU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xbU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xbU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xcU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xcU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (1U & this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x1fffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x200000U & (
+                                                   (this->__PVT__tl_t_o[2U] 
+                                                    & ((0xdU 
+                                                        == 
+                                                        (0xfU 
+                                                         & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U])) 
+                                                       << 0x15U)) 
+                                                   & ((~ (IData)(this->__PVT__hold_all_requests)) 
+                                                      << 0x15U))));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x23ffffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1c0000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3c7fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x38000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3f9fffU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x6000U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fe01fU & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fe0U & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0x1fU & this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0xffffffe0U & 
+                                      this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][2U] = ((0x3fffe0U & this->__PVT__tl_u_o
+                                      [0xdU][2U]) | 
+                                     (0x1fU & this->__PVT__tl_t_o[2U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xffffffe1U & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
+                                     (0x1eU & this->__PVT__tl_t_o[1U]));
+    this->__PVT__tl_u_o[0xdU][0U] = ((1U & this->__PVT__tl_u_o
+                                      [0xdU][0U]) | 
+                                     (0xfffffffeU & 
+                                      this->__PVT__tl_t_o[0U]));
+    this->__PVT__tl_u_o[0xdU][1U] = ((0xfffffffeU & 
+                                      this->__PVT__tl_u_o
+                                      [0xdU][1U]) | 
                                      (1U & this->__PVT__tl_t_o[1U]));
     this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U] 
         = ((1U & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U]) 
@@ -938,6 +968,44 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U] 
         = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U]) 
            | (1U & this->__PVT__tl_u_o[0xaU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((1U & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (0xfffffffeU & this->__PVT__tl_u_o[0xbU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[1U] 
+        = ((1U & this->__PVT__tl_u_o[0xbU][1U]) | (0xfffffffeU 
+                                                   & this->__PVT__tl_u_o
+                                                   [0xbU][1U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
+                            [0xbU][2U]) | (0x1ffffeU 
+                                           & this->__PVT__tl_u_o
+                                           [0xbU][2U]))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x200000U & this->__PVT__tl_u_o[0xbU][2U]));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (1U & this->__PVT__tl_u_o[0xbU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((1U & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (0xfffffffeU & this->__PVT__tl_u_o[0xcU][0U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[1U] 
+        = ((1U & this->__PVT__tl_u_o[0xcU][1U]) | (0xfffffffeU 
+                                                   & this->__PVT__tl_u_o
+                                                   [0xcU][1U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x200000U & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x3fffffU & ((1U & this->__PVT__tl_u_o
+                            [0xcU][2U]) | (0x1ffffeU 
+                                           & this->__PVT__tl_u_o
+                                           [0xcU][2U]))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U] 
+        = ((0x1fffffU & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U]) 
+           | (0x200000U & this->__PVT__tl_u_o[0xcU][2U]));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U] 
+        = ((0xfffffffeU & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U]) 
+           | (1U & this->__PVT__tl_u_o[0xcU][0U]));
     this->tl_d_o[0U][0U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[0U];
     this->tl_d_o[0U][1U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[1U];
     this->tl_d_o[0U][2U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_d_o[2U];
@@ -971,6 +1039,12 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     this->tl_d_o[0xaU][0U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[0U];
     this->tl_d_o[0xaU][1U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[1U];
     this->tl_d_o[0xaU][2U] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_d_o[2U];
+    this->tl_d_o[0xbU][0U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[0U];
+    this->tl_d_o[0xbU][1U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[1U];
+    this->tl_d_o[0xbU][2U] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_d_o[2U];
+    this->tl_d_o[0xcU][0U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[0U];
+    this->tl_d_o[0xcU][1U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[1U];
+    this->tl_d_o[0xcU][2U] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_d_o[2U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0U][0U] 
         = this->tl_d_o[0U][0U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0U][1U] 
@@ -1037,6 +1111,18 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
         = this->tl_d_o[0xaU][1U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xaU][2U] 
         = this->tl_d_o[0xaU][2U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xbU][0U] 
+        = this->tl_d_o[0xbU][0U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xbU][1U] 
+        = this->tl_d_o[0xbU][1U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xbU][2U] 
+        = this->tl_d_o[0xbU][2U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xcU][0U] 
+        = this->tl_d_o[0xcU][0U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xcU][1U] 
+        = this->tl_d_o[0xcU][1U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o[0xcU][2U] 
+        = this->tl_d_o[0xcU][2U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0U][0U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
         [0U][0U];
@@ -1136,10 +1222,28 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xaU][2U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
         [0xaU][2U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xbU][0U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xbU][0U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xbU][1U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xbU][1U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xbU][2U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xbU][2U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xcU][0U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xcU][0U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xcU][1U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xcU][1U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_h2d[0xcU][2U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__u_s1n_10__tl_d_o
+        [0xcU][2U];
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__34(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__34\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__39(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__39\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__Vcellout__err_resp__tl_h_o = ((0xff803ffffffffULL 
@@ -1163,8 +1267,8 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__openti
     this->__PVT__err_resp__DOT__err_rsp_pending = this->__Vdly__err_resp__DOT__err_rsp_pending;
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__36(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__36\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__41(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_10__41\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__Vcellout__err_resp__tl_h_o = ((0xffffffffffffeULL 
@@ -1176,272 +1280,8 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                                    ((IData)(this->__PVT__err_resp__DOT__err_req_pending) 
                                                                     & (~ 
                                                                        this->__PVT__tl_u_o
-                                                                       [0xbU][0U]))))))));
-    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__err_resp__tl_h_o;
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__idx_o = 0U;
-    if ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__gen_normal_case__DOT__winner))) {
-        vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__idx_o = 0U;
-    }
-    if ((2U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__gen_normal_case__DOT__winner))) {
-        vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__idx_o = 1U;
-    }
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hgrant 
-        = ((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o))
-            ? (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__gen_arb_ppc__DOT__u_reqarb__DOT__gen_normal_case__DOT__winner)
-            : 0U);
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i[0U] 
-        = (((QData)((IData)((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hfifo_rspvalid)))) 
-            << 0x33U) | (((QData)((IData)((7U & (IData)(
-                                                        (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                         >> 0x30U))))) 
-                          << 0x30U) | (((QData)((IData)(
-                                                        (7U 
-                                                         & (IData)(
-                                                                   (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                    >> 0x2dU))))) 
-                                        << 0x2dU) | 
-                                       (((QData)((IData)(
-                                                         (3U 
-                                                          & (IData)(
-                                                                    (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                     >> 0x2bU))))) 
-                                         << 0x2bU) 
-                                        | (((QData)((IData)(
-                                                            (0x7fU 
-                                                             & (IData)(
-                                                                       (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                        >> 0x24U))))) 
-                                            << 0x23U) 
-                                           | (((QData)((IData)(
-                                                               (1U 
-                                                                & (IData)(
-                                                                          (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                           >> 0x22U))))) 
-                                               << 0x22U) 
-                                              | (((QData)((IData)(
-                                                                  (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                   >> 2U))) 
-                                                  << 2U) 
-                                                 | (QData)((IData)(
-                                                                   ((2U 
-                                                                     & ((IData)(
-                                                                                (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                                >> 1U)) 
-                                                                        << 1U)) 
-                                                                    | (1U 
-                                                                       & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hgrant))))))))))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i[1U] 
-        = (((QData)((IData)((1U & ((IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hfifo_rspvalid) 
-                                   >> 1U)))) << 0x33U) 
-           | (((QData)((IData)((7U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                              >> 0x30U))))) 
-               << 0x30U) | (((QData)((IData)((7U & (IData)(
-                                                           (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                            >> 0x2dU))))) 
-                             << 0x2dU) | (((QData)((IData)(
-                                                           (3U 
-                                                            & (IData)(
-                                                                      (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                       >> 0x2bU))))) 
-                                           << 0x2bU) 
-                                          | (((QData)((IData)(
-                                                              (0x7fU 
-                                                               & (IData)(
-                                                                         (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                          >> 0x24U))))) 
-                                              << 0x23U) 
-                                             | (((QData)((IData)(
-                                                                 (1U 
-                                                                  & (IData)(
-                                                                            (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                             >> 0x22U))))) 
-                                                 << 0x22U) 
-                                                | (((QData)((IData)(
-                                                                    (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                     >> 2U))) 
-                                                    << 2U) 
-                                                   | (QData)((IData)(
-                                                                     ((2U 
-                                                                       & ((IData)(
-                                                                                (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__drsp_fifo_o 
-                                                                                >> 1U)) 
-                                                                          << 1U)) 
-                                                                      | (1U 
-                                                                         & ((IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hgrant) 
-                                                                            >> 1U))))))))))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0xffffffffffffeULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o) 
-           | (IData)((IData)((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                           [0U])))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0x8000000000001ULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o) 
-           | (((QData)((IData)((0x1ffffU & (IData)(
-                                                   (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                    [0U] 
-                                                    >> 0x22U))))) 
-               << 0x22U) | (((QData)((IData)(((1U == 
-                                               (7U 
-                                                & (IData)(
-                                                          (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                           [0U] 
-                                                           >> 0x30U))))
-                                               ? (IData)(
-                                                         (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                          [0U] 
-                                                          >> 2U))
-                                               : 0U))) 
-                             << 2U) | ((QData)((IData)(
-                                                       (1U 
-                                                        & (IData)(
-                                                                  (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                                   [0U] 
-                                                                   >> 1U))))) 
-                                       << 1U))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0x7ffffffffffffULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o) 
-           | ((QData)((IData)((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                             [0U] >> 0x33U))))) 
-              << 0x33U));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0xffffffffffffeULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o) 
-           | (IData)((IData)((1U & (IData)(vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                           [1U])))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0x8000000000001ULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o) 
-           | (((QData)((IData)((0x1ffffU & (IData)(
-                                                   (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                    [1U] 
-                                                    >> 0x22U))))) 
-               << 0x22U) | (((QData)((IData)(((1U == 
-                                               (7U 
-                                                & (IData)(
-                                                          (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                           [1U] 
-                                                           >> 0x30U))))
-                                               ? (IData)(
-                                                         (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                          [1U] 
-                                                          >> 2U))
-                                               : 0U))) 
-                             << 2U) | ((QData)((IData)(
-                                                       (1U 
-                                                        & (IData)(
-                                                                  (vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                                                   [1U] 
-                                                                   >> 1U))))) 
-                                       << 1U))));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o 
-        = ((0x7ffffffffffffULL & vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o) 
-           | ((QData)((IData)((1U & (IData)((vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__PVT__hrsp_fifo_i
-                                             [1U] >> 0x33U))))) 
-              << 0x33U));
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.tl_h_o[0U] 
-        = vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__0__KET____DOT__u_hostfifo__tl_h_o;
-    vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.tl_h_o[1U] 
-        = vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.__Vcellout__gen_host_fifo__BRA__1__KET____DOT__u_hostfifo__tl_h_o;
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__PLIC__tl_h_o[0U] 
-        = vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.tl_h_o
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__PLIC__tl_h_o[1U] 
-        = vlSymsp->TOP__opentitan_soc_top__DOT__periph_switch__DOT__PLIC.tl_h_o
-        [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_11[0U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__PLIC__tl_h_o
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_11[1U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellout__PLIC__tl_h_o
-        [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[0U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_2
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[1U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_3
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[2U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_4
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[3U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_5
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[4U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_6
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[4U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_6
-        [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[5U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_7
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[6U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_8
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[7U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_9
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[8U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_10
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[9U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_11
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h[0xaU] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_12
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[0U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [0U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[1U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[2U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [2U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[3U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [3U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[4U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [4U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[5U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [5U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[6U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [6U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[7U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [7U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[8U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [8U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[9U] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [9U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i[0xaU] 
-        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_10_ds_d2h
-        [0xaU];
-    this->tl_d_i[0U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [0U];
-    this->tl_d_i[1U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [1U];
-    this->tl_d_i[2U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [2U];
-    this->tl_d_i[3U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [3U];
-    this->tl_d_i[4U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [4U];
-    this->tl_d_i[5U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [5U];
-    this->tl_d_i[6U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [6U];
-    this->tl_d_i[7U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [7U];
-    this->tl_d_i[8U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [8U];
-    this->tl_d_i[9U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [9U];
-    this->tl_d_i[0xaU] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_10__tl_d_i
-        [0xaU];
+                                                                       [0xdU][0U]))))))));
+    this->__PVT__tl_u_i[0xdU] = this->__Vcellout__err_resp__tl_h_o;
     this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o 
         = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o) 
            | (IData)((IData)((1U & (IData)(this->tl_d_i
@@ -1806,6 +1646,74 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                              [0xaU] 
                                              >> 0x33U))))) 
               << 0x33U));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xbU])))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xbU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xbU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xbU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xbU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xbU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xcU])))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xcU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xcU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xcU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xcU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xcU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
     this->__PVT__tl_u_i[0U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[1U] = this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[2U] = this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_h_o;
@@ -1817,7 +1725,9 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     this->__PVT__tl_u_i[8U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[9U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[0xaU] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_h_o;
-    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_u_i[0xcU] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xdU];
     if ((0U == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0U];
     }
@@ -1851,8 +1761,14 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     if ((0xaU == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xaU];
     }
+    if ((0xbU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    }
+    if ((0xcU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xcU];
+    }
     this->__PVT__hfifo_reqready = (1U & (IData)(this->__PVT__tl_u_i
-                                                [0xbU]));
+                                                [0xdU]));
     if ((0U == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
         this->__PVT__hfifo_reqready = (1U & (IData)(
                                                     this->__PVT__tl_u_i
@@ -1907,6 +1823,16 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
         this->__PVT__hfifo_reqready = (1U & (IData)(
                                                     this->__PVT__tl_u_i
                                                     [0xaU]));
+    }
+    if ((0xbU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xbU]));
+    }
+    if ((0xcU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xcU]));
     }
     if (this->__PVT__hold_all_requests) {
         this->__PVT__hfifo_reqready = 0U;
@@ -2233,108 +2159,10 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
         = (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__cs_registers_i__DOT__csr_wr) 
             & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op_en)) 
            & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__illegal_csr_insn_id)));
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__csr_pipe_flush = 0U;
-    if (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op_en) 
-         & ((1U == (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op)) 
-            | (2U == (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op))))) {
-        if (((0x300U == (0xfffU & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                   >> 0x14U))) | (0x304U 
-                                                  == 
-                                                  (0xfffU 
-                                                   & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                                      >> 0x14U))))) {
-            vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__csr_pipe_flush = 1U;
-        }
-    } else {
-        if (((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op_en) 
-             & (0U != (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__csr_op)))) {
-            if (((((0x7b0U == (0xfffU & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                         >> 0x14U))) 
-                   | (0x7b1U == (0xfffU & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                           >> 0x14U)))) 
-                  | (0x7b2U == (0xfffU & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                          >> 0x14U)))) 
-                 | (0x7b3U == (0xfffU & (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__instr_rdata_id 
-                                         >> 0x14U))))) {
-                vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__csr_pipe_flush = 1U;
-            }
-        }
-    }
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__csr_pipe_flush 
-        = ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__csr_pipe_flush) 
-           & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__if_stage_i__DOT__instr_valid_id_q));
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__special_req 
-        = (((((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__mret_insn) 
-              | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__dret_insn)) 
-             | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__exc_req_d)) 
-            | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__lsu_store_err) 
-               | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__lsu_load_err))) 
-           | ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__wfi_insn) 
-              | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__csr_pipe_flush)));
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 0U;
-    if ((1U & (~ ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs) 
-                  >> 3U)))) {
-        if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-            if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-                if ((1U & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs)))) {
-                    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                }
-            } else {
-                if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-                    if ((((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__enter_debug_mode_prio_d) 
-                          | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__handle_irq)) 
-                         & ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__stall) 
-                            | (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__id_wb_pending)))) {
-                        vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                    }
-                    if ((1U & (((~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__stall)) 
-                                & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__special_req))) 
-                               & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__id_wb_pending))))) {
-                        if (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__enter_debug_mode_prio_d) {
-                            vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                        } else {
-                            if (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__handle_irq) {
-                                vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                            }
-                        }
-                    }
-                } else {
-                    if (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__handle_irq) {
-                        vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                    }
-                    if (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__enter_debug_mode_prio_d) {
-                        vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-                    }
-                }
-            }
-        } else {
-            if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-                vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if = 1U;
-            }
-        }
-    }
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__retain_id = 0U;
-    if ((1U & (~ ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs) 
-                  >> 3U)))) {
-        if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-            if ((1U & (~ ((IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs) 
-                          >> 1U)))) {
-                if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__ctrl_fsm_cs))) {
-                    if (vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__special_req) {
-                        vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__retain_id = 1U;
-                    }
-                }
-            }
-        }
-    }
-    vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_in_ready 
-        = (1U & (((~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__stall)) 
-                  & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__halt_if))) 
-                 & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__u_top__DOT__u_core__DOT__u_ibex_core__DOT__id_stage_i__DOT__controller_i__DOT__retain_id))));
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__37(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__37\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__36(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__36\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__Vcellout__err_resp__tl_h_o = ((0xff803ffffffffULL 
@@ -2364,8 +2192,8 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_sequent__TOP__openti
                                              << 0x33U));
 }
 
-VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__38(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__38\n"); );
+VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__37(Vopentitan_soc_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+          Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentitan_soc_top__DOT__periph_switch__DOT__u_s1n_11__37\n"); );
     Vopentitan_soc_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     this->__Vcellout__err_resp__tl_h_o = ((0xffffffffffffeULL 
@@ -2377,30 +2205,30 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                                    ((IData)(this->__PVT__err_resp__DOT__err_req_pending) 
                                                                     & (~ 
                                                                        this->__PVT__tl_u_o
-                                                                       [0xbU][0U]))))))));
-    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__err_resp__tl_h_o;
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[0U] 
+                                                                       [0xdU][0U]))))))));
+    this->__PVT__tl_u_i[0xdU] = this->__Vcellout__err_resp__tl_h_o;
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[1U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_2
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[1U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[2U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_3
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[2U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[3U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_4
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[3U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[4U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_5
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[5U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[6U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_7
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[6U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[8U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_8
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[7U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[9U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_9
         [1U];
-    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[8U] 
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[0xaU] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_10
         [1U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[9U] 
@@ -2408,6 +2236,9 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
         [1U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[0xaU] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_12
+        [1U];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h[0U] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__sm1_s1n_1
         [1U];
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i[0U] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h
@@ -2442,6 +2273,12 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i[0xaU] 
         = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h
         [0xaU];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i[0xbU] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h
+        [0xbU];
+    vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i[0xcU] 
+        = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT__tl_s1n_11_ds_d2h
+        [0xcU];
     this->tl_d_i[0U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i
         [0U];
     this->tl_d_i[1U] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i
@@ -2464,6 +2301,10 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
         [9U];
     this->tl_d_i[0xaU] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i
         [0xaU];
+    this->tl_d_i[0xbU] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i
+        [0xbU];
+    this->tl_d_i[0xcU] = vlTOPp->opentitan_soc_top__DOT__periph_switch__DOT____Vcellinp__u_s1n_11__tl_d_i
+        [0xcU];
     this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o 
         = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o) 
            | (IData)((IData)((1U & (IData)(this->tl_d_i
@@ -2828,21 +2669,74 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                              [0xaU] 
                                              >> 0x33U))))) 
               << 0x33U));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__threshold[0U] 
-        = (7U & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[1U] 
-                  << 0x17U) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[0U] 
-                               >> 9U)));
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__claim = 0U;
-    if ((2U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[0U])) {
-        vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__claim 
-            = (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__claim 
-               | (0xffffffffULL & ((IData)(1U) << vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__claim_id
-                                   [0U])));
-    }
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__complete_id[0U] 
-        = (0x1fU & ((vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[1U] 
-                     << 0x1dU) | (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[0U] 
-                                  >> 3U)));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xbU])))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xbU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xbU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xbU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xbU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xbU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0xffffffffffffeULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (IData)((IData)((1U & (IData)(this->tl_d_i
+                                           [0xcU])))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x8000000000001ULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | (((QData)((IData)((0x1ffffU & (IData)(
+                                                   (this->tl_d_i
+                                                    [0xcU] 
+                                                    >> 0x22U))))) 
+               << 0x22U) | (((QData)((IData)(((1U == 
+                                               (7U 
+                                                & (IData)(
+                                                          (this->tl_d_i
+                                                           [0xcU] 
+                                                           >> 0x30U))))
+                                               ? (IData)(
+                                                         (this->tl_d_i
+                                                          [0xcU] 
+                                                          >> 2U))
+                                               : 0U))) 
+                             << 2U) | ((QData)((IData)(
+                                                       (1U 
+                                                        & (IData)(
+                                                                  (this->tl_d_i
+                                                                   [0xcU] 
+                                                                   >> 1U))))) 
+                                       << 1U))));
+    this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o 
+        = ((0x7ffffffffffffULL & this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o) 
+           | ((QData)((IData)((1U & (IData)((this->tl_d_i
+                                             [0xcU] 
+                                             >> 0x33U))))) 
+              << 0x33U));
     this->__PVT__tl_u_i[0U] = this->__Vcellout__gen_dfifo__BRA__0__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[1U] = this->__Vcellout__gen_dfifo__BRA__1__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[2U] = this->__Vcellout__gen_dfifo__BRA__2__KET____DOT__fifo_d__tl_h_o;
@@ -2854,14 +2748,9 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     this->__PVT__tl_u_i[8U] = this->__Vcellout__gen_dfifo__BRA__8__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[9U] = this->__Vcellout__gen_dfifo__BRA__9__KET____DOT__fifo_d__tl_h_o;
     this->__PVT__tl_u_i[0xaU] = this->__Vcellout__gen_dfifo__BRA__10__KET____DOT__fifo_d__tl_h_o;
-    vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__complete = 0U;
-    if ((4U & vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__reg2hw[0U])) {
-        vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__complete 
-            = (vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__complete 
-               | (0xffffffffULL & ((IData)(1U) << vlTOPp->opentitan_soc_top__DOT__intr_controller__DOT__complete_id
-                                   [0U])));
-    }
-    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    this->__PVT__tl_u_i[0xbU] = this->__Vcellout__gen_dfifo__BRA__11__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_u_i[0xcU] = this->__Vcellout__gen_dfifo__BRA__12__KET____DOT__fifo_d__tl_h_o;
+    this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xdU];
     if ((0U == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0U];
     }
@@ -2895,8 +2784,14 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
     if ((0xaU == (IData)(this->__PVT__dev_select_outstanding))) {
         this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xaU];
     }
+    if ((0xbU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xbU];
+    }
+    if ((0xcU == (IData)(this->__PVT__dev_select_outstanding))) {
+        this->__PVT__tl_t_p = this->__PVT__tl_u_i[0xcU];
+    }
     this->__PVT__hfifo_reqready = (1U & (IData)(this->__PVT__tl_u_i
-                                                [0xbU]));
+                                                [0xdU]));
     if ((0U == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
         this->__PVT__hfifo_reqready = (1U & (IData)(
                                                     this->__PVT__tl_u_i
@@ -2952,6 +2847,16 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                     this->__PVT__tl_u_i
                                                     [0xaU]));
     }
+    if ((0xbU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xbU]));
+    }
+    if ((0xcU == (0xfU & this->fifo_h__DOT____Vcellinp__reqfifo__wdata_i[0U]))) {
+        this->__PVT__hfifo_reqready = (1U & (IData)(
+                                                    this->__PVT__tl_u_i
+                                                    [0xcU]));
+    }
     if (this->__PVT__hold_all_requests) {
         this->__PVT__hfifo_reqready = 0U;
     }
@@ -2961,11 +2866,6 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                            | (IData)((IData)(((this->__PVT__tl_t_o[2U] 
                                                >> 0x15U) 
                                               & (IData)(this->__PVT__hfifo_reqready)))));
-    this->__PVT__accept_t_req = (1U & ((this->__PVT__tl_t_o[2U] 
-                                        >> 0x15U) & (IData)(this->__PVT__tl_t_i)));
-    this->__PVT__accept_t_rsp = (1U & ((IData)((this->__PVT__tl_t_i 
-                                                >> 0x33U)) 
-                                       & this->__PVT__tl_t_o[0U]));
     this->tl_h_o = ((0xffffffffffffeULL & this->tl_h_o) 
                     | (IData)((IData)((1U & (IData)(this->__PVT__tl_t_i)))));
     this->tl_h_o = ((0x8000000000001ULL & this->tl_h_o) 
@@ -2994,131 +2894,6 @@ VL_INLINE_OPT void Vopentitan_soc_top_tlul_socket_1n__pi2::_combo__TOP__opentita
                                                      (this->__PVT__tl_t_i 
                                                       >> 0x33U))))) 
                        << 0x33U));
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_q;
-    if ((((~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__i_fifo__DOT__gen_normal_fifo__DOT__full)) 
-          & (~ (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT__i_cdc_req__DOT__empty))) 
-         & (2U == (3U & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                 >> 0x20U)))))) {
-        if ((1U & (~ (((((((((4U <= (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U)))) 
-                             & (5U >= (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                            | (0x10U == (0x7fU & (IData)(
-                                                         (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                          >> 0x22U))))) 
-                           | (0x11U == (0x7fU & (IData)(
-                                                        (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                         >> 0x22U))))) 
-                          | (0x12U == (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) 
-                         | (0x16U == (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))) 
-                        | (0x17U == (0x7fU & (IData)(
-                                                     (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                      >> 0x22U))))) 
-                       | (0x18U == (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U))))) 
-                      | ((0x20U <= (0x7fU & (IData)(
-                                                    (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                     >> 0x22U)))) 
-                         & (0x27U >= (0x7fU & (IData)(
-                                                      (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                       >> 0x22U))))))))) {
-            if ((0x38U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                            >> 0x22U))))) {
-                if ((0x39U != (0x7fU & (IData)((vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                >> 0x22U))))) {
-                    if ((0x3aU != (0x7fU & (IData)(
-                                                   (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                    >> 0x22U))))) {
-                        if ((0x3cU == (0x7fU & (IData)(
-                                                       (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                        >> 0x22U))))) {
-                            if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-                                    = ((0xffffffff00000000ULL 
-                                        & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
-                                       | (IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o)));
-                            }
-                        } else {
-                            if ((0x3dU == (0x7fU & (IData)(
-                                                           (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o 
-                                                            >> 0x22U))))) {
-                                if ((0U == (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-                                        = ((0xffffffffULL 
-                                            & vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d) 
-                                           | ((QData)((IData)((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__dap__DOT__i_dmi_cdc__DOT____Vcellout__i_cdc_req__rdata_o))) 
-                                              << 0x20U));
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    if ((1U & (IData)((this->tl_h_o >> 0x33U)))) {
-        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbdata_d 
-            = (QData)((IData)((this->tl_h_o >> 2U)));
-    }
-    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d 
-        = vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q;
-    if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-            vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-        } else {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-            } else {
-                if ((1U & (IData)((this->tl_h_o >> 0x33U)))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-                }
-            }
-        }
-    } else {
-        if ((2U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                if ((1U & (IData)((this->tl_h_o >> 0x33U)))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-                }
-            } else {
-                if ((1U & (IData)(this->tl_h_o))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 4U;
-                }
-            }
-        } else {
-            if ((1U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
-                if ((1U & (IData)(this->tl_h_o))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 3U;
-                }
-            } else {
-                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_write_valid) 
-                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                        >> 0x14U))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
-                }
-                if (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_write_valid) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 2U;
-                }
-                if (((IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbdata_read_valid) 
-                     & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                        >> 0xfU))) {
-                    vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 1U;
-                }
-            }
-        }
-    }
-    if (((3U < (7U & (vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbcs_q 
-                      >> 0x11U))) & (0U != (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q)))) {
-        vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_d = 0U;
-    }
     vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__sbaddress_sba_csrs 
         = (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_csrs__DOT__sbaddr_q);
     if ((4U & (IData)(vlTOPp->opentitan_soc_top__DOT__debug_module__DOT__i_dm_sba__DOT__state_q))) {
