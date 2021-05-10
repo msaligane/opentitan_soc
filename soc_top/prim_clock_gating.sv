@@ -1,3 +1,4 @@
+/* verilator lint_off LATCH */
 module prim_clock_gating (
   input  logic  clk_i,
   input  logic  en_i,
@@ -15,3 +16,5 @@ module prim_clock_gating (
   assign clk_o = en_latch & clk_i;
 
 endmodule
+/* verilator lint_on LATCH */
+

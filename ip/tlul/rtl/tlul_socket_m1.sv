@@ -1,7 +1,4 @@
-// Copyright lowRISC contributors.
-// Licensed under the Apache License, Version 2.0, see LICENSE for details.
-// SPDX-License-Identifier: Apache-2.0
-//
+
 // TL-UL socket M:1 module
 //
 // Verilog parameters
@@ -19,8 +16,6 @@
 //   DRspPass:      Same as HReqPass but for device response FIFO.
 //   DReqDepth:     Same as HReqDepth but for device request FIFO.
 //   DRspDepth:     Same as HReqDepth but for device response FIFO.
-
-`include "prim_assert.sv"
 
 module tlul_socket_m1 #(
   parameter int unsigned  M         = 4,
@@ -42,9 +37,6 @@ module tlul_socket_m1 #(
   output tlul_pkg::tl_h2d_t tl_d_o,
   input  tlul_pkg::tl_d2h_t tl_d_i
 );
-
-  `ASSERT_INIT(maxM, M < 16)
-
 
   // Signals
   //
@@ -69,7 +61,7 @@ module tlul_socket_m1 #(
   //
   // Required ID width to distinguish between host ports
   //  Used in response steering
-  localparam int unsigned IDW   = top_pkg::TL_AIW;
+  localparam int unsigned IDW   = tlul_pkg::TL_AIW;
   localparam int unsigned STIDW = $clog2(M);
 
   tlul_pkg::tl_h2d_t hreq_fifo_o [M];
@@ -98,8 +90,7 @@ module tlul_socket_m1 #(
       reqid_sub
     };
 
-  `ASSERT(idInRange, tl_h_i[i].a_valid |-> tl_h_i[i].a_source[IDW-1 -:STIDW] == '0)
-
+ 
     // assign not connected bits to nc_* signal to make lint happy
     logic [IDW-1 : IDW-STIDW] unused_tl_h_source;
     assign unused_tl_h_source = tl_h_i[i].a_source[IDW-1 -: STIDW];
@@ -114,7 +105,6 @@ module tlul_socket_m1 #(
       a_address:  tl_h_i[i].a_address,
       a_mask:     tl_h_i[i].a_mask,
       a_data:     tl_h_i[i].a_data,
-      a_user:     tl_h_i[i].a_user,
       d_ready:    tl_h_i[i].d_ready
     };
 
@@ -198,7 +188,7 @@ module tlul_socket_m1 #(
       .ready_i ( arb_ready   )
     );
   end else begin : gen_unknown
-    `ASSERT_INIT(UnknownArbImpl_A, 0)
+    
   end
 
   logic [  M-1:0] hfifo_rspvalid;
@@ -219,7 +209,6 @@ module tlul_socket_m1 #(
     a_address: arb_data.a_address,
     a_mask:    arb_data.a_mask,
     a_data:    arb_data.a_data,
-    a_user:    arb_data.a_user,
 
     d_ready:   dfifo_rspready_merged
   };
@@ -247,14 +236,10 @@ module tlul_socket_m1 #(
       d_source: hfifo_rspid,
       d_sink:   drsp_fifo_o.d_sink,
       d_data:   drsp_fifo_o.d_data,
-      d_user:   drsp_fifo_o.d_user,
       d_error:  drsp_fifo_o.d_error,
       a_ready:  hgrant[i]
     };
   end
 
-  // this assertion fails when rspid[0+:STIDW] not in [0..M-1]
-  `ASSERT(rspIdInRange, drsp_fifo_o.d_valid |->
-      drsp_fifo_o.d_source[0+:STIDW] >= 0 && drsp_fifo_o.d_source[0+:STIDW] < M)
 
 endmodule
