@@ -189,8 +189,8 @@ module opentitan_soc_top #(
     .tl_tsen2_i  (),
   
     // DAP
-    .tl_dap_o         (),
-    .tl_dap_i         (),
+    .tl_dap_o    (),
+    .tl_dap_i    (),
 
     // PLIC
     .tl_plic_o  (plic_req),
@@ -198,7 +198,10 @@ module opentitan_soc_top #(
 
     // For JTAG Debug ROM
     .tl_debug_rom_o (xbar_to_dbgrom),
-    .tl_debug_rom_i (dbgrom_to_xbar)
+    .tl_debug_rom_i (dbgrom_to_xbar),
+
+    // .tl_uart_o      (xbar_to_uart),
+    // .tl_uart_i      (uart_to_xbar)
 
   );
 
@@ -233,6 +236,15 @@ module opentitan_soc_top #(
     .tl_d_i   (xbar_to_dccm),
     .tl_d_o   (dccm_to_xbar)
   );
+
+  // uart_receiver programmer (
+  //   .i_Clock       (clk_i),
+  //   .rst_ni        (RESET),
+  //   .i_Rx_Serial   (uart_rx_i),
+  //   .CLKS_PER_BIT  (15'd182),
+  //   .o_Rx_DV       (rx_dv_i),
+  //   .o_Rx_Byte     (rx_byte_i)
+  // );
 
   rv_plic intr_controller (
     .clk_i      (clk_i),
@@ -325,13 +337,6 @@ module opentitan_soc_top #(
     .jtag_srst_n (cio_jtag_srst_n)
   );
 
-
-  // .jtag_tck_i(cio_jtag_tck),
-  // .jtag_tms_i(cio_jtag_tms),
-  // .jtag_trst_ni(cio_jtag_trst_n),
-  // .jtag_tdi_i(cio_jtag_tdi),
-  // .jtag_tdo_o(cio_jtag_tdo),
-// logic [63:0] clk_count;
 
 // always_ff @(posedge clk_i) begin
 //   if(!rst_ni) begin
