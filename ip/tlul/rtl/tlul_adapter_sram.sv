@@ -455,27 +455,27 @@ module tlul_adapter_sram import tlul_pkg::*; #(
   );
 
   // below assertion fails when SRAM rvalid is asserted even though ReqFifo is empty
-  `ASSERT(rvalidHighReqFifoEmpty, rvalid_i |-> reqfifo_rvalid)
+  // `ASSERT(rvalidHighReqFifoEmpty, rvalid_i |-> reqfifo_rvalid)
 
-  // below assertion fails when outstanding value is too small (SRAM rvalid is asserted
-  // even though the RspFifo is full)
-  `ASSERT(rvalidHighWhenRspFifoFull, rvalid_i |-> rspfifo_wready)
+  // // below assertion fails when outstanding value is too small (SRAM rvalid is asserted
+  // // even though the RspFifo is full)
+  // `ASSERT(rvalidHighWhenRspFifoFull, rvalid_i |-> rspfifo_wready)
 
-  // If both ErrOnWrite and ErrOnRead are set, this block is useless
-  `ASSERT_INIT(adapterNoReadOrWrite, (ErrOnWrite & ErrOnRead) == 0)
+  // // If both ErrOnWrite and ErrOnRead are set, this block is useless
+  // `ASSERT_INIT(adapterNoReadOrWrite, (ErrOnWrite & ErrOnRead) == 0)
 
-  `ASSERT_INIT(SramDwHasByteGranularity_A, SramDw % 8 == 0)
-  `ASSERT_INIT(SramDwIsMultipleOfTlulWidth_A, SramDw % top_pkg::TL_DW == 0)
+  // `ASSERT_INIT(SramDwHasByteGranularity_A, SramDw % 8 == 0)
+  // `ASSERT_INIT(SramDwIsMultipleOfTlulWidth_A, SramDw % top_pkg::TL_DW == 0)
 
-  // These parameter options cannot both be true at the same time
-  `ASSERT_INIT(DataIntgOptions_A, ~(EnableDataIntgGen & EnableDataIntgPt))
+  // // These parameter options cannot both be true at the same time
+  // `ASSERT_INIT(DataIntgOptions_A, ~(EnableDataIntgGen & EnableDataIntgPt))
 
-  // make sure outputs are defined
-  `ASSERT_KNOWN(TlOutKnown_A,    tl_o   )
-  `ASSERT_KNOWN(ReqOutKnown_A,   req_o  )
-  `ASSERT_KNOWN(WeOutKnown_A,    we_o   )
-  `ASSERT_KNOWN(AddrOutKnown_A,  addr_o )
-  `ASSERT_KNOWN(WdataOutKnown_A, wdata_o)
-  `ASSERT_KNOWN(WmaskOutKnown_A, wmask_o)
+  // // make sure outputs are defined
+  // `ASSERT_KNOWN(TlOutKnown_A,    tl_o   )
+  // `ASSERT_KNOWN(ReqOutKnown_A,   req_o  )
+  // `ASSERT_KNOWN(WeOutKnown_A,    we_o   )
+  // `ASSERT_KNOWN(AddrOutKnown_A,  addr_o )
+  // `ASSERT_KNOWN(WdataOutKnown_A, wdata_o)
+  // `ASSERT_KNOWN(WmaskOutKnown_A, wmask_o)
 
 endmodule

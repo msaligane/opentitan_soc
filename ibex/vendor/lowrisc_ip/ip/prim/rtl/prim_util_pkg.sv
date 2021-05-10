@@ -82,7 +82,7 @@ package prim_util_pkg;
     // See #2579 and #2597.
     return (value == 1) ? 1 : _clog2(value);
 `else
-    return (value == 1) ? 1 : $clog2(value);
+    return (value == 1) ? 1 : _clog2(value);
 `endif
   endfunction
 
