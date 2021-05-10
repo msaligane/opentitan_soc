@@ -314,6 +314,23 @@ module opentitan_soc_top #(
 );
 
 
+  jtagdpi u_jtagdpi (
+    .clk_i       (clk_i),
+    .rst_ni      (rst_ni),
+    .jtag_tck    (cio_jtag_tck),
+    .jtag_tms    (cio_jtag_tms),
+    .jtag_tdi    (cio_jtag_tdi),
+    .jtag_tdo    (cio_jtag_tdo),
+    .jtag_trst_n (cio_jtag_trst_n),
+    .jtag_srst_n (cio_jtag_srst_n)
+  );
+
+
+  // .jtag_tck_i(cio_jtag_tck),
+  // .jtag_tms_i(cio_jtag_tms),
+  // .jtag_trst_ni(cio_jtag_trst_n),
+  // .jtag_tdi_i(cio_jtag_tdi),
+  // .jtag_tdo_o(cio_jtag_tdo),
 // logic [63:0] clk_count;
 
 // always_ff @(posedge clk_i) begin
