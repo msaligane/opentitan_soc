@@ -22,9 +22,14 @@ $IBEX_COLLAB/ip/xbar/xbar_periph.sv
 $IBEX_COLLAB/memory/data_mem_tlul.sv
 $IBEX_COLLAB/memory/DFFRAM.sv
 $IBEX_COLLAB/memory/instr_mem_tlul.sv
+//$IBEX_COLLAB/memory/ins_test.sv
+$IBEX_COLLAB/memory/gf12/gf12lp_1rw_lg12_w32_bit.v
 
 $IBEX_COLLAB/soc_top/opentitan_soc.sv
 $IBEX_COLLAB/soc_top/opentitan_soc_top.sv
+$IBEX_COLLAB/soc_top/rstmgr.sv
+$IBEX_COLLAB/soc_top/iccm_controller.v
+$IBEX_COLLAB/soc_top/uart_receiver.v
 
 $IBEX_COLLAB/ibex/rtl/ibex_branch_predict.v
 $IBEX_COLLAB/ibex/rtl/ibex_alu.v
@@ -56,6 +61,13 @@ $IBEX_COLLAB/ibex/rtl/ibex_wb_stage.v
 $IBEX_COLLAB/ip/prim/rtl/prim_util_pkg.sv
 
 $IBEX_COLLAB/ip/tempsens/tlul_adapter_tempsensor.sv
+
+$IBEX_COLLAB/ip/tempsens/tlul_adapter_tempsensor.sv
+$IBEX_COLLAB/ip/uart/rtl/uart_rx.sv
+$IBEX_COLLAB/ip/uart/rtl/uart_tx.sv
+$IBEX_COLLAB/ip/uart/rtl/uart_core.sv
+$IBEX_COLLAB/ip/uart/rtl/uart_reg_top.sv
+$IBEX_COLLAB/ip/uart/rtl/uart.sv
 
 $IBEX_COLLAB/ip/prim/rtl/prim_arbiter_ppc.sv
 $IBEX_COLLAB/soc_top/prim_clock_gating.sv

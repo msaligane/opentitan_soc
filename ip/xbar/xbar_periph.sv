@@ -32,7 +32,9 @@ module xbar_periph (
   output tlul_pkg::tl_h2d_t tl_dap_o,
   input  tlul_pkg::tl_d2h_t tl_dap_i,
   output tlul_pkg::tl_h2d_t tl_plic_o,
-  input  tlul_pkg::tl_d2h_t tl_plic_i
+  input  tlul_pkg::tl_d2h_t tl_plic_i,
+  output tlul_pkg::tl_h2d_t tl_uart_o,
+  input  tlul_pkg::tl_d2h_t tl_uart_i
 );
 
   import tlul_pkg::*;
@@ -48,8 +50,8 @@ module xbar_periph (
   tl_h2d_t tl_s1n_10_us_h2d ;
   tl_d2h_t tl_s1n_10_us_d2h ;
 
-  tl_h2d_t tl_s1n_10_ds_h2d [10];
-  tl_d2h_t tl_s1n_10_ds_d2h [10];
+  tl_h2d_t tl_s1n_10_ds_h2d [11];
+  tl_d2h_t tl_s1n_10_ds_d2h [11];
 
   // Create steering signal
   logic [3:0] dev_sel_s1n_10;
@@ -84,6 +86,9 @@ module xbar_periph (
 
   assign tl_plic_o = tl_s1n_10_ds_h2d[9];
   assign tl_s1n_10_ds_d2h[9] = tl_plic_i;
+
+  assign tl_uart_o = tl_s1n_10_ds_h2d[10];
+  assign tl_s1n_10_ds_d2h[10] = tl_uart_i;
 
   assign tl_s1n_10_us_h2d = tl_lsu_i;
   assign tl_lsu_o         = tl_s1n_10_us_d2h;
@@ -121,6 +126,9 @@ module xbar_periph (
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
       dev_sel_s1n_10 = 4'd9;
+
+   end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_UART)) == ADDR_SPACE_UART) begin
+      dev_sel_s1n_10 = 4'd10;
     end
   end
 
@@ -130,7 +138,7 @@ module xbar_periph (
     .HRspDepth (4'h0),
     .DReqDepth (52'h0),
     .DRspDepth (52'h0),
-    .N         (10)
+    .N         (11)
   ) u_s1n_10 (
     .clk_i        (clk_i),
     .rst_ni       (rst_ni),

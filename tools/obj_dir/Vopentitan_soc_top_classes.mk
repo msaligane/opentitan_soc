@@ -28,6 +28,8 @@ VM_CLASSES_FAST += \
 	Vopentitan_soc_top \
 	Vopentitan_soc_top__1 \
 	Vopentitan_soc_top__2 \
+	Vopentitan_soc_top__3 \
+	Vopentitan_soc_top_uart_reg_pkg \
 	Vopentitan_soc_top_rv_plic_reg_pkg \
 	Vopentitan_soc_top_gpio_reg_pkg \
 
@@ -36,6 +38,7 @@ VM_CLASSES_SLOW += \
 	Vopentitan_soc_top__Slow \
 	Vopentitan_soc_top__1__Slow \
 	Vopentitan_soc_top__2__Slow \
+	Vopentitan_soc_top_uart_reg_pkg__Slow \
 	Vopentitan_soc_top_rv_plic_reg_pkg__Slow \
 	Vopentitan_soc_top_gpio_reg_pkg__Slow \
 

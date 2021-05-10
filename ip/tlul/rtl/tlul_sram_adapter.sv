@@ -149,7 +149,10 @@ module tlul_sram_adapter #(
   //    Generate request only when no internal error occurs. If error occurs, the request should be
   //    dropped and returned error response to the host. So, error to be pushed to reqfifo.
   //    In this case, it is assumed the request is granted (may cause ordering issue later?)
+  
+  ///// Changes to error internal
   assign req_o    = tl_i.a_valid & reqfifo_wready & ~error_internal;
+  //assign req_o    = tl_i.a_valid & reqfifo_wready;
   assign we_o     = tl_i.a_valid & logic'(tl_i.a_opcode inside {PutFullData, PutPartialData});
   assign addr_o   = (tl_i.a_valid) ? tl_i.a_address[DataBitWidth+:SramAw] : '0;
 
@@ -167,7 +170,7 @@ module tlul_sram_adapter #(
   logic [WidthMult-1:0][tlul_pkg::TL_DW-1:0] wmask_int;
   logic [WidthMult-1:0][tlul_pkg::TL_DW-1:0] wdata_int;
 
-  always_comb begin
+ always_comb begin
     wmask_int = '0;
     wdata_int = '0;
 
@@ -178,6 +181,23 @@ module tlul_sram_adapter #(
       end
     end
   end
+
+//always_comb begin
+ //   wmask_int = '0;
+ //   wdata_int = '0; 
+ //   if (tl_i.a_opcode == PutFullData || tl_i.a_opcode == PutPartialData) begin
+ //   assign wmask_int = '1;
+ // end else begin
+ //   assign wmask_int = '0;
+ // end
+ //   if(tl_i.a_valid) begin
+ //   for (int i = 0 ; i < tlul_pkg::TL_DW/8 ; i++) begin
+ //       //wmask_int[woffset][8*i +: 8] = {8{tl_i.a_mask[i]}};
+ //       wdata_int[woffset][8*i +: 8] = (wmask_int[i] && we_o) ? tl_i.a_data[8*i+:8] : '0;
+ //   end
+ // end
+//end
+
 
   assign wmask_o = wmask_int;
   assign wdata_o = wdata_int;

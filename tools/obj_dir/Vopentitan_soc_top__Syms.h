@@ -11,6 +11,7 @@
 
 // INCLUDE MODULE CLASSES
 #include "Vopentitan_soc_top.h"
+#include "Vopentitan_soc_top_uart_reg_pkg.h"
 #include "Vopentitan_soc_top_rv_plic_reg_pkg.h"
 #include "Vopentitan_soc_top_gpio_reg_pkg.h"
 
@@ -28,6 +29,7 @@ class Vopentitan_soc_top__Syms : public VerilatedSyms {
     Vopentitan_soc_top*            TOPp;
     Vopentitan_soc_top_gpio_reg_pkg TOP__gpio_reg_pkg;
     Vopentitan_soc_top_rv_plic_reg_pkg TOP__rv_plic_reg_pkg;
+    Vopentitan_soc_top_uart_reg_pkg TOP__uart_reg_pkg;
     
     // CREATORS
     Vopentitan_soc_top__Syms(VerilatedContext* contextp, Vopentitan_soc_top* topp, const char* namep);

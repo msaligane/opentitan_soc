@@ -25,6 +25,7 @@ defines = $(IBEX_COLLAB)/ip/prim/rtl/prim_pkg.sv
 defines = $(IBEX_COLLAB)/ip/prim/rtl/prim_util_pkg.sv
 defines += $(IBEX_COLLAB)/soc_top/top_pkg.sv
 defines += $(IBEX_COLLAB)/ibex/rtl/ibex_pkg.sv
+defines += $(IBEX_COLLAB)/ip/uart/rtl/uart_reg_pkg.sv
 defines += $(IBEX_COLLAB)/ip/tlul/rtl/tlul_pkg.sv
 defines += $(IBEX_COLLAB)/ip/xbar/xbar_pkg.sv
 defines += $(IBEX_COLLAB)/ip/rv_plic/rtl/rv_plic_reg_pkg.sv

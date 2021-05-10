@@ -1,0 +1,9 @@
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version N-2017.12-SP2-1_Full64; Runtime version N-2017.12-SP2-1_Full64;  May 10 12:04 2021
+$finish called from file "/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/gf12_opentitan/test_mem/soc_top/opentitan_soc_top_tb.sv", line 65.
+$finish at simulation time           2060000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2060000000 fs
+CPU Time:      0.310 seconds;       Data structure size:   0.3Mb
+Mon May 10 12:04:39 2021

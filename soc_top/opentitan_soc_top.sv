@@ -3,8 +3,16 @@ module opentitan_soc_top(
   input logic rst_ni,
 
   input  logic [19:0] gpio_i,
-  output logic [19:0] gpio_o
+  output logic [19:0] gpio_o,
+
+  output              uart_tx,
+  input               uart_rx,
+  input uart_rx_i
 );
+
+  logic system_rst_ni;
+  logic RESET;
+  assign RESET = ~rst_ni;
 
   wire [19:0] gpio_in;
   wire [19:0] gpio_out;
@@ -51,21 +59,51 @@ module opentitan_soc_top(
   tlul_pkg::tl_h2d_t plic_req;
   tlul_pkg::tl_d2h_t plic_resp;
 
+  tlul_pkg::tl_h2d_t xbar_to_uart;
+  tlul_pkg::tl_d2h_t uart_to_xbar;
+
+
   // interrupt vector
   logic [32:0] intr_vector;  // size depend on number of interrupts 
                              // increses on adding peripherals 
-
-  // Interrupt source list 
+// Interrupt source list 
   logic [31:0] intr_gpio;
+  logic        intr_uart0_tx_watermark;
+  logic        intr_uart0_rx_watermark;
+  logic        intr_uart0_tx_empty;
+  logic        intr_uart0_rx_overflow;
+  logic        intr_uart0_rx_frame_err;
+  logic        intr_uart0_rx_break_err;
+  logic        intr_uart0_rx_timeout;
+  logic        intr_uart0_rx_parity_err;
+  logic        intr_req;
 
   assign intr_vector = {  
-
-      // add more pheripheral intrupts here
       intr_gpio,
+      intr_uart0_rx_parity_err,
+      intr_uart0_rx_timeout,
+      intr_uart0_rx_break_err,
+      intr_uart0_rx_frame_err,
+      intr_uart0_rx_overflow,
+      intr_uart0_tx_empty,
+      intr_uart0_rx_watermark,
+      intr_uart0_tx_watermark,
       1'b0
   };
-
   logic [31:0] gpio_intr;
+
+  logic       rx_dv_i;
+  logic [7:0] rx_byte_i;
+  
+  logic instr_valid;
+  logic [11:0] tlul_addr;
+  logic req_i;
+  logic [31:0] tlul_data;
+
+  logic iccm_cntrl_reset;
+  logic [11:0] iccm_cntrl_addr;
+  logic [31:0] iccm_cntrl_data;
+  logic iccm_cntrl_we;
   
   opentitan_tlul_wrapper
   //  #(
@@ -174,7 +212,11 @@ module opentitan_soc_top(
 
     // PLIC
     .tl_plic_o  (plic_req),
-    .tl_plic_i  (plic_resp)
+    .tl_plic_i  (plic_resp),
+
+   //UART
+   .tl_uart_o         (xbar_to_uart),
+   .tl_uart_i         (uart_to_xbar)
   );
 
   //GPIO module
@@ -190,6 +232,25 @@ module opentitan_soc_top(
     .cio_gpio_en_o (),
     .intr_gpio_o   (intr_gpio )  
   );
+iccm_controller u_dut(
+	.clk_i       (clk_i),
+	.rst_ni      (RESET),
+	.rx_dv_i     (rx_dv_i),
+	.rx_byte_i   (rx_byte_i),
+	.we_o        (iccm_cntrl_we),
+	.addr_o      (iccm_cntrl_addr),
+	.wdata_o     (iccm_cntrl_data),
+	.reset_o     (iccm_cntrl_reset)
+);
+
+ uart_receiver programmer (
+ .i_Clock       (clk_i),
+ .rst_ni        (RESET),
+ .i_Rx_Serial   (uart_rx_i),
+ .CLKS_PER_BIT  (15'd182),
+ .o_Rx_DV       (rx_dv_i),
+ .o_Rx_Byte     (rx_byte_i)
+ );
 
   instr_mem_tlul iccm (
     .clk_i    (clk_i),
@@ -198,7 +259,7 @@ module opentitan_soc_top(
     // tl-ul insterface
     .tl_d_i   (xbar_to_iccm),
     .tl_d_o   (iccm_to_xbar)
-  );
+      );
 
   data_mem_tlul dccm(
     .clk_i    (clk_i),
@@ -208,6 +269,14 @@ module opentitan_soc_top(
     .tl_d_i   (xbar_to_dccm),
     .tl_d_o   (dccm_to_xbar)
   );
+
+rstmgr reset_manager(
+  .clk_i(clk_i),
+  .rst_ni(rst_ni),
+  .iccm_rst_i(iccm_cntrl_reset),
+  .ndmreset (dbg_rst),
+  .sys_rst_ni(system_rst_ni)
+);
 
   rv_plic intr_controller (
     .clk_i      (clk_i),
@@ -226,22 +295,46 @@ module opentitan_soc_top(
 
     .msip_o     ()
   );
-tlul_adapter_tempsensor u_tempsense( 
-  .clk_i				   (clk_i),
-  .rst_ni       		           (rst_ni),
+//tlul_adapter_tempsensor u_tempsense( 
+ //  .clk_i				   (clk_i),
+ //  .rst_ni       		           (rst_ni),
   
-  .tl_i					   (xbar_to_tsen1),
-  .tl_o                    (tsen1_to_xbar),
+//   .tl_i					   (xbar_to_tsen1),
+//   .tl_o                    (tsen1_to_xbar),
   
-  .re_o   				   (re_o),
-  .we_o					   (we_o),
-  .addr_o				   (addr_o),
-  .wdata_o     			   (wdata_o),
-  .be_o    				   (be_o),
-  .rdata_i				   (rdata_i),
-  .error_i      		   (error_i),
-  .CLK_REF				   (CLK_REF),
-  .CLK_LC				   (CLK_LC)
+//   .re_o   				   (re_o),
+//   .we_o					   (we_o),
+//   .addr_o				   (addr_o),
+//   .wdata_o     			   (wdata_o),
+//   .be_o    				   (be_o),
+//   .rdata_i				   (rdata_i),
+//   .error_i      		   (error_i),
+//   .CLK_REF				   (CLK_REF),
+//   .CLK_LC				   (CLK_LC)
+// );
+
+uart u_uart0(
+  .clk_i                   (clk_i             ),
+  .rst_ni                  (rst_ni     ),
+  // Bus Interface
+  .tl_i                    (xbar_to_uart      ),
+  .tl_o                    (uart_to_xbar      ),
+
+  // Generic IO
+  .cio_rx_i                (uart_rx           ),
+  .cio_tx_o                (uart_tx           ),
+  .cio_tx_en_o             (                  ),
+
+  // Interrupts
+  .intr_tx_watermark_o     (intr_uart0_tx_watermark ),
+  .intr_rx_watermark_o     (intr_uart0_rx_watermark ),
+  .intr_tx_empty_o         (intr_uart0_tx_empty     ),
+  .intr_rx_overflow_o      (intr_uart0_rx_overflow  ),
+  .intr_rx_frame_err_o     (intr_uart0_rx_frame_err ),
+  .intr_rx_break_err_o     (intr_uart0_rx_break_err ),
+  .intr_rx_timeout_o       (intr_uart0_rx_timeout   ),
+  .intr_rx_parity_err_o    (intr_uart0_rx_parity_err) 
 );
+
 
 endmodule
