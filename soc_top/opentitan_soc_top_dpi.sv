@@ -10,6 +10,7 @@ module opentitan_soc_top_tb #(
 logic clk_i;
 logic rst_ni;
 
+logic uart_rx_i;
 logic uart_tx;
 logic uart_rx;
 
@@ -24,11 +25,12 @@ opentitan_soc_top #(
 ) 
 ot_soc_top 
 (
-    .clk_i   (clk_i),
-    .rst_ni  (rst_ni),
+    .clk_i     (clk_i),
+    .rst_ni    (rst_ni),
 
-    .uart_rx (uart_rx),
-	.uart_tx (uart_tx),
+    .uart_rx_i (uart_rx_i),
+    .uart_rx   (uart_rx),
+	.uart_tx   (uart_tx),
 
     // JTAG interface 
     // .jtag_tck_i(jtag_tck_i),
@@ -38,8 +40,8 @@ ot_soc_top
     // .jtag_tdo_o(jtag_tdo_o),
 
 	// GPIO interface
-    .gpio_i(gpio_i),
-    .gpio_o(gpio_o)
+    .gpio_i  (gpio_i),
+    .gpio_o  (gpio_o)
 );
 
 task init_inputs();
@@ -55,7 +57,7 @@ int totalLines = rfile();
 int byte_i[];
 
 longint frequency = 'd100000000;
-longint baudrate = 'd9600;
+longint baudrate = 'd115200;
 int clk_bit = (frequency / baudrate) + 1;
 
 int inst_c  = 0;
@@ -88,24 +90,28 @@ always @(posedge clk_i) begin
     else begin    
         clk_count <= clk_count + 'b1;
     end
-    if(clk_count >= 'd10000) begin
+    if(clk_count >= 'd20000) begin
         $display("Max Cycles Reached!");
         $finish;
     end
 end
 
 always @(posedge clk_i) begin
-    if(clk_count >= clk_bit && clk_count%clk_bit == 0) begin
+    if(clk_count >= clk_bit && ((clk_count-bit_c)%clk_bit) == 0) begin
+        $display("Start @ %d", clk_count);
         if(bit_c == 0) begin
-            uart_rx = 0;
+            uart_rx_i = 0;
+            bit_c     = bit_c+1;
         end
         else if(bit_c <= 'd8) begin
-            uart_rx = (byte_i[inst_c] >> bit_c - 1) & 'h01;
-            bit_c = bit_c+1;
+            $display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
+            uart_rx_i = (byte_i[inst_c] >> bit_c - 1) & 'h01;
+            bit_c     = bit_c+1;
         end
         else if(bit_c > 'd8) begin
-            uart_rx = 1;
-            inst_c = inst_c+1;
+            uart_rx_i = 1;
+            bit_c     = 0;
+            inst_c    = inst_c+1;
         end
     end
 end
@@ -162,6 +168,7 @@ initial begin
         half_byte8 = (inst & 'hf0000000) >> 28; // 0
         byte4      = (half_byte8 << 4) | half_byte7; // 0x00  
 
+        $display("n: %d, B1: %d, B2: %d, B3: %d, B4: %d", n, byte1, byte2, byte3, byte4);
         byte_i[n]     = byte1;
         byte_i[n + 1] = byte2;
         byte_i[n + 2] = byte3;

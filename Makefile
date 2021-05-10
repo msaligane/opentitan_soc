@@ -47,10 +47,14 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_async.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/xbar/xbar_periph.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/DFFRAM.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_tlul.sv
+SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
+SIMFILES   +=$(OPENTITAN_ROOT)/memory/sram.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_tlul.sv
 # SIMFILES   +=$(OPENTITAN_ROOT)/memory/gf12/gf12lp_1rw_lg12_w32_bit.v
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc_top.sv
+SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/uart_receiver.v
+SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/iccm_controller.v
 SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_branch_predict.v
 SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_alu.v
 SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_compressed_decoder.v
@@ -83,13 +87,13 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_wb_stage.v
 ### Updated missing registers DONE/DREG
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/tempsens/tlul_adapter_tempsensor.sv
 
+SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/prim_clock_gating.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_rx.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_tx.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_core.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_reg_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_arbiter_ppc.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/prim_clock_gating.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter_ctr.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_gating.sv
@@ -103,8 +107,9 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
 
-TESTFILE = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
-TESTSIM  = $(OPENTITAN_TOP)/opentitan_soc_top.sv
+TESTFILE  = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
+TESTFILE += $(OPENTITAN_TOP)/opentitan_soc_top_dpi.cpp
+TESTSIM   = $(OPENTITAN_TOP)/opentitan_soc_top.sv
 
 # Flags
 # DEBUG_FLAG = -g
@@ -128,6 +133,8 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full
 ## RULES
 ################################################################################
 
+.PHONY: all sim simv dve test testv
+
 # Default target:
 all:    simv
 	./simv | tee program.out
@@ -142,10 +149,34 @@ simv:  $(HEADERS) $(SIMFILES) $(TESTBENCH)
 dve:	sim
 	./simv -gui &
 
-test: $(HEADERS) $(SIMFILES) $(TESTFILE)
-	$(VCS) $^ -o test
+test: testv
+	./testv | tee program.out
+
+testv: $(HEADERS) $(SIMFILES) $(TESTFILE)
+	$(VCS) $^ -o testv
 
 tdve:	test
 	./test -gui &
 
-.PHONY: all sim simv dve test
+.PHONY:	clean
+clean:
+	@rm -rf *simv *simv.daidir csrc vcs.key *.key
+	@rm -rf *testv *test.daidir csrc vcs.key *.key
+	@rm -rf vis_simv vis_simv.daidir
+	@rm -rf dve* inter.vpd DVEfiles
+	@rm -rf csrc vcdplus.vpd vc_hdrs.h
+	@rm -f *.out *.elf *.dump *.mem *.log
+	@rm -f debug_bin
+	@rm -f .__*
+	@rm -f default.svf
+	@rm -rf simv.vdb
+	@rm -rf urgReport
+
+.PHONY:	nuke
+nuke:   clean
+	@rm -rf syn_simv syn_simv.daidir
+	@rm -rf synth/*.vg synth/*.rep synth/*.ddc synth/*.chk synth/*.log synth/*.syn synth/*.res
+	@rm -rf synth/*.out synth/*.db synth/*.svf synth/*.mr synth/*.pvl
+	@rm -rf synth/*_svsim.sv
+	@rm -rf syn_simv.vdb
+	@rm -f synth/.__*

@@ -39,24 +39,14 @@ module xbar_periph (
 
   // DEBUG ROM
   output tlul_pkg::tl_h2d_t tl_debug_rom_o,
-  input  tlul_pkg::tl_d2h_t tl_debug_rom_i
+  input  tlul_pkg::tl_d2h_t tl_debug_rom_i,
+
+  output tlul_pkg::tl_h2d_t tl_uart_o,
+  input  tlul_pkg::tl_d2h_t tl_uart_i
 );
 
   import tlul_pkg::*;
   import xbar_pkg::*;
-  
-  always_comb begin
-    if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-   assign   s1n_sm1_1[0] = tl_if_i;
-   assign   tl_if_o      = sm1_s1n_1[0];
-    end
-  end
-  // always_comb begin : instruction_memory
-  //   if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-  //     tl_iccm_o = tl_if_i;
-  //     tl_if_o   = tl_iccm_i;
-  //   end
-  // end
 
   tl_h2d_t tl_s1n_10_us_h2d ;
   tl_d2h_t tl_s1n_10_us_d2h ;
@@ -110,6 +100,9 @@ module xbar_periph (
   tlul_pkg::tl_h2d_t s1n_sm1_12[2];
   tlul_pkg::tl_d2h_t sm1_s1n_12[2];
 
+  tlul_pkg::tl_h2d_t s1n_sm1_13[2];
+  tlul_pkg::tl_d2h_t sm1_s1n_13[2];
+
   // ICCM
   assign s1n_sm1_1[1] = tl_s1n_11_ds_h2d[0];
   assign tl_s1n_11_ds_d2h[0] = sm1_s1n_1[1];
@@ -142,7 +135,7 @@ module xbar_periph (
   assign s1n_sm1_6[0] = tl_s1n_10_ds_h2d[5];
   assign s1n_sm1_6[1] = tl_s1n_11_ds_h2d[5];
   assign tl_s1n_10_ds_d2h[5] = sm1_s1n_6[0];
-  assign tl_s1n_10_ds_d2h[5] = sm1_s1n_6[1];
+  assign tl_s1n_11_ds_d2h[5] = sm1_s1n_6[1];
 
   // PLL1
   assign s1n_sm1_7[0] = tl_s1n_10_ds_h2d[6];
@@ -153,32 +146,38 @@ module xbar_periph (
   // TSEN1
   assign s1n_sm1_8[0] = tl_s1n_10_ds_h2d[7];
   assign s1n_sm1_8[1] = tl_s1n_11_ds_h2d[7];
-  assign tl_s1n_10_ds_d2h[8] = sm1_s1n_8[0];
-  assign tl_s1n_11_ds_d2h[8] = sm1_s1n_8[1];
+  assign tl_s1n_10_ds_d2h[7] = sm1_s1n_8[0];
+  assign tl_s1n_11_ds_d2h[7] = sm1_s1n_8[1];
 
   // TSEN2
-  assign s1n_sm1_9[0] = tl_s1n_10_ds_h2d[9];
-  assign s1n_sm1_9[1] = tl_s1n_11_ds_h2d[9];
-  assign tl_s1n_10_ds_d2h[9] = sm1_s1n_9[0];
-  assign tl_s1n_11_ds_d2h[9] = sm1_s1n_9[1];
+  assign s1n_sm1_9[0] = tl_s1n_10_ds_h2d[8];
+  assign s1n_sm1_9[1] = tl_s1n_11_ds_h2d[8];
+  assign tl_s1n_10_ds_d2h[8] = sm1_s1n_9[0];
+  assign tl_s1n_11_ds_d2h[8] = sm1_s1n_9[1];
 
   // DAP
-  assign s1n_sm1_10[0] = tl_s1n_10_ds_h2d[10];
-  assign s1n_sm1_10[1] = tl_s1n_11_ds_h2d[10];
-  assign tl_s1n_10_ds_d2h[10] = sm1_s1n_10[0];
-  assign tl_s1n_11_ds_d2h[10] = sm1_s1n_10[1];
+  assign s1n_sm1_10[0] = tl_s1n_10_ds_h2d[9];
+  assign s1n_sm1_10[1] = tl_s1n_11_ds_h2d[9];
+  assign tl_s1n_10_ds_d2h[9] = sm1_s1n_10[0];
+  assign tl_s1n_11_ds_d2h[9] = sm1_s1n_10[1];
 
   // PLIC
-  assign s1n_sm1_11[0] = tl_s1n_10_ds_h2d[9];
-  assign s1n_sm1_11[1] = tl_s1n_11_ds_h2d[9];
-  assign tl_s1n_10_ds_d2h[9] = sm1_s1n_11[0];
-  assign tl_s1n_11_ds_d2h[9] = sm1_s1n_11[1];
+  assign s1n_sm1_11[0] = tl_s1n_10_ds_h2d[10];
+  assign s1n_sm1_11[1] = tl_s1n_11_ds_h2d[10];
+  assign tl_s1n_10_ds_d2h[10] = sm1_s1n_11[0];
+  assign tl_s1n_11_ds_d2h[10] = sm1_s1n_11[1];
 
   // DEBUG ROM
-  assign s1n_sm1_12[0] = tl_s1n_10_ds_h2d[10];
-  assign s1n_sm1_12[1] = tl_s1n_11_ds_h2d[10];
-  assign tl_s1n_10_ds_d2h[10] = sm1_s1n_12[0];
-  assign tl_s1n_11_ds_d2h[10] = sm1_s1n_12[1];
+  assign s1n_sm1_12[0] = tl_s1n_10_ds_h2d[11];
+  assign s1n_sm1_12[1] = tl_s1n_11_ds_h2d[11];
+  assign tl_s1n_10_ds_d2h[11] = sm1_s1n_12[0];
+  assign tl_s1n_11_ds_d2h[11] = sm1_s1n_12[1];
+
+  // UART
+  assign s1n_sm1_13[0] = tl_s1n_10_ds_h2d[12];
+  assign s1n_sm1_13[1] = tl_s1n_11_ds_h2d[12];
+  assign tl_s1n_10_ds_d2h[12] = sm1_s1n_13[0];
+  assign tl_s1n_11_ds_d2h[12] = sm1_s1n_13[1];
 
   assign tl_s1n_10_us_h2d = tl_lsu_i;
   assign tl_lsu_o         = tl_s1n_10_us_d2h;
@@ -187,8 +186,21 @@ module xbar_periph (
   assign tl_dm_sba_o      = tl_s1n_11_us_d2h;
 
   always_comb begin
+    if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
+      s1n_sm1_1[0] = tl_if_i;
+      tl_if_o      = sm1_s1n_1[0];
+    end
+  end
+  // always_comb begin : instruction_memory
+  //   if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
+  //     tl_iccm_o = tl_if_i;
+  //     tl_if_o   = tl_iccm_i;
+  //   end
+  // end
+
+  always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_10 = 4'd12;
+    dev_sel_s1n_10 = 4'd13;
     
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
       dev_sel_s1n_10 = 4'd0;
@@ -218,7 +230,6 @@ module xbar_periph (
       dev_sel_s1n_10 = 4'd8;
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
-      
       dev_sel_s1n_10 = 4'd9;
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
@@ -226,12 +237,15 @@ module xbar_periph (
     
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
       dev_sel_s1n_10 = 4'd11;
+    
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_UART)) == ADDR_SPACE_UART) begin
+      dev_sel_s1n_10 = 4'd12;
     end    
   end
 
   always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_11 = 4'd12;
+    dev_sel_s1n_11 = 4'd13;
 
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
       dev_sel_s1n_11 = 4'd0;
@@ -266,8 +280,11 @@ module xbar_periph (
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
       dev_sel_s1n_11 = 4'd10;
     
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
       dev_sel_s1n_11 = 4'd11;
+    
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_UART)) == ADDR_SPACE_UART) begin
+      dev_sel_s1n_11 = 4'd12;
     end    
   end
 
@@ -486,6 +503,20 @@ module xbar_periph (
     .tl_d_i       (tl_debug_rom_i)
   );
 
+    tlul_socket_m1 #(
+    .HReqDepth (8'h0),
+    .HRspDepth (8'h0),
+    .DReqDepth (4'h0),
+    .DRspDepth (4'h0),
+    .M         (2)
+  ) UART (
+    .clk_i        (clk_i),
+    .rst_ni       (rst_ni),
+    .tl_h_i       (s1n_sm1_13),
+    .tl_h_o       (sm1_s1n_13),
+    .tl_d_o       (tl_uart_o),
+    .tl_d_i       (tl_uart_i)
+  );
 endmodule
 /* verilator lint_on LATCH */
 

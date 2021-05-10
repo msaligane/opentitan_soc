@@ -51,7 +51,9 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   logic         RESET_REGn        ; // 0x04
   logic [3:0]   SEL_CONV_TIME_REG ; // 0x08
   logic         en_REG            ; // 0x0C
+  logic [23:0]  DOUT              ; // 0x14
   logic [23:0]  DOUT_REG          ; // 0x14
+  logic         DONE              ; // 0x18
   logic         DONE_REG          ; // 0x18
 
   assign a_ack   = tl_i.a_valid & tl_o.a_ready;

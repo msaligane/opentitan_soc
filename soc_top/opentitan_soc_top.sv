@@ -6,11 +6,15 @@ module opentitan_soc_top #(
   input logic rst_ni,
 
   // jtag interface 
-  input               jtag_tck_i,
-  input               jtag_tms_i,
-  input               jtag_trst_ni,
-  input               jtag_tdi_i,
-  output              jtag_tdo_o,
+  // input               jtag_tck_i,
+  // input               jtag_tms_i,
+  // input               jtag_trst_ni,
+  // input               jtag_tdi_i,
+  // output              jtag_tdo_o,
+
+  input               uart_rx_i,
+  input               uart_rx,
+  output              uart_tx,
 
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
@@ -83,7 +87,35 @@ module opentitan_soc_top #(
   };
 
   logic [31:0] gpio_intr;
-  
+
+  logic instr_valid;
+  logic [11:0] tlul_addr;
+  logic [31:0] tlul_data;
+
+  logic       rx_dv_i;
+  logic [7:0] rx_byte_i;
+
+  logic iccm_cntrl_reset;
+  logic [11:0] iccm_cntrl_addr;
+  logic [31:0] iccm_cntrl_data;
+  logic iccm_cntrl_we;
+
+  // jtag interfaces (COPIED FROM AZADI) 
+
+  // jtag_pkg::jtag_req_t jtag_req;
+  // jtag_pkg::jtag_rsp_t jtag_rsp;
+  // logic unused_jtag_tdo_oe_o;
+
+  // assign jtag_req.tck         = jtag_tck_i;
+  // assign jtag_req.tms         = jtag_tms_i;
+  // assign jtag_req.trst_n      = jtag_trst_ni;
+  // assign jtag_req.tdi         = jtag_tdi_i;
+  // assign jtag_tdo_o           = jtag_rsp.tdo;
+  // assign unused_jtag_tdo_oe_o = jtag_rsp.tdo_oe;
+
+  // logic dbg_req;
+  // logic dbg_rst;
+
   opentitan_tlul_wrapper
   //  #(
   //     .PMPEnable        (1'b0),
@@ -200,8 +232,8 @@ module opentitan_soc_top #(
     .tl_debug_rom_o (xbar_to_dbgrom),
     .tl_debug_rom_i (dbgrom_to_xbar),
 
-    // .tl_uart_o      (xbar_to_uart),
-    // .tl_uart_i      (uart_to_xbar)
+    .tl_uart_o      (xbar_to_uart),
+    .tl_uart_i      (uart_to_xbar)
 
   );
 
@@ -219,13 +251,50 @@ module opentitan_soc_top #(
     .intr_gpio_o   (intr_gpio )  
   );
 
-  instr_mem_tlul iccm (
-    .clk_i    (clk_i),
-    .rst_ni   (rst_ni),
+  // instr_mem_tlul iccm (
+  //   .clk_i    (clk_i),
+  //   .rst_ni   (rst_ni),
 
-    // tl-ul insterface
-    .tl_d_i   (xbar_to_iccm),
-    .tl_d_o   (iccm_to_xbar)
+  //   // tl-ul insterface
+  //   .tl_d_i   (xbar_to_iccm),
+  //   .tl_d_o   (iccm_to_xbar)
+  // );
+
+  instr_mem_top iccm (
+    .clk_i      (clk_i),
+    .rst_ni      (rst_ni),
+
+    .req        (req_i),
+    .addr       (tlul_addr),
+    .wdata      (),
+    .rdata      (tlul_data),
+    .rvalid     (instr_valid),
+    .wmask      ('0),
+    .we         (0)
+  );
+
+  tlul_sram_adapter #(
+    .SramAw       (12),
+    .SramDw       (32), 
+    .Outstanding  (2),  
+    .ByteAccess   (1),
+    .ErrOnWrite   (0),  // 1: Writes not allowed, automatically error
+    .ErrOnRead    (0)   // 1: Reads not allowed, automatically error  
+
+  ) inst_mem (
+      .clk_i     (clk_i),
+      .rst_ni    (rst_ni),
+      .tl_i      (xbar_to_iccm),
+      .tl_o      (iccm_to_xbar), 
+      .req_o     (req_i),
+      .gnt_i     (1'b1),
+      .we_o      (),
+      .addr_o    (tlul_addr),
+      .wdata_o   (),
+      .wmask_o   (),
+      .rdata_i   ((rst_ni) ? tlul_data: '0),
+      .rvalid_i  (instr_valid),
+      .rerror_i  (2'b0)
   );
 
   data_mem_tlul dccm(
@@ -237,14 +306,25 @@ module opentitan_soc_top #(
     .tl_d_o   (dccm_to_xbar)
   );
 
-  // uart_receiver programmer (
-  //   .i_Clock       (clk_i),
-  //   .rst_ni        (RESET),
-  //   .i_Rx_Serial   (uart_rx_i),
-  //   .CLKS_PER_BIT  (15'd182),
-  //   .o_Rx_DV       (rx_dv_i),
-  //   .o_Rx_Byte     (rx_byte_i)
-  // );
+  iccm_controller u_dut(
+    .clk_i       (clk_i),
+    .rst_ni      (rst_ni),
+    .rx_dv_i     (rx_dv_i),
+    .rx_byte_i   (rx_byte_i),
+    .we_o        (iccm_cntrl_we),
+    .addr_o      (iccm_cntrl_addr),
+    .wdata_o     (iccm_cntrl_data),
+    .reset_o     (iccm_cntrl_reset)
+  );
+
+  uart_receiver programmer (
+    .i_Clock       (clk_i),
+    .rst_ni        (rst_ni),
+    .i_Rx_Serial   (uart_rx_i),
+    .CLKS_PER_BIT  (15'd182),
+    .o_Rx_DV       (rx_dv_i),
+    .o_Rx_Byte     (rx_byte_i)
+  );
 
   rv_plic intr_controller (
     .clk_i      (clk_i),
@@ -282,60 +362,69 @@ module opentitan_soc_top #(
     .CLK_LC				   (CLK_LC)
   );
 
-  // jtag interfaces (COPIED FROM AZADI) 
+  // rv_dm #(
+  //   .NrHarts(1),
+  //   .IdcodeValue(JTAG_ID),
+  //   .DirectDmiTap (DirectDmiTap)
+  // ) debug_module (
+  //     .clk_i(clk_i),         // clock
+  //     .rst_ni(rst_ni),       // asynchronous reset active low, connect PoR
+  //                                             // here, not the system reset
+  //     .testmode_i(),
+  //     .ndmreset_o(dbg_rst),  // non-debug module reset
+  //     .dmactive_o(),         // debug module is active
+  //     .debug_req_o(dbg_req), // async debug request
+  //     .unavailable_i(1'b0),  // communicate whether the hart is unavailable
+  //                                               // (e.g.: power down)
 
-  jtag_pkg::jtag_req_t jtag_req;
-  jtag_pkg::jtag_rsp_t jtag_rsp;
-  logic unused_jtag_tdo_oe_o;
+  //     // bus device with debug memory, for an execution based technique
+  //     .tl_d_i(dbgrom_to_xbar),
+  //     .tl_d_o(xbar_to_dbgrom),
 
-  assign jtag_req.tck         = jtag_tck_i;
-  assign jtag_req.tms         = jtag_tms_i;
-  assign jtag_req.trst_n      = jtag_trst_ni;
-  assign jtag_req.tdi         = jtag_tdi_i;
-  assign jtag_tdo_o           = jtag_rsp.tdo;
-  assign unused_jtag_tdo_oe_o = jtag_rsp.tdo_oe;
+  //     // bus host, for system bus accesses
+  //     .tl_h_o(dm_to_xbar),
+  //     .tl_h_i(xbar_to_dm),
 
-  logic dbg_req;
-  logic dbg_rst;
-
-  rv_dm #(
-  .NrHarts(1),
-  .IdcodeValue(JTAG_ID),
-  .DirectDmiTap (DirectDmiTap)
-  ) debug_module (
-  .clk_i(clk_i),         // clock
-  .rst_ni(rst_ni),       // asynchronous reset active low, connect PoR
-                                          // here, not the system reset
-  .testmode_i(),
-  .ndmreset_o(dbg_rst),  // non-debug module reset
-  .dmactive_o(),         // debug module is active
-  .debug_req_o(dbg_req), // async debug request
-  .unavailable_i(1'b0),  // communicate whether the hart is unavailable
-                                            // (e.g.: power down)
-
-  // bus device with debug memory, for an execution based technique
-  .tl_d_i(dbgrom_to_xbar),
-  .tl_d_o(xbar_to_dbgrom),
-
-  // bus host, for system bus accesses
-  .tl_h_o(dm_to_xbar),
-  .tl_h_i(xbar_to_dm),
-
-  .jtag_req_i(jtag_req),
-  .jtag_rsp_o(jtag_rsp)
-);
+  //     .jtag_req_i(jtag_req),
+  //     .jtag_rsp_o(jtag_rsp)
+  // );
 
 
-  jtagdpi u_jtagdpi (
-    .clk_i       (clk_i),
-    .rst_ni      (rst_ni),
-    .jtag_tck    (cio_jtag_tck),
-    .jtag_tms    (cio_jtag_tms),
-    .jtag_tdi    (cio_jtag_tdi),
-    .jtag_tdo    (cio_jtag_tdo),
-    .jtag_trst_n (cio_jtag_trst_n),
-    .jtag_srst_n (cio_jtag_srst_n)
+  // jtagdpi u_jtagdpi (
+  //   .clk_i       (clk_i),
+  //   .rst_ni      (rst_ni),
+  //   .jtag_tck    (cio_jtag_tck),
+  //   .jtag_tms    (cio_jtag_tms),
+  //   .jtag_tdi    (cio_jtag_tdi),
+  //   .jtag_tdo    (cio_jtag_tdo),
+  //   .jtag_trst_n (cio_jtag_trst_n),
+  //   .jtag_srst_n (cio_jtag_srst_n)
+  // );
+
+  uart u_uart0(
+    .clk_i                   (clk_i             ),
+    .rst_ni                  (rst_ni     ),
+
+    // Bus Interface
+    .tl_i                    (xbar_to_uart      ),
+    .tl_o                    (uart_to_xbar      ),
+
+    // Generic IO
+    .cio_rx_i                (uart_rx           ),
+    .cio_tx_o                (uart_tx           ),
+    .cio_tx_en_o             (                  ),
+
+    // Interrupts
+    .intr_tx_watermark_o     (intr_uart0_tx_watermark ),
+    .intr_rx_watermark_o     (intr_uart0_rx_watermark ),
+    .intr_tx_empty_o         (intr_uart0_tx_empty     ),
+    .intr_rx_overflow_o      (intr_uart0_rx_overflow  ),
+    .intr_rx_frame_err_o     (intr_uart0_rx_frame_err ),
+    .intr_rx_break_err_o     (intr_uart0_rx_break_err ),
+    .intr_rx_timeout_o       (intr_uart0_rx_timeout   ),
+    .intr_rx_parity_err_o    (intr_uart0_rx_parity_err) 
   );
+
 
 
 // always_ff @(posedge clk_i) begin
