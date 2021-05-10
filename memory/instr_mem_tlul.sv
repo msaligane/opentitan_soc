@@ -29,29 +29,29 @@ module instr_mem_tlul
     end
   end
 
-  // DFFRAM inst_memory (
-  //   .CLK    (clk_i),  // system clk_i
-  //   .EN     (req),    // chip enable
-  //   .WE     (data_we),   // write mask
-  //   .DI     (wdata),  // data input
-  //   .DO     (rdata),  // data output
-  //   .A      (addr)    // address
-  // );
-  
-  gf12lp_1rw_lg12_w32_bit inst_memory (
-    .A(addr),
-    .D(wdata),
-    .CEN(req),
-    .CLK(clk_i),
-    .Q(rdata),
-    .WEN(data_we),
-    .GWEN(&data_we),
-    .EMA(3'b010),
-    .EMAW(2'b01),
-    .EMAS(1'b0),
-    .RET1N(1'b1),
-    .STOV(1'b0)
+  DFFRAM inst_memory (
+    .CLK    (clk_i),  // system clk_i
+    .EN     (req),    // chip enable
+    .WE     (data_we),   // write mask
+    .DI     (wdata),  // data input
+    .DO     (rdata),  // data output
+    .A      (addr)    // address
   );
+  
+  // gf12lp_1rw_lg12_w32_bit inst_memory (
+  //   .A(addr),
+  //   .D(wdata),
+  //   .CEN(req),
+  //   .CLK(clk_i),
+  //   .Q(rdata),
+  //   .WEN(data_we),
+  //   .GWEN(&data_we),
+  //   .EMA(3'b010),
+  //   .EMAW(2'b01),
+  //   .EMAS(1'b0),
+  //   .RET1N(1'b1),
+  //   .STOV(1'b0)
+  // );
 
   tlul_sram_adapter #(
     .SramAw       (12),
