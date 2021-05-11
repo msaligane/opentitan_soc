@@ -12,7 +12,7 @@ extern "C" int rfile(){
     ifstream file;
     string ins;
     
-    file.open("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/gf12_opentitan/opentitan_soc/tests/asm/output/program.hex");
+    file.open("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/prog.hex", std::ifstream::in);
     int totalLines = count(istreambuf_iterator<char>(file), istreambuf_iterator<char>(), '\n');
     
     file.clear();
@@ -20,4 +20,6 @@ extern "C" int rfile(){
     if (!file){
         cerr << "Unable to open file";
     }
+
+    return totalLines;
 }

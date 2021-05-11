@@ -50,13 +50,13 @@ task init_inputs();
 endtask
 
 logic [63:0] clk_count;
+logic [31:0] inst_count;
+logic [3:0]  bit_count;
 
 int totalLines = rfile();
-// int byte_i[4*totalLines-1:0];
-
 int byte_i[];
 
-longint frequency = 'd100000000;
+longint frequency = 'd10000000;
 longint baudrate = 'd115200;
 int clk_bit = (frequency / baudrate) + 1;
 
@@ -97,21 +97,25 @@ always @(posedge clk_i) begin
 end
 
 always @(posedge clk_i) begin
-    if(clk_count >= clk_bit && ((clk_count-bit_c)%clk_bit) == 0) begin
+    if(clk_count >= clk_bit && (clk_count%clk_bit) == 0) begin
         $display("Start @ %d", clk_count);
         if(bit_c == 0) begin
             uart_rx_i = 0;
             bit_c     = bit_c+1;
+            bit_count = 0;
         end
         else if(bit_c <= 'd8) begin
             $display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
             uart_rx_i = (byte_i[inst_c] >> bit_c - 1) & 'h01;
             bit_c     = bit_c+1;
+            bit_count = bit_count+1;
         end
         else if(bit_c > 'd8) begin
             uart_rx_i = 1;
             bit_c     = 0;
             inst_c    = inst_c+1;
+            bit_count = 0;
+            inst_count= inst_count+1;
         end
     end
 end
@@ -139,13 +143,19 @@ initial begin
     half_byte8 = 0;
     byte4      = 0;
 
-    byte_i = new [totalLines*4];
-    clk_i  = 0;
+    byte_i     = new [totalLines*4];
+
+    uart_rx_i  = 1;
+    clk_i      = 0;
+    rst_ni     = 0;
+
+    inst_count = 0;
+    bit_count  = 0;
 
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/gf12_opentitan/opentitan_soc/tests/hex/li.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/prog.hex", "r");
     while(!$feof(fp)) begin
         //$fscanf(fp, "%h", inst);
         $fgets(inst, fp);

@@ -251,27 +251,27 @@ module opentitan_soc_top #(
     .intr_gpio_o   (intr_gpio )  
   );
 
-  // instr_mem_tlul iccm (
-  //   .clk_i    (clk_i),
-  //   .rst_ni   (rst_ni),
+  instr_mem_tlul iccm (
+    .clk_i    (clk_i),
+    .rst_ni   (rst_ni),
 
-  //   // tl-ul insterface
-  //   .tl_d_i   (xbar_to_iccm),
-  //   .tl_d_o   (iccm_to_xbar)
-  // );
-
-  instr_mem_top iccm (
-    .clk_i      (clk_i),
-    .rst_ni     (rst_ni),
-
-    .req        (req_i),
-    .addr       (rst_ni? tlul_addr : iccm_cntrl_addr),
-    .wdata      (iccm_cntrl_data),
-    .rdata      (tlul_data),
-    .rvalid     (instr_valid),
-    .wmask      ('0),
-    .we         (0)
+    // tl-ul insterface
+    .tl_d_i   (xbar_to_iccm),
+    .tl_d_o   (iccm_to_xbar)
   );
+
+//   instr_mem_top iccm (
+//     .clk_i      (clk_i),
+//     .rst_ni      (rst_ni),
+
+//     .req        (req_i),
+//     .addr       (tlul_addr),
+//     .wdata      (),
+//     .rdata      (tlul_data),
+//     .rvalid     (instr_valid),
+//     .wmask      ('0),
+//     .we         (0)
+//   );
 
   tlul_sram_adapter #(
     .SramAw       (12),
@@ -317,6 +317,17 @@ module opentitan_soc_top #(
     .reset_o     (iccm_cntrl_reset)
   );
 
+  SPI_slave spi_slave_inst (
+    .reset      (SPI_RST_pad     ),
+    .SS         (SPI_SS_pad      ),
+    .SCLK       (SPI_SCLK_pad    ),
+    .MOSI       (SPI_MOSI_pad    ),
+    .MISO       (SPI_MISO_PO     ),
+    .REG_DIN    (DIN_SPI         ),
+    .REG_ADDR   (ADDR_SPI        ),
+    .REG_DOUT   (SRAM_DOUT       )
+  );
+
   uart_receiver programmer (
     .i_Clock       (clk_i),
     .rst_ni        (rst_ni),
@@ -345,65 +356,26 @@ module opentitan_soc_top #(
   );
 
   tlul_adapter_tempsensor u_tempsense( 
-    .clk_i				   (clk_i),
+    .clk_i           (clk_i),
     .rst_ni          (rst_ni),
     
-    .tl_i					   (xbar_to_tsen1),
+    .tl_i            (xbar_to_tsen1),
     .tl_o            (tsen1_to_xbar),
     
-    .re_o   			   (re_o),
-    .we_o					   (we_o),
-    .addr_o				   (addr_o),
-    .wdata_o  		   (wdata_o),
-    .be_o    			   (be_o),
-    .rdata_i			   (rdata_i),
-    .error_i      	 (error_i),
-    .CLK_REF				 (CLK_REF),
-    .CLK_LC				   (CLK_LC)
+    .re_o            (re_o),
+    .we_o            (we_o),
+    .addr_o          (addr_o),
+    .wdata_o         (wdata_o),
+    .be_o            (be_o),
+    .rdata_i         (rdata_i),
+    .error_i         (error_i),
+    .CLK_REF         (CLK_REF),
+    .CLK_LC          (CLK_LC)
   );
-
-  // rv_dm #(
-  //   .NrHarts(1),
-  //   .IdcodeValue(JTAG_ID),
-  //   .DirectDmiTap (DirectDmiTap)
-  // ) debug_module (
-  //     .clk_i(clk_i),         // clock
-  //     .rst_ni(rst_ni),       // asynchronous reset active low, connect PoR
-  //                                             // here, not the system reset
-  //     .testmode_i(),
-  //     .ndmreset_o(dbg_rst),  // non-debug module reset
-  //     .dmactive_o(),         // debug module is active
-  //     .debug_req_o(dbg_req), // async debug request
-  //     .unavailable_i(1'b0),  // communicate whether the hart is unavailable
-  //                                               // (e.g.: power down)
-
-  //     // bus device with debug memory, for an execution based technique
-  //     .tl_d_i(dbgrom_to_xbar),
-  //     .tl_d_o(xbar_to_dbgrom),
-
-  //     // bus host, for system bus accesses
-  //     .tl_h_o(dm_to_xbar),
-  //     .tl_h_i(xbar_to_dm),
-
-  //     .jtag_req_i(jtag_req),
-  //     .jtag_rsp_o(jtag_rsp)
-  // );
-
-
-  // jtagdpi u_jtagdpi (
-  //   .clk_i       (clk_i),
-  //   .rst_ni      (rst_ni),
-  //   .jtag_tck    (cio_jtag_tck),
-  //   .jtag_tms    (cio_jtag_tms),
-  //   .jtag_tdi    (cio_jtag_tdi),
-  //   .jtag_tdo    (cio_jtag_tdo),
-  //   .jtag_trst_n (cio_jtag_trst_n),
-  //   .jtag_srst_n (cio_jtag_srst_n)
-  // );
 
   uart u_uart0(
     .clk_i                   (clk_i             ),
-    .rst_ni                  (rst_ni     ),
+    .rst_ni                  (rst_ni            ),
 
     // Bus Interface
     .tl_i                    (xbar_to_uart      ),
