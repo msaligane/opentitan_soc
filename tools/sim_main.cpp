@@ -58,18 +58,18 @@ int main (int argc, char **argv) {
         // redundant
         //top -> eval();
 
-        if (tfp) tfp -> dump(main_time);
+        // if (tfp) tfp -> dump(main_time);
         // or dump always
-        //tfp -> dump(main_time);
+        tfp -> dump(main_time);
 
         main_time ++;
     }
 
     top -> final();
 
-    if (tfp) tfp -> close();
+    // if (tfp) tfp -> close();
     // or close anyways
-    //tfp -> close();
+    tfp -> close();
 
     delete top;
 

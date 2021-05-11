@@ -14,6 +14,9 @@ package xbar_pkg;
   localparam logic [31:0] ADDR_SPACE_UART  = 32'h 40080000;
 
  
+  // For JTAG
+  localparam logic [31:0] ADDR_SPACE_DEBUG_ROM = 32'h 10040000;
+
   localparam logic [31:0] ADDR_MASK_ICCM  = 32'h 0000ffff;
   localparam logic [31:0] ADDR_MASK_DCCM  = 32'h 0000ffff;
   localparam logic [31:0] ADDR_MASK_GPIO  = 32'h 0000ffff;
@@ -26,6 +29,8 @@ package xbar_pkg;
   localparam logic [31:0] ADDR_MASK_DAP   = 32'h 0000ffff;
   localparam logic [31:0] ADDR_MASK_PLIC = 32'h 0000ffff;
   localparam logic [31:0] ADDR_MASK_UART = 32'h 0000ffff;
+  // For JTAG
+  localparam logic [31:0] ADDR_MASK_DEBUG_ROM = 32'h 0000ffff;
 
   localparam int N_HOST   = 2;
   localparam int N_DEVICE = 12;
