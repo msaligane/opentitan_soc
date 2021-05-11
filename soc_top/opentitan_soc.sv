@@ -1,8 +1,8 @@
 
-module opentitan_soc #(
+module opentitan_tlul_wrapper #(
     parameter bit                 PMPEnable        = 1'b0,
     parameter int unsigned        PMPGranularity   = 0,
-    parameter int unsigned        PMPNumRegions    = 0,
+    parameter int unsigned        PMPNumRegions    = 2,
     parameter int unsigned        MHPMCounterNum   = 0,
     parameter int unsigned        MHPMCounterWidth = 40,
     parameter bit                 RV32E            = 1'b0,
@@ -20,10 +20,24 @@ module opentitan_soc #(
 (
   input clk_i,
   input rst_ni,
+  input logic ram_cfg_i,
+  input logic scan_rst_ni,
+  output logic crash_dump_o,
 
+  // instruction memory interface 
+  input  tlul_pkg::tl_d2h_t tl_i_i,
+  output tlul_pkg::tl_h2d_t tl_i_o,
+
+  // data memory interface 
+  input  tlul_pkg::tl_d2h_t tl_d_i,
+  output tlul_pkg::tl_h2d_t tl_d_o,
   input  logic              test_en_i,     // enable all clock gates for testing
   input  logic [31:0]       hart_id_i,
   input  logic [31:0]       boot_addr_i,
+
+  //input  logic              test_en_i,     // enable all clock gates for testing
+  //input  logic [31:0]       hart_id_i,
+  //input  logic [31:0]       boot_addr_i,
   
   // Interrupt inputs
   input  logic        irq_software_i,
@@ -38,7 +52,7 @@ module opentitan_soc #(
   output logic        alert_major_o,
   output logic        core_sleep_o
 );
-  // import ibex_pkg::*;
+import ibex_pkg::*;
 
   // logic  rst_ni;
   // assign rst_ni = reset;
@@ -61,27 +75,7 @@ module opentitan_soc #(
   logic [31:0] data_rdata;
   logic        data_err;
   
-  // instruction memory interface 
-  tlul_pkg::tl_d2h_t tl_i_i;
-  tlul_pkg::tl_h2d_t tl_i_o;
-
-  // data memory interface 
-  tlul_pkg::tl_d2h_t tl_d_i;
-  tlul_pkg::tl_h2d_t tl_d_o;
-
-  tlul_pkg::tl_h2d_t xbar_to_iccm;
-  tlul_pkg::tl_d2h_t iccm_to_xbar;
-
-  tlul_pkg::tl_h2d_t xbar_to_dccm;
-  tlul_pkg::tl_d2h_t dccm_to_xbar;
-
-  tlul_pkg::tl_h2d_t xbar_to_gpio;
-  tlul_pkg::tl_d2h_t gpio_to_xbar;
-
-  tlul_pkg::tl_h2d_t plic_req;
-  tlul_pkg::tl_d2h_t plic_resp;
-
-ibex_core #(
+ ibex_top #(
     .PMPEnable        (PMPEnable),
     .PMPGranularity   (PMPGranularity), 
     .PMPNumRegions    (PMPNumRegions), 
@@ -105,7 +99,8 @@ ibex_core #(
     .clk_i (clk_i),
     .rst_ni(rst_ni),
 
-    // .test_en_i (test_en_i),     // enable all clock gates for testing
+    .test_en_i (test_en_i),     // enable all clock gates for testing
+    .ram_cfg_i (ram_cfg_i),
 
     .hart_id_i  (hart_id_i),
     .boot_addr_i(boot_addr_i),
@@ -168,14 +163,16 @@ ibex_core #(
     .rvfi_mem_wdata (),
 `endif
 
-    // CPU Control Signals
-    // .fetch_enable_i (fetch_enable_i),
+   // // CPU Control Signals
+    .fetch_enable_i (fetch_enable_i),
     .alert_minor_o  (alert_minor_o),
     .alert_major_o  (alert_major_o),
-    .core_busy_o    (~core_sleep_o)
+    .core_sleep_o   (core_sleep_o),
+    .crash_dump_o    (crash_dump_o),
+    .scan_rst_ni    (scan_rst_ni)
 );
 
-tlul_adapter_host #(
+tlul_host_adapter #(
     .MAX_REQS(2)
 ) intr_interface (
     .clk_i      (clk_i),
@@ -186,16 +183,16 @@ tlul_adapter_host #(
     .we_i       (1'b0),
     .wdata_i    (32'b0),
     .be_i       (4'hF),
-    .type_i     (tlul_pkg::InstrType),
+    //.type_i     (tlul_pkg::InstrType),
     .valid_o    (instr_rvalid),
     .rdata_o    (instr_rdata),
     .err_o      (instr_err),
-    .intg_err_o (),
-    .tl_o   (tl_i_o),
-    .tl_i   (tl_i_i)
+    //.intg_err_o (),
+    .tl_h_c_a   (tl_i_o),
+    .tl_h_c_d   (tl_i_i)
 );
 
-tlul_adapter_host #(
+tlul_host_adapter #(
     .MAX_REQS (2)
 ) data_interface (
     .clk_i      (clk_i),
@@ -206,86 +203,13 @@ tlul_adapter_host #(
     .we_i       (data_we),
     .wdata_i    (data_wdata),
     .be_i       (data_be),
-    .type_i     (tlul_pkg::DataType),
+    //.type_i     (tlul_pkg::DataType),
     .valid_o    (data_rvalid),
     .rdata_o    (data_rdata),
     .err_o      (data_err),
-    .intg_err_o (),
-    .tl_o   (tl_d_o),
-    .tl_i   (tl_d_i)
+    //.intg_err_o (),
+    .tl_h_c_a  (tl_d_o),
+    .tl_h_c_d   (tl_d_i)
 );
-
-//peripheral xbar
-xbar_periph periph_switch (
-  .clk_i     (clk_i),
-  .rst_ni    (rst_ni),
-
-  /* Host interfaces */
-  .tl_if_i   (tl_i_o), 
-  .tl_if_o   (tl_i_i), 
-  .tl_lsu_i  (tl_d_o),
-  .tl_lsu_o  (tl_d_i),
-
-  /* Device interfaces */
-  .tl_iccm_o(xbar_to_iccm),
-  .tl_iccm_i(iccm_to_xbar),
-  
-  .tl_dccm_o(xbar_to_dccm),
-  .tl_dccm_i(dccm_to_xbar),
-
-  // GPIOs
-  .tl_gpio_o  (xbar_to_gpio),
-  .tl_gpio_i  (gpio_to_xbar),
-
-  // LDO 1
-  .tl_ldo1_o  (),
-  .tl_ldo1_i  (),
-
-  // LDO 2
-  .tl_ldo2_o  (),
-  .tl_ldo2_i  (),
-
-  // DCDC
-  .tl_dcdc_o  (),
-  .tl_dcdc_i  (),
-
-  // PLL 1
-  .tl_pll1_o  (),
-  .tl_pll1_i  (),
-
-  // Temp. Sensor 1
-  .tl_tsen1_o  (),
-  .tl_tsen1_i  (),
-
-  // Temp. Sensor 2
-  .tl_tsen2_o  (),
-  .tl_tsen2_i  (),
-
-  // DAP
-  .tl_dap_o         (),
-  .tl_dap_i         (),
-
-  // PLIC
-  .tl_plic_o  (plic_req),
-  .tl_plic_i  (plic_resp)
-);
-
-// instr_mem_tlul iccm (
-//   .clk_i    (clk_i),
-//   .rst_ni   (rst_ni),
-// 
-//   // tl-ul insterface
-//   .xbar_to_iccm   (xbar_to_iccm),
-//   .iccm_to_xbar   (iccm_to_xbar)
-// );
-// 
-// data_mem_tlul dccm(
-//   .clk_i    (clk_i),
-//   .rst_ni   (rst_ni),
-// 
-//   // tl-ul insterface
-//   .xbar_to_dccm   (xbar_to_dccm),
-//   .dccm_to_xbar   (dccm_to_xbar)
-// );
 
 endmodule

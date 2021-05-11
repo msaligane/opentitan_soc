@@ -4,8 +4,8 @@ module instr_mem_tlul
   input rst_ni,
 
   // tl-ul insterface
-  input  tlul_pkg::tl_h2d_t xbar_to_iccm,
-  output tlul_pkg::tl_d2h_t iccm_to_xbar
+  input  tlul_pkg::tl_h2d_t tl_d_i,
+  output tlul_pkg::tl_d2h_t tl_d_o
 );
 
   logic        we;
@@ -16,8 +16,13 @@ module instr_mem_tlul
   logic [31:0] rdata;
   logic        rvalid; 
   logic        instr_valid;
+<<<<<<< HEAD
+  logic [3:0]  data_we;
+ // logic [31:0]  data_we;
+=======
   // logic [3:0]  data_we;
   logic [31:0]  data_we;
+>>>>>>> main
 
   always_ff @(posedge clk_i) begin
     if (!rst_ni) begin
@@ -29,6 +34,31 @@ module instr_mem_tlul
     end
   end
 
+<<<<<<< HEAD
+   DFFRAM inst_memory (
+     .CLK    (clk_i),  // system clk_i
+     .EN     (req),    // chip enable
+     .WE     (data_we),   // write mask
+     .DI     (wdata),  // data input
+      .DO     (rdata),  // data output
+    .A      (addr)    // address
+   );
+  
+ // gf12lp_1rw_lg12_w32_bit inst_memory (
+ //   .A(addr),
+ //   .D(wdata),
+ //   .CEN(req),
+ //   .CLK(clk_i),
+ //   .Q(rdata),
+ //   .WEN(data_we),
+ //   .GWEN(&data_we),
+ //   .EMA(3'b010),
+//   .EMAW(2'b01),
+//   .EMAS(1'b0),
+//   .RET1N(1'b1),
+//   .STOV(1'b0)
+// );
+=======
   // DFFRAM inst_memory (
   //   .CLK    (clk_i),  // system clk_i
   //   .EN     (req),    // chip enable
@@ -52,8 +82,9 @@ module instr_mem_tlul
     .RET1N(1'b1),
     .STOV(1'b0)
   );
+>>>>>>> main
 
-  tlul_adapter_sram #(
+  tlul_sram_adapter #(
     .SramAw       (12),
     .SramDw       (32), 
     .Outstanding  (2),  
@@ -64,8 +95,8 @@ module instr_mem_tlul
   ) inst_mem (
     .clk_i     (clk_i),
     .rst_ni    (rst_ni),
-    .tl_i      (xbar_to_iccm),
-    .tl_o      (iccm_to_xbar), 
+    .tl_i      (tl_d_i),
+    .tl_o      (tl_d_o), 
     .req_o     (req),
     .gnt_i     (1'b1),
     .we_o      (),

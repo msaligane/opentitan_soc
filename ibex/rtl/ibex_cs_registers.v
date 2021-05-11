@@ -1,3 +1,4 @@
+/* verilator lint_off LITENDIAN */
 module ibex_cs_registers (
 	clk_i,
 	rst_ni,
@@ -1258,3 +1259,4 @@ module ibex_cs_registers (
 	);
 	assign csr_shadow_err_o = ((mstatus_err | mtvec_err) | pmp_csr_err) | cpuctrl_err;
 endmodule
+/* verilator lint_on LITENDIAN */
