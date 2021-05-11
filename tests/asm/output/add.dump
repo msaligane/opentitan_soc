@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/gf12_opentitan/opentitan_soc/tests/asm/output/add.merl:     file format elf32-littleriscv
-=======
-/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/asm/output/add.merl:     file format elf32-littleriscv
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
 
 
 Disassembly of section .text:

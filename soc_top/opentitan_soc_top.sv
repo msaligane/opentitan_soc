@@ -420,16 +420,16 @@ uart u_uart0(
 );
 
 
-  jtagdpi u_jtagdpi (
-    .clk_i       (clk_i),
-    .rst_ni      (rst_ni),
-    .jtag_tck    (cio_jtag_tck),
-    .jtag_tms    (cio_jtag_tms),
-    .jtag_tdi    (cio_jtag_tdi),
-    .jtag_tdo    (cio_jtag_tdo),
-    .jtag_trst_n (cio_jtag_trst_n),
-    .jtag_srst_n (cio_jtag_srst_n)
-  );
+  // jtagdpi u_jtagdpi (
+  //   .clk_i       (clk_i),
+  //   .rst_ni      (rst_ni),
+  //   .jtag_tck    (cio_jtag_tck),
+  //   .jtag_tms    (cio_jtag_tms),
+  //   .jtag_tdi    (cio_jtag_tdi),
+  //   .jtag_tdo    (cio_jtag_tdo),
+  //   .jtag_trst_n (cio_jtag_trst_n),
+  //   .jtag_srst_n (cio_jtag_srst_n)
+  // );
 
 
   // .jtag_tck_i(cio_jtag_tck),

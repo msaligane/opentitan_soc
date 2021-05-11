@@ -47,50 +47,18 @@ module xbar_periph (
   import tlul_pkg::*;
   import xbar_pkg::*;
   
-<<<<<<< HEAD
-<<<<<<< HEAD
   always_comb begin
     if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
    assign   tl_iccm_o = tl_if_i;
    assign   tl_if_o   = tl_iccm_i;
     end
   end
-=======
-=======
-  always_comb begin
-    if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-   assign   s1n_sm1_1[0] = tl_if_i;
-   assign   tl_if_o      = sm1_s1n_1[0];
-    end
-  end
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
-  // always_comb begin : instruction_memory
-  //   if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-  //     tl_iccm_o = tl_if_i;
-  //     tl_if_o   = tl_iccm_i;
-  //   end
-  // end
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
 
   tl_h2d_t tl_s1n_10_us_h2d ;
   tl_d2h_t tl_s1n_10_us_d2h ;
 
-<<<<<<< HEAD
   tl_h2d_t tl_s1n_10_ds_h2d [11];
   tl_d2h_t tl_s1n_10_ds_d2h [11];
-=======
-  tl_h2d_t tl_s1n_11_us_h2d ;
-  tl_d2h_t tl_s1n_11_us_d2h ;
-
-  tl_h2d_t tl_s1n_10_ds_h2d [13];
-  tl_d2h_t tl_s1n_10_ds_d2h [13];
-
-  tl_h2d_t tl_s1n_11_ds_h2d [13];
-  tl_d2h_t tl_s1n_11_ds_d2h [13];
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
 
   // Create steering signal
   logic [3:0] dev_sel_s1n_10;
@@ -208,42 +176,6 @@ module xbar_periph (
   assign tl_s1n_11_us_h2d = tl_dm_sba_i;
   assign tl_dm_sba_o      = tl_s1n_11_us_d2h;
 
-  always_comb begin
-    // default steering to generate error response if address is not within the range
-    dev_sel_s1n_10 = 4'd12;
-    
-    if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-      dev_sel_s1n_10 = 4'd0;
-    
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
-      dev_sel_s1n_10 = 4'd1;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
-      dev_sel_s1n_10 = 4'd2;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
-      dev_sel_s1n_10 = 4'd3;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO2)) == ADDR_SPACE_LDO2) begin
-      dev_sel_s1n_10 = 4'd4;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCDC)) == ADDR_SPACE_DCDC) begin
-      dev_sel_s1n_10 = 4'd5;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLL1)) == ADDR_SPACE_PLL1) begin
-      dev_sel_s1n_10 = 4'd6;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN1)) == ADDR_SPACE_TSEN1) begin
-      dev_sel_s1n_10 = 4'd7;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_TSEN2)) == ADDR_SPACE_TSEN2) begin
-      dev_sel_s1n_10 = 4'd8;
-
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
-      
-      dev_sel_s1n_10 = 4'd9;
-
-<<<<<<< HEAD
   assign tl_uart_o = tl_s1n_10_ds_h2d[10];
   assign tl_s1n_10_ds_d2h[10] = tl_uart_i;
 
@@ -252,40 +184,16 @@ module xbar_periph (
 
   always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_10 = 4'd10;
+    dev_sel_s1n_10 = 4'd12;
 
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
       dev_sel_s1n_10 = 4'd0;
-<<<<<<< HEAD
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
-=======
-    
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
->>>>>>> main
       dev_sel_s1n_10 = 4'd1;
-=======
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
-      dev_sel_s1n_10 = 4'd10;
     
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
-      dev_sel_s1n_10 = 4'd11;
-    end    
-  end
-
-  always_comb begin
-    // default steering to generate error response if address is not within the range
-    dev_sel_s1n_11 = 4'd12;
-
-    if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-      dev_sel_s1n_11 = 4'd0;
-    
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
-      dev_sel_s1n_11 = 4'd1;
-
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_GPIO)) == ADDR_SPACE_GPIO) begin
       dev_sel_s1n_11 = 4'd2;
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_LDO1)) == ADDR_SPACE_LDO1) begin
       dev_sel_s1n_11 = 4'd3;
@@ -306,31 +214,14 @@ module xbar_periph (
       dev_sel_s1n_11 = 4'd8;
 
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
-<<<<<<< HEAD
-      dev_sel_s1n_10 = 4'd8;
-=======
-      dev_sel_s1n_11 = 4'd9;
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
-
-<<<<<<< HEAD
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_PLIC)) == ADDR_SPACE_PLIC) begin
-<<<<<<< HEAD
-=======
-    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DAP)) == ADDR_SPACE_DAP) begin
-      
->>>>>>> main
       dev_sel_s1n_10 = 4'd9;
 
-   end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_UART)) == ADDR_SPACE_UART) begin
+    end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_UART)) == ADDR_SPACE_UART) begin
       dev_sel_s1n_10 = 4'd10;
-    end
-=======
-      dev_sel_s1n_11 = 4'd10;
     
     end else if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DEBUG_ROM)) == ADDR_SPACE_DEBUG_ROM) begin
       dev_sel_s1n_11 = 4'd11;
     end    
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
   end
 
   // Instantiation phase
@@ -339,11 +230,7 @@ module xbar_periph (
     .HRspDepth (4'h0),
     .DReqDepth (52'h0),
     .DRspDepth (52'h0),
-<<<<<<< HEAD
-    .N         (11)
-=======
     .N         (13)
->>>>>>> 82476d8e0429e7ee13a12171e2161bfef65b56dc
   ) u_s1n_10 (
     .clk_i        (clk_i),
     .rst_ni       (rst_ni),
