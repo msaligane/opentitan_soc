@@ -2,8 +2,8 @@ module opentitan_soc_top(
   input logic clk_i,
   input logic rst_ni,
 
-  input  logic [19:0] gpio_i,
-  output logic [19:0] gpio_o,
+  input  logic [31:0] gpio_i,
+  output logic [31:0] gpio_o,
 
   output              uart_tx,
   input               uart_rx,
@@ -14,8 +14,8 @@ module opentitan_soc_top(
   logic RESET;
   assign RESET = ~rst_ni;
 
-  wire [19:0] gpio_in;
-  wire [19:0] gpio_out;
+  wire [31:0] gpio_in;
+  wire [31:0] gpio_out;
 
   assign gpio_in = gpio_i;
   assign gpio_o = gpio_out; 
@@ -64,7 +64,7 @@ module opentitan_soc_top(
 
 
   // interrupt vector
-  logic [32:0] intr_vector;  // size depend on number of interrupts 
+  logic [31:0] intr_vector;  // size depend on number of interrupts 
                              // increses on adding peripherals 
 // Interrupt source list 
   logic [31:0] intr_gpio;
@@ -101,7 +101,7 @@ module opentitan_soc_top(
   logic [31:0] tlul_data;
 
   logic iccm_cntrl_reset;
-  logic [11:0] iccm_cntrl_addr;
+  logic [13:0] iccm_cntrl_addr;
   logic [31:0] iccm_cntrl_data;
   logic iccm_cntrl_we;
   
@@ -151,7 +151,7 @@ module opentitan_soc_top(
       .irq_software_i (1'b0),
       .irq_timer_i    (intr_timer),
       .irq_external_i (intr_req),
-      .irq_fast_i     (1'b0),
+      .irq_fast_i     (15'b0),
       .irq_nm_i       (1'b0),       // non-maskeable interrupt
 
       // CPU Control Signals
@@ -220,18 +220,19 @@ module opentitan_soc_top(
   );
 
   //GPIO module
-   gpio gpio_32 (
-    .clk_i         (clk_i),
-    .rst_ni        (rst_ni),
+  // gpio gpio_32 (
+  //   .clk_i         (clk_i),
+  //   .rst_ni        (rst_ni),
 
-    // Below Regster interface can be changed
-    .tl_i          (xbar_to_gpio),
-    .tl_o          (gpio_to_xbar),
-    .cio_gpio_i    (gpio_in),
-    .cio_gpio_o    (gpio_out),
-    .cio_gpio_en_o (),
-    .intr_gpio_o   (intr_gpio )  
-  );
+  //   // Below Regster interface can be changed
+  //   .tl_i          (xbar_to_gpio),
+  //   .tl_o          (gpio_to_xbar),
+  //   .cio_gpio_i    (gpio_in),
+  //   .cio_gpio_o    (gpio_out),
+  //   .cio_gpio_en_o (),
+  //   .intr_gpio_o   (intr_gpio )  
+  // );
+
 iccm_controller u_dut(
 	.clk_i       (clk_i),
 	.rst_ni      (RESET),
@@ -247,7 +248,7 @@ iccm_controller u_dut(
  .i_Clock       (clk_i),
  .rst_ni        (RESET),
  .i_Rx_Serial   (uart_rx_i),
- .CLKS_PER_BIT  (15'd182),
+ .CLKS_PER_BIT  (16'd182),
  .o_Rx_DV       (rx_dv_i),
  .o_Rx_Byte     (rx_byte_i)
  );

@@ -1,0 +1,69 @@
+# cpf_memcomp Version: p0.2.1-EAC
+# common_memcomp Version: p1.0.0-EAC
+# lang compiler Version: 4.9.3-EAC Oct 11 2016 15:45:39 
+#
+#       CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+#      
+#       Copyright (c) 1993 - 2021 ARM Physical IP, Inc.  All Rights Reserved.
+#      
+#       Use of this Software is subject to the terms and conditions of the
+#       applicable license agreement with ARM Physical IP, Inc.
+#       In addition, this Software is protected by patents, copyright law 
+#       and international treaties.
+#      
+#       The copyright notice(s) in this Software does not indicate actual or
+#       intended publication of this Software.
+#
+#       CPF Macro-Model for Synchronous Single-Port Register File
+#
+#       Instance Name:              gf12lp_1rw_lg12_w32_bit
+#       Words:                      4096
+#       Bits:                       32
+#       Mux:                        4
+#       Drive:                      6
+#       Write Mask:                 On
+#       Write Thru:                 Off
+#       Extra Margin Adjustment:    On
+#       Redundany:                  Off
+#       Test Muxes                  Off
+#       Power Gating:               Off
+#       Retention:                  On
+#       Pipeline:                   Off
+#       Read Disturb Test:	        Off
+#       
+#       Creation Date:  Tue Apr 27 11:33:42 2021
+#       Version: 	r0p0
+#
+set_cpf_version 1.1
+set_macro_model gf12lp_1rw_lg12_w32_bit
+create_nominal_condition -name nc_on -voltage 1 -state on \
+   -ground_voltage 0.0
+create_nominal_condition -name nc_off -voltage 0.0 -state off -ground_voltage 0.0
+
+create_power_domain -name PDPE -default \
+  -boundary_ports { Q[*] CLK CEN GWEN A[*] D[*] WEN[*] STOV EMA[*] EMAW[*] EMAS } \
+  -instances { clk0_int CEN_int GWEN_int A_int[11] A_int[10] A_int[9] A_int[8] A_int[7] A_int[6] A_int[5] A_int[4] A_int[3] A_int[2] A_int[1] A_int[0] D_int[31] D_int[30] D_int[29] D_int[28] D_int[27] D_int[26] D_int[25] D_int[24] D_int[23] D_int[22] D_int[21] D_int[20] D_int[19] D_int[18] D_int[17] D_int[16] D_int[15] D_int[14] D_int[13] D_int[12] D_int[11] D_int[10] D_int[9] D_int[8] D_int[7] D_int[6] D_int[5] D_int[4] D_int[3] D_int[2] D_int[1] D_int[0] WEN_int[31] WEN_int[30] WEN_int[29] WEN_int[28] WEN_int[27] WEN_int[26] WEN_int[25] WEN_int[24] WEN_int[23] WEN_int[22] WEN_int[21] WEN_int[20] WEN_int[19] WEN_int[18] WEN_int[17] WEN_int[16] WEN_int[15] WEN_int[14] WEN_int[13] WEN_int[12] WEN_int[11] WEN_int[10] WEN_int[9] WEN_int[8] WEN_int[7] WEN_int[6] WEN_int[5] WEN_int[4] WEN_int[3] WEN_int[2] WEN_int[1] WEN_int[0] STOV_int EMA_int[2] EMA_int[1] EMA_int[0] EMAW_int[1] EMAW_int[0] EMAS_int } 
+update_power_domain -name PDPE \
+  -primary_power_net VDDPE -primary_ground_net VSSE
+
+create_power_domain -name PDCE \
+  -boundary_ports { RET1N } \
+  -instances { mem*  RET1N_int }
+update_power_domain -name PDCE \
+  -primary_power_net VDDCE -primary_ground_net VSSE
+
+
+# PM1: Mode A1/A2 - Chip-Enable/Chip-Disable/Selective_Precharge
+create_power_mode -name PM1 -domain_conditions \
+   {PDPE@nc_on PDCE@nc_on} -default
+
+# PM2a: Mode A3 - Retention with VDDCE at nc_on
+create_power_mode -name PM2 -domain_conditions \
+   {PDPE@nc_off PDCE@nc_on}
+
+# PM3: Mode A4 - All Off Mode
+create_power_mode -name PM3 -domain_conditions \
+   {PDPE@nc_off PDCE@nc_off}
+
+
+end_macro_model gf12lp_1rw_lg12_w32_bit

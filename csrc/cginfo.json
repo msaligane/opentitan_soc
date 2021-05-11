@@ -1,0 +1,1240 @@
+{
+    "Misc": {
+        "vcs_version": "N-2017.12-SP2-1_Full64",
+        "vcs_build_date": "Build Date = Jul 14 2018 20:29:59",
+        "master_pid": 10383,
+        "VCS_HOME": "/usr/caen/vcs-2017.12-SP2-1",
+        "cwd": "/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc",
+        "daidir": "/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/csrc",
+        "daidir_abs": "/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.4"
+    },
+    "cycles_program_begin": 56536056375480924,
+    "MlibObjs": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "prim_pkg",
+        "prim_util_pkg",
+        "top_pkg",
+        "ibex_pkg",
+        "prim_ram_1p_pkg",
+        "uart_reg_pkg",
+        "tlul_pkg",
+        "xbar_pkg",
+        "rv_plic_reg_pkg",
+        "gpio_reg_pkg",
+        "gpio",
+        "rv_plic_target_0000",
+        "rv_plic_0000",
+        "tlul_host_adapter_0000",
+        "tlul_adapter_reg",
+        "tlul_adapter_reg_0000",
+        "tlul_err",
+        "tlul_fifo_async",
+        "tlul_fifo_sync",
+        "tlul_fifo_sync_0001",
+        "tlul_socket_1n_0000",
+        "tlul_socket_m1",
+        "fifo_sync_000A",
+        "xbar_periph",
+        "data_mem_tlul",
+        "instr_mem_tlul",
+        "instr_mem_tlul",
+        "datapath_latch_gf12lp_1rw_lg12_w32_bit",
+        "gf12lp_1rw_lg12_w32_bit_error_injection",
+        "iccm_controller",
+        "uart_receiver",
+        "rstmgr",
+        "ibex_counter_0000",
+        "ibex_cs_registers_0000",
+        "ibex_csr_0000",
+        "ibex_csr_0000_0000",
+        "ibex_ex_block_0000",
+        "ibex_if_stage_0000",
+        "ibex_load_store_unit",
+        "ibex_register_file_ff_0000",
+        "ibex_wb_stage_0000",
+        "uart",
+        "prim_clock_gating",
+        "prim_filter_ctr",
+        "prim_filter",
+        "prim_generic_clock_gating",
+        "prim_generic_clock_inv",
+        "prim_generic_flop_2sync",
+        "prim_intr_hw_0000_0000",
+        "prim_subreg_ext_0000",
+        "prim_subreg_ext_0001",
+        "prim_subreg_ext_0002",
+        "prim_subreg_0000",
+        "prim_subreg_0002",
+        "prim_subreg_0003",
+        "prim_subreg_0004",
+        "prim_subreg_0005",
+        "prim_subreg_0006",
+        "opentitan_soc_top_tb"
+    ],
+    "perf": [
+        [
+            0.26492691040039062,
+            0.063990000000000005,
+            0.068988999999999995,
+            226060,
+            226540,
+            1620748230.586344,
+            56536057265718684,
+            "doParsingAndDesignResolution",
+            "entry"
+        ],
+        [
+            0.5011298656463623,
+            0.28995500000000002,
+            0.077988000000000002,
+            237908,
+            238556,
+            1620748230.822547,
+            56536058115849816,
+            "doParsingAndDesignResolution",
+            "exit"
+        ],
+        [
+            0.50372099876403809,
+            0.28995500000000002,
+            0.079987000000000003,
+            237908,
+            238556,
+            1620748230.8251381,
+            56536058125125024,
+            "doPostDesignResolutionToVir2Vcs",
+            "entry"
+        ],
+        [
+            0.63889479637145996,
+            0.39993899999999999,
+            0.100984,
+            242520,
+            242524,
+            1620748230.9603119,
+            56536058611764234,
+            "doUptoVir2VcsNoSepCleanup",
+            "entry"
+        ],
+        [
+            1.2318458557128906,
+            0.860869,
+            0.118981,
+            255140,
+            255160,
+            1620748231.5532629,
+            56536060746608016,
+            "doUptoVir2VcsNoSepCleanup",
+            "exit"
+        ],
+        [
+            1.2319889068603516,
+            0.860869,
+            0.118981,
+            255140,
+            255160,
+            1620748231.553406,
+            56536060747019760,
+            "doRadify_vir2vcsAll",
+            "entry"
+        ],
+        [
+            1.2770798206329346,
+            0.90186200000000005,
+            0.12098100000000001,
+            255140,
+            255160,
+            1620748231.5984969,
+            56536060909268985,
+            "doRadify_vir2vcsAll",
+            "exit"
+        ],
+        [
+            1.2771189212799072,
+            0.90186200000000005,
+            0.12098100000000001,
+            255140,
+            255160,
+            1620748231.598536,
+            56536060909344912,
+            "doPostDesignResolutionToVir2Vcs",
+            "exit"
+        ],
+        [
+            1.2771389484405518,
+            0.90186200000000005,
+            0.12098100000000001,
+            255140,
+            255160,
+            1620748231.598556,
+            56536060909412304,
+            "doGAToPass2",
+            "entry"
+        ],
+        [
+            1.3268139362335205,
+            0.90786100000000003,
+            0.12598000000000001,
+            252284,
+            255160,
+            1620748231.648231,
+            56536061088492900,
+            "DoPass2",
+            "entry"
+        ],
+        [
+            1.7886829376220703,
+            1.3068010000000001,
+            0.16797400000000001,
+            254316,
+            255160,
+            1620748232.1101,
+            56536062751196268,
+            "DoPass2",
+            "exit"
+        ]
+    ],
+    "PrevCompiledModules": {
+        "opentitan_soc_top_tb": {
+            "aDTP7_d": {
+                "bytes": 240660,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "opentitan_soc_top_tb",
+                "mode": 4,
+                "checksum": 0,
+                "out": "aDTP7_d.o"
+            }
+        },
+        "iccm_controller": {
+            "pBBuB_d": {
+                "bytes": 22896,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "iccm_controller",
+                "mode": 4,
+                "checksum": 0,
+                "out": "pBBuB_d.o"
+            }
+        },
+        "gpio": {
+            "NhjRS_d": {
+                "bytes": 137022,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "gpio",
+                "mode": 4,
+                "checksum": 0,
+                "out": "NhjRS_d.o"
+            }
+        },
+        "rv_plic_reg_pkg": {
+            "smRL9_d": {
+                "bytes": 23110,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "rv_plic_reg_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "smRL9_d.o"
+            }
+        },
+        "prim_filter_ctr": {
+            "gk6MZ_d": {
+                "bytes": 15952,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_filter_ctr",
+                "mode": 4,
+                "checksum": 0,
+                "out": "gk6MZ_d.o"
+            }
+        },
+        "tlul_adapter_reg": {
+            "iqqmq_d": {
+                "bytes": 28012,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_adapter_reg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "iqqmq_d.o"
+            }
+        },
+        "uart_receiver": {
+            "p9vU8_d": {
+                "bytes": 19804,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "uart_receiver",
+                "mode": 4,
+                "checksum": 0,
+                "out": "p9vU8_d.o"
+            }
+        },
+        "prim_util_pkg": {
+            "GASTi_d": {
+                "bytes": 6558,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_util_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "GASTi_d.o"
+            }
+        },
+        "prim_subreg_0005": {
+            "c4NnT_d": {
+                "bytes": 14562,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0005",
+                "mode": 4,
+                "checksum": 0,
+                "out": "c4NnT_d.o"
+            }
+        },
+        "prim_clock_gating": {
+            "wLcaU_d": {
+                "bytes": 9712,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_clock_gating",
+                "mode": 4,
+                "checksum": 0,
+                "out": "wLcaU_d.o"
+            }
+        },
+        "tlul_host_adapter_0000": {
+            "VUy5n_d": {
+                "bytes": 20608,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_host_adapter_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "VUy5n_d.o"
+            }
+        },
+        "prim_generic_clock_gating": {
+            "tg752_d": {
+                "bytes": 9688,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_generic_clock_gating",
+                "mode": 4,
+                "checksum": 0,
+                "out": "tg752_d.o"
+            }
+        },
+        "ibex_cs_registers_0000": {
+            "ZYcQd_d": {
+                "bytes": 106502,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_cs_registers_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "ZYcQd_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 33820,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "std",
+                "mode": 4,
+                "checksum": 0,
+                "out": "reYIK_d.o"
+            }
+        },
+        "prim_subreg_ext_0001": {
+            "jApNg_d": {
+                "bytes": 7652,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_ext_0001",
+                "mode": 4,
+                "checksum": 0,
+                "out": "jApNg_d.o"
+            }
+        },
+        "prim_filter": {
+            "YHrbE_d": {
+                "bytes": 13320,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_filter",
+                "mode": 4,
+                "checksum": 0,
+                "out": "YHrbE_d.o"
+            }
+        },
+        "prim_subreg_0000": {
+            "yW5IZ_d": {
+                "bytes": 14530,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "yW5IZ_d.o"
+            }
+        },
+        "instr_mem_tlul": {
+            "nsM2L_d": {
+                "bytes": 108272,
+                "archive": "archive.4/_10383_archive_1.a",
+                "mod": "instr_mem_tlul",
+                "out": "nsM2L_d.o",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
+        "tlul_fifo_sync": {
+            "xdFVz_d": {
+                "bytes": 52612,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_fifo_sync",
+                "mode": 4,
+                "checksum": 0,
+                "out": "xdFVz_d.o"
+            }
+        },
+        "ibex_register_file_ff_0000": {
+            "WEzvH_d": {
+                "bytes": 49842,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_register_file_ff_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "WEzvH_d.o"
+            }
+        },
+        "ibex_if_stage_0000": {
+            "L7dFI_d": {
+                "bytes": 119518,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_if_stage_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "L7dFI_d.o"
+            }
+        },
+        "fifo_sync_000A": {
+            "FSTEk_d": {
+                "bytes": 27476,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "fifo_sync_000A",
+                "mode": 4,
+                "checksum": 0,
+                "out": "FSTEk_d.o"
+            }
+        },
+        "gpio_reg_pkg": {
+            "p5ADd_d": {
+                "bytes": 21652,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "gpio_reg_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "p5ADd_d.o"
+            }
+        },
+        "prim_subreg_ext_0002": {
+            "m2Suf_d": {
+                "bytes": 6778,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_ext_0002",
+                "mode": 4,
+                "checksum": 0,
+                "out": "m2Suf_d.o"
+            }
+        },
+        "prim_generic_flop_2sync": {
+            "jU29D_d": {
+                "bytes": 12160,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_generic_flop_2sync",
+                "mode": 4,
+                "checksum": 0,
+                "out": "jU29D_d.o"
+            }
+        },
+        "ibex_load_store_unit": {
+            "gZKca_d": {
+                "bytes": 47636,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_load_store_unit",
+                "mode": 4,
+                "checksum": 0,
+                "out": "gZKca_d.o"
+            }
+        },
+        "tlul_fifo_async": {
+            "YUi9L_d": {
+                "bytes": 73924,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_fifo_async",
+                "mode": 4,
+                "checksum": 0,
+                "out": "YUi9L_d.o"
+            }
+        },
+        "rv_plic_0000": {
+            "BuiMD_d": {
+                "bytes": 280234,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "rv_plic_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "BuiMD_d.o"
+            }
+        },
+        "xbar_pkg": {
+            "iJN1a_d": {
+                "bytes": 7588,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "xbar_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "iJN1a_d.o"
+            }
+        },
+        "tlul_socket_1n_0000": {
+            "Nnugb_d": {
+                "bytes": 79290,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_socket_1n_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "Nnugb_d.o"
+            }
+        },
+        "tlul_fifo_sync_0001": {
+            "Ze6dp_d": {
+                "bytes": 19058,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_fifo_sync_0001",
+                "mode": 4,
+                "checksum": 0,
+                "out": "Ze6dp_d.o"
+            }
+        },
+        "tlul_socket_m1": {
+            "jNSeH_d": {
+                "bytes": 58902,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_socket_m1",
+                "mode": 4,
+                "checksum": 0,
+                "out": "jNSeH_d.o"
+            }
+        },
+        "ibex_wb_stage_0000": {
+            "feu9J_d": {
+                "bytes": 25784,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_wb_stage_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "feu9J_d.o"
+            }
+        },
+        "prim_subreg_0004": {
+            "vfPy3_d": {
+                "bytes": 14648,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0004",
+                "mode": 4,
+                "checksum": 0,
+                "out": "vfPy3_d.o"
+            }
+        },
+        "prim_subreg_0002": {
+            "VPGh6_d": {
+                "bytes": 13682,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0002",
+                "mode": 4,
+                "checksum": 0,
+                "out": "VPGh6_d.o"
+            }
+        },
+        "prim_subreg_0003": {
+            "eFmNN_d": {
+                "bytes": 14218,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0003",
+                "mode": 4,
+                "checksum": 0,
+                "out": "eFmNN_d.o"
+            }
+        },
+        "prim_pkg": {
+            "vbVTH_d": {
+                "bytes": 6774,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "vbVTH_d.o"
+            }
+        },
+        "ibex_csr_0000": {
+            "AtUGh_d": {
+                "bytes": 10168,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_csr_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "AtUGh_d.o"
+            }
+        },
+        "prim_ram_1p_pkg": {
+            "JYtvx_d": {
+                "bytes": 8700,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_ram_1p_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "JYtvx_d.o"
+            }
+        },
+        "top_pkg": {
+            "twicH_d": {
+                "bytes": 6328,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "top_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "twicH_d.o"
+            }
+        },
+        "prim_subreg_0006": {
+            "y9mwP_d": {
+                "bytes": 14648,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_0006",
+                "mode": 4,
+                "checksum": 0,
+                "out": "y9mwP_d.o"
+            }
+        },
+        "ibex_pkg": {
+            "A0dZk_d": {
+                "bytes": 32246,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "A0dZk_d.o"
+            }
+        },
+        "prim_generic_clock_inv": {
+            "aVmYK_d": {
+                "bytes": 8738,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_generic_clock_inv",
+                "mode": 4,
+                "checksum": 0,
+                "out": "aVmYK_d.o"
+            }
+        },
+        "ibex_ex_block_0000": {
+            "Yw9K4_d": {
+                "bytes": 132616,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_ex_block_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "Yw9K4_d.o"
+            }
+        },
+        "tlul_adapter_reg_0000": {
+            "KPj1T_d": {
+                "bytes": 27514,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_adapter_reg_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "KPj1T_d.o"
+            }
+        },
+        "uart_reg_pkg": {
+            "CnAYi_d": {
+                "bytes": 34754,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "uart_reg_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "CnAYi_d.o"
+            }
+        },
+        "gf12lp_1rw_lg12_w32_bit_error_injection": {
+            "gK7Qq_d": {
+                "bytes": 19832,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "gf12lp_1rw_lg12_w32_bit_error_injection",
+                "mode": 4,
+                "checksum": 0,
+                "out": "gK7Qq_d.o"
+            }
+        },
+        "rstmgr": {
+            "MwPWI_d": {
+                "bytes": 11506,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "rstmgr",
+                "mode": 4,
+                "checksum": 0,
+                "out": "MwPWI_d.o"
+            }
+        },
+        "data_mem_tlul": {
+            "bVEtj_d": {
+                "bytes": 208942,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "data_mem_tlul",
+                "mode": 4,
+                "checksum": 0,
+                "out": "bVEtj_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 12916,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "xbar_periph": {
+            "dgB84_d": {
+                "bytes": 31766,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "xbar_periph",
+                "mode": 4,
+                "checksum": 0,
+                "out": "dgB84_d.o"
+            }
+        },
+        "tlul_pkg": {
+            "rKIkK_d": {
+                "bytes": 13334,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_pkg",
+                "mode": 4,
+                "checksum": 0,
+                "out": "rKIkK_d.o"
+            }
+        },
+        "prim_intr_hw_0000_0000": {
+            "UgkW6_d": {
+                "bytes": 11056,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_intr_hw_0000_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "UgkW6_d.o"
+            }
+        },
+        "rv_plic_target_0000": {
+            "RBDvr_d": {
+                "bytes": 230060,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "rv_plic_target_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "RBDvr_d.o"
+            }
+        },
+        "ibex_counter_0000": {
+            "a8P8Z_d": {
+                "bytes": 14998,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_counter_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "a8P8Z_d.o"
+            }
+        },
+        "tlul_err": {
+            "FwCJb_d": {
+                "bytes": 19352,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "tlul_err",
+                "mode": 4,
+                "checksum": 0,
+                "out": "FwCJb_d.o"
+            }
+        },
+        "prim_subreg_ext_0000": {
+            "h9SmE_d": {
+                "bytes": 7680,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "prim_subreg_ext_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "h9SmE_d.o"
+            }
+        },
+        "ibex_csr_0000_0000": {
+            "anrUZ_d": {
+                "bytes": 10106,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "ibex_csr_0000_0000",
+                "mode": 4,
+                "checksum": 0,
+                "out": "anrUZ_d.o"
+            }
+        },
+        "uart": {
+            "bvImI_d": {
+                "bytes": 225918,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "uart",
+                "mode": 4,
+                "checksum": 0,
+                "out": "bvImI_d.o"
+            }
+        },
+        "datapath_latch_gf12lp_1rw_lg12_w32_bit": {
+            "NbUw3_d": {
+                "bytes": 12246,
+                "archive": "archive.4/_prev_archive_1.a",
+                "mod": "datapath_latch_gf12lp_1rw_lg12_w32_bit",
+                "mode": 4,
+                "checksum": 0,
+                "out": "NbUw3_d.o"
+            }
+        }
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 129732,
+        "archive": "archive.4/_10383_archive_1.a",
+        "text": 0
+    },
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.90786100000000003,
+            "ru_nivcsw": 157,
+            "ru_stime_sec": 0.12598000000000001,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 95404,
+            "ru_nvcsw": 638,
+            "ru_minflt": 30190
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.010998000000000001,
+            "ru_nivcsw": 20,
+            "ru_stime_sec": 0.023996,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 40996,
+            "ru_nvcsw": 17,
+            "ru_minflt": 4928
+        },
+        "realTime": 1.8103988170623779,
+        "cpu_cycles_end": 56536062828785736,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0089980000000000008,
+            "ru_nivcsw": 15,
+            "ru_stime_sec": 0.020996000000000001,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 40640,
+            "ru_nvcsw": 15,
+            "ru_minflt": 4407
+        },
+        "totalObjSize": 238002,
+        "cpu_cycles_cgstart": 56536061088806508,
+        "nMops": 227376,
+        "nQuads": 72654,
+        "ru_self_end": {
+            "ru_utime_sec": 1.3138000000000001,
+            "ru_nivcsw": 203,
+            "ru_stime_sec": 0.16997399999999999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 103112,
+            "ru_nvcsw": 711,
+            "ru_minflt": 35971
+        },
+        "cpu_cycles_total": 6453304812,
+        "mopSpeed": 557377.451040474,
+        "CodeGen(%)": 30.792543467004034,
+        "quadSpeed": 178100.15713133573,
+        "mop/quad": 3.1295730448426791,
+        "outputSizePerQuad": 3.2758278966058305,
+        "Frontend(%)": 69.207456532995963,
+        "peak_mem_kb": 255160
+    },
+    "CurCompileUdps": {},
+    "CompileStrategy": "fullobj",
+    "NameTable": {
+        "prim_intr_hw_0000_0000": [
+            "prim_intr_hw_0000_0000",
+            "UgkW6",
+            "module",
+            49
+        ],
+        "rv_plic_target_0000": [
+            "rv_plic_target_0000",
+            "RBDvr",
+            "module",
+            13
+        ],
+        "tlul_pkg": [
+            "tlul_pkg",
+            "rKIkK",
+            "module",
+            8
+        ],
+        "ibex_cs_registers_0000": [
+            "ibex_cs_registers_0000",
+            "ZYcQd",
+            "module",
+            34
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module",
+            1
+        ],
+        "tlul_adapter_reg": [
+            "tlul_adapter_reg",
+            "iqqmq",
+            "module",
+            16
+        ],
+        "ibex_csr_0000": [
+            "ibex_csr_0000",
+            "AtUGh",
+            "module",
+            35
+        ],
+        "top_pkg": [
+            "top_pkg",
+            "twicH",
+            "module",
+            4
+        ],
+        "prim_ram_1p_pkg": [
+            "prim_ram_1p_pkg",
+            "JYtvx",
+            "module",
+            6
+        ],
+        "prim_subreg_0003": [
+            "prim_subreg_0003",
+            "eFmNN",
+            "module",
+            55
+        ],
+        "prim_pkg": [
+            "prim_pkg",
+            "vbVTH",
+            "module",
+            2
+        ],
+        "prim_subreg_0005": [
+            "prim_subreg_0005",
+            "c4NnT",
+            "module",
+            57
+        ],
+        "prim_util_pkg": [
+            "prim_util_pkg",
+            "GASTi",
+            "module",
+            3
+        ],
+        "uart_receiver": [
+            "uart_receiver",
+            "p9vU8",
+            "module",
+            31
+        ],
+        "prim_generic_clock_gating": [
+            "prim_generic_clock_gating",
+            "tg752",
+            "module",
+            46
+        ],
+        "prim_clock_gating": [
+            "prim_clock_gating",
+            "wLcaU",
+            "module",
+            43
+        ],
+        "tlul_host_adapter_0000": [
+            "tlul_host_adapter_0000",
+            "VUy5n",
+            "module",
+            15
+        ],
+        "opentitan_soc_top_tb": [
+            "opentitan_soc_top_tb",
+            "aDTP7",
+            "module",
+            59
+        ],
+        "gpio": [
+            "gpio",
+            "NhjRS",
+            "module",
+            12
+        ],
+        "iccm_controller": [
+            "iccm_controller",
+            "pBBuB",
+            "module",
+            30
+        ],
+        "ibex_pkg": [
+            "ibex_pkg",
+            "A0dZk",
+            "module",
+            5
+        ],
+        "uart_reg_pkg": [
+            "uart_reg_pkg",
+            "CnAYi",
+            "module",
+            7
+        ],
+        "tlul_fifo_async": [
+            "tlul_fifo_async",
+            "YUi9L",
+            "module",
+            19
+        ],
+        "rv_plic_0000": [
+            "rv_plic_0000",
+            "BuiMD",
+            "module",
+            14
+        ],
+        "xbar_pkg": [
+            "xbar_pkg",
+            "iJN1a",
+            "module",
+            9
+        ],
+        "ibex_counter_0000": [
+            "ibex_counter_0000",
+            "a8P8Z",
+            "module",
+            33
+        ],
+        "tlul_err": [
+            "tlul_err",
+            "FwCJb",
+            "module",
+            18
+        ],
+        "prim_filter_ctr": [
+            "prim_filter_ctr",
+            "gk6MZ",
+            "module",
+            44
+        ],
+        "rv_plic_reg_pkg": [
+            "rv_plic_reg_pkg",
+            "smRL9",
+            "module",
+            10
+        ],
+        "ibex_if_stage_0000": [
+            "ibex_if_stage_0000",
+            "L7dFI",
+            "module",
+            38
+        ],
+        "gpio_reg_pkg": [
+            "gpio_reg_pkg",
+            "p5ADd",
+            "module",
+            11
+        ],
+        "fifo_sync_000A": [
+            "fifo_sync_000A",
+            "FSTEk",
+            "module",
+            24
+        ],
+        "tlul_adapter_reg_0000": [
+            "tlul_adapter_reg_0000",
+            "KPj1T",
+            "module",
+            17
+        ],
+        "tlul_fifo_sync": [
+            "tlul_fifo_sync",
+            "xdFVz",
+            "module",
+            20
+        ],
+        "instr_mem_tlul": [
+            "instr_mem_tlul",
+            "nsM2L",
+            "module",
+            27
+        ],
+        "tlul_fifo_sync_0001": [
+            "tlul_fifo_sync_0001",
+            "Ze6dp",
+            "module",
+            21
+        ],
+        "tlul_socket_m1": [
+            "tlul_socket_m1",
+            "jNSeH",
+            "module",
+            23
+        ],
+        "uart": [
+            "uart",
+            "bvImI",
+            "module",
+            42
+        ],
+        "datapath_latch_gf12lp_1rw_lg12_w32_bit": [
+            "datapath_latch_gf12lp_1rw_lg12_w32_bit",
+            "NbUw3",
+            "module",
+            28
+        ],
+        "tlul_socket_1n_0000": [
+            "tlul_socket_1n_0000",
+            "Nnugb",
+            "module",
+            22
+        ],
+        "xbar_periph": [
+            "xbar_periph",
+            "dgB84",
+            "module",
+            25
+        ],
+        "data_mem_tlul": [
+            "data_mem_tlul",
+            "bVEtj",
+            "module",
+            26
+        ],
+        "rstmgr": [
+            "rstmgr",
+            "MwPWI",
+            "module",
+            32
+        ],
+        "gf12lp_1rw_lg12_w32_bit_error_injection": [
+            "gf12lp_1rw_lg12_w32_bit_error_injection",
+            "gK7Qq",
+            "module",
+            29
+        ],
+        "ibex_csr_0000_0000": [
+            "ibex_csr_0000_0000",
+            "anrUZ",
+            "module",
+            36
+        ],
+        "ibex_ex_block_0000": [
+            "ibex_ex_block_0000",
+            "Yw9K4",
+            "module",
+            37
+        ],
+        "prim_subreg_ext_0002": [
+            "prim_subreg_ext_0002",
+            "m2Suf",
+            "module",
+            52
+        ],
+        "prim_generic_flop_2sync": [
+            "prim_generic_flop_2sync",
+            "jU29D",
+            "module",
+            48
+        ],
+        "ibex_load_store_unit": [
+            "ibex_load_store_unit",
+            "gZKca",
+            "module",
+            39
+        ],
+        "ibex_register_file_ff_0000": [
+            "ibex_register_file_ff_0000",
+            "WEzvH",
+            "module",
+            40
+        ],
+        "ibex_wb_stage_0000": [
+            "ibex_wb_stage_0000",
+            "feu9J",
+            "module",
+            41
+        ],
+        "prim_subreg_0000": [
+            "prim_subreg_0000",
+            "yW5IZ",
+            "module",
+            53
+        ],
+        "prim_subreg_ext_0001": [
+            "prim_subreg_ext_0001",
+            "jApNg",
+            "module",
+            51
+        ],
+        "prim_filter": [
+            "prim_filter",
+            "YHrbE",
+            "module",
+            45
+        ],
+        "prim_generic_clock_inv": [
+            "prim_generic_clock_inv",
+            "aVmYK",
+            "module",
+            47
+        ],
+        "prim_subreg_ext_0000": [
+            "prim_subreg_ext_0000",
+            "h9SmE",
+            "module",
+            50
+        ],
+        "prim_subreg_0002": [
+            "prim_subreg_0002",
+            "VPGh6",
+            "module",
+            54
+        ],
+        "prim_subreg_0004": [
+            "prim_subreg_0004",
+            "vfPy3",
+            "module",
+            56
+        ],
+        "prim_subreg_0006": [
+            "prim_subreg_0006",
+            "y9mwP",
+            "module",
+            58
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            60
+        ]
+    },
+    "CompileProcesses": [
+        "cgproc.10383.json"
+    ],
+    "cpu_cycles_pass2_start": 56536061088556092,
+    "incremental": "on",
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "rlimit": {
+        "data": -1,
+        "stack": -1
+    }
+}

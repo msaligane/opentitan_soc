@@ -1,16 +1,16 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Mon May 10 12:11:21 2021
+# Saved on Tue May 11 11:54:49 2021
 # Designs open: 1
-#   Sim: /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/gf12_opentitan/test_mem/simv
+#   Sim: /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: prim_pkg
-#   Wave.1: 9 signals
+#   Wave.1: 10 signals
 #   Group count = 2
 #   Group Group1 signal count = 3
-#   Group Group2 signal count = 6
+#   Group Group2 signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: N-2017.12-SP2-1_Full64
@@ -60,7 +60,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 467} {child_wave_right 1139} {child_wave_colname 231} {child_wave_colvalue 232} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 467} {child_wave_right 1139} {child_wave_colname 231} {child_wave_colvalue 231} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -87,20 +87,19 @@ gui_set_time_units 1fs
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {opentitan_soc_top_tb.ot_soc_top}
 
 
-set _session_group_3 Group1
-gui_sg_create "$_session_group_3"
-set Group1 "$_session_group_3"
+set _session_group_1 Group1
+gui_sg_create "$_session_group_1"
+set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_3" { opentitan_soc_top_tb.ot_soc_top.iccm_to_xbar opentitan_soc_top_tb.ot_soc_top.xbar_to_dccm opentitan_soc_top_tb.ot_soc_top.dccm_to_xbar }
+gui_sg_addsignal -group "$_session_group_1" { opentitan_soc_top_tb.ot_soc_top.iccm_to_xbar opentitan_soc_top_tb.ot_soc_top.xbar_to_dccm opentitan_soc_top_tb.ot_soc_top.dccm_to_xbar }
 
-set _session_group_4 Group2
-gui_sg_create "$_session_group_4"
-set Group2 "$_session_group_4"
+set _session_group_2 Group2
+gui_sg_create "$_session_group_2"
+set Group2 "$_session_group_2"
 
-gui_sg_addsignal -group "$_session_group_4" { opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D }
+gui_sg_addsignal -group "$_session_group_2" { opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.WEN }
 
 # Global: Highlighting
 
@@ -141,7 +140,7 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK }}
+catch { gui_list_select -id ${Data.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.WEN }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -150,7 +149,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active prim_pkg /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/gf12_opentitan/test_mem/ip/prim/rtl/prim_pkg.sv
+gui_open_source -id ${Source.1}  -replace -active prim_pkg /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/ip/prim/rtl/prim_pkg.sv
 gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 
@@ -162,13 +161,12 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 2001191965 2118797858
+gui_wv_zoom_timerange -id ${Wave.1} 116383692 251061408
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group2}
-gui_list_expand -id ${Wave.1} opentitan_soc_top_tb.ot_soc_top.iccm_to_xbar
 gui_list_expand -id ${Wave.1} opentitan_soc_top_tb.ot_soc_top.xbar_to_dccm
 gui_list_expand -id ${Wave.1} opentitan_soc_top_tb.ot_soc_top.dccm_to_xbar
-gui_list_select -id ${Wave.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN }
+gui_list_select -id ${Wave.1} {opentitan_soc_top_tb.ot_soc_top.dccm_to_xbar.d_data }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -184,9 +182,9 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group2  -item {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D[31:0]} -position below
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group2  -item {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.WEN[31:0]} -position below
 
-gui_view_scroll -id ${Wave.1} -vertical -set 279
+gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane

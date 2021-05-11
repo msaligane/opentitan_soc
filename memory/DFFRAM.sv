@@ -12,7 +12,7 @@ localparam  DEPTH = 2**($bits(A));
 reg [31:0] mem [0:DEPTH-1];         // 16 KBytes
 
 initial begin
-    $readmemh("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/gf12_opentitan/test_mem/tests/hex/load_test.hex", mem);
+    $readmemh("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/tests/hex/load_test.hex", mem);
 end
   
 always @(posedge CLK) begin

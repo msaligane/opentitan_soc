@@ -42,8 +42,8 @@ module xbar_periph (
   
   always_comb begin
     if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-   assign   tl_iccm_o = tl_if_i;
-   assign   tl_if_o   = tl_iccm_i;
+      tl_iccm_o = tl_if_i;
+      tl_if_o   = tl_iccm_i;
     end
   end
 

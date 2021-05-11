@@ -16,7 +16,7 @@
 
 module rv_plic import rv_plic_reg_pkg::*; #(
   // derived parameter
-  localparam int SRCW    = $clog2(NumSrc)
+  localparam int SRCW    = $clog2(NumSrc+1)
 ) (
   input     clk_i,
   input     rst_ni,

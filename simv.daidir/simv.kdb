@@ -1,0 +1,14 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=gpio tlul_fifo_async tlul_socket_m1 gf12lp_1rw_lg12_w32_bit_error_injection prim_filter prim_generic_clock_gating prim_generic_clock_inv opentitan_soc_top_tb 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

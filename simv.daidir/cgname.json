@@ -1,0 +1,362 @@
+{
+    "prim_intr_hw_0000_0000": [
+        "prim_intr_hw_0000_0000",
+        "UgkW6",
+        "module",
+        49
+    ],
+    "rv_plic_target_0000": [
+        "rv_plic_target_0000",
+        "RBDvr",
+        "module",
+        13
+    ],
+    "tlul_pkg": [
+        "tlul_pkg",
+        "rKIkK",
+        "module",
+        8
+    ],
+    "ibex_cs_registers_0000": [
+        "ibex_cs_registers_0000",
+        "ZYcQd",
+        "module",
+        34
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "tlul_adapter_reg": [
+        "tlul_adapter_reg",
+        "iqqmq",
+        "module",
+        16
+    ],
+    "ibex_csr_0000": [
+        "ibex_csr_0000",
+        "AtUGh",
+        "module",
+        35
+    ],
+    "top_pkg": [
+        "top_pkg",
+        "twicH",
+        "module",
+        4
+    ],
+    "prim_ram_1p_pkg": [
+        "prim_ram_1p_pkg",
+        "JYtvx",
+        "module",
+        6
+    ],
+    "prim_subreg_0003": [
+        "prim_subreg_0003",
+        "eFmNN",
+        "module",
+        55
+    ],
+    "prim_pkg": [
+        "prim_pkg",
+        "vbVTH",
+        "module",
+        2
+    ],
+    "prim_subreg_0005": [
+        "prim_subreg_0005",
+        "c4NnT",
+        "module",
+        57
+    ],
+    "prim_util_pkg": [
+        "prim_util_pkg",
+        "GASTi",
+        "module",
+        3
+    ],
+    "uart_receiver": [
+        "uart_receiver",
+        "p9vU8",
+        "module",
+        31
+    ],
+    "prim_generic_clock_gating": [
+        "prim_generic_clock_gating",
+        "tg752",
+        "module",
+        46
+    ],
+    "prim_clock_gating": [
+        "prim_clock_gating",
+        "wLcaU",
+        "module",
+        43
+    ],
+    "tlul_host_adapter_0000": [
+        "tlul_host_adapter_0000",
+        "VUy5n",
+        "module",
+        15
+    ],
+    "opentitan_soc_top_tb": [
+        "opentitan_soc_top_tb",
+        "aDTP7",
+        "module",
+        59
+    ],
+    "gpio": [
+        "gpio",
+        "NhjRS",
+        "module",
+        12
+    ],
+    "iccm_controller": [
+        "iccm_controller",
+        "pBBuB",
+        "module",
+        30
+    ],
+    "ibex_pkg": [
+        "ibex_pkg",
+        "A0dZk",
+        "module",
+        5
+    ],
+    "uart_reg_pkg": [
+        "uart_reg_pkg",
+        "CnAYi",
+        "module",
+        7
+    ],
+    "tlul_fifo_async": [
+        "tlul_fifo_async",
+        "YUi9L",
+        "module",
+        19
+    ],
+    "rv_plic_0000": [
+        "rv_plic_0000",
+        "BuiMD",
+        "module",
+        14
+    ],
+    "xbar_pkg": [
+        "xbar_pkg",
+        "iJN1a",
+        "module",
+        9
+    ],
+    "ibex_counter_0000": [
+        "ibex_counter_0000",
+        "a8P8Z",
+        "module",
+        33
+    ],
+    "tlul_err": [
+        "tlul_err",
+        "FwCJb",
+        "module",
+        18
+    ],
+    "prim_filter_ctr": [
+        "prim_filter_ctr",
+        "gk6MZ",
+        "module",
+        44
+    ],
+    "rv_plic_reg_pkg": [
+        "rv_plic_reg_pkg",
+        "smRL9",
+        "module",
+        10
+    ],
+    "ibex_if_stage_0000": [
+        "ibex_if_stage_0000",
+        "L7dFI",
+        "module",
+        38
+    ],
+    "gpio_reg_pkg": [
+        "gpio_reg_pkg",
+        "p5ADd",
+        "module",
+        11
+    ],
+    "fifo_sync_000A": [
+        "fifo_sync_000A",
+        "FSTEk",
+        "module",
+        24
+    ],
+    "tlul_adapter_reg_0000": [
+        "tlul_adapter_reg_0000",
+        "KPj1T",
+        "module",
+        17
+    ],
+    "tlul_fifo_sync": [
+        "tlul_fifo_sync",
+        "xdFVz",
+        "module",
+        20
+    ],
+    "instr_mem_tlul": [
+        "instr_mem_tlul",
+        "nsM2L",
+        "module",
+        27
+    ],
+    "tlul_fifo_sync_0001": [
+        "tlul_fifo_sync_0001",
+        "Ze6dp",
+        "module",
+        21
+    ],
+    "tlul_socket_m1": [
+        "tlul_socket_m1",
+        "jNSeH",
+        "module",
+        23
+    ],
+    "uart": [
+        "uart",
+        "bvImI",
+        "module",
+        42
+    ],
+    "datapath_latch_gf12lp_1rw_lg12_w32_bit": [
+        "datapath_latch_gf12lp_1rw_lg12_w32_bit",
+        "NbUw3",
+        "module",
+        28
+    ],
+    "tlul_socket_1n_0000": [
+        "tlul_socket_1n_0000",
+        "Nnugb",
+        "module",
+        22
+    ],
+    "xbar_periph": [
+        "xbar_periph",
+        "dgB84",
+        "module",
+        25
+    ],
+    "data_mem_tlul": [
+        "data_mem_tlul",
+        "bVEtj",
+        "module",
+        26
+    ],
+    "rstmgr": [
+        "rstmgr",
+        "MwPWI",
+        "module",
+        32
+    ],
+    "gf12lp_1rw_lg12_w32_bit_error_injection": [
+        "gf12lp_1rw_lg12_w32_bit_error_injection",
+        "gK7Qq",
+        "module",
+        29
+    ],
+    "ibex_csr_0000_0000": [
+        "ibex_csr_0000_0000",
+        "anrUZ",
+        "module",
+        36
+    ],
+    "ibex_ex_block_0000": [
+        "ibex_ex_block_0000",
+        "Yw9K4",
+        "module",
+        37
+    ],
+    "prim_subreg_ext_0002": [
+        "prim_subreg_ext_0002",
+        "m2Suf",
+        "module",
+        52
+    ],
+    "prim_generic_flop_2sync": [
+        "prim_generic_flop_2sync",
+        "jU29D",
+        "module",
+        48
+    ],
+    "ibex_load_store_unit": [
+        "ibex_load_store_unit",
+        "gZKca",
+        "module",
+        39
+    ],
+    "ibex_register_file_ff_0000": [
+        "ibex_register_file_ff_0000",
+        "WEzvH",
+        "module",
+        40
+    ],
+    "ibex_wb_stage_0000": [
+        "ibex_wb_stage_0000",
+        "feu9J",
+        "module",
+        41
+    ],
+    "prim_subreg_0000": [
+        "prim_subreg_0000",
+        "yW5IZ",
+        "module",
+        53
+    ],
+    "prim_subreg_ext_0001": [
+        "prim_subreg_ext_0001",
+        "jApNg",
+        "module",
+        51
+    ],
+    "prim_filter": [
+        "prim_filter",
+        "YHrbE",
+        "module",
+        45
+    ],
+    "prim_generic_clock_inv": [
+        "prim_generic_clock_inv",
+        "aVmYK",
+        "module",
+        47
+    ],
+    "prim_subreg_ext_0000": [
+        "prim_subreg_ext_0000",
+        "h9SmE",
+        "module",
+        50
+    ],
+    "prim_subreg_0002": [
+        "prim_subreg_0002",
+        "VPGh6",
+        "module",
+        54
+    ],
+    "prim_subreg_0004": [
+        "prim_subreg_0004",
+        "vfPy3",
+        "module",
+        56
+    ],
+    "prim_subreg_0006": [
+        "prim_subreg_0006",
+        "y9mwP",
+        "module",
+        58
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        60
+    ]
+}

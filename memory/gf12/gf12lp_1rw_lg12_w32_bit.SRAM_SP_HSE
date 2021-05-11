@@ -1,0 +1,9 @@
+instname=gf12lp_1rw_lg12_w32_bit
+check_instname=off
+words=4096
+bits=32
+mux=4
+write_mask=on
+corners = ffpg_sigcmin_0p88v_0p88v_m40c,tt_nominal_0p80v_0p80v_25c,sspg_sigcmax_0p72v_0p72v_125c
+libname=gf12lp_1rw_lg12_w32_bit
+flexible_banking = 4

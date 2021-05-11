@@ -1,0 +1,112 @@
+ucliGUI::start /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/simv -ucligui 
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD1
+set ::dve_fid VPD1
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpyJF5eN
+synUtils::sendTool -active {_icl_start_rpc -version "N-2017.12-SP2-1_Full64" -sync_file /tmp/vcs_dve_rpc.naomikmo.17836}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.naomikmo.17836}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+# Begin_DVE_Session_Save_Info
+# DVE restart session
+# Saved on Tue May 11 11:54:49 2021
+# Designs open: 1
+#   Sim: /afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/final_test/opentitan_soc/simv
+# Toplevel windows open: 2
+# 	TopLevel.1
+# 	TopLevel.2
+#   Source.1: prim_pkg
+#   Wave.1: 10 signals
+#   Group count = 2
+#   Group Group1 signal count = 3
+#   Group Group2 signal count = 7
+# End_DVE_Session_Save_Info
+# DVE version: N-2017.12-SP2-1_Full64
+# DVE build date: Jul 14 2018 20:58:30
+#<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
+# Application preferences
+#<WindowLayout>
+# DVE top-level session
+# Create and position top-level window: TopLevel.1
+set TopLevel.1 TopLevel.1
+# Docked window settings
+set HSPane.1 HSPane.1
+set Hier.1 Hier.1
+set DLPane.1 DLPane.1
+set Data.1 Data.1
+set Console.1 Console.1
+# MDI window settings
+set Source.1 Source.1
+# End MDI window settings
+# Create and position top-level window: TopLevel.2
+set TopLevel.2 TopLevel.2
+# Docked window settings
+# MDI window settings
+set Wave.1 Wave.1
+# End MDI window settings
+#</WindowLayout>
+#<Database>
+#</Database>
+# DVE Global setting session:
+# Global: Breakpoints
+# Global: Bus
+# Global: Expressions
+# Global: Signal Time Shift
+# Global: Signal Compare
+# Global: Signal Groups
+set _session_group_1 Group1
+set Group1 "$_session_group_1"
+set _session_group_2 Group2
+set Group2 "$_session_group_2"
+# Global: Highlighting
+# Global: Stack
+synopsys::xml {set_only_active_frame <data value="1" />}
+# Post database loading setting...
+# Save global setting...
+# Wave/List view global setting
+# Close all empty TopLevel windows
+foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
+# DVE View/pane content session:
+# Hier 'Hier.1'
+catch {gui_list_expand -id ${Hier.1} opentitan_soc_top_tb}
+catch {gui_list_expand -id ${Hier.1} opentitan_soc_top_tb.ot_soc_top}
+catch {gui_list_expand -id ${Hier.1} opentitan_soc_top_tb.ot_soc_top.dccm}
+catch {gui_list_select -id ${Hier.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12}}
+# Data 'Data.1'
+catch { gui_list_select -id ${Data.1} {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.WEN }}
+# Source 'Source.1'
+# View 'Wave.1'
+set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+set origGroupCreationState [gui_list_create_group_when_add -wave]
+synopsys::dump -add {opentitan_soc_top_tb.ot_soc_top.dccm_to_xbar opentitan_soc_top_tb.ot_soc_top.iccm_to_xbar opentitan_soc_top_tb.ot_soc_top.xbar_to_dccm } -aggregates  -fid VPD1
+synopsys::dump -add {opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.A opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.CLK opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.D opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.GWEN opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.Q opentitan_soc_top_tb.ot_soc_top.dccm.dccm_gf12.WEN } -aggregates  -fid VPD1
+if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+if { $groupExD } {  gui_msg_report -code DVWW028 }
+# Restore toplevel window zorder
+# The toplevel window could be closed if it has no view/pane
+if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Source.1} 	gui_set_active_window -window ${DLPane.1} }
+if {[gui_exist_window -window ${TopLevel.2}]} { 	gui_set_active_window -window ${TopLevel.2} 	gui_set_active_window -window ${Wave.1} }
+#</Session>
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit
