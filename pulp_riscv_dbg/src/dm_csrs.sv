@@ -625,6 +625,4 @@ module dm_csrs #(
   end
 
 
-  //pragma translate_on
-
 endmodule : dm_csrs

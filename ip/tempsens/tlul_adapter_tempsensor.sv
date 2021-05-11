@@ -119,13 +119,13 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
        //rdata <= '1;
       //end else begin
         case(addr_o)
-          8'h08 : rdata = SEL_CONV_TIME_REG;
-          8'h0C : rdata = en_REG;
-          8'h14 : rdata = DOUT_REG;
-          8'h18 : rdata = DONE_REG;
+          8'h08 : rdata <= SEL_CONV_TIME_REG;
+          8'h0C : rdata <= en_REG;
+          8'h14 : rdata <= DOUT_REG;
+          8'h18 : rdata <= DONE_REG;
         endcase
       end
-      error = 1'b0; // <= error_i | err_internal;
+      error <= 1'b0; // <= error_i | err_internal;
     end
   
   always_ff @(posedge clk_i or negedge rst_ni) begin

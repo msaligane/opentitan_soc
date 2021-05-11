@@ -232,7 +232,7 @@ module opentitan_soc_top #(
 
    //UART
    .tl_uart_o         (xbar_to_uart),
-   .tl_uart_i         (uart_to_xbar)
+   .tl_uart_i         (uart_to_xbar),
     // For JTAG Debug ROM
     .tl_debug_rom_o (xbar_to_dbgrom),
     .tl_debug_rom_i (dbgrom_to_xbar)
@@ -289,14 +289,17 @@ iccm_controller u_dut(
     .tl_d_i   (xbar_to_dccm),
     .tl_d_o   (dccm_to_xbar)
   );
-
-rstmgr reset_manager(
-  .clk_i(clk_i),
-  .rst_ni(rst_ni),
-  .iccm_rst_i(iccm_cntrl_reset),
-  .ndmreset (dbg_rst),
-  .sys_rst_ni(system_rst_ni)
-);
+  
+  logic dbg_req;
+  logic dbg_rst;
+  
+  rstmgr reset_manager(
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
+    .iccm_rst_i(iccm_cntrl_reset),
+    .ndmreset (dbg_rst),
+    .sys_rst_ni(system_rst_ni)
+  );
 
   rv_plic intr_controller (
     .clk_i      (clk_i),
@@ -389,8 +392,6 @@ uart u_uart0(
   assign jtag_tdo_o           = jtag_rsp.tdo;
   assign unused_jtag_tdo_oe_o = jtag_rsp.tdo_oe;
 
-  logic dbg_req;
-  logic dbg_rst;
 
   rv_dm #(
   .NrHarts(1),
