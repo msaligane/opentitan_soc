@@ -1,4 +1,4 @@
-// `define GF12
+`define GF12
 
 module data_mem_tlul
 (

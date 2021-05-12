@@ -1,4 +1,6 @@
 /* verilator lint_off CASEINCOMPLETE */
+// `define SIMULATION
+
 module tlul_adapter_tempsensor import tlul_pkg::*; #(
   parameter  bit EnableDataIntgGen = 1'b0,
   parameter  int RegAw = 12,
@@ -91,7 +93,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
       end 
   end
 
-  tempsenseInst u_tempsenseInst (
+  tempsenseInst_error_inv6_head9 u_tempsenseInst (
     .CLK_REF       (CLK_REF),
     .RESET_COUNTERn(RESET_REGn),
     .SEL_CONV_TIME (SEL_CONV_TIME_REG),
@@ -197,7 +199,8 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
 //  `ASSERT_INIT(MatchedWidthAssert, RegDw == top_pkg::TL_DW)
 endmodule
 
-module tempsenseInst (
+`ifndef SIMULATION
+module tempsenseInst_error_inv6_head9 (
   CLK_REF,
   RESET_COUNTERn,
   SEL_CONV_TIME,
@@ -217,4 +220,5 @@ module tempsenseInst (
    output outb;
    output lc_out;
 endmodule
+`endif
 /* verilator lint_on CASEINCOMPLETE */
