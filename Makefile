@@ -10,9 +10,15 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 ## DEPENDENCIES
 ################################################################################
 
+### Top Level Testbench
 # TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_tb.sv
+
+### Top Level Testbench to test UART
 TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
 TESTBENCH  += $(OPENTITAN_TOP)/opentitan_soc_top_dpi.cpp
+
+### UART Testbench from Ghazdi
+# TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_uart.sv
 
 ### Adding required files by BRUTE FORCE (to-be copied from test/flist.f)
 HEADERS     = $(OPENTITAN_PKGS)/prim/rtl/prim_pkg.sv

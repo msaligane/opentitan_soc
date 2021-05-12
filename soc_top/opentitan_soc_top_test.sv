@@ -16,6 +16,15 @@ module opentitan_soc_top #(
   input               uart_rx,
   output              uart_tx,
 
+	input  logic        SPI_RST_pad,
+	input  logic        SPI_SS_pad,
+	input  logic        SPI_SCLK_pad,
+	input  logic        SPI_MOSI_pad,
+	input  logic        SPI_MISO_PO,
+	input  logic [31:0] DIN_SPI,
+	input  logic [31:0] ADDR_SPI,
+	output logic [31:0] SRAM_DOUT,
+
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
 );
@@ -88,17 +97,18 @@ module opentitan_soc_top #(
 
   logic [31:0] gpio_intr;
 
-  logic instr_valid;
+  logic        instr_valid;
   logic [11:0] tlul_addr;
   logic [31:0] tlul_data;
 
   logic       rx_dv_i;
   logic [7:0] rx_byte_i;
 
-  logic iccm_cntrl_reset;
+  logic        iccm_cntrl_reset;
   logic [11:0] iccm_cntrl_addr;
   logic [31:0] iccm_cntrl_data;
-  logic iccm_cntrl_we;
+  logic        iccm_cntrl_we;
+
 
   // jtag interfaces (COPIED FROM AZADI) 
 

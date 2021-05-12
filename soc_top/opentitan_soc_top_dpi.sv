@@ -63,8 +63,9 @@ int clk_bit = (frequency / baudrate) + 1;
 int inst_c  = 0;
 int bit_c   = 0;
 
+logic[71:0] buffer;
+logic[31:0] inst;
 int n           = 0;
-int inst        = 0;
 int half_byte1  = 0;
 int half_byte2  = 0;
 int byte1       = 0;
@@ -100,6 +101,7 @@ always @(posedge clk_i) begin
     if(clk_count >= clk_bit && (clk_count%clk_bit) == 0) begin
         $display("Start @ %d", clk_count);
         if(bit_c == 0) begin
+            inst_count= inst_count+1;
             uart_rx_i = 0;
             bit_c     = bit_c+1;
             bit_count = 0;
@@ -115,7 +117,6 @@ always @(posedge clk_i) begin
             bit_c     = 0;
             inst_c    = inst_c+1;
             bit_count = 0;
-            inst_count= inst_count+1;
         end
     end
 end
@@ -143,7 +144,7 @@ initial begin
     half_byte8 = 0;
     byte4      = 0;
 
-    byte_i     = new [totalLines*4];
+    byte_i     = new [totalLines*8];
 
     uart_rx_i  = 1;
     clk_i      = 0;
@@ -155,10 +156,10 @@ initial begin
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/prog.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/test.hex", "r");
     while(!$feof(fp)) begin
-        //$fscanf(fp, "%h", inst);
-        $fgets(inst, fp);
+        $fgets(buffer, fp);
+        $sscanf(buffer, "%x", inst);
 
         $display("Reading: %h\n", inst);
 
