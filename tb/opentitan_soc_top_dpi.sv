@@ -159,7 +159,7 @@ initial begin
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/test.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/load_test.hex", "r");
     while(!$feof(fp)) begin
         $fgets(buffer, fp);
         $sscanf(buffer, "%x", inst);
