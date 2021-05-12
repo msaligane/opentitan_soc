@@ -1,4 +1,5 @@
 `timescale 1ns/100ps
+`define DBG_INST
 
 import "DPI-C" function int rfile();
 
@@ -10,7 +11,8 @@ module opentitan_soc_top_tb #(
 logic clk_i;
 logic rst_ni;
 
-logic uart_rx_i;
+logic uart_rx_inst;
+logic uart_txen;
 logic uart_tx;
 logic uart_rx;
 
@@ -25,12 +27,13 @@ opentitan_soc_top #(
 ) 
 ot_soc_top 
 (
-    .clk_i     (clk_i),
-    .rst_ni    (rst_ni),
+    .clk_i        (clk_i),
+    .rst_ni       (rst_ni),
 
-    .uart_rx_i (uart_rx_i),
-    .uart_rx   (uart_rx),
-	.uart_tx   (uart_tx),
+    .uart_rx_inst (uart_rx_inst),
+    .uart_rx      (uart_rx),
+	.uart_tx      (uart_tx),
+    .uart_txen    (uart_txen),
 
     // JTAG interface 
     // .jtag_tck_i(jtag_tck_i),
@@ -53,11 +56,11 @@ logic [63:0] clk_count;
 logic [31:0] inst_count;
 logic [3:0]  bit_count;
 
-int totalLines = rfile();
+logic [15:0] totalLines = rfile();
 int byte_i[];
 
-longint frequency = 'd10000000;
-longint baudrate = 'd115200;
+longint frequency = 'd100000000;
+longint baudrate = 'd9600;
 int clk_bit = (frequency / baudrate) + 1;
 
 int inst_c  = 0;
@@ -91,29 +94,29 @@ always @(posedge clk_i) begin
     else begin    
         clk_count <= clk_count + 'b1;
     end
-    if(clk_count >= 'd20000) begin
-        $display("Max Cycles Reached!");
-        $finish;
-    end
 end
 
 always @(posedge clk_i) begin
     if(clk_count >= clk_bit && (clk_count%clk_bit) == 0) begin
-        $display("Start @ %d", clk_count);
+        `ifdef DBG_BYTE
+            $display("Start @ %d", clk_count);
+        `endif
         if(bit_c == 0) begin
             inst_count= inst_count+1;
-            uart_rx_i = 0;
+            uart_rx_inst = 0;
             bit_c     = bit_c+1;
             bit_count = 0;
         end
         else if(bit_c <= 'd8) begin
-            $display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
-            uart_rx_i = (byte_i[inst_c] >> bit_c - 1) & 'h01;
+            uart_rx_inst = (byte_i[inst_c] >> bit_c - 1) & 'h01;
             bit_c     = bit_c+1;
             bit_count = bit_count+1;
+            `ifdef DBG_BYTE
+                $display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
+            `endif
         end
         else if(bit_c > 'd8) begin
-            uart_rx_i = 1;
+            uart_rx_inst = 1;
             bit_c     = 0;
             inst_c    = inst_c+1;
             bit_count = 0;
@@ -146,9 +149,9 @@ initial begin
 
     byte_i     = new [totalLines*8];
 
-    uart_rx_i  = 1;
-    clk_i      = 0;
-    rst_ni     = 0;
+    uart_rx_inst  = 1;
+    clk_i         = 0;
+    rst_ni        = 0;
 
     inst_count = 0;
     bit_count  = 0;
@@ -160,8 +163,9 @@ initial begin
     while(!$feof(fp)) begin
         $fgets(buffer, fp);
         $sscanf(buffer, "%x", inst);
-
-        $display("Reading: %h\n", inst);
+        `ifdef DBG_INST
+            $display("Reading: %h\n", inst);
+        `endif
 
         half_byte1 = (inst & 'h0f);             // 3
         half_byte2 = (inst & 'hf0) >> 4;        // 1
@@ -179,7 +183,10 @@ initial begin
         half_byte8 = (inst & 'hf0000000) >> 28; // 0
         byte4      = (half_byte8 << 4) | half_byte7; // 0x00  
 
-        $display("n: %d, B1: %d, B2: %d, B3: %d, B4: %d", n, byte1, byte2, byte3, byte4);
+        `ifdef DBG_INST
+            $display("n: %d, B1: %d, B2: %d, B3: %d, B4: %d", n, byte1, byte2, byte3, byte4);
+        `endif
+
         byte_i[n]     = byte1;
         byte_i[n + 1] = byte2;
         byte_i[n + 2] = byte3;
@@ -188,17 +195,21 @@ initial begin
     end
 
 	repeat(5)
-	@(negedge clk_i)
-	rst_ni = 0;
-	
-	
+	    @(negedge clk_i)
+
+
 	@(negedge clk_i)
 	rst_ni  = 1;
     uart_rx = 1;
+
+    `ifdef DBG_INST
+        $display("totalLines: %d", totalLines);
+    `endif
 	
+    #(CLOCK*clk_bit*(totalLines+1)*64)
     
     @(negedge clk_i)
-	#100000
+    #100000
 	$finish;
 
 end

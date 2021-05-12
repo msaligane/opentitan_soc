@@ -33,6 +33,7 @@ HEADERS    += $(OPENTITAN_PKGS)/rv_plic/rtl/rv_plic_reg_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
+SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio_reg_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_reg_top.sv
@@ -139,7 +140,7 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full
 ## RULES
 ################################################################################
 
-.PHONY: all sim simv dve test testv
+.PHONY: all sim simv dve
 
 # Default target:
 all:    simv
@@ -154,15 +155,6 @@ simv:  $(HEADERS) $(SIMFILES) $(TESTBENCH)
 
 dve:	sim
 	./simv -gui &
-
-test: testv
-	./testv | tee program.out
-
-testv: $(HEADERS) $(SIMFILES) $(TESTFILE)
-	$(VCS) $^ -o testv
-
-tdve:	test
-	./test -gui &
 
 .PHONY:	clean
 clean:

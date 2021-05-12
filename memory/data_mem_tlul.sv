@@ -1,3 +1,5 @@
+// `define GF12
+
 module data_mem_tlul
 (
   input clk_i,
@@ -17,8 +19,12 @@ module data_mem_tlul
   logic        rvalid;
   logic        rvalid_buf; 
   logic [31:0] we_inv;
-  // logic [3:0]  data_we;
-  logic [31:0]  data_we;
+  `ifndef GF12
+    logic [3:0]  data_we;
+  `endif
+  `ifdef GF12
+    logic [31:0]  data_we;
+  `endif
   
   logic [31:0] data_buffer;
 
@@ -35,35 +41,39 @@ module data_mem_tlul
     end
   end
 
- //  assign data_we[1:0] = (wmask[23:16] != 8'd0) ? 2'b11: 2'b00;
- //  assign data_we[3:2] = (wmask[31:24] != 8'd0) ? 2'b11: 2'b00; 
-   
- //  DFFRAM dccm (
- //      .CLK    (clk_i  ),
- //     .EN     (req    ),   // chip enable
- //     .WE     (data_we),   // write mask
- //     .DI     (wdata  ),   // data input
- //     .DO     (rdata  ),   // data output
- //     .A      (addr   )    // address
- // );
+  `ifndef GF12
+    assign data_we[1:0] = (wmask[23:16] != 8'd0) ? 2'b11: 2'b00;
+    assign data_we[3:2] = (wmask[31:24] != 8'd0) ? 2'b11: 2'b00; 
+      
+    DFFRAM dccm (
+        .CLK    (clk_i  ),
+        .EN     (req    ),   // chip enable
+        .WE     (data_we),   // write mask
+        .DI     (wdata  ),   // data input
+        .DO     (rdata  ),   // data output
+        .A      (addr   )    // address
+    );
+  `endif
 
-  assign data_we[15:0] = (wmask[23:16] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
-  assign data_we[31:16] = (wmask[31:24] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
-  assign we_inv = ~data_we;
-  gf12lp_1rw_lg12_w32_bit dccm_gf12 (
-    .A(addr),
-    .D(wdata),
-    .CEN(~req),
-    .CLK(clk_i),
-    .Q(rdata),
-    .WEN(we ? we_inv : '1),
-    .GWEN(we ? &we_inv : '1),
-    .EMA(3'b010),
-    .EMAW(2'b01),
-    .EMAS(1'b0),
-    .RET1N(1'b1),
-    .STOV(1'b0)
-  );
+  `ifdef GF12
+    assign data_we[15:0] = (wmask[23:16] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
+    assign data_we[31:16] = (wmask[31:24] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
+    assign we_inv = ~data_we;
+    gf12lp_1rw_lg12_w32_bit dccm_gf12 (
+      .A(addr),
+      .D(wdata),
+      .CEN(~req),
+      .CLK(clk_i),
+      .Q(rdata),
+      .WEN(we ? we_inv : '1),
+      .GWEN(we ? &we_inv : '1),
+      .EMA(3'b010),
+      .EMAW(2'b01),
+      .EMAS(1'b0),
+      .RET1N(1'b1),
+      .STOV(1'b0)
+    );
+  `endif
   
   tlul_sram_adapter #(
     .SramAw       (12),

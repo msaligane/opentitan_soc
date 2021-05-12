@@ -12,9 +12,10 @@ module opentitan_soc_top #(
   // input               jtag_tdi_i,
   // output              jtag_tdo_o,
 
-  input               uart_rx_i,
+  input               uart_rx_inst,
   input               uart_rx,
   output              uart_tx,
+  output              uart_txen,
 
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
@@ -161,43 +162,43 @@ module opentitan_soc_top #(
   //     .DmExceptionAddr  () 
   // )
   u_top (
-      .clk_i  (clk_i),
-      .rst_ni (rst_ni),
-      .ram_cfg_i (1'b1),
-      .scan_rst_ni (),
-      .crash_dump_o (),
+    .clk_i  (clk_i),
+    .rst_ni (system_rst_ni),
+    .ram_cfg_i (1'b1),
+    .scan_rst_ni (),
+    .crash_dump_o (),
 
-      // instruction memory interface 
-      .tl_i_i (xbar_to_ifu),
-      .tl_i_o (ifu_to_xbar),
+    // instruction memory interface 
+    .tl_i_i (xbar_to_ifu),
+    .tl_i_o (ifu_to_xbar),
 
-      // data memory interface 
-      .tl_d_i (xbar_to_lsu),
-      .tl_d_o (lsu_to_xbar),
+    // data memory interface 
+    .tl_d_i (xbar_to_lsu),
+    .tl_d_o (lsu_to_xbar),
 
-      .test_en_i   (1'b1),     // enable all clock gates for testing
+    .test_en_i   (1'b1),     // enable all clock gates for testing
 
-      .hart_id_i   (32'b0), 
-      .boot_addr_i (32'h20000000),
+    .hart_id_i   (32'b0), 
+    .boot_addr_i (32'h20000000),
 
-      // Interrupt inputs
-      .irq_software_i (1'b0),
-      .irq_timer_i    (intr_timer),
-      .irq_external_i (intr_req),
-      .irq_fast_i     (15'b0),
-      .irq_nm_i       (1'b0),       // non-maskeable interrupt
+    // Interrupt inputs
+    .irq_software_i (1'b0),
+    .irq_timer_i    (intr_timer),
+    .irq_external_i (intr_req),
+    .irq_fast_i     (15'b0),
+    .irq_nm_i       (1'b0),       // non-maskeable interrupt
 
-      // CPU Control Signals
-      .fetch_enable_i (1'b1),
-      .alert_minor_o  (),
-      .alert_major_o  (),
-      .core_sleep_o   ()
+    // CPU Control Signals
+    .fetch_enable_i (1'b1),
+    .alert_minor_o  (),
+    .alert_major_o  (),
+    .core_sleep_o   ()
   );
 
   //peripheral xbar
   xbar_periph periph_switch (
     .clk_i     (clk_i),
-    .rst_ni    (rst_ni),
+    .rst_ni    (system_rst_ni),
 
     /* Host interfaces */
     .tl_if_i   (ifu_to_xbar), 
@@ -284,10 +285,10 @@ module opentitan_soc_top #(
 
   instr_mem_top iccm (
     .clk_i      (clk_i),
-    .rst_ni     (rst_ni),
+    .rst_ni     (system_rst_ni),
 
     .req        (req_i),
-    .addr       (rst_ni? tlul_addr : iccm_cntrl_addr),
+    .addr       (system_rst_ni? tlul_addr : iccm_cntrl_addr),
     .wdata      (iccm_cntrl_data),
     .rdata      (tlul_data),
     .rvalid     (instr_valid),
@@ -302,26 +303,25 @@ module opentitan_soc_top #(
     .ByteAccess   (1),
     .ErrOnWrite   (0),  // 1: Writes not allowed, automatically error
     .ErrOnRead    (0)   // 1: Reads not allowed, automatically error  
-
   ) inst_mem (
-      .clk_i     (clk_i),
-      .rst_ni    (rst_ni),
-      .tl_i      (xbar_to_iccm),
-      .tl_o      (iccm_to_xbar), 
-      .req_o     (req_i),
-      .gnt_i     (1'b1),
-      .we_o      (),
-      .addr_o    (tlul_addr),
-      .wdata_o   (),
-      .wmask_o   (),
-      .rdata_i   ((rst_ni) ? tlul_data: '0),
-      .rvalid_i  (instr_valid),
-      .rerror_i  (2'b0)
+    .clk_i     (clk_i),
+    .rst_ni    (system_rst_ni),
+    .tl_i      (xbar_to_iccm),
+    .tl_o      (iccm_to_xbar), 
+    .req_o     (req_i),
+    .gnt_i     (1'b1),
+    .we_o      (),
+    .addr_o    (tlul_addr),
+    .wdata_o   (),
+    .wmask_o   (),
+    .rdata_i   ((system_rst_ni) ? tlul_data: '0),
+    .rvalid_i  (instr_valid),
+    .rerror_i  (2'b0)
   );
 
   data_mem_tlul dccm(
     .clk_i    (clk_i),
-    .rst_ni   (rst_ni),
+    .rst_ni   (system_rst_ni),
   
     // tl-ul insterface
     .tl_d_i   (xbar_to_dccm),
@@ -342,15 +342,23 @@ module opentitan_soc_top #(
   uart_receiver programmer (
     .i_Clock       (clk_i),
     .rst_ni        (rst_ni),
-    .i_Rx_Serial   (uart_rx_i),
-    .CLKS_PER_BIT  (16'd182),
+    .i_Rx_Serial   (uart_rx_inst),
+    .CLKS_PER_BIT  (16'd10417),
     .o_Rx_DV       (rx_dv_i),
     .o_Rx_Byte     (rx_byte_i)
   );
 
-  rv_plic intr_controller (
+  rstmgr reset_manager(
     .clk_i      (clk_i),
     .rst_ni     (rst_ni),
+    .iccm_rst_i (iccm_cntrl_reset),
+    .ndmreset   (dbg_rst),
+    .sys_rst_ni (system_rst_ni)
+  );
+
+  rv_plic intr_controller (
+    .clk_i      (clk_i),
+    .rst_ni     (system_rst_ni),
 
     // Bus Interface (device)
     .tl_i       (plic_req),
@@ -366,46 +374,46 @@ module opentitan_soc_top #(
     .msip_o     ()
   );
 
-uart u_uart0(
-  .clk_i                   (clk_i             ),
-  .rst_ni                  (rst_ni     ),
-  // Bus Interface
-  .tl_i                    (xbar_to_uart      ),
-  .tl_o                    (uart_to_xbar      ),
+  uart u_uart0(
+    .clk_i                   (clk_i             ),
+    .rst_ni                  (system_rst_ni     ),
+    // Bus Interface
+    .tl_i                    (xbar_to_uart      ),
+    .tl_o                    (uart_to_xbar      ),
 
-  // Generic IO
-  .cio_rx_i                (uart_rx           ),
-  .cio_tx_o                (uart_tx           ),
-  .cio_tx_en_o             (                  ),
+    // Generic IO
+    .cio_rx_i                (uart_rx           ),
+    .cio_tx_o                (uart_tx           ),
+    .cio_tx_en_o             (uart_txen         ),
 
-  // Interrupts
-  .intr_tx_watermark_o     (intr_uart0_tx_watermark ),
-  .intr_rx_watermark_o     (intr_uart0_rx_watermark ),
-  .intr_tx_empty_o         (intr_uart0_tx_empty     ),
-  .intr_rx_overflow_o      (intr_uart0_rx_overflow  ),
-  .intr_rx_frame_err_o     (intr_uart0_rx_frame_err ),
-  .intr_rx_break_err_o     (intr_uart0_rx_break_err ),
-  .intr_rx_timeout_o       (intr_uart0_rx_timeout   ),
-  .intr_rx_parity_err_o    (intr_uart0_rx_parity_err) 
-);
+    // Interrupts
+    .intr_tx_watermark_o     (intr_uart0_tx_watermark ),
+    .intr_rx_watermark_o     (intr_uart0_rx_watermark ),
+    .intr_tx_empty_o         (intr_uart0_tx_empty     ),
+    .intr_rx_overflow_o      (intr_uart0_rx_overflow  ),
+    .intr_rx_frame_err_o     (intr_uart0_rx_frame_err ),
+    .intr_rx_break_err_o     (intr_uart0_rx_break_err ),
+    .intr_rx_timeout_o       (intr_uart0_rx_timeout   ),
+    .intr_rx_parity_err_o    (intr_uart0_rx_parity_err) 
+  );
 
 
 
   tlul_adapter_tempsensor u_tempsense( 
     .clk_i				    (clk_i),
-    .rst_ni                 (rst_ni),
+    .rst_ni           (system_rst_ni),
     
-    .tl_i				    (xbar_to_tsen1),
-    .tl_o                   (tsen1_to_xbar),
+    .tl_i				      (xbar_to_tsen1),
+    .tl_o             (tsen1_to_xbar),
     
     .re_o   			    (),
-    .we_o					(),
+    .we_o					    (),
     .addr_o				    (),
-    .wdata_o  		        (),
+    .wdata_o  		    (),
     .be_o    			    (),
     .rdata_i			    (),
-    .error_i      	        (),
-    .CLK_REF				(),
+    .error_i      	  (),
+    .CLK_REF				  (),
     .CLK_LC				    ()
   );
 
