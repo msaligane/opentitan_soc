@@ -1,4 +1,4 @@
-// `define GF12
+// `define DFFRAM
 
 module data_mem_tlul
 (
@@ -19,10 +19,10 @@ module data_mem_tlul
   logic        rvalid;
   logic        rvalid_buf; 
   logic [31:0] we_inv;
-  `ifndef GF12
+  `ifdef DFFRAM
     logic [3:0]  data_we;
   `endif
-  `ifdef GF12
+  `ifndef DFFRAM
     logic [31:0]  data_we;
   `endif
   
@@ -41,7 +41,7 @@ module data_mem_tlul
     end
   end
 
-  `ifndef GF12
+  `ifdef DFFRAM
     assign data_we[1:0] = (wmask[23:16] != 8'd0) ? 2'b11: 2'b00;
     assign data_we[3:2] = (wmask[31:24] != 8'd0) ? 2'b11: 2'b00; 
       
@@ -55,7 +55,7 @@ module data_mem_tlul
     );
   `endif
 
-  `ifdef GF12
+  `ifndef DFFRAM
     assign data_we[15:0] = (wmask[23:16] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
     assign data_we[31:16] = (wmask[31:24] != 8'd0) ? {16{1'b1}}: {16{1'b0}};
     assign we_inv = ~data_we;
