@@ -63,6 +63,9 @@ int clk_bit = (frequency / baudrate) + 1;
 int inst_c  = 0;
 int bit_c   = 0;
 
+// 1 line of the hex file is 8*8 bytes of characters
+// Also have to include the newline character
+// 8*8 + 8 = 72 bits
 logic[71:0] buffer;
 logic[31:0] inst;
 int n           = 0;
@@ -99,7 +102,7 @@ end
 
 always @(posedge clk_i) begin
     if(clk_count >= clk_bit && (clk_count%clk_bit) == 0) begin
-        $display("Start @ %d", clk_count);
+        //$display("Start @ %d", clk_count);
         if(bit_c == 0) begin
             inst_count= inst_count+1;
             uart_rx_i = 0;
@@ -107,7 +110,7 @@ always @(posedge clk_i) begin
             bit_count = 0;
         end
         else if(bit_c <= 'd8) begin
-            $display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
+            //$display("Bit @ %d: %d", bit_c, (byte_i[inst_c] >> bit_c - 1) & 'h01);
             uart_rx_i = (byte_i[inst_c] >> bit_c - 1) & 'h01;
             bit_c     = bit_c+1;
             bit_count = bit_count+1;

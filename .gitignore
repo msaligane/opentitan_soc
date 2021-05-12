@@ -5,6 +5,8 @@ tools/obj_dir/*
 csrc/*
 simv
 *.out
+*.key
+vc_hdrs.h
 *.vpd
 *.daidir
 *dve*
