@@ -206,8 +206,8 @@ module opentitan_soc_top #(
     .tl_lsu_i  (lsu_to_xbar),
     .tl_lsu_o  (xbar_to_lsu),
 
-    .tl_dm_sba_i (dm_to_xbar),
-    .tl_dm_sba_o (xbar_to_dm),
+    // .tl_dm_sba_i (dm_to_xbar),
+    // .tl_dm_sba_o (xbar_to_dm),
 
     /* Device interfaces */
     .tl_iccm_o (xbar_to_iccm),
@@ -252,8 +252,8 @@ module opentitan_soc_top #(
     .tl_plic_i  (plic_resp),
 
     // For JTAG Debug ROM
-    .tl_debug_rom_o (xbar_to_dbgrom),
-    .tl_debug_rom_i (dbgrom_to_xbar),
+    // .tl_debug_rom_o (xbar_to_dbgrom),
+    // .tl_debug_rom_i (dbgrom_to_xbar),
 
     .tl_uart_o      (xbar_to_uart),
     .tl_uart_i      (uart_to_xbar)
