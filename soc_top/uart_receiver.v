@@ -1,3 +1,35 @@
+
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 01/20/2021 12:32:12 PM
+// Design Name: 
+// Module Name: uart_rx
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+// This file contains the UART Receiver.  This receiver is able to
+// receive 8 bits of serial data, one start bit, one stop bit,
+// and no parity bit.  When receive is complete o_rx_dv will be
+// driven high for one clock cycle.
+// 
+// Set Parameter CLKS_PER_BIT as follows:
+// CLKS_PER_BIT = (Frequency of i_Clock)/(Frequency of UART)
+// Example: 10 MHz Clock, 115200 baud UART
+// (10000000)/(115200) = 87
+   
 module uart_receiver (
  input         i_Clock,
  input         rst_ni,

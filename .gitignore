@@ -1,3 +1,12 @@
 *.vcd
 
 tools/obj_dir/*
+*.tcl*
+csrc/*
+simv
+*.out
+*.vpd
+*.daidir
+*dve*
+DVEfiles/*
+stack.info.*/*

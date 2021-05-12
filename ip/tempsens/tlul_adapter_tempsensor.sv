@@ -1,7 +1,7 @@
 /* verilator lint_off CASEINCOMPLETE */
 module tlul_adapter_tempsensor import tlul_pkg::*; #(
   parameter  bit EnableDataIntgGen = 1'b0,
-  parameter  int RegAw = 8,
+  parameter  int RegAw = 12,
   parameter  int RegDw = 32, // Shall be matched with TL_DW
   localparam int RegBw = RegDw/8,
   parameter int DataIntgWidth = 7,
@@ -43,7 +43,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
 
   logic [IW-1:0]  reqid;
   logic [SZW-1:0] reqsz;
-  logic       rspop;
+  tl_d_m_op       rspop;
 
   logic rd_req, wr_req;
   logic CLK_SEL;
@@ -51,10 +51,10 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   logic         RESET_REGn        ; // 0x04
   logic [3:0]   SEL_CONV_TIME_REG ; // 0x08
   logic         en_REG            ; // 0x0C
+  logic [23:0]  DOUT              ; // 0x14
   logic [23:0]  DOUT_REG          ; // 0x14
+  logic         DONE              ; // 0x18
   logic         DONE_REG          ; // 0x18
-  logic [23:0]  DOUT          ; 
-  logic         DONE          ;
 
   assign a_ack   = tl_i.a_valid & tl_o.a_ready;
   assign d_ack   = tl_o.d_valid & tl_i.d_ready;
@@ -114,19 +114,17 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
     if (!rst_ni) begin
       rdata  <= '0;
       error <= 1'b0;
-   end else if (a_ack) begin
-      //if (error_i || err_internal || wr_req) begin
-       //rdata <= '1;
-      //end else begin
+    end else begin
+      error <= 1'b0; // <= error_i | err_internal;
+      if (a_ack)
         case(addr_o)
           8'h08 : rdata <= SEL_CONV_TIME_REG;
           8'h0C : rdata <= en_REG;
           8'h14 : rdata <= DOUT_REG;
           8'h18 : rdata <= DONE_REG;
         endcase
-      end
-      error <= 1'b0; // <= error_i | err_internal;
     end
+  end
   
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin

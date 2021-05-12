@@ -20,8 +20,8 @@ opentitan_soc_top #(
 ) 
 ot_soc_top 
 (
-  .clk_i   (clk_i),
-  .rst_ni  (rst_ni),
+	.clk_i   (clk_i),
+	.rst_ni  (rst_ni),
 
 	.uart_rx (uart_rx),
 	.uart_tx (uart_tx),
