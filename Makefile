@@ -3,6 +3,7 @@
 ################################################################################
 
 OPENTITAN_TOP  = $(OPENTITAN_ROOT)/soc_top
+OPENTITAN_TB   = $(OPENTITAN_ROOT)/tb
 OPENTITAN_IBEX = $(OPENTITAN_ROOT)/ibex
 OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 
@@ -11,14 +12,14 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 ################################################################################
 
 ### Top Level Testbench
-# TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_tb.sv
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TOP)/opentitan_soc_top_dpi.cpp
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 
 ### UART Testbench from Ghazdi
-# TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_uart.sv
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
 ### Adding required files by BRUTE FORCE (to-be copied from test/flist.f)
 HEADERS     = $(OPENTITAN_PKGS)/prim/rtl/prim_pkg.sv
@@ -113,10 +114,6 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_arb.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
-
-TESTFILE  = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
-TESTFILE += $(OPENTITAN_TOP)/opentitan_soc_top_dpi.cpp
-TESTSIM   = $(OPENTITAN_TOP)/opentitan_soc_top.sv
 
 # Flags
 # DEBUG_FLAG = -g
