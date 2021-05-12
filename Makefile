@@ -3,6 +3,7 @@
 ################################################################################
 
 OPENTITAN_TOP  = $(OPENTITAN_ROOT)/soc_top
+OPENTITAN_TB   = $(OPENTITAN_ROOT)/tb
 OPENTITAN_IBEX = $(OPENTITAN_ROOT)/ibex
 OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 
@@ -11,14 +12,14 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 ################################################################################
 
 ### Top Level Testbench
-# TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_tb.sv
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TOP)/opentitan_soc_top_dpi.cpp
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 
 ### UART Testbench from Ghazdi
-# TESTBENCH   = $(OPENTITAN_TOP)/opentitan_soc_top_uart.sv
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
 ### Adding required files by BRUTE FORCE (to-be copied from test/flist.f)
 HEADERS     = $(OPENTITAN_PKGS)/prim/rtl/prim_pkg.sv
@@ -139,7 +140,7 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full
 ## RULES
 ################################################################################
 
-.PHONY: all sim simv dve test testv
+.PHONY: all sim simv dve
 
 # Default target:
 all:    simv
@@ -154,15 +155,6 @@ simv:  $(HEADERS) $(SIMFILES) $(TESTBENCH)
 
 dve:	sim
 	./simv -gui &
-
-test: testv
-	./testv | tee program.out
-
-testv: $(HEADERS) $(SIMFILES) $(TESTFILE)
-	$(VCS) $^ -o testv
-
-tdve:	test
-	./test -gui &
 
 .PHONY:	clean
 clean:
