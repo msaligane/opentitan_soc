@@ -17,6 +17,9 @@ module opentitan_soc_top #(
   output              uart_tx,
   output              uart_txen,
 
+  output              tempsnese_clkref,
+  output              tempsnese_clkout,
+
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
 );
@@ -400,21 +403,21 @@ module opentitan_soc_top #(
 
 
   tlul_adapter_tempsensor u_tempsense( 
-    .clk_i				    (clk_i),
-    .rst_ni           (system_rst_ni),
+    .clk_i                  (clk_i),
+    .rst_ni                 (system_rst_ni),
     
-    .tl_i				      (xbar_to_tsen1),
-    .tl_o             (tsen1_to_xbar),
+    .tl_i                   (xbar_to_tsen1),
+    .tl_o                   (tsen1_to_xbar),
     
-    .re_o   			    (),
-    .we_o					    (),
-    .addr_o				    (),
-    .wdata_o  		    (),
-    .be_o    			    (),
-    .rdata_i			    (),
-    .error_i      	  (),
-    .CLK_REF				  (),
-    .CLK_LC				    ()
+    .re_o                   (),
+    .we_o                   (),
+    .addr_o                 (),
+    .wdata_o                (),
+    .be_o                   (),
+    .rdata_i                (),
+    .error_i                (),
+    .CLK_REF                (tempsnese_clkref),
+    .CLK_LC                 (tempsense_clkout)
   );
 
   // rv_dm #(
