@@ -17,8 +17,8 @@ module opentitan_soc_top #(
   output              uart_tx,
   output              uart_txen,
 
-  output              tempsnese_clkref,
-  output              tempsnese_clkout,
+  input  logic        tempsense_clkref,
+  output logic        tempsense_clkout,
 
   input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
@@ -416,7 +416,7 @@ module opentitan_soc_top #(
     .be_o                   (),
     .rdata_i                (),
     .error_i                (),
-    .CLK_REF                (tempsnese_clkref),
+    .CLK_REF                (tempsense_clkref),
     .CLK_LC                 (tempsense_clkout)
   );
 
