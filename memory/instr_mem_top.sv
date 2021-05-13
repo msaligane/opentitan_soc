@@ -1,4 +1,4 @@
-`define DFFRAM
+//`define DFFRAM
 
 module instr_mem_top
 (
@@ -19,14 +19,20 @@ module instr_mem_top
   input  logic        we
 );
 
-  always_ff @(negedge clk_i) begin
-  if (!rst_ni) begin
-    rvalid <= 1'b0;
-  end else if (we) begin
-    rvalid <= 1'b0;
-  end else begin 
-    rvalid <= req;
-  end
+  logic rvalid_buf;
+  always_ff @(posedge clk_i) begin
+    if (!rst_ni) begin
+      rvalid <= 1'b0;
+      rvalid_buf <= 1'b0;
+    end 
+    else if (we) begin
+      rvalid <= 1'b0;
+      rvalid_buf <= 1'b0;
+    end 
+    else begin 
+      rvalid_buf <= req;
+      rvalid <= rvalid_buf;
+    end
   end
 
   `ifdef DFFRAM
@@ -42,14 +48,17 @@ module instr_mem_top
 
   `ifndef DFFRAM
 
+    logic gwmask;
+    assign gwmask = &wmask;
+
     gf12lp_1rw_lg12_w32_bit inst_memory (
       .A(addr),
       .D(wdata),
-      .CEN(req),
+      .CEN(1'b0),
       .CLK(clk_i),
       .Q(rdata),
       .WEN(~rst_ni ? wmask : 'hffff),
-      .GWEN(~rst_ni ? &wmask : 'b1),
+      .GWEN(~rst_ni ? gwmask : 1'b1),
       .EMA(3'b010),
       .EMAW(2'b01),
       .EMAS(1'b0),

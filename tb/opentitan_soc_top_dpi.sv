@@ -53,7 +53,7 @@ task init_inputs();
 endtask
 
 logic [63:0] clk_count;
-logic [31:0] inst_count;
+logic [31:0] byte_count;
 logic [3:0]  bit_count;
 
 logic [15:0] totalLines = rfile();
@@ -102,10 +102,10 @@ always @(posedge clk_i) begin
             $display("Start @ %d", clk_count);
         `endif
         if(bit_c == 0) begin
-            inst_count= inst_count+1;
+            byte_count   = byte_count+1;
+            bit_count    = 0;
             uart_rx_inst = 0;
-            bit_c     = bit_c+1;
-            bit_count = 0;
+            bit_c        = bit_c+1;
         end
         else if(bit_c <= 'd8) begin
             uart_rx_inst = (byte_i[inst_c] >> bit_c - 1) & 'h01;
@@ -153,7 +153,7 @@ initial begin
     clk_i         = 0;
     rst_ni        = 0;
 
-    inst_count = 0;
+    byte_count = 0;
     bit_count  = 0;
 
     @(negedge clk_i)
@@ -206,7 +206,7 @@ initial begin
         $display("totalLines: %d", totalLines);
     `endif
 	
-    #(CLOCK*clk_bit*(totalLines+1)*64)
+    #(CLOCK*clk_bit*(totalLines+1)*48)
     
     @(negedge clk_i)
     #100000

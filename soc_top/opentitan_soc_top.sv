@@ -296,6 +296,16 @@ module opentitan_soc_top #(
     .we         (1'b0)
   );
 
+  logic [31:0] inst_buffer;
+  always_ff @(posedge clk_i or negedge system_rst_ni) begin
+    if(!system_rst_ni) begin
+      inst_buffer <= 'b0;
+    end
+    else begin  
+      inst_buffer <= tlul_data;
+    end
+  end
+
   tlul_sram_adapter #(
     .SramAw       (12),
     .SramDw       (32), 
@@ -314,7 +324,7 @@ module opentitan_soc_top #(
     .addr_o    (tlul_addr),
     .wdata_o   (),
     .wmask_o   (),
-    .rdata_i   ((system_rst_ni) ? tlul_data: '0),
+    .rdata_i   ((system_rst_ni) ? inst_buffer: '0),
     .rvalid_i  (instr_valid),
     .rerror_i  (2'b0)
   );

@@ -93,7 +93,7 @@ module xbar_periph (
 
   always_comb begin
     // default steering to generate error response if address is not within the range
-    dev_sel_s1n_10 = 4'd10;
+    dev_sel_s1n_10 = 4'd11;
 
     if ((tl_s1n_10_us_h2d.a_address & ~(ADDR_MASK_DCCM)) == ADDR_SPACE_DCCM) begin
       dev_sel_s1n_10 = 4'd0;
