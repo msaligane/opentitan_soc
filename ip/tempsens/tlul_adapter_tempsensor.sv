@@ -199,7 +199,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
 //  `ASSERT_INIT(MatchedWidthAssert, RegDw == top_pkg::TL_DW)
 endmodule
 
-`ifndef SIMULATION
+`ifdef SIMULATION
 module tempsenseInst_error_inv6_head9 (
   CLK_REF,
   RESET_COUNTERn,
