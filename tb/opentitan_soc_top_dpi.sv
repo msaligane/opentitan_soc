@@ -10,13 +10,15 @@ module opentitan_soc_top_tb #(
 
 logic clk_i;
 logic rst_ni;
+logic tempsense_clkref;
+logic tempsense_clkout;
 
 logic uart_rx_inst;
 logic uart_txen;
 logic uart_tx;
 logic uart_rx;
 
-logic [19:0] gpio_i;
+//logic [19:0] gpio_i;
 logic [19:0] gpio_o;
 
 real CLOCK = 10;
@@ -29,10 +31,12 @@ ot_soc_top
 (
     .clk_i        (clk_i),
     .rst_ni       (rst_ni),
+    .tempsense_clkref (tempsense_clkref),
+    .tempsense_clkout (tempsense_clkout),
 
     .uart_rx_inst (uart_rx_inst),
     .uart_rx      (uart_rx),
-	.uart_tx      (uart_tx),
+    .uart_tx      (uart_tx),
     .uart_txen    (uart_txen),
 
     // JTAG interface 
@@ -43,12 +47,12 @@ ot_soc_top
     // .jtag_tdo_o(jtag_tdo_o),
 
 	// GPIO interface
-    .gpio_i  (gpio_i),
+   // .gpio_i  (gpio_i),
     .gpio_o  (gpio_o)
 );
 
 task init_inputs();
-	gpio_i       = 8;
+	//gpio_i       = 8;
 	rst_ni       = 1;
 endtask
 
@@ -85,6 +89,7 @@ int byte4       = 0;
 always begin
 	#(CLOCK/2)
 	clk_i = ~clk_i;
+        tempsense_clkref = ~tempsense_clkref;
 end
 
 always @(posedge clk_i) begin
@@ -152,6 +157,7 @@ initial begin
     uart_rx_inst  = 1;
     clk_i         = 0;
     rst_ni        = 0;
+    tempsense_clkref =0;
 
     byte_count = 0;
     bit_count  = 0;
@@ -159,7 +165,7 @@ initial begin
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/load_test.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/main_branch_test/gpio_fix/opentitan_soc/tests/hex/gpio.hex", "r");
     while(!$feof(fp)) begin
         $fgets(buffer, fp);
         $sscanf(buffer, "%x", inst);

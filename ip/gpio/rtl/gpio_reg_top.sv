@@ -79,6 +79,7 @@ module gpio_reg_top (
   logic direct_out_we;
   logic direct_out_re;
   logic [9:0] masked_out_lower_data_qs;
+  logic [5:0] masked_out_lower_data_qs_ext;
   logic [9:0] masked_out_lower_data_wd;
   logic masked_out_lower_data_we;
   logic masked_out_lower_data_re;
@@ -128,7 +129,7 @@ module gpio_reg_top (
 
   // Register instances
   // R[intr_state]: V(False)
-
+  //assign  masked_out_lower_data_qs_ext = '0;
   prim_subreg #(
     .DW      (32),
     .SWACCESS("W1C"),
@@ -247,12 +248,12 @@ module gpio_reg_top (
   ) u_masked_out_lower_data (
     .re     (masked_out_lower_data_re),
     .we     (masked_out_lower_data_we),
-    .wd     (masked_out_lower_data_wd),
-    .d      (hw2reg.masked_out_lower.data.d),
+    .wd     ({6'b0, masked_out_lower_data_wd}),
+    .d      ({6'b0, hw2reg.masked_out_lower.data.d}),
     .qre    (),
     .qe     (reg2hw.masked_out_lower.data.qe),
     .q      (reg2hw.masked_out_lower.data.q ),
-    .qs     (masked_out_lower_data_qs)
+    .qs     ({ masked_out_lower_data_qs_ext, masked_out_lower_data_qs})
   );
 
 
@@ -263,10 +264,10 @@ module gpio_reg_top (
     .re     (1'b0),
     .we     (masked_out_lower_mask_we),
     .wd     (masked_out_lower_mask_wd),
-    .d      (hw2reg.masked_out_lower.mask.d),
+    .d      ({6'b0, hw2reg.masked_out_lower.mask.d}),
     .qre    (),
     .qe     (reg2hw.masked_out_lower.mask.qe),
-    .q      (reg2hw.masked_out_lower.mask.q ),
+    .q      (reg2hw.masked_out_lower.mask.q),
     .qs     ()
   );
 

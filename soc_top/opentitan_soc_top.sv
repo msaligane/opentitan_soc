@@ -20,7 +20,7 @@ module opentitan_soc_top #(
   input  logic        tempsense_clkref,
   output logic        tempsense_clkout,
 
-  input  logic [19:0] gpio_i,
+  //input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
 );
 
@@ -28,11 +28,11 @@ module opentitan_soc_top #(
   logic RESET;
   assign RESET = ~rst_ni;
 
-  wire [19:0] gpio_in;
+  //wire [19:0] gpio_in;
   wire [19:0] gpio_out;
   wire [11:0] gpio_out_ext;
 
-  assign gpio_in = gpio_i;
+  //assign gpio_in = gpio_i;
   assign gpio_o = gpio_out; 
         
   tlul_pkg::tl_h2d_t ifu_to_xbar; 
@@ -263,19 +263,19 @@ module opentitan_soc_top #(
 
   );
 
-  // //GPIO module
-  //  gpio gpio_32 (
-  //   .clk_i         (clk_i),
-  //   .rst_ni        (rst_ni),
+  //GPIO module
+   gpio gpio_32 (
+    .clk_i         (clk_i),
+    .rst_ni        (rst_ni),
 
-  //   // Below Regster interface can be changed
-  //   .tl_i          (xbar_to_gpio),
-  //   .tl_o          (gpio_to_xbar),
-  //   .cio_gpio_i    ({12'b0, gpio_in}),
-  //   .cio_gpio_o    ({gpio_out_ext, gpio_out}),
-  //   .cio_gpio_en_o (),
-  //   .intr_gpio_o   (intr_gpio )  
-  // );
+    // Below Regster interface can be changed
+    .tl_i          (xbar_to_gpio),
+    .tl_o          (gpio_to_xbar),
+   // .cio_gpio_i    ({12'b0, gpio_in}),
+    .cio_gpio_o    ({gpio_out_ext, gpio_out}),
+    .cio_gpio_en_o (),
+    .intr_gpio_o   (intr_gpio )  
+  );
 
   // instr_mem_tlul iccm (
   //   .clk_i    (clk_i),
@@ -295,7 +295,12 @@ module opentitan_soc_top #(
     .wdata      (iccm_cntrl_data),
     .rdata      (tlul_data),
     .rvalid     (instr_valid),
+    `ifdef DFFRAM
     .wmask      (4'b0),
+    `endif
+    `ifndef DFFRAM
+    .wmask      (32'b0),
+    `endif
     .we         (1'b0)
   );
 
@@ -427,7 +432,7 @@ module opentitan_soc_top #(
     .rdata_i                (),
     .error_i                (),
     .CLK_REF                (tempsense_clkref),
-    .CLK_LC                 (tempsense_clkout)
+    .CLK_OUT                (tempsense_clkout)
   );
 
   // rv_dm #(

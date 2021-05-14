@@ -26,7 +26,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   input                    error_i,
   
   input                    CLK_REF,
-  output logic             CLK_LC
+  output logic             CLK_OUT
 
 );
 
@@ -40,7 +40,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   logic             error, err_internal;
 
   logic addr_align_err;     // Size and alignment
-  logic malformed_meta_err; // User signal format error or unsupported
+  //logic malformed_meta_err; // User signal format error or unsupported
   logic tl_err;             // Common TL-UL error checker
 
   logic [IW-1:0]  reqid;
@@ -48,16 +48,34 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   tl_d_m_op       rspop;
 
   logic rd_req, wr_req;
-  logic CLK_SEL;
   
   logic         RESET_REGn        ; // 0x04
   logic [3:0]   SEL_CONV_TIME_REG ; // 0x08
   logic         en_REG            ; // 0x0C
-  logic [23:0]  DOUT              ; // 0x14
-  logic [23:0]  DOUT_REG          ; // 0x14
-  logic         DONE              ; // 0x18
-  logic         DONE_REG          ; // 0x18
+  logic [23:0]  DOUT_REG1         ; // 0x10
+  logic         DONE_REG1         ; // 0x14
+  logic [23:0]  DOUT_REG2         ; // 0x18
+  logic         DONE_REG2         ; // 0x1C
+  logic [23:0]  DOUT_REG3         ; // 0x20
+  logic         DONE_REG3         ; // 0x24
+  logic [23:0]  DOUT_REG4         ; // 0x28
+  logic         DONE_REG4         ; // 0x2C
+  logic [ 1:0]  CLK_SEL_REG       ;
 
+  logic [23:0]  DOUT1             ;
+  logic         DONE1             ;
+  logic [23:0]  DOUT2             ;
+  logic         DONE2             ;
+  logic [23:0]  DOUT3             ;
+  logic         DONE3             ;
+  logic [23:0]  DOUT4             ;
+  logic         DONE4             ;
+
+  logic         CLK_LC1           ;
+  logic         CLK_LC2           ;
+  logic         CLK_LC3           ;
+  logic         CLK_LC4           ;
+          
   assign a_ack   = tl_i.a_valid & tl_o.a_ready;
   assign d_ack   = tl_o.d_valid & tl_i.d_ready;
 
@@ -78,32 +96,85 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
  
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin
+      RESET_REGn        <= 1'b1;
       SEL_CONV_TIME_REG <= 4'b0;
       en_REG            <= 1'b0;
-      CLK_SEL           <= 1'b0;
+      CLK_SEL_REG       <= 1'b0;
     end else begin
-      DOUT_REG    <= DOUT;
-      DONE_REG    <= DONE;
+      DOUT_REG1    <= DOUT1;
+      DONE_REG1    <= DONE1;
+      DOUT_REG2    <= DOUT2;
+      DONE_REG2    <= DONE2;
+      DOUT_REG3    <= DOUT3;
+      DONE_REG3    <= DONE3;
+      DOUT_REG4    <= DOUT4;
+      DONE_REG4    <= DONE4;
       if (wr_req)
         case (addr_o)
           8'h04 : RESET_REGn        <= tl_i.a_data;
           8'h08 : SEL_CONV_TIME_REG <= tl_i.a_data;
           8'h0C : en_REG            <= tl_i.a_data;
+          8'h10 : CLK_SEL_REG       <= tl_i.a_data;
         endcase
       end 
   end
 
-  tempsenseInst_error_inv6_head9 u_tempsenseInst (
+  tempsenseInst_error_inv6_head9 u_tempsenseInst1 (
     .CLK_REF       (CLK_REF),
     .RESET_COUNTERn(RESET_REGn),
     .SEL_CONV_TIME (SEL_CONV_TIME_REG),
     .en            (en_REG),
-    .DOUT          (DOUT),
-    .DONE          (DONE),
+    .DOUT          (DOUT1),
+    .DONE          (DONE1),
     .out           (),
     .outb          (),
-    .lc_out        (CLK_LC)
+    .lc_out        (CLK_LC1)
   );
+  
+  tempsenseInst_error_inv8_head3 u_tempsenseInst2 (
+    .CLK_REF       (CLK_REF),
+    .RESET_COUNTERn(RESET_REGn),
+    .SEL_CONV_TIME (SEL_CONV_TIME_REG),
+    .en            (en_REG),
+    .DOUT          (DOUT2),
+    .DONE          (DONE2),
+    .out           (),
+    .outb          (),
+    .lc_out        (CLK_LC2)
+  );
+  
+  tempsenseInst_error_inv8_head5 u_tempsenseInst3 (
+    .CLK_REF       (CLK_REF),
+    .RESET_COUNTERn(RESET_REGn),
+    .SEL_CONV_TIME (SEL_CONV_TIME_REG),
+    .en            (en_REG),
+    .DOUT          (DOUT3),
+    .DONE          (DONE3),
+    .out           (),
+    .outb          (),
+    .lc_out        (CLK_LC3)
+  );
+  
+  tempsenseInst_error_inv8_head7 u_tempsenseInst4 (
+    .CLK_REF       (CLK_REF),
+    .RESET_COUNTERn(RESET_REGn),
+    .SEL_CONV_TIME (SEL_CONV_TIME_REG),
+    .en            (en_REG),
+    .DOUT          (DOUT4),
+    .DONE          (DONE4),
+    .out           (),
+    .outb          (),
+    .lc_out        (CLK_LC4)
+  );
+
+  always_comb begin
+    case (CLK_SEL_REG) 
+      2'b00: CLK_OUT = CLK_LC1;
+      2'b01: CLK_OUT = CLK_LC2;
+      2'b10: CLK_OUT = CLK_LC3;
+      2'b11: CLK_OUT = CLK_LC4;
+    endcase
+  end
   
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni)    outstanding <= 1'b0;
@@ -120,10 +191,17 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
       error <= 1'b0; // <= error_i | err_internal;
       if (a_ack)
         case(addr_o)
-          8'h08 : rdata <= SEL_CONV_TIME_REG;
-          8'h0C : rdata <= en_REG;
-          8'h14 : rdata <= DOUT_REG;
-          8'h18 : rdata <= DONE_REG;
+          8'h04: rdata <= RESET_REGn;
+          8'h08: rdata <= SEL_CONV_TIME_REG;
+          8'h0C: rdata <= en_REG;
+          8'h10: rdata <= DOUT_REG1;
+          8'h14: rdata <= DONE_REG1;
+          8'h18: rdata <= DOUT_REG2;
+          8'h1C: rdata <= DONE_REG2;
+          8'h20: rdata <= DOUT_REG3;
+          8'h24: rdata <= DONE_REG3;
+          8'h28: rdata <= DOUT_REG4;
+          8'h2C: rdata <= DONE_REG4;
         endcase
     end
   end
@@ -169,7 +247,9 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   ////////////////////
   // Error Handling //
   ////////////////////
-  assign err_internal = addr_align_err | malformed_meta_err | tl_err ;
+  assign err_internal = 1'b0;
+
+ //addr_align_err | malformed_meta_err | tl_err ;
 
   // Don't allow unsupported values.
   //added assign malformed_meta_err = tl_a_user_chk(tl_i.a_user);
@@ -201,6 +281,69 @@ endmodule
 
 `ifdef SIMULATION
 module tempsenseInst_error_inv6_head9 (
+  CLK_REF,
+  RESET_COUNTERn,
+  SEL_CONV_TIME,
+  en,
+  DOUT,
+  DONE,
+  out,
+  outb,
+  lc_out);
+   input CLK_REF;
+   input RESET_COUNTERn;
+   input [3:0] SEL_CONV_TIME;
+   input en;
+   output [23:0] DOUT;
+   output DONE;
+   output out;
+   output outb;
+   output lc_out;
+endmodule
+
+module tempsenseInst_error_inv8_head3 (
+  CLK_REF,
+  RESET_COUNTERn,
+  SEL_CONV_TIME,
+  en,
+  DOUT,
+  DONE,
+  out,
+  outb,
+  lc_out);
+   input CLK_REF;
+   input RESET_COUNTERn;
+   input [3:0] SEL_CONV_TIME;
+   input en;
+   output [23:0] DOUT;
+   output DONE;
+   output out;
+   output outb;
+   output lc_out;
+endmodule
+
+module tempsenseInst_error_inv8_head5 (
+  CLK_REF,
+  RESET_COUNTERn,
+  SEL_CONV_TIME,
+  en,
+  DOUT,
+  DONE,
+  out,
+  outb,
+  lc_out);
+   input CLK_REF;
+   input RESET_COUNTERn;
+   input [3:0] SEL_CONV_TIME;
+   input en;
+   output [23:0] DOUT;
+   output DONE;
+   output out;
+   output outb;
+   output lc_out;
+endmodule
+
+module tempsenseInst_error_inv8_head7 (
   CLK_REF,
   RESET_COUNTERn,
   SEL_CONV_TIME,
