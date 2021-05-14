@@ -1,5 +1,5 @@
 /* verilator lint_off CASEINCOMPLETE */
-// `define SIMULATION
+`define SIMULATION
 
 module tlul_adapter_tempsensor import tlul_pkg::*; #(
   parameter  bit EnableDataIntgGen = 1'b0,
@@ -40,7 +40,7 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   logic             error, err_internal;
 
   logic addr_align_err;     // Size and alignment
-  logic malformed_meta_err; // User signal format error or unsupported
+  //logic malformed_meta_err; // User signal format error or unsupported
   logic tl_err;             // Common TL-UL error checker
 
   logic [IW-1:0]  reqid;
@@ -247,7 +247,9 @@ module tlul_adapter_tempsensor import tlul_pkg::*; #(
   ////////////////////
   // Error Handling //
   ////////////////////
-  assign err_internal = addr_align_err | malformed_meta_err | tl_err ;
+  assign err_internal = 1'b0;
+
+ //addr_align_err | malformed_meta_err | tl_err ;
 
   // Don't allow unsupported values.
   //added assign malformed_meta_err = tl_a_user_chk(tl_i.a_user);

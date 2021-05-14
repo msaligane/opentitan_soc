@@ -10,7 +10,7 @@ module gpio (
   input  tlul_pkg::tl_h2d_t tl_i,
   output tlul_pkg::tl_d2h_t tl_o,
 
-  input        [31:0] cio_gpio_i,
+ // input        [31:0] cio_gpio_i,
   output logic [31:0] cio_gpio_o,
   output logic [31:0] cio_gpio_en_o,
 
@@ -34,7 +34,8 @@ module gpio (
       .clk_i,
       .rst_ni,
       .enable_i(reg2hw.ctrl_en_input_filter.q[i]),
-      .filter_i(cio_gpio_i[i]),
+     // .filter_i(cio_gpio_i[i]),
+      .filter_i('0),
       .filter_o(data_in_d[i])
     );
   end

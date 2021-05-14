@@ -12,7 +12,7 @@ extern "C" int rfile(){
     ifstream file;
     string ins;
     
-    file.open("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/load_test.hex", std::ifstream::in);
+    file.open("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/main_branch_test/gpio_fix/opentitan_soc/tests/hex/gpio.hex", std::ifstream::in);
     int totalLines = count(istreambuf_iterator<char>(file), istreambuf_iterator<char>(), '\n');
     
     file.clear();
