@@ -20,18 +20,32 @@ module instr_mem_top
 );
 
   logic rvalid_buf;
+  // always_ff @(posedge clk_i) begin
+  //   if (!rst_ni) begin
+  //     rvalid <= 1'b0;
+  //     rvalid_buf <= 1'b0;
+  //   end 
+  //   else if (we) begin
+  //     rvalid <= 1'b0;
+  //     rvalid_buf <= 1'b0;
+  //   end 
+  //   else begin 
+  //     rvalid_buf <= req;
+  //     rvalid <= rvalid_buf;
+  //   end
+  // end
+
+  assign rvalid_buf = 'b0;
+  
   always_ff @(posedge clk_i) begin
     if (!rst_ni) begin
       rvalid <= 1'b0;
-      rvalid_buf <= 1'b0;
     end 
     else if (we) begin
       rvalid <= 1'b0;
-      rvalid_buf <= 1'b0;
     end 
     else begin 
-      rvalid_buf <= req;
-      rvalid <= rvalid_buf;
+      rvalid <= req;
     end
   end
 

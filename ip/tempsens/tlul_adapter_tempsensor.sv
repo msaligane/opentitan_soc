@@ -1,5 +1,5 @@
 /* verilator lint_off CASEINCOMPLETE */
-// `define SIMULATION
+`define SIMULATION
 
 module tlul_adapter_tempsensor import tlul_pkg::*; #(
   parameter  bit EnableDataIntgGen = 1'b0,
