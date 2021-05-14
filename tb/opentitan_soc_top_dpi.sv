@@ -165,7 +165,7 @@ initial begin
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/naomikmo/main_branch_test/gpio_fix/opentitan_soc/tests/hex/gpio.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/temp.hex", "r");
     while(!$feof(fp)) begin
         $fgets(buffer, fp);
         $sscanf(buffer, "%x", inst);
@@ -212,7 +212,7 @@ initial begin
         $display("totalLines: %d", totalLines);
     `endif
 	
-    #(CLOCK*clk_bit*(totalLines+1)*48)
+    #(CLOCK*clk_bit*(totalLines+1)*40)
     
     @(negedge clk_i)
     #100000

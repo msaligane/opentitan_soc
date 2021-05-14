@@ -38,12 +38,15 @@ module xbar_periph (
   import tlul_pkg::*;
   import xbar_pkg::*;
   
-  always_comb begin
-    if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
-      tl_iccm_o = tl_if_i;
-      tl_if_o   = tl_iccm_i;
-    end
-  end
+  // always_comb begin
+  //   if ((tl_if_i.a_address & ~(ADDR_MASK_ICCM)) == ADDR_SPACE_ICCM) begin
+  //     tl_iccm_o = tl_if_i;
+  //     tl_if_o   = tl_iccm_i;
+  //   end
+  // end
+
+  assign tl_iccm_o = tl_if_i;
+  assign tl_if_o   = tl_iccm_i;
 
   tl_h2d_t tl_s1n_10_us_h2d ;
   tl_d2h_t tl_s1n_10_us_d2h ;
