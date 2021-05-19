@@ -1,3 +1,5 @@
+`define DEBUG
+
 module opentitan_soc_top #(
   parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
   parameter logic DirectDmiTap = 1'b1
@@ -22,11 +24,18 @@ module opentitan_soc_top #(
 
   //input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
+
+  `ifdef DEBUG
+    ,output tlul_pkg::tl_d2h_t iccm_to_xbar
+    ,output tlul_pkg::tl_d2h_t dccm_to_xbar
+
+    ,output logic              system_rst_ni
+  `endif
 );
 
-  logic system_rst_ni;
-  logic RESET;
-  assign RESET = ~rst_ni;
+  `ifndef DEBUG
+    logic system_rst_ni;
+  `endif
 
   //wire [19:0] gpio_in;
   wire [19:0] gpio_out;
@@ -39,13 +48,15 @@ module opentitan_soc_top #(
   tlul_pkg::tl_d2h_t xbar_to_ifu;
 
   tlul_pkg::tl_h2d_t xbar_to_iccm;
-  tlul_pkg::tl_d2h_t iccm_to_xbar;
+  tlul_pkg::tl_h2d_t xbar_to_dccm;
+
+  `ifndef DEBUG
+    tlul_pkg::tl_d2h_t iccm_to_xbar;
+    tlul_pkg::tl_d2h_t dccm_to_xbar;
+  `endif
 
   tlul_pkg::tl_h2d_t lsu_to_xbar;
   tlul_pkg::tl_d2h_t xbar_to_lsu;
-
-  tlul_pkg::tl_h2d_t xbar_to_dccm;
-  tlul_pkg::tl_d2h_t dccm_to_xbar;
 
   tlul_pkg::tl_h2d_t xbar_to_gpio;
   tlul_pkg::tl_d2h_t gpio_to_xbar;

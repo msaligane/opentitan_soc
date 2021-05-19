@@ -1,7 +1,13 @@
 `timescale 1ns/100ps
-`define DBG_INST
 
-import "DPI-C" function int rfile();
+`define DBG_INST
+`define DEBUG
+
+import "DPI-C" function int  rfile();
+import "DPI-C" function void init_out();
+import "DPI-C" function void print_D2H_header(string TYPE);
+import "DPI-C" function int  print_D2H(int d_valid, int clkcount, int d_data);
+import "DPI-C" function void print_close();
 
 module opentitan_soc_top_tb #(
 	parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
@@ -17,6 +23,13 @@ logic uart_rx_inst;
 logic uart_txen;
 logic uart_tx;
 logic uart_rx;
+
+`ifdef DEBUG
+    tlul_pkg::tl_d2h_t iccm_to_xbar;
+    tlul_pkg::tl_d2h_t dccm_to_xbar;
+
+    logic system_rst_ni;
+`endif
 
 //logic [19:0] gpio_i;
 logic [19:0] gpio_o;
@@ -49,6 +62,12 @@ ot_soc_top
 	// GPIO interface
    // .gpio_i  (gpio_i),
     .gpio_o  (gpio_o)
+
+    `ifdef DEBUG    
+        ,.iccm_to_xbar (iccm_to_xbar)
+        ,.dccm_to_xbar (dccm_to_xbar)
+        ,.system_rst_ni(system_rst_ni)
+    `endif
 );
 
 task init_inputs();
@@ -60,36 +79,38 @@ logic [63:0] clk_count;
 logic [31:0] byte_count;
 logic [3:0]  bit_count;
 
-logic [15:0] totalLines = rfile();
-int byte_i[];
+logic        stop_print;
 
-longint frequency = 'd100000000;
-longint baudrate = 'd9600;
-int clk_bit = (frequency / baudrate) + 1;
+logic [15:0] totalLines  = rfile();
+int          byte_i[];
 
-int inst_c  = 0;
-int bit_c   = 0;
+longint      frequency   = 'd100000000;
+longint      baudrate    = 'd9600;
+int          clk_bit     = (frequency / baudrate) + 1;
 
-logic[71:0] buffer;
-logic[31:0] inst;
-int n           = 0;
-int half_byte1  = 0;
-int half_byte2  = 0;
-int byte1       = 0;
-int half_byte3  = 0;
-int half_byte4  = 0;
-int byte2       = 0;
-int half_byte5  = 0;
-int half_byte6  = 0;
-int byte3       = 0;
-int half_byte7  = 0;
-int half_byte8  = 0;
-int byte4       = 0;
+int          inst_c      = 0;
+int          bit_c       = 0;
+
+logic[71:0]  buffer;
+logic[31:0]  inst;
+int          n           = 0;
+int          half_byte1  = 0;
+int          half_byte2  = 0;
+int          byte1       = 0;
+int          half_byte3  = 0;
+int          half_byte4  = 0;
+int          byte2       = 0;
+int          half_byte5  = 0;
+int          half_byte6  = 0;
+int          byte3       = 0;
+int          half_byte7  = 0;
+int          half_byte8  = 0;
+int          byte4       = 0;
 
 always begin
 	#(CLOCK/2)
-	clk_i = ~clk_i;
-        tempsense_clkref = ~tempsense_clkref;
+	clk_i            = ~clk_i;
+    tempsense_clkref = ~tempsense_clkref;
 end
 
 always @(posedge clk_i) begin
@@ -98,6 +119,24 @@ always @(posedge clk_i) begin
     end
     else begin    
         clk_count <= clk_count + 'b1;
+    end
+end
+
+always @(posedge clk_i) begin
+    if(system_rst_ni) begin
+        if(stop_print == 0) begin         
+            print_D2H_header("ICCM");
+            print_D2H(ot_soc_top.iccm_to_xbar.d_valid,
+                    clk_count,
+                    ot_soc_top.iccm_to_xbar.d_data);
+            print_D2H_header("DCCM");
+            print_D2H(ot_soc_top.dccm_to_xbar.d_valid,
+                    clk_count,
+                    ot_soc_top.dccm_to_xbar.d_data);
+            if(ot_soc_top.dccm_to_xbar.d_data == 'h5a) begin
+                stop_print = 'b1;
+            end
+        end
     end
 end
 
@@ -132,6 +171,7 @@ end
 initial begin
 
     int fp;
+    init_out();
 
     n          = 0;
     inst       = 0;
@@ -162,10 +202,12 @@ initial begin
     byte_count = 0;
     bit_count  = 0;
 
+    stop_print = 0;
+
     @(negedge clk_i)
     init_inputs();
 
-    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/temp.hex", "r");
+    fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/load_test.hex", "r");
     while(!$feof(fp)) begin
         $fgets(buffer, fp);
         $sscanf(buffer, "%x", inst);
@@ -217,7 +259,7 @@ initial begin
     @(negedge clk_i)
     #100000
 	$finish;
-
+    print_close();
 end
 
 

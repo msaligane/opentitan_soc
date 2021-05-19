@@ -17,9 +17,70 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 ### Top Level Testbench to test UART
 TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
 TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
+# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### UART Testbench from Ghazdi
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
+
+
+### Libraries
+# Standard Cell Track Architecture - sc9mcpp84, sc10p5mcpp84
+export SC_TRACK_10 = sc10p5mcpp84
+export SC_TRACK_9  = sc9mcpp84
+export DESIGN_PDK_DIR = /afs/eecs.umich.edu/kits/ARM/GF12LP/arm/gf/12lp
+
+# Standard Cell Library Locations
+export SC10_BASE_LVT_DIR  = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_base_lvt_c14/r0p0/verilog
+export SC10_BASE_RVT_DIR  = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_base_rvt_c14/r0p0/verilog
+export SC10_BASE_SLVT_DIR = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_base_slvt_c14/r0p0/verilog
+export SC10_ECO_LVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_eco_lvt_c14/r0p0/verilog
+export SC10_ECO_RVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_eco_rvt_c14/r0p0/verilog
+export SC10_ECO_SLVT_DIR  = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_eco_slvt_c14/r0p0/verilog
+export SC10_PMK_LVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_pmk_lvt_c14/r0p0/verilog
+export SC10_PMK_RVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_pmk_rvt_c14/r0p0/verilog
+export SC10_PMK_SLVT_DIR  = $(DESIGN_PDK_DIR)/$(SC_TRACK_10)_pmk_slvt_c14/r0p0/verilog
+
+export SC9_BASE_LVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_base_lvt_c14/r0p0/verilog
+export SC9_BASE_RVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_base_rvt_c14/r0p0/verilog
+export SC9_BASE_SLVT_DIR  = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_base_slvt_c14/r0p0/verilog
+export SC9_ECO_LVT_DIR    = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_eco_lvt_c14/r0p0/verilog
+export SC9_ECO_RVT_DIR    = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_eco_rvt_c14/r0p0/verilog
+export SC9_ECO_SLVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_eco_slvt_c14/r0p0/verilog
+export SC9_PMK_LVT_DIR    = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_pmk_lvt_c14/r0p0/verilog
+export SC9_PMK_RVT_DIR    = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_pmk_rvt_c14/r0p0/verilog
+export SC9_PMK_SLVT_DIR   = $(DESIGN_PDK_DIR)/$(SC_TRACK_9)_pmk_slvt_c14/r0p0/verilog
+
+LIB         = $(SC10_BASE_LVT_DIR)/sc10p5mcpp84_12lp_base_lvt_c14.v
+LIB        += $(SC10_BASE_RVT_DIR)/sc10p5mcpp84_12lp_base_rvt_c14.v
+LIB        += $(SC10_BASE_SLVT_DIR)/sc10p5mcpp84_12lp_base_slvt_c14.v
+LIB        += $(SC10_ECO_LVT_DIR)/sc10p5mcpp84_12lp_eco_lvt_c14.v
+LIB        += $(SC10_ECO_RVT_DIR)/sc10p5mcpp84_12lp_eco_rvt_c14.v
+LIB        += $(SC10_ECO_SLVT_DIR)/sc10p5mcpp84_12lp_eco_slvt_c14.v
+LIB        += $(SC10_PMK_LVT_DIR)/sc10p5mcpp84_12lp_pmk_lvt_c14.v
+LIB        += $(SC10_PMK_RVT_DIR)/sc10p5mcpp84_12lp_pmk_rvt_c14.v
+LIB        += $(SC10_PMK_SLVT_DIR)/sc10p5mcpp84_12lp_pmk_slvt_c14.v
+
+LIB        += $(SC9_BASE_LVT_DIR)/sc9mcpp84_12lp_base_lvt_c14.v
+LIB        += $(SC9_BASE_RVT_DIR)/sc9mcpp84_12lp_base_rvt_c14.v
+LIB        += $(SC9_BASE_SLVT_DIR)/sc9mcpp84_12lp_base_slvt_c14.v
+LIB        += $(SC9_ECO_LVT_DIR)/sc9mcpp84_12lp_eco_lvt_c14.v
+LIB        += $(SC9_ECO_RVT_DIR)/sc9mcpp84_12lp_eco_rvt_c14.v
+LIB        += $(SC9_ECO_SLVT_DIR)/sc9mcpp84_12lp_eco_slvt_c14.v
+LIB        += $(SC9_PMK_LVT_DIR)/sc9mcpp84_12lp_pmk_lvt_c14.v
+LIB        += $(SC9_PMK_RVT_DIR)/sc9mcpp84_12lp_pmk_rvt_c14.v
+LIB        += $(SC9_PMK_SLVT_DIR)/sc9mcpp84_12lp_pmk_slvt_c14.v
+
+export PLATFORMS = /afs/eecs.umich.edu/vlsida/projects/restricted/google/platforms
+LIB        += $(PLATFORMS)/memory/gf12lp_1rw_lg12_w32_bit.v
+
+export OpenROAD = /afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/OpenROAD-flow-scripts/flow
+LIB        += $(OpenROAD)/opentitan_soc_macros/tempsenseInst_error_inv6_head9/export/tempsenseInst_error_inv6_head9.mapped.v
+LIB        += $(OpenROAD)/opentitan_soc_macros/tempsenseInst_error_inv8_head7/export/tempsenseInst_error_inv8_head7.mapped.v
+LIB        += $(OpenROAD)/opentitan_soc_macros/tempsenseInst_error_inv8_head5/export/tempsenseInst_error_inv8_head5.mapped.v
+LIB        += $(OpenROAD)/opentitan_soc_macros/tempsenseInst_error_inv8_head3/export/tempsenseInst_error_inv8_head3.mapped.v
+
+LIB        += $(OpenROAD)/opentitan_soc_macros/SLC_cell/SLC_cell.v
+LIB        += $(OpenROAD)/opentitan_soc_macros/HEAD14/HEAD14.v
 
 ### Adding required files by BRUTE FORCE (to-be copied from test/flist.f)
 HEADERS     = $(OPENTITAN_PKGS)/prim/rtl/prim_pkg.sv
@@ -32,6 +93,8 @@ HEADERS    += $(OPENTITAN_PKGS)/tlul/rtl/tlul_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/xbar/xbar_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/rv_plic/rtl/rv_plic_reg_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
+
+SYNFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.mapped.v
 
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
 SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
@@ -138,7 +201,6 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full
 ################################################################################
 
 .PHONY: all sim simv dve
-
 # Default target:
 all:    simv
 	./simv | tee program.out
@@ -152,6 +214,14 @@ simv:  $(HEADERS) $(SIMFILES) $(TESTBENCH)
 
 dve:	sim
 	./simv -gui &
+
+.PHONY: syn syn_simv
+syn_simv:	$(SYNFILES) $(TESTBENCH)
+	$(VCS) $^ $(LIB) -o syn_simv 
+
+syn:	syn_simv
+	./syn_simv | tee syn_program.out
+
 
 .PHONY:	clean
 clean:
