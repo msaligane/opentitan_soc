@@ -126,14 +126,14 @@ always @(posedge clk_i) begin
     if(system_rst_ni) begin
         if(stop_print == 0) begin         
             print_D2H_header("ICCM");
-            print_D2H(ot_soc_top.iccm_to_xbar.d_valid,
-                    clk_count,
-                    ot_soc_top.iccm_to_xbar.d_data);
+            print_D2H(iccm_to_xbar.d_valid,
+                      clk_count,
+                      iccm_to_xbar.d_data);
             print_D2H_header("DCCM");
-            print_D2H(ot_soc_top.dccm_to_xbar.d_valid,
-                    clk_count,
-                    ot_soc_top.dccm_to_xbar.d_data);
-            if(ot_soc_top.dccm_to_xbar.d_data == 'h5a) begin
+            print_D2H(dccm_to_xbar.d_valid,
+                      clk_count,
+                      dccm_to_xbar.d_data);
+            if(dccm_to_xbar.d_data == 'h5a) begin
                 stop_print = 'b1;
             end
         end
@@ -254,7 +254,7 @@ initial begin
         $display("totalLines: %d", totalLines);
     `endif
 	
-    #(CLOCK*clk_bit*(totalLines+1)*40)
+    #(CLOCK*clk_bit*(totalLines+1)*48)
     
     @(negedge clk_i)
     #100000

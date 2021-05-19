@@ -4,6 +4,7 @@ tools/obj_dir/*
 *.tcl*
 csrc/*
 simv
+syn_simv
 *.out
 *.vpd
 *.daidir

@@ -216,9 +216,12 @@ dve:	sim
 	./simv -gui &
 
 .PHONY: syn syn_simv
-syn_simv:	$(SYNFILES) $(TESTBENCH)
+syn_simv:	$(HEADERS) $(SYNFILES) $(TESTBENCH)
 	$(VCS) $^ $(LIB) -o syn_simv 
 
+syn_dve:	syn_simv
+	./syn_simv -gui &
+	
 syn:	syn_simv
 	./syn_simv | tee syn_program.out
 

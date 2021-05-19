@@ -4,7 +4,6 @@ module rstmgr(
     input rst_ni, // system reset
 
     input logic iccm_rst_i,
-    input  logic  ndmreset, // non-debug module reset
     output logic  sys_rst_ni // reset for system except debug module
 );
 
@@ -17,10 +16,8 @@ module rstmgr(
     end else 
     if (!iccm_rst_i) begin
       rst_d = 1'b0;
-    end else
-    if(ndmreset) begin
-      rst_d = 1'b0;
-    end else begin
+    end
+    else begin
       rst_d = 1'b1;
     end
   end

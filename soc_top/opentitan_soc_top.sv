@@ -381,7 +381,6 @@ module opentitan_soc_top #(
     .clk_i      (clk_i),
     .rst_ni     (rst_ni),
     .iccm_rst_i (iccm_cntrl_reset),
-    .ndmreset   (dbg_rst),
     .sys_rst_ni (system_rst_ni)
   );
 
