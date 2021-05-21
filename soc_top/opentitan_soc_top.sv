@@ -1,4 +1,4 @@
-`define DEBUG
+//`define DEBUG
 
 module opentitan_soc_top #(
   parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
