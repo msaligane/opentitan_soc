@@ -94,7 +94,8 @@ HEADERS    += $(OPENTITAN_PKGS)/xbar/xbar_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/rv_plic/rtl/rv_plic_reg_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 
-SYNFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.mapped.v
+# SYNFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.mapped.v
+SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
 
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
 SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
@@ -194,7 +195,7 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
 
 # # VCS command shorthand
-VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs +define+DUMP_VCD=1 +memcbk +vcs+dumparrays +sdfverbose +define+ARM_UD_MODEL
+VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs +notimingcheck +define+DUMP_VCD=1 +memcbk +vcs+dumparrays +sdfverbose +define+ARM_UD_MODEL 
 
 ################################################################################
 ## RULES

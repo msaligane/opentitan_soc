@@ -72,6 +72,8 @@ always @(posedge i_Clock or negedge rst_ni)
       r_Rx_DV       <= 1'b0;
       r_Clock_Count <= 0;
       r_Bit_Index   <= 0;
+
+      r_Rx_Byte     <= 0;
     end else begin       
     case (r_SM_Main)
       s_IDLE :

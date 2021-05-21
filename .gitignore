@@ -14,4 +14,6 @@ vc_hdrs.h
 DVEfiles/*
 stack.info.*/*
 
+*.log
+
 memory/gf12/*
