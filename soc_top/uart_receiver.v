@@ -31,12 +31,13 @@
 // (10000000)/(115200) = 87
    
 module uart_receiver (
- input         i_Clock,
- input         rst_ni,
- input         i_Rx_Serial,
- input  [15:0] CLKS_PER_BIT,
- output reg       o_Rx_DV,
- output reg [7:0] o_Rx_Byte
+ input             i_Clock,
+ input             rst_ni,
+ input             i_Rx_Serial,
+ input      [15:0] CLKS_PER_BIT,
+ 
+ output reg        o_Rx_DV,
+ output reg [7:0]  o_Rx_Byte
 
  `ifdef DEBUG
   , output reg [15:0]    r_Clock_Count
@@ -44,6 +45,9 @@ module uart_receiver (
   , output reg [2:0]     r_SM_Main
   , output reg [7:0]     r_Rx_Byte
   , output reg           r_Rx_DV
+  
+  , output reg           r_Rx_Data_R
+  , output reg           r_Rx_Data
  `endif
  );
   
@@ -53,8 +57,6 @@ parameter s_RX_DATA_BITS = 3'b010;
 parameter s_RX_STOP_BIT  = 3'b011;
 parameter s_CLEANUP      = 3'b100;
  
-reg           r_Rx_Data_R = 1'b1;
-reg           r_Rx_Data   = 1'b1;
 
 `ifndef DEBUG
   reg [15:0]    r_Clock_Count = 0;
@@ -62,6 +64,9 @@ reg           r_Rx_Data   = 1'b1;
   reg [2:0]     r_SM_Main     = 0;
   reg [7:0]     r_Rx_Byte     = 0;
   reg           r_Rx_DV       = 0;
+
+  reg           r_Rx_Data_R   = 1'b1;
+  reg           r_Rx_Data     = 1'b1;
 `endif
 
 // Purpose: Double-register the incoming data.
@@ -78,12 +83,15 @@ always @(posedge i_Clock)
 always @(posedge i_Clock or negedge rst_ni)
   begin
     if (!rst_ni) begin
-      r_SM_Main <= s_IDLE;
+      r_SM_Main     <= s_IDLE;
       r_Rx_DV       <= 1'b0;
       r_Clock_Count <= 0;
       r_Bit_Index   <= 0;
 
       r_Rx_Byte     <= 0;
+
+      r_Rx_Data_R   <= 1;
+      r_Rx_Data_R   <= 1;
     end else begin       
     case (r_SM_Main)
       s_IDLE :
