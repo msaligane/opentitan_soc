@@ -30,6 +30,12 @@ module opentitan_soc_top #(
     ,output tlul_pkg::tl_d2h_t dccm_to_xbar
 
     ,output logic              system_rst_ni
+
+    ,output logic  [15:0]      r_Clock_Count
+    ,output logic  [2:0]       r_Bit_Index
+    ,output logic  [2:0]       r_SM_Main
+    ,output logic  [7:0]       r_Rx_Byte
+    ,output logic              r_Rx_DV
   `endif
 );
 
@@ -375,6 +381,14 @@ module opentitan_soc_top #(
     .CLKS_PER_BIT  (16'd10417),
     .o_Rx_DV       (rx_dv_i),
     .o_Rx_Byte     (rx_byte_i)
+
+    `ifdef DEBUG
+      ,.r_Clock_Count(r_Clock_Count)
+      ,.r_Bit_Index(r_Bit_Index)
+      ,.r_SM_Main(r_SM_Main)
+      ,.r_Rx_Byte(r_Rx_Byte)
+      ,.r_Rx_DV(r_Rx_DV)
+    `endif
   );
 
   rstmgr reset_manager(
