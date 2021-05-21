@@ -59,24 +59,24 @@ parameter s_CLEANUP      = 3'b100;
  
 
 `ifndef DEBUG
-  reg [15:0]    r_Clock_Count = 0;
-  reg [2:0]     r_Bit_Index   = 0; //8 bits total
-  reg [2:0]     r_SM_Main     = 0;
-  reg [7:0]     r_Rx_Byte     = 0;
-  reg           r_Rx_DV       = 0;
+  reg [15:0]    r_Clock_Count;
+  reg [2:0]     r_Bit_Index;
+  reg [2:0]     r_SM_Main;
+  reg [7:0]     r_Rx_Byte;
+  reg           r_Rx_DV;
 
-  reg           r_Rx_Data_R   = 1'b1;
-  reg           r_Rx_Data     = 1'b1;
+  reg           r_Rx_Data_R;
+  reg           r_Rx_Data;
 `endif
 
 // Purpose: Double-register the incoming data.
 // This allows it to be used in the UART RX Clock Domain.
 // (It removes problems caused by metastability)
-always @(posedge i_Clock)
-  begin
-    r_Rx_Data_R <= i_Rx_Serial;
-    r_Rx_Data   <= r_Rx_Data_R;
-  end
+// always @(posedge i_Clock)
+//   begin
+//     r_Rx_Data_R <= i_Rx_Serial;
+//     r_Rx_Data   <= r_Rx_Data_R;
+//   end
  
  
 // Purpose: Control RX state machine
@@ -91,8 +91,12 @@ always @(posedge i_Clock or negedge rst_ni)
       r_Rx_Byte     <= 0;
 
       r_Rx_Data_R   <= 1;
-      r_Rx_Data_R   <= 1;
-    end else begin       
+      r_Rx_Data     <= 1;
+    end else begin
+
+    r_Rx_Data_R <= i_Rx_Serial;
+    r_Rx_Data   <= r_Rx_Data_R;
+
     case (r_SM_Main)
       s_IDLE :
         begin

@@ -36,6 +36,9 @@ module opentitan_soc_top #(
     ,output logic  [2:0]       r_SM_Main
     ,output logic  [7:0]       r_Rx_Byte
     ,output logic              r_Rx_DV
+
+    ,output logic              r_Rx_Data_R
+    ,output logic              r_Rx_Data
   `endif
 );
 
@@ -388,6 +391,8 @@ module opentitan_soc_top #(
       ,.r_SM_Main(r_SM_Main)
       ,.r_Rx_Byte(r_Rx_Byte)
       ,.r_Rx_DV(r_Rx_DV)
+      ,.r_Rx_Data_R(r_Rx_Data_R)
+      ,.r_Rx_Data(r_Rx_Data)
     `endif
   );
 
