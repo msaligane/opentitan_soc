@@ -11,13 +11,19 @@ import "DPI-C" function void print_close();
 
 module opentitan_soc_top_tb #(
 	parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
-	parameter logic DirectDmiTap = 1'b1
+	parameter logic DirectDmiTap = 1'b1,
+    parameter DATA_WIDTH = 'd32
 )();
 
 logic clk_i;
 logic rst_ni;
 logic tempsense_clkref;
 logic tempsense_clkout;
+
+logic sel;
+
+logic spi_ss;
+logic spi_mosi;
 
 logic uart_rx_inst;
 logic uart_txen;
@@ -31,37 +37,32 @@ logic uart_rx;
     logic system_rst_ni;
 `endif
 
-//logic [19:0] gpio_i;
 logic [19:0] gpio_o;
 
 real CLOCK = 10;
 
 opentitan_soc_top #(
 	.JTAG_ID      (JTAG_ID),
-	.DirectDmiTap (DirectDmiTap)
+	.DirectDmiTap (DirectDmiTap),
+    .DATA_WIDTH   (DATA_WIDTH)
 ) 
 ot_soc_top 
 (
-    .clk_i        (clk_i),
-    .rst_ni       (rst_ni),
+    .clk_i            (clk_i),
+    .rst_ni           (rst_ni),
     .tempsense_clkref (tempsense_clkref),
     .tempsense_clkout (tempsense_clkout),
 
-    .uart_rx_inst (uart_rx_inst),
-    .uart_rx      (uart_rx),
-    .uart_tx      (uart_tx),
-    .uart_txen    (uart_txen),
+    .sel              (sel),
+    .spi_ss           (spi_ss),
+    .spi_mosi         (spi_mosi),
 
-    // JTAG interface 
-    // .jtag_tck_i(jtag_tck_i),
-    // .jtag_tms_i(jtag_tms_i),
-    // .jtag_trst_ni(jtag_trst_ni),
-    // .jtag_tdi_i(jtag_tdi_i),
-    // .jtag_tdo_o(jtag_tdo_o),
+    .uart_rx_inst     (uart_rx_inst),
+    .uart_rx          (uart_rx),
+    .uart_tx          (uart_tx),
+    .uart_txen        (uart_txen),
 
-	// GPIO interface
-   // .gpio_i  (gpio_i),
-    .gpio_o  (gpio_o)
+    .gpio_o           (gpio_o)
 
     `ifdef DEBUG    
         ,.iccm_to_xbar (iccm_to_xbar)
@@ -71,7 +72,6 @@ ot_soc_top
 );
 
 task init_inputs();
-	//gpio_i       = 8;
 	rst_ni       = 1;
 endtask
 
@@ -199,6 +199,8 @@ initial begin
     uart_rx_inst  = 1;
     clk_i         = 0;
     rst_ni        = 0;
+    sel           = 1;
+    
     tempsense_clkref =0;
 
     byte_count = 0;
