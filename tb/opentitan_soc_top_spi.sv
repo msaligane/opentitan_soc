@@ -90,7 +90,8 @@ end
 logic ss_buffer;
 always @(negedge clk_i) begin
     if(!rst_ni) begin
-        spi_ss <= 1;
+        ss_buffer <= 0;
+        spi_ss    <= 1;
     end
     else begin        
         if(bit_count == 'd32) begin
