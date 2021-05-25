@@ -1,5 +1,3 @@
-//`define DFFRAM
-
 module instr_mem_top
 (
   input clk_i,

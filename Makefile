@@ -15,13 +15,19 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 # TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### UART Testbench from Ghazdi
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
+### SPI Testbench
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
+# TESTBENCH   = $(OPENTITAN_ROOT)/spi/tb/SPI_test.v
+# TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
+# TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp
 
 ### Libraries
 # Standard Cell Track Architecture - sc9mcpp84, sc10p5mcpp84
@@ -118,14 +124,15 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_sync.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_async.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/xbar/xbar_periph.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/DFFRAM.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/sram.v
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/gf12/gf12lp_1rw_lg12_w32_bit.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/memory/DFFRAM.sv
 # SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_tlul.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/uart_receiver.v
+SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/SPI_slave.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/iccm_controller.v
 SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_branch_predict.v
 SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_alu.v
@@ -177,7 +184,6 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_intr_hw.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_arb.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
-
 
 # Flags
 # DEBUG_FLAG = -g

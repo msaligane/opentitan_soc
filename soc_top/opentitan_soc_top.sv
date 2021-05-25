@@ -2,27 +2,24 @@
 
 module opentitan_soc_top #(
   parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
-  parameter logic DirectDmiTap = 1'b1
+  parameter logic DirectDmiTap = 1'b1,
+  parameter DATA_WIDTH = 'd32
 )(
-  input logic clk_i,
-  input logic rst_ni,
+  input  logic        clk_i,
+  input  logic        rst_ni,
 
-  // jtag interface 
-  // input               jtag_tck_i,
-  // input               jtag_tms_i,
-  // input               jtag_trst_ni,
-  // input               jtag_tdi_i,
-  // output              jtag_tdo_o,
+  input  logic        sel,
+  input  logic        spi_ss,
+  input  logic        spi_mosi,
 
-  input               uart_rx_inst,
-  input               uart_rx,
-  output              uart_tx,
-  output              uart_txen,
+  input  logic        uart_rx_inst,
+  input  logic        uart_rx,
+  output logic        uart_tx,
+  output logic        uart_txen,
 
   input  logic        tempsense_clkref,
   output logic        tempsense_clkout,
 
-  //input  logic [19:0] gpio_i,
   output logic [19:0] gpio_o
 
   `ifdef DEBUG
@@ -40,6 +37,15 @@ module opentitan_soc_top #(
     ,output logic              r_Rx_Data_R
     ,output logic              r_Rx_Data
   `endif
+  
+  // jtag interface 
+  // input               jtag_tck_i,
+  // input               jtag_tms_i,
+  // input               jtag_trst_ni,
+  // input               jtag_tdi_i,
+  // output              jtag_tdo_o,
+  
+  //input  logic [19:0] gpio_i,
 );
 
   `ifndef DEBUG
@@ -145,6 +151,10 @@ module opentitan_soc_top #(
   logic [11:0] iccm_cntrl_addr;
   logic [31:0] iccm_cntrl_data;
   logic iccm_cntrl_we;
+
+
+  logic [31:0] rx_spi_inst_i;
+  logic rx_spi_valid_i;
 
   // jtag interfaces (COPIED FROM AZADI) 
 
@@ -369,12 +379,26 @@ module opentitan_soc_top #(
   iccm_controller u_dut(
     .clk_i       (clk_i),
     .rst_ni      (rst_ni),
-    .rx_dv_i     (rx_dv_i),
+    .rx_dv_i     (sel ? rx_dv_i : rx_spi_valid_i),
     .rx_byte_i   (rx_byte_i),
     .we_o        (iccm_cntrl_we),
     .addr_o      ({iccm_cntrl_addr_ext, iccm_cntrl_addr}),
     .wdata_o     (iccm_cntrl_data),
-    .reset_o     (iccm_cntrl_reset)
+    .reset_o     (iccm_cntrl_reset),
+
+  	.rx_spi_i    (rx_spi_inst_i),
+	  .sel         (sel)
+  );
+
+  SPI_slave #(
+    .DATA_WIDTH(DATA_WIDTH)
+  ) u_spi (
+    .reset(rst_ni),
+    .SS(spi_ss),
+    .SCLK(clk_i),
+    .MOSI(spi_mosi),
+    .REG_DIN(rx_spi_inst_i),
+    .valid(rx_spi_valid_i)
   );
 
   uart_receiver programmer (
