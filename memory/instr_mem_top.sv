@@ -8,6 +8,9 @@ module instr_mem_top
   input  logic [31:0] wdata,
   output logic [31:0] rdata,
   output logic        rvalid,
+
+  input  logic        en,
+
   `ifdef DFFRAM
     input  logic [3:0]  wmask,
   `endif
@@ -35,7 +38,7 @@ module instr_mem_top
 
   assign rvalid_buf = 'b0;
   
-  always_ff @(posedge clk_i) begin
+  always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin
       rvalid <= 1'b0;
     end 
@@ -69,8 +72,8 @@ module instr_mem_top
       .CEN(1'b0),
       .CLK(clk_i),
       .Q(rdata),
-      .WEN(~rst_ni ? wmask : 'hffff),
-      .GWEN(~rst_ni ? gwmask : 1'b1),
+      .WEN(~en ? wmask : 'hffff),
+      .GWEN(~en ? gwmask : 1'b1),
       .EMA(3'b010),
       .EMAW(2'b01),
       .EMAS(1'b0),

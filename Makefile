@@ -15,16 +15,16 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 # TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### UART Testbench from Ghazdi
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
 ### SPI Testbench
-# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
-# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 # TESTBENCH   = $(OPENTITAN_ROOT)/spi/tb/SPI_test.v
 # TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
 # TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp

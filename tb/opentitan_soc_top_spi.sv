@@ -12,6 +12,7 @@ real CLOCK = 10;
 
 logic clk_i;
 logic rst_ni;
+logic en_i;
 
 logic sel;
 
@@ -35,6 +36,8 @@ ot_soc_top
 (
     .clk_i            (clk_i),
     .rst_ni           (rst_ni),
+    .en_i             (en_i),
+
     .tempsense_clkref (tempsense_clkref),
     .tempsense_clkout (tempsense_clkout),
 
@@ -116,6 +119,8 @@ initial begin
 
     clk_i      = 0;
     rst_ni     = 0;
+    en_i       = 0;
+
     spi_ss     = 1;
     sel        = 0;
     
@@ -159,7 +164,10 @@ initial begin
 	
     #((totalLines+1)*36*CLOCK);
 
-    #5000;
+    #100;
+    en_i = 1;
+
+    #2000;
 
 	$finish;
 end

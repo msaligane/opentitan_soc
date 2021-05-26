@@ -52,7 +52,7 @@ always @(posedge SCLK or negedge reset) begin
 			rcv_bit_count      <= 5'b11111;
 			prev_rcv_bit_count <= 5'b11111;
 
-			valid     <= 1'b0;
+			valid              <= 1'b0;
     	end	
 	end
 end	
