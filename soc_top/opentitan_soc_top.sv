@@ -154,8 +154,13 @@ module opentitan_soc_top #(
   // Enable signal synchronizer
   logic [2:0] en_reg;
   logic       en_clocked;
-  always @ (posedge clk_i) begin
-    en_reg <= {en_i, en_reg[2:1]};
+  always @ (posedge clk_i or negedge rst_ni) begin
+    if(!rst_ni) begin
+      en_reg <= 3'b000;
+    end
+    else begin    
+      en_reg <= {en_i, en_reg[2:1]};
+    end
   end
  
   assign en_clocked = en_reg[0];
@@ -326,6 +331,9 @@ module opentitan_soc_top #(
   logic [31:0] inst_buffer;
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if(!rst_ni) begin
+      inst_buffer <= 'b0;
+    end
+    else if (!en_i) begin
       inst_buffer <= 'b0;
     end
     else begin  

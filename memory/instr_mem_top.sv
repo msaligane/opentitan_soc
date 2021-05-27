@@ -44,7 +44,7 @@ module instr_mem_top
     end 
     else if (we) begin
       rvalid <= 1'b0;
-    end 
+    end
     else begin 
       rvalid <= req;
     end
