@@ -1,25 +1,5 @@
-//`define DEBUG
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/20/2021 12:32:12 PM
-// Design Name: 
-// Module Name: uart_rx
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+`define DEBUG
 
-//////////////////////////////////////////////////////////////////////
 // This file contains the UART Receiver.  This receiver is able to
 // receive 8 bits of serial data, one start bit, one stop bit,
 // and no parity bit.  When receive is complete o_rx_dv will be
@@ -49,7 +29,7 @@ module uart_receiver (
   , output reg           r_Rx_Data_R
   , output reg           r_Rx_Data
  `endif
- );
+);
   
 parameter s_IDLE         = 3'b000;
 parameter s_RX_START_BIT = 3'b001;

@@ -1,3 +1,5 @@
+`define DEBUG
+
 module SPI_slave #(
 	parameter DATA_WIDTH = 'd32
 )
@@ -10,13 +12,20 @@ module SPI_slave #(
 	
     output reg [DATA_WIDTH-1:0] REG_DIN,
     output reg valid
+
+	`ifdef DEBUG
+		,output reg [DATA_WIDTH-1:0] command
+		,output reg [DATA_WIDTH-1:0] data_out
+		,output reg [4:0] rcv_bit_count
+		,output reg [4:0] prev_rcv_bit_count
+	`endif
 );
 
-reg [DATA_WIDTH-1:0] REG_MISC; 
-reg [DATA_WIDTH-1:0] command; 
-reg [DATA_WIDTH-1:0] data_out;
-reg [4:0] rcv_bit_count, prev_rcv_bit_count;
-
+`ifndef DEBUG
+	reg [DATA_WIDTH-1:0] command; 
+	reg [DATA_WIDTH-1:0] data_out;
+	reg [4:0] rcv_bit_count, prev_rcv_bit_count;
+`endif
 
 wire byte_end   = (rcv_bit_count == 5'b11111) && (prev_rcv_bit_count == 5'b11110);
 

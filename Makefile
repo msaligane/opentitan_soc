@@ -15,16 +15,16 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 # TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### UART Testbench from Ghazdi
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
 ### SPI Testbench
-# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
-# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 # TESTBENCH   = $(OPENTITAN_ROOT)/spi/tb/SPI_test.v
 # TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
 # TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp
@@ -201,7 +201,15 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
 
 # # VCS command shorthand
-VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp +vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs +notimingcheck +define+DUMP_VCD=1 +memcbk +vcs+dumparrays +sdfverbose +define+ARM_UD_MODEL 
+VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
+		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
+		+define+DUMP_VCD=1 +define+ARM_UD_MODEL
+
+VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+			+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
+			+define+DEBUG +define+DUMP_VCD=1 +define+ARM_UD_MODEL 
 
 ################################################################################
 ## RULES
@@ -224,7 +232,7 @@ dve:	sim
 
 .PHONY: syn syn_simv
 syn_simv:	$(HEADERS) $(SYNFILES) $(TESTBENCH)
-	$(VCS) $^ $(LIB) -o syn_simv 
+	$(VCS_debug) $^ $(LIB) -o syn_simv 
 
 syn_dve:	syn_simv
 	./syn_simv -gui &
@@ -236,7 +244,6 @@ syn:	syn_simv
 .PHONY:	clean
 clean:
 	@rm -rf *simv *simv.daidir csrc vcs.key *.key
-	@rm -rf *testv *test.daidir csrc vcs.key *.key
 	@rm -rf vis_simv vis_simv.daidir
 	@rm -rf dve* inter.vpd DVEfiles
 	@rm -rf csrc vcdplus.vpd vc_hdrs.h

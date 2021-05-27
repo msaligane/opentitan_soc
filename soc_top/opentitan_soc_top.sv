@@ -1,8 +1,6 @@
-//`define DEBUG
+`define DEBUG
 
 module opentitan_soc_top #(
-  parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
-  parameter logic DirectDmiTap = 1'b1,
   parameter DATA_WIDTH = 'd32
 )(
   input  logic        clk_i,
@@ -23,49 +21,49 @@ module opentitan_soc_top #(
   output logic [19:0] gpio_o
 
   `ifdef DEBUG
+    // system reset debug signal from reset manager
+    ,output logic              system_rst_ni
+    
+    // tilelink debug signals
     ,output tlul_pkg::tl_d2h_t iccm_to_xbar
     ,output tlul_pkg::tl_d2h_t dccm_to_xbar
+    ,output tlul_pkg::tl_h2d_t xbar_to_iccm
+    ,output tlul_pkg::tl_h2d_t xbar_to_dccm
 
-    ,output logic              system_rst_ni
+    // UART receiver debug signals
+    ,output logic  [15:0]           r_Clock_Count
+    ,output logic  [2:0]            r_Bit_Index
+    ,output logic  [2:0]            r_SM_Main
+    ,output logic  [7:0]            r_Rx_Byte
+    ,output logic                   r_Rx_DV
+    ,output logic                   r_Rx_Data_R
+    ,output logic                   r_Rx_Data
 
-    ,output logic  [15:0]      r_Clock_Count
-    ,output logic  [2:0]       r_Bit_Index
-    ,output logic  [2:0]       r_SM_Main
-    ,output logic  [7:0]       r_Rx_Byte
-    ,output logic              r_Rx_DV
-
-    ,output logic              r_Rx_Data_R
-    ,output logic              r_Rx_Data
+    // SPI slave debug signals
+    ,output logic  [DATA_WIDTH-1:0] rx_spi_inst_i
+    ,output logic                   rx_spi_valid_i
+    ,output logic  [DATA_WIDTH-1:0] command
+    ,output logic  [DATA_WIDTH-1:0] data_out
+    ,output logic  [4:0]            rcv_bit_count
+    ,output logic  [4:0]            prev_rcv_bit_count
   `endif
-  
-  // jtag interface 
-  // input               jtag_tck_i,
-  // input               jtag_tms_i,
-  // input               jtag_trst_ni,
-  // input               jtag_tdi_i,
-  // output              jtag_tdo_o,
-  
-  //input  logic [19:0] gpio_i,
 );
 
   `ifndef DEBUG
     logic system_rst_ni;
   `endif
 
-  //wire [19:0] gpio_in;
   wire [19:0] gpio_out;
   wire [11:0] gpio_out_ext;
 
-  //assign gpio_in = gpio_i;
   assign gpio_o = gpio_out; 
         
   tlul_pkg::tl_h2d_t ifu_to_xbar; 
   tlul_pkg::tl_d2h_t xbar_to_ifu;
 
-  tlul_pkg::tl_h2d_t xbar_to_iccm;
-  tlul_pkg::tl_h2d_t xbar_to_dccm;
-
   `ifndef DEBUG
+    tlul_pkg::tl_h2d_t xbar_to_iccm;
+    tlul_pkg::tl_h2d_t xbar_to_dccm;
     tlul_pkg::tl_d2h_t iccm_to_xbar;
     tlul_pkg::tl_d2h_t dccm_to_xbar;
   `endif
@@ -113,7 +111,7 @@ module opentitan_soc_top #(
   // interrupt vector
   logic [31:0] intr_vector;  // size depend on number of interrupts 
                              // increses on adding peripherals 
-// Interrupt source list 
+  // Interrupt source list 
   logic [31:0] intr_gpio;
   logic        intr_uart0_tx_watermark;
   logic        intr_uart0_rx_watermark;
@@ -137,64 +135,40 @@ module opentitan_soc_top #(
       intr_uart0_tx_watermark,
       1'b0
   };
+  
   logic [31:0] gpio_intr;
 
-  logic instr_valid;
+  logic        instr_valid;
   logic [11:0] tlul_addr;
   logic [31:0] tlul_data;
 
-  logic       rx_dv_i;
-  logic [7:0] rx_byte_i;
+  logic        rx_dv_i;
+  logic [7:0]  rx_byte_i;
 
-  logic iccm_cntrl_reset;
-  logic [1:0] iccm_cntrl_addr_ext;
+  logic        iccm_cntrl_reset;
+  logic [1:0]  iccm_cntrl_addr_ext;
   logic [11:0] iccm_cntrl_addr;
   logic [31:0] iccm_cntrl_data;
-  logic iccm_cntrl_we;
-
+  logic        iccm_cntrl_we;
 
   logic [31:0] rx_spi_inst_i;
-  logic rx_spi_valid_i;
+  logic        rx_spi_valid_i;
 
-  // jtag interfaces (COPIED FROM AZADI) 
 
-  // jtag_pkg::jtag_req_t jtag_req;
-  // jtag_pkg::jtag_rsp_t jtag_rsp;
-  // logic unused_jtag_tdo_oe_o;
+  // Reset Synchronizers
+  logic [2:0] rst_buf;
+  logic       rst_sync;
+  always_ff @ (posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni)
+      rst_buf <= 3'b000;
+    else
+      rst_buf <= {rst_ni, rst_buf[2:1]};
+  end
 
-  // assign jtag_req.tck         = jtag_tck_i;
-  // assign jtag_req.tms         = jtag_tms_i;
-  // assign jtag_req.trst_n      = jtag_trst_ni;
-  // assign jtag_req.tdi         = jtag_tdi_i;
-  // assign jtag_tdo_o           = jtag_rsp.tdo;
-  // assign unused_jtag_tdo_oe_o = jtag_rsp.tdo_oe;
+  assign rst_sync = rst_buf[0];
 
-  // logic dbg_req;
-  // logic dbg_rst;
 
-  opentitan_tlul_wrapper
-  //  #(
-  //     .PMPEnable        (1'b0),
-  //     .PMPGranularity   (0), 
-  //     .PMPNumRegions    (0), 
-  //     .MHPMCounterNum   (0), 
-  //     .MHPMCounterWidth (40), 
-  //     .RV32E            (1'b0), 
-  //     .RV32M            (ibex_pkg::RV32MFast), 
-  //     .RV32B            (ibex_pkg::RV32BNone), 
-  //     .RegFile          (ibex_pkg::RegFileFF), 
-  //     .BranchTargetALU  (1'b0), 
-  //     .WritebackStage   (1'b1), 
-  //     .ICache           (1'b0), 
-  //     .ICacheECC        (1'b0), 
-  //     .BranchPredictor  (1'b0), 
-  //     .DbgTriggerEn     (1'b1), 
-  //     .DbgHwBreakNum    (2), 
-  //     .Securebrq        (1'b0),
-  //     .DmHaltAddr       (), 
-  //     .DmExceptionAddr  () 
-  // )
-  u_top (
+  opentitan_tlul_wrapper u_top (
     .clk_i  (clk_i),
     .rst_ni (system_rst_ni),
     .ram_cfg_i (1'b1),
@@ -230,23 +204,20 @@ module opentitan_soc_top #(
 
   //peripheral xbar
   xbar_periph periph_switch (
-    .clk_i     (clk_i),
-    .rst_ni    (system_rst_ni),
+    .clk_i      (clk_i),
+    .rst_ni     (system_rst_ni),
 
     /* Host interfaces */
-    .tl_if_i   (ifu_to_xbar), 
-    .tl_if_o   (xbar_to_ifu), 
-    .tl_lsu_i  (lsu_to_xbar),
-    .tl_lsu_o  (xbar_to_lsu),
-
-    // .tl_dm_sba_i (dm_to_xbar),
-    // .tl_dm_sba_o (xbar_to_dm),
+    .tl_if_i    (ifu_to_xbar), 
+    .tl_if_o    (xbar_to_ifu), 
+    .tl_lsu_i   (lsu_to_xbar),
+    .tl_lsu_o   (xbar_to_lsu),
 
     /* Device interfaces */
-    .tl_iccm_o (xbar_to_iccm),
-    .tl_iccm_i (iccm_to_xbar),
-    .tl_dccm_o (xbar_to_dccm),
-    .tl_dccm_i (dccm_to_xbar),
+    .tl_iccm_o  (xbar_to_iccm),
+    .tl_iccm_i  (iccm_to_xbar),
+    .tl_dccm_o  (xbar_to_dccm),
+    .tl_dccm_i  (dccm_to_xbar),
 
     // GPIOs
     .tl_gpio_o  (xbar_to_gpio),
@@ -281,40 +252,27 @@ module opentitan_soc_top #(
     .tl_dap_i    (),
 
     // PLIC
-    .tl_plic_o  (plic_req),
-    .tl_plic_i  (plic_resp),
+    .tl_plic_o   (plic_req),
+    .tl_plic_i   (plic_resp),
 
-    // For JTAG Debug ROM
-    // .tl_debug_rom_o (xbar_to_dbgrom),
-    // .tl_debug_rom_i (dbgrom_to_xbar),
-
-    .tl_uart_o      (xbar_to_uart),
-    .tl_uart_i      (uart_to_xbar)
+    .tl_uart_o   (xbar_to_uart),
+    .tl_uart_i   (uart_to_xbar)
 
   );
 
   //GPIO module
-   gpio gpio_32 (
+  gpio gpio_32 (
     .clk_i         (clk_i),
-    .rst_ni        (rst_ni),
+    .rst_ni        (system_rst_ni),
 
     // Below Regster interface can be changed
     .tl_i          (xbar_to_gpio),
     .tl_o          (gpio_to_xbar),
-   // .cio_gpio_i    ({12'b0, gpio_in}),
+
     .cio_gpio_o    ({gpio_out_ext, gpio_out}),
     .cio_gpio_en_o (),
     .intr_gpio_o   (intr_gpio )  
   );
-
-  // instr_mem_tlul iccm (
-  //   .clk_i    (clk_i),
-  //   .rst_ni   (rst_ni),
-
-  //   // tl-ul insterface
-  //   .tl_d_i   (xbar_to_iccm),
-  //   .tl_d_o   (iccm_to_xbar)
-  // );
 
   instr_mem_top iccm (
     .clk_i      (clk_i),
@@ -362,7 +320,7 @@ module opentitan_soc_top #(
     .addr_o    (tlul_addr),
     .wdata_o   (),
     .wmask_o   (),
-    .rdata_i   ((system_rst_ni) ? inst_buffer: '0),
+    .rdata_i   (system_rst_ni ? inst_buffer: '0),
     .rvalid_i  (instr_valid),
     .rerror_i  (2'b0)
   );
@@ -378,7 +336,7 @@ module opentitan_soc_top #(
   
   iccm_controller u_dut(
     .clk_i       (clk_i),
-    .rst_ni      (rst_ni),
+    .rst_ni      (rst_sync),
     .rx_dv_i     (sel ? rx_dv_i : rx_spi_valid_i),
     .rx_byte_i   (rx_byte_i),
     .we_o        (iccm_cntrl_we),
@@ -393,17 +351,24 @@ module opentitan_soc_top #(
   SPI_slave #(
     .DATA_WIDTH(DATA_WIDTH)
   ) u_spi (
-    .reset(rst_ni),
+    .reset(rst_sync),
     .SS(spi_ss),
     .SCLK(clk_i),
     .MOSI(spi_mosi),
     .REG_DIN(rx_spi_inst_i),
     .valid(rx_spi_valid_i)
+
+    `ifdef DEBUG
+      ,.command(command)
+      ,.data_out(data_out)
+      ,.rcv_bit_count(rcv_bit_count)
+      ,.prev_rcv_bit_count(prev_rcv_bit_count)
+	  `endif
   );
 
   uart_receiver programmer (
     .i_Clock       (clk_i),
-    .rst_ni        (rst_ni),
+    .rst_ni        (rst_sync),
     .i_Rx_Serial   (uart_rx_inst),
     .CLKS_PER_BIT  (16'd10417),
     .o_Rx_DV       (rx_dv_i),
@@ -422,7 +387,7 @@ module opentitan_soc_top #(
 
   rstmgr reset_manager(
     .clk_i      (clk_i),
-    .rst_ni     (rst_ni),
+    .rst_ni     (rst_sync),
     .iccm_rst_i (iccm_cntrl_reset),
     .sys_rst_ni (system_rst_ni)
   );
@@ -487,45 +452,5 @@ module opentitan_soc_top #(
     .CLK_REF                (tempsense_clkref),
     .CLK_OUT                (tempsense_clkout)
   );
-
-  // rv_dm #(
-  //   .NrHarts(1),
-  //   .IdcodeValue(JTAG_ID),
-  //   .DirectDmiTap (DirectDmiTap)
-  // ) debug_module (
-  //     .clk_i(clk_i),         // clock
-  //     .rst_ni(rst_ni),       // asynchronous reset active low, connect PoR
-  //                                             // here, not the system reset
-  //     .testmode_i(),
-  //     .ndmreset_o(dbg_rst),  // non-debug module reset
-  //     .dmactive_o(),         // debug module is active
-  //     .debug_req_o(dbg_req), // async debug request
-  //     .unavailable_i(1'b0),  // communicate whether the hart is unavailable
-  //                                               // (e.g.: power down)
-
-  //     // bus device with debug memory, for an execution based technique
-  //     .tl_d_i(dbgrom_to_xbar),
-  //     .tl_d_o(xbar_to_dbgrom),
-
-  //     // bus host, for system bus accesses
-  //     .tl_h_o(dm_to_xbar),
-  //     .tl_h_i(xbar_to_dm),
-
-  //     .jtag_req_i(jtag_req),
-  //     .jtag_rsp_o(jtag_rsp)
-  // );
-
-
-  // jtagdpi u_jtagdpi (
-  //   .clk_i       (clk_i),
-  //   .rst_ni      (rst_ni),
-  //   .jtag_tck    (cio_jtag_tck),
-  //   .jtag_tms    (cio_jtag_tms),
-  //   .jtag_tdi    (cio_jtag_tdi),
-  //   .jtag_tdo    (cio_jtag_tdo),
-  //   .jtag_trst_n (cio_jtag_trst_n),
-  //   .jtag_srst_n (cio_jtag_srst_n)
-  // );
-
 
 endmodule
