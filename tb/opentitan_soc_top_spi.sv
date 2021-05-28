@@ -15,6 +15,7 @@ real CLOCK = 10;
 
 logic clk_i;
 logic rst_ni;
+logic en_i;
 
 logic sel;
 
@@ -28,6 +29,8 @@ logic uart_rx;
 
 logic tempsense_clkref;
 logic tempsense_clkout;
+
+logic [7:0] gpio_o;
 
 `ifdef DEBUG
     logic                   system_rst_ni;
@@ -60,6 +63,8 @@ ot_soc_top
 (
     .clk_i            (clk_i),
     .rst_ni           (rst_ni),
+    .en_i             (en_i),
+    
     .tempsense_clkref (tempsense_clkref),
     .tempsense_clkout (tempsense_clkout),
 
@@ -99,26 +104,30 @@ ot_soc_top
     `endif
 );
 
-logic [15:0] totalLines = rfile();
-
-logic [71:0] buffer;
-logic [31:0] inst;
-int          inst_i[];
-
-logic        stop_print;
-
 logic [63:0] clk_count;
 logic [31:0] inst_count;
 logic [31:0] bit_count;
 
-int   n      = 0;
+logic        stop_print;
+
+logic [15:0] totalLines = rfile();
+int          inst_i[];
+
 int   inst_c = 0;
 int   bit_c  = 0;
+
+logic [71:0] buffer;
+logic [31:0] inst;
+int   n      = 0;
+
+
+
 
 
 always begin
     #(CLOCK/2)
-    clk_i = ~clk_i;
+    clk_i            = ~clk_i;
+    tempsense_clkref = ~tempsense_clkref;
 end
 
 always @(posedge clk_i) begin
@@ -202,16 +211,25 @@ initial begin
     int fp;
     init_out();
 
+    // Instruction reader initialization
     n          = 0;
     inst       = 0;
 
     inst_i     = new [totalLines+1];
 
-    clk_i      = 0;
-    rst_ni     = 0;
+    // System input resets
+    clk_i            = 0;
+    rst_ni           = 0;
+    en_i             = 0;
+    tempsense_clkref = 0;
+
+    // Interface initialization
     spi_ss     = 1;
+    spi_mosi   = 0;
+
     sel        = 0;
     
+    // Counter initialization
     bit_c      = 0;
     inst_c     = 0;
     bit_count  = 0;
@@ -250,9 +268,11 @@ initial begin
 
 	@(negedge clk_i)
     spi_ss   = 0;
-    spi_mosi = 0;
 	
     #((totalLines+1)*36*CLOCK);
+
+    #1000;
+    en_i     = 1;
 
     #5000;
 

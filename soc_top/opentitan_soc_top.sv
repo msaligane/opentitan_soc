@@ -5,6 +5,7 @@ module opentitan_soc_top #(
 )(
   input  logic        clk_i,
   input  logic        rst_ni,
+  input  logic        en_i,
 
   input  logic        sel,
   input  logic        spi_ss,
@@ -18,7 +19,7 @@ module opentitan_soc_top #(
   input  logic        tempsense_clkref,
   output logic        tempsense_clkout,
 
-  output logic [19:0] gpio_o
+  output logic [7:0] gpio_o
 
   `ifdef DEBUG
     // system reset debug signal from reset manager
@@ -53,8 +54,8 @@ module opentitan_soc_top #(
     logic system_rst_ni;
   `endif
 
-  wire [19:0] gpio_out;
-  wire [11:0] gpio_out_ext;
+  wire [7:0] gpio_out;
+  wire [23:0] gpio_out_ext;
 
   assign gpio_o = gpio_out; 
         
@@ -151,26 +152,36 @@ module opentitan_soc_top #(
   logic [31:0] iccm_cntrl_data;
   logic        iccm_cntrl_we;
 
-  logic [31:0] rx_spi_inst_i;
-  logic        rx_spi_valid_i;
+  `ifndef DEBUG
+    logic [31:0] rx_spi_inst_i;
+    logic        rx_spi_valid_i;
+  `endif
 
-
-  // Reset Synchronizers
+  // Reset/Enable Synchronizers
   logic [2:0] rst_buf;
   logic       rst_sync;
+
+  logic [2:0] en_buf;
+  logic       en_sync;  
   always_ff @ (posedge clk_i or negedge rst_ni) begin
-    if (!rst_ni)
+    if (!rst_ni) begin
       rst_buf <= 3'b000;
-    else
+      en_buf  <= 3'b000;
+    end
+    else begin
       rst_buf <= {rst_ni, rst_buf[2:1]};
+      en_buf  <= {en_i  , en_buf[2:1]};
+    end
   end
 
   assign rst_sync = rst_buf[0];
+  assign en_sync  = en_buf[0];
 
+  assign enable_rst_ni = en_sync && system_rst_ni;
 
   opentitan_tlul_wrapper u_top (
     .clk_i  (clk_i),
-    .rst_ni (system_rst_ni),
+    .rst_ni (enable_rst_ni),
     .ram_cfg_i (1'b1),
     .scan_rst_ni (),
     .crash_dump_o (),
@@ -205,7 +216,7 @@ module opentitan_soc_top #(
   //peripheral xbar
   xbar_periph periph_switch (
     .clk_i      (clk_i),
-    .rst_ni     (system_rst_ni),
+    .rst_ni     (enable_rst_ni),
 
     /* Host interfaces */
     .tl_if_i    (ifu_to_xbar), 
@@ -263,7 +274,7 @@ module opentitan_soc_top #(
   //GPIO module
   gpio gpio_32 (
     .clk_i         (clk_i),
-    .rst_ni        (system_rst_ni),
+    .rst_ni        (enable_rst_ni),
 
     // Below Regster interface can be changed
     .tl_i          (xbar_to_gpio),
@@ -276,10 +287,10 @@ module opentitan_soc_top #(
 
   instr_mem_top iccm (
     .clk_i      (clk_i),
-    .rst_ni     (system_rst_ni),
+    .rst_ni     (enable_rst_ni),
 
     .req        (req_i),
-    .addr       (system_rst_ni? tlul_addr : iccm_cntrl_addr),
+    .addr       (enable_rst_ni? tlul_addr : iccm_cntrl_addr),
     .wdata      (iccm_cntrl_data),
     .rdata      (tlul_data),
     .rvalid     (instr_valid),
@@ -293,8 +304,8 @@ module opentitan_soc_top #(
   );
 
   logic [31:0] inst_buffer;
-  always_ff @(posedge clk_i or negedge system_rst_ni) begin
-    if(!system_rst_ni) begin
+  always_ff @(posedge clk_i or negedge enable_rst_ni) begin
+    if(!enable_rst_ni) begin
       inst_buffer <= 'b0;
     end
     else begin  
@@ -311,7 +322,7 @@ module opentitan_soc_top #(
     .ErrOnRead    (0)   // 1: Reads not allowed, automatically error  
   ) inst_mem (
     .clk_i     (clk_i),
-    .rst_ni    (system_rst_ni),
+    .rst_ni    (enable_rst_ni),
     .tl_i      (xbar_to_iccm),
     .tl_o      (iccm_to_xbar), 
     .req_o     (req_i),
@@ -320,14 +331,14 @@ module opentitan_soc_top #(
     .addr_o    (tlul_addr),
     .wdata_o   (),
     .wmask_o   (),
-    .rdata_i   (system_rst_ni ? inst_buffer: '0),
+    .rdata_i   (enable_rst_ni ? inst_buffer: '0),
     .rvalid_i  (instr_valid),
     .rerror_i  (2'b0)
   );
 
   data_mem_tlul dccm(
     .clk_i    (clk_i),
-    .rst_ni   (system_rst_ni),
+    .rst_ni   (enable_rst_ni),
   
     // tl-ul insterface
     .tl_d_i   (xbar_to_dccm),
@@ -394,7 +405,7 @@ module opentitan_soc_top #(
 
   rv_plic intr_controller (
     .clk_i      (clk_i),
-    .rst_ni     (system_rst_ni),
+    .rst_ni     (enable_rst_ni),
 
     // Bus Interface (device)
     .tl_i       (plic_req),
@@ -412,7 +423,7 @@ module opentitan_soc_top #(
 
   uart u_uart0(
     .clk_i                   (clk_i             ),
-    .rst_ni                  (system_rst_ni     ),
+    .rst_ni                  (enable_rst_ni     ),
     // Bus Interface
     .tl_i                    (xbar_to_uart      ),
     .tl_o                    (uart_to_xbar      ),
@@ -437,7 +448,7 @@ module opentitan_soc_top #(
 
   tlul_adapter_tempsensor u_tempsense( 
     .clk_i                  (clk_i),
-    .rst_ni                 (system_rst_ni),
+    .rst_ni                 (enable_rst_ni),
     
     .tl_i                   (xbar_to_tsen1),
     .tl_o                   (tsen1_to_xbar),

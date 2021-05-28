@@ -1,7 +1,6 @@
 `timescale 1ns/100ps
-
-`define DBG_INST
-//`define DEBUG
+//`define DBG_INST
+`define DEBUG
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -10,15 +9,14 @@ import "DPI-C" function int  print_D2H(int d_valid, int clkcount, int d_data);
 import "DPI-C" function void print_close();
 
 module opentitan_soc_top_tb #(
-	parameter logic [31:0] JTAG_ID = 32'h 0000_0001,
-	parameter logic DirectDmiTap = 1'b1,
     parameter DATA_WIDTH = 'd32
 )();
 
+real CLOCK = 10;
+
 logic clk_i;
 logic rst_ni;
-logic tempsense_clkref;
-logic tempsense_clkout;
+logic en_i;
 
 logic sel;
 
@@ -30,26 +28,44 @@ logic uart_txen;
 logic uart_tx;
 logic uart_rx;
 
-`ifdef DEBUG
-    tlul_pkg::tl_d2h_t iccm_to_xbar;
-    tlul_pkg::tl_d2h_t dccm_to_xbar;
+logic tempsense_clkref;
+logic tempsense_clkout;
 
-    logic system_rst_ni;
+logic [7:0] gpio_o;
+
+`ifdef DEBUG
+    logic                   system_rst_ni;
+    
+    tlul_pkg::tl_d2h_t      iccm_to_xbar;
+    tlul_pkg::tl_d2h_t      dccm_to_xbar;
+    tlul_pkg::tl_h2d_t      xbar_to_iccm;
+    tlul_pkg::tl_h2d_t      xbar_to_dccm;
+
+    logic  [15:0]           r_Clock_Count;
+    logic  [2:0]            r_Bit_Index;
+    logic  [2:0]            r_SM_Main;
+    logic  [7:0]            r_Rx_Byte;
+    logic                   r_Rx_DV;
+    logic                   r_Rx_Data_R;
+    logic                   r_Rx_Data;
+
+    logic  [DATA_WIDTH-1:0] rx_spi_inst_i;
+    logic                   rx_spi_valid_i;
+    logic  [DATA_WIDTH-1:0] command;
+    logic  [DATA_WIDTH-1:0] data_out;
+    logic  [4:0]            rcv_bit_count;
+    logic  [4:0]            prev_rcv_bit_count;
 `endif
 
-logic [19:0] gpio_o;
-
-real CLOCK = 10;
-
 opentitan_soc_top #(
-	.JTAG_ID      (JTAG_ID),
-	.DirectDmiTap (DirectDmiTap),
     .DATA_WIDTH   (DATA_WIDTH)
 ) 
 ot_soc_top 
 (
     .clk_i            (clk_i),
     .rst_ni           (rst_ni),
+    .en_i             (en_i),
+    
     .tempsense_clkref (tempsense_clkref),
     .tempsense_clkout (tempsense_clkout),
 
@@ -64,16 +80,30 @@ ot_soc_top
 
     .gpio_o           (gpio_o)
 
-    `ifdef DEBUG    
-        ,.iccm_to_xbar (iccm_to_xbar)
-        ,.dccm_to_xbar (dccm_to_xbar)
-        ,.system_rst_ni(system_rst_ni)
+    `ifdef DEBUG
+        ,.system_rst_ni     (system_rst_ni)
+        
+        ,.iccm_to_xbar      (iccm_to_xbar)
+        ,.dccm_to_xbar      (dccm_to_xbar)
+        ,.xbar_to_iccm      (xbar_to_iccm)
+        ,.xbar_to_dccm      (xbar_to_dccm)
+        
+        ,.r_Clock_Count     (r_Clock_Count)
+        ,.r_Bit_Index       (r_Bit_Index)
+        ,.r_SM_Main         (r_SM_Main)
+        ,.r_Rx_Byte         (r_Rx_Byte)
+        ,.r_Rx_DV           (r_Rx_DV)
+        ,.r_Rx_Data_R       (r_Rx_Data_R)
+        ,.r_Rx_Data         (r_Rx_Data)
+        
+        ,.rx_spi_inst_i     (rx_spi_inst_i)
+        ,.rx_spi_valid_i    (rx_spi_valid_i)
+        ,.command           (command)
+        ,.data_out          (data_out)
+        ,.rcv_bit_count     (rcv_bit_count)
+        ,.prev_rcv_bit_count(prev_rcv_bit_count)
     `endif
 );
-
-task init_inputs();
-	rst_ni       = 1;
-endtask
 
 logic [63:0] clk_count;
 logic [31:0] byte_count;
@@ -175,6 +205,7 @@ initial begin
     int fp;
     init_out();
 
+    // Instruction reader initialization
     n          = 0;
     inst       = 0;
 
@@ -196,20 +227,24 @@ initial begin
 
     byte_i     = new [totalLines*8];
 
-    uart_rx_inst  = 1;
-    clk_i         = 0;
-    rst_ni        = 0;
-    sel           = 1;
+    // System input resets
+    clk_i            = 0;
+    rst_ni           = 0;
+    en_i             = 0;
+    tempsense_clkref = 0;
     
-    tempsense_clkref =0;
-
+    // Interface initialization
+    sel           = 1;
+    uart_rx_inst  = 1;
+    
+    // Counter initialization
     byte_count = 0;
     bit_count  = 0;
 
     stop_print = 0;
 
     @(negedge clk_i)
-    init_inputs();
+    rst_ni      = 1;
 
     fp = $fopen("/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/tests/hex/load_test.hex", "r");
     while(!$feof(fp)) begin
@@ -246,22 +281,19 @@ initial begin
         n = n+4;              
     end
 
-	repeat(5)
-	    @(negedge clk_i)
-
 
 	@(negedge clk_i)
-	rst_ni  = 1;
-    uart_rx = 1;
 
     `ifdef DBG_INST
         $display("totalLines: %d", totalLines);
     `endif
 	
-    #(CLOCK*clk_bit*(totalLines+1)*48)
+    #(CLOCK*clk_bit*(totalLines+1)*32)
     
-    @(negedge clk_i)
-    #100000
+    #1000;
+    en_i     = 1;
+    
+    #5000;
 	$finish;
     print_close();
 end
