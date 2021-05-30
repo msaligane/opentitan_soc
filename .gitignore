@@ -6,6 +6,7 @@ csrc/*
 simv
 syn_simv
 *.out
+*mapped*
 *.vpd
 *.daidir
 vc_hdrs.h

@@ -15,16 +15,16 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_tb.sv
 
 ### Top Level Testbench to test UART
-TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
-TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_dpi.sv
+# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.cpp
 # TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### UART Testbench from Ghazdi
 # TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_uart.sv
 
 ### SPI Testbench
-# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
-# TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
+TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 # TESTBENCH   = $(OPENTITAN_ROOT)/spi/tb/SPI_test.v
 # TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
 # TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp
@@ -100,8 +100,8 @@ HEADERS    += $(OPENTITAN_PKGS)/xbar/xbar_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/rv_plic/rtl/rv_plic_reg_pkg.sv
 HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 
-# SYNFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.mapped.v
-SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
+# SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
+SYNFILES    = $(OPENTITAN_ROOT)/../synth_10000ps/1_synth.v
 # SYNFILES    =$(OPENTITAN_TOP)/debug/1_synth.v
 
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv

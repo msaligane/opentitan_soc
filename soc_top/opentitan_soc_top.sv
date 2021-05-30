@@ -1,4 +1,4 @@
-`define DEBUG
+//`define DEBUG
 
 module opentitan_soc_top #(
   parameter DATA_WIDTH = 'd32
