@@ -381,7 +381,7 @@ module opentitan_soc_top #(
     .i_Clock       (clk_i),
     .rst_ni        (rst_sync),
     .i_Rx_Serial   (uart_rx_inst),
-    .CLKS_PER_BIT  (16'd10417),
+    .CLKS_PER_BIT  (16'd20834),
     .o_Rx_DV       (rx_dv_i),
     .o_Rx_Byte     (rx_byte_i)
 
