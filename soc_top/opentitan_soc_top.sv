@@ -1,4 +1,4 @@
-//`define DEBUG
+`define DEBUG
 
 module opentitan_soc_top #(
   parameter DATA_WIDTH = 'd32
@@ -298,7 +298,12 @@ module opentitan_soc_top #(
     .wmask      (4'b0),
     `endif
     `ifndef DFFRAM
-    .wmask      (32'b0),
+      `ifdef GF12
+        .wmask      (32'b0),
+      `else
+        .wen        (iccm_cntrl_reset),
+        .wmask      (4'b1111),
+      `endif
     `endif
     .we         (1'b0)
   );

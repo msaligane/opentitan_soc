@@ -1,4 +1,4 @@
-//`define DEBUG
+`define DEBUG
 
 // This file contains the UART Receiver.  This receiver is able to
 // receive 8 bits of serial data, one start bit, one stop bit,

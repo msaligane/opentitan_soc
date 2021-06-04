@@ -3,10 +3,13 @@
 tools/obj_dir/*
 *.tcl*
 csrc/*
+
 simv
 syn_simv
+
 *.out
 *mapped*
+
 *.vpd
 *.daidir
 vc_hdrs.h
@@ -18,3 +21,4 @@ stack.info.*/*
 *.log
 
 memory/gf12/*
+soc_top/debug/*

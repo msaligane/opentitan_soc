@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-//`define DEBUG
+`define DEBUG
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();

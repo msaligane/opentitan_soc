@@ -1,4 +1,4 @@
-//`define DEBUG
+`define DEBUG
 
 module SPI_slave #(
 	parameter DATA_WIDTH = 'd32

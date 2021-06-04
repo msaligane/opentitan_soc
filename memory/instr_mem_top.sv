@@ -12,12 +12,16 @@ module instr_mem_top
     input  logic [3:0]  wmask,
   `endif
   `ifndef DFFRAM
-    input  logic [31:0]  wmask,
+    `ifdef GF12
+      input  logic [31:0]  wmask,
+    `else
+      input  logic         wen,
+      input  logic [3:0]   wmask,
+    `endif
   `endif  
   input  logic        we
 );
 
-  logic rvalid_buf;
   // always_ff @(posedge clk_i) begin
   //   if (!rst_ni) begin
   //     rvalid <= 1'b0;
@@ -32,8 +36,6 @@ module instr_mem_top
   //     rvalid <= rvalid_buf;
   //   end
   // end
-
-  assign rvalid_buf = 'b0;
   
   always_ff @(posedge clk_i) begin
     if (!rst_ni) begin
@@ -60,23 +62,46 @@ module instr_mem_top
 
   `ifndef DFFRAM
 
-    logic gwmask;
-    assign gwmask = &wmask;
+    `ifdef GF12
+      logic gwmask;
+      assign gwmask = &wmask;
 
-    gf12lp_1rw_lg12_w32_bit inst_memory (
-      .A(addr),
-      .D(wdata),
-      .CEN(1'b0),
-      .CLK(clk_i),
-      .Q(rdata),
-      .WEN(~rst_ni ? wmask : 'hffff),
-      .GWEN(~rst_ni ? gwmask : 1'b1),
-      .EMA(3'b010),
-      .EMAW(2'b01),
-      .EMAS(1'b0),
-      .RET1N(1'b1),
-      .STOV(1'b0)
-    );
+      gf12lp_1rw_lg12_w32_bit inst_memory (
+        .A(addr),
+        .D(wdata),
+        .CEN(1'b0),
+        .CLK(clk_i),
+        .Q(rdata),
+        .WEN(~rst_ni ? wmask : 'hffff),
+        .GWEN(~rst_ni ? gwmask : 1'b1),
+        .EMA(3'b010),
+        .EMAW(2'b01),
+        .EMAS(1'b0),
+        .RET1N(1'b1),
+        .STOV(1'b0)
+      );
+
+    `else
+
+      logic [31:0] rdata_0;
+
+      sky130_sram_4kbyte_1rw1r_32x1024_8 sky130_sram_4kbyte_1rw1r_32x1024_8(
+        // Port 0: RW
+        .clk0(clk_i),
+        .csb0(rst_ni),
+        .web0(wen),
+        .wmask0(wmask),
+        .addr0(addr),
+        .din0(wdata),
+        .dout0(rdata_0),
+        
+        // Port 1: R
+        .clk1(clk_i),
+        .csb1(~rst_ni),
+        .addr1(addr),
+        .dout1(rdata)
+      );
+    `endif
   `endif
 
 endmodule
