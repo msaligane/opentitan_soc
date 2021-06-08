@@ -1,25 +1,24 @@
+`define SKY130
+
 module instr_mem_top
 (
   input clk_i,
   input rst_ni,
 
   input  logic        req,
+  input  logic        we,
   input  logic [11:0] addr,
   input  logic [31:0] wdata,
   output logic [31:0] rdata,
-  output logic        rvalid,
+  output logic        rvalid
   `ifdef DFFRAM
-    input  logic [3:0]  wmask,
-  `endif
-  `ifndef DFFRAM
-    `ifdef GF12
-      input  logic [31:0]  wmask,
-    `else
-      input  logic         wen,
-      input  logic [3:0]   wmask,
-    `endif
+    ,input  logic [3:0]  wmask
+  `elsif GF12
+    ,input  logic [31:0]  wmask
+  `else
+    ,input  logic         wen
+    ,input  logic [3:0]   wmask
   `endif  
-  input  logic        we
 );
 
   // always_ff @(posedge clk_i) begin
@@ -58,11 +57,7 @@ module instr_mem_top
       .DO     (rdata),  // data output
       .A      (addr)    // address
     );
-  `endif
-
-  `ifndef DFFRAM
-
-    `ifdef GF12
+  `elsif GF12
       logic gwmask;
       assign gwmask = &wmask;
 
@@ -81,27 +76,69 @@ module instr_mem_top
         .STOV(1'b0)
       );
 
-    `else
-
-      logic [31:0] rdata_0;
-
-      sky130_sram_4kbyte_1rw1r_32x1024_8 sky130_sram_4kbyte_1rw1r_32x1024_8(
-        // Port 0: RW
-        .clk0(clk_i),
-        .csb0(rst_ni),
-        .web0(wen),
-        .wmask0(wmask),
-        .addr0(addr),
-        .din0(wdata),
-        .dout0(rdata_0),
-        
-        // Port 1: R
-        .clk1(clk_i),
-        .csb1(~rst_ni),
-        .addr1(addr),
-        .dout1(rdata)
+  `else
+      logic [3:0] sel;
+      i_2to4_decoder two2four_dec (
+        .in(addr[11:10]),
+        .out(sel)
       );
-    `endif
+
+      logic [3:0][31:0] rdata_out;
+      logic [3:0][31:0] rdata_dummy;
+      genvar i;
+      generate
+        for(i=0; i<4; i++) begin : iccm
+          sky130_sram_4kbyte_1rw1r_32x1024_8 sky130_sram_4kb(
+            // Port 0: RW
+            .clk0(clk_i),
+            .csb0(rst_ni || ~sel[i]),
+            .web0(wen),
+            .wmask0(wmask),
+            .addr0(addr[9:0]),
+            .din0(wdata),
+            .dout0(rdata_dummy[i]),
+            
+            // Port 1: R
+            .clk1(clk_i),
+            .csb1(~rst_ni && sel[i]),
+            .addr1(addr[9:0]),
+            .dout1(rdata_out[i])
+          );
+        end
+      endgenerate
+
+      always_comb begin
+        case(addr[11:10])
+          2'b00: rdata = rdata_out[0];
+          2'b01: rdata = rdata_out[1];
+          2'b10: rdata = rdata_out[2];
+          2'b11: rdata = rdata_out[3];
+        endcase
+      end
   `endif
 
 endmodule
+
+`ifdef SKY130
+  module i_2to4_decoder (
+    input logic  [1:0] in,
+    output logic [3:0] out
+  );
+    always_comb begin
+      case(in)
+        2'b00: begin
+          out = 4'b0001;
+        end
+        2'b01: begin
+          out = 4'b0010;
+        end
+        2'b10: begin
+          out = 4'b0100;
+        end
+        2'b11: begin
+          out = 4'b1000;
+        end
+      endcase
+    end
+  endmodule
+`endif

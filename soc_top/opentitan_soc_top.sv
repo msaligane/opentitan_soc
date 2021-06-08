@@ -295,15 +295,12 @@ module opentitan_soc_top #(
     .rdata      (tlul_data),
     .rvalid     (instr_valid),
     `ifdef DFFRAM
-    .wmask      (4'b0),
-    `endif
-    `ifndef DFFRAM
-      `ifdef GF12
-        .wmask      (32'b0),
-      `else
-        .wen        (iccm_cntrl_reset),
-        .wmask      (4'b1111),
-      `endif
+      .wmask      (4'b0),
+    `elsif GF12
+      .wmask      (32'b0),
+    `else
+      .wen        (iccm_cntrl_reset),
+      .wmask      (4'b1111),
     `endif
     .we         (1'b0)
   );
