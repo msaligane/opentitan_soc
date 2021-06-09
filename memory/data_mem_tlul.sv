@@ -21,10 +21,11 @@ module data_mem_tlul
   logic        rvalid_buf; 
   logic [31:0] we_inv;
   `ifdef DFFRAM
-    logic [3:0]  data_we;
-  `endif
-  `ifndef DFFRAM
+    logic [3:0]   data_we;
+  `elsif GF12
     logic [31:0]  data_we;
+  `else
+    logic [3:0 ]  data_we;
   `endif
   
   logic [31:0] data_buffer;
