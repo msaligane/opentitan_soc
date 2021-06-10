@@ -103,7 +103,7 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
 # SYNFILES    = $(OPENTITAN_ROOT)/../synth_5000ps/1_synth.v
 # SYNFILES    = $(OPENTITAN_TOP)/1_synth.v
-SYNFILES    =$(OPENTITAN_TOP)/debug/1_synth_sky130.v
+SYNFILES    =$(OPENTITAN_TOP)/debug/sky130/opentitan_soc_top.mapped.v
 
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
 SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
