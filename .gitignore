@@ -22,3 +22,5 @@ stack.info.*/*
 
 memory/gf12/*
 soc_top/debug/*
+
+*.swp
