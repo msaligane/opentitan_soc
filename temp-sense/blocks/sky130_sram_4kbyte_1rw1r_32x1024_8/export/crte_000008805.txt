@@ -1,0 +1,339 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+8805
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Fri Jun 18 00:52:38 EDT 2021 (1623991958)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: vlsipool-j20.eecs.umich.edu
+arch: x86_64
+release_version: 2.6.32-754.31.1.el6.x86_64
+
+SECTION_IPC_INFO
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0xabbaca01 1605666    cwtseng    666        4          3                       
+0xabbaca02 1638435    cwtseng    666        4          3                       
+0x00000072 90243139   wbduan     444        1          0                       
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems     
+0x00004155 98306      seojeong   666        1         
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+
+SECTION_ULIMIT
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 515702
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 10240
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1024
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 4096
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 2621440
+_SC_CHILD_MAX= 1024
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/usr/caen/synopsys-lib-compiler-2018.06/linux64/lc/bin/lc2_shell_exec -shell lc2_shell -r /usr/caen/synopsys-lib-compiler-2018.06 -f lc.tcl
+
+SECTION_CPUINFO
+total_core: 12
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch ida arat epb xsaveopt pln pts dtherm invpcid_single pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdseed adx cqm_llc cqm_occup_llc
+cpu_family: 6
+core_frequency_mhz: 1200
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 15360
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+Red Hat Enterprise Linux Server release 6.10 (Santiago)
+
+
+SECTION_SYS/VM
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/block_dump:0
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:20
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/drop_caches:0
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/extra_free_kbytes:0
+/proc/sys/vm/hugepages_treat_as_movable:0
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_scan_congestion_wait:1
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/meminfo_legacy_layout:1
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:67584
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:4096
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/nr_pdflush_threads:0
+/proc/sys/vm/numa_zonelist_order:default
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_fraction:0
+/proc/sys/vm/scan_unevictable_pages:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:60
+/proc/sys/vm/unmap_area_factor:0
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/would_have_oomkilled:0
+/proc/sys/vm/zone_reclaim_mode:0
+
+
+SECTION_SWAP
+swap_partition: /dev/sda3
+size_gb: 62
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1623991958275
+
+SECTION_MPSTAT
+total_core: 12
+
+CPU     %user   %kernel %wait   %idle   
+all   15.975615 0.681589 0.033668 83.309128
+0     15.261758 1.100586 0.040004 83.597649
+1     14.410243 0.805745 0.034056 84.749954
+2     13.732656 0.745437 0.027131 85.494774
+3     15.320365 0.662449 0.069994 83.947197
+4     12.450052 0.681446 0.018540 86.849968
+5     12.261810 0.500331 0.020523 87.217331
+6     20.254959 0.659481 0.013410 79.072151
+7     19.194916 0.694722 0.042218 80.068146
+8     18.240822 0.700792 0.007676 81.050705
+9     14.976925 0.589627 0.115353 84.318092
+10     18.034016 0.590613 0.007369 81.368004
+11     17.568645 0.448285 0.007731 81.975342
+
+SECTION_PID_STATUS
+name: lc2_shell_exec
+state: 1
+vmsize: 656984
+vmrss: 134944
+vmdata: 108872
+vmstk: 100
+vmexe: 150796
+vmlib: 208492
+threads: 2
+
+SECTION_PROCESS_CPU_UTIL
+pid: 8805
+cpu_total_time: 22717114148
+cpu_used_time: 506
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 132185852
+memfree: 69097936
+cached: 57235788
+swapcached: 42848
+active: 23843680
+swaptotal: 65535996
+swapfree: 63575936
+
+SECTION_SMAPS
+shared_kb: 2584
+private_kb: 132364
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        311G  91G  204G    31
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          20766720  64950 20701770   4294935523
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        2047G  0G  2047G    0
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          2147483647  0 2147483647   0
+
+SECTION_SWAP_RATE
+blk_read: 1999384
+blk_wrtn: 32943640
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 10
+total_size: 16010
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 2
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+    lo:         0        0        0        0
+  eth2:         0        0        0        0
+
+SECTION_NFSSTAT
+readlink: 0
+write: 4
+getattr: 8
+retrans: 0
+raw_data: 
+net 0 0 0 0
+rpc 11880044 6593 11885667
+proc2 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+proc3 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+proc4 48 0 94169 507897 7530 1025644 5010 230 1453 957295 415340 222 1755279 127 127 15798 7 15480 4325397 1058404 880191 74 81403 21107 1309 3840 26934 148 588389 637 77321 370 0 7 0 0 13219 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+SECTION_THREAD_CPU_UTIL
+8805 : 8805 (lc2_shell_exec) R 1 8805 6216 0 -1 4202496 26985 56322 19 81 154 23 129 36 20 0 2 0 1893588961 672751616 33737 18446744073709551615 4194304 158607524 140727387078768 140727387068752 210948384813 0 16385 2101248 1216399103 0 0 0 17 6 0 0 0 0 0
+8828 : 8828 (lc2_shell_exec) S 1 8805 6216 0 -1 4202560 1 56322 0 81 0 0 129 36 20 0 2 0 1893589042 672751616 33737 18446744073709551615 4194304 158607524 140727387078768 139666957648064 210940859955 0 2147221247 2101248 1216399103 18446744071580657849 0 0 -1 3 0 0 0 0 0
+
+CRTE_PERIODIC_END 1 1623991958275

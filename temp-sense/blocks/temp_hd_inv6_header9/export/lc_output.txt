@@ -1,0 +1,26 @@
+
+Initializing...
+read_lib tempsenseInst_error_inv6_head9_typ.lib
+Reading '/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/fasoc_sky130/private/tests/fasoc_sky130/blocks/tempsenseInst_error_inv6_head9/export/tempsenseInst_error_inv6_head9_typ.lib' ...
+Warning: Line 1180, Cell 'tempsenseInst_error_inv6_head9', pin 'DONE', The 'values' attribute has a '-0.156592' value,
+        which is less than '0.000000' the minimum recommended value of this attribute. (LBDB-272)
+Warning: Line 1180, Cell 'tempsenseInst_error_inv6_head9', pin 'DONE', The 'values' attribute has a '-0.156592' value,
+        which is less than '0.000000' the minimum recommended value of this attribute. (LBDB-272)
+Warning: Line 1180, Cell 'tempsenseInst_error_inv6_head9', pin 'DONE', The 'values' attribute has a '-0.156592' value,
+        which is less than '0.000000' the minimum recommended value of this attribute. (LBDB-272)
+Warning: Line 1180, Cell 'tempsenseInst_error_inv6_head9', pin 'DONE', The 'values' attribute has a '-0.156592' value,
+        which is less than '0.000000' the minimum recommended value of this attribute. (LBDB-272)
+Warning: Line 1180, Cell 'tempsenseInst_error_inv6_head9', pin 'DONE', The 'values' attribute has a '-0.156592' value,
+        which is less than '0.000000' the minimum recommended value of this attribute. (LBDB-272)
+Technology library 'tempsenseInst_error_inv6_head9_typ' read successfully
+1
+write_lib -format db -output tempsenseInst_error_inv6_head9_typ.db tempsenseInst_error_inv6_head9_typ
+Wrote the 'tempsenseInst_error_inv6_head9_typ' library to '/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/fasoc_sky130/private/tests/fasoc_sky130/blocks/tempsenseInst_error_inv6_head9/export/tempsenseInst_error_inv6_head9_typ.db' successfully
+1
+1
+lc_shell> exit
+Maximum memory usage for this session: 64.07 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      6 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+

@@ -1,0 +1,18 @@
+
+Initializing...
+read_lib sky130_sram_4kbyte_1rw1r_32x1024_8.lib
+Reading '/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/fasoc_sky130/private/tests/fasoc_sky130/blocks/sky130_sram_4kbyte_1rw1r_32x1024_8/export/sky130_sram_4kbyte_1rw1r_32x1024_8.lib' ...
+Warning: Line 1, The 'internal_power_calculation' attribute in char_config group is required for NLPM library. 
+        No default can be applied to this attribute. (LBDB-366)
+Technology library 'sky130_sram_4kbyte_1rw1r_32x1024_8' read successfully
+1
+write_lib -format db -output sky130_sram_4kbyte_1rw1r_32x1024_8.db sky130_sram_4kbyte_1rw1r_32x1024_8
+Wrote the 'sky130_sram_4kbyte_1rw1r_32x1024_8' library to '/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/fasoc_sky130/private/tests/fasoc_sky130/blocks/sky130_sram_4kbyte_1rw1r_32x1024_8/export/sky130_sram_4kbyte_1rw1r_32x1024_8.db' successfully
+1
+1
+lc_shell> exit
+Maximum memory usage for this session: 64.19 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      4 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+
