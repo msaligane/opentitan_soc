@@ -35,11 +35,16 @@ logic [7:0] gpio_o;
 `ifdef DEBUG
     logic                   system_rst_ni;
     
-    tlul_pkg::tl_d2h_t      iccm_to_xbar;
-    tlul_pkg::tl_d2h_t      dccm_to_xbar;
-    tlul_pkg::tl_h2d_t      xbar_to_iccm;
-    tlul_pkg::tl_h2d_t      xbar_to_dccm;
+    logic  [51:0] iccm_to_xbar;
+    logic  [51:0] dccm_to_xbar;
+    logic  [85:0] xbar_to_iccm;
+    logic  [85:0] xbar_to_dccm;
 
+    //tlul_pkg::tl_d2h_t      iccm_to_xbar;
+    //tlul_pkg::tl_d2h_t      dccm_to_xbar;
+    //tlul_pkg::tl_d2h_t      iccm_to_xbar;
+    //tlul_pkg::tl_d2h_t      dccm_to_xbar;
+    
     logic  [15:0]           r_Clock_Count;
     logic  [2:0]            r_Bit_Index;
     logic  [2:0]            r_SM_Main;
@@ -190,15 +195,26 @@ end
     always @(posedge clk_i) begin
         if(system_rst_ni) begin
             if(stop_print == 0) begin         
-                print_D2H_header("ICCM");
-                print_D2H(iccm_to_xbar.d_valid,
+                //print_D2H_header("ICCM");
+                //print_D2H(iccm_to_xbar.d_valid,
+                //        clk_count,
+                //        iccm_to_xbar.d_data);
+                //print_D2H_header("DCCM");
+                //print_D2H(dccm_to_xbar.d_valid,
+                //        clk_count,
+                //        dccm_to_xbar.d_data);
+                //if(dccm_to_xbar.d_data == 'h5a) begin
+                //    stop_print = 'b1;
+                //end                
+		print_D2H_header("ICCM");
+                print_D2H(iccm_to_xbar[0],
                         clk_count,
-                        iccm_to_xbar.d_data);
+                        iccm_to_xbar[49:18]);
                 print_D2H_header("DCCM");
-                print_D2H(dccm_to_xbar.d_valid,
+                print_D2H(dccm_to_xbar[0],
                         clk_count,
-                        dccm_to_xbar.d_data);
-                if(dccm_to_xbar.d_data == 'h5a) begin
+                        dccm_to_xbar[49:18]);
+                if(dccm_to_xbar[49:18] == 'h5a) begin
                     stop_print = 'b1;
                 end
             end
