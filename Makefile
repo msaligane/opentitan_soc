@@ -78,8 +78,7 @@ TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 #export PLATFORMS = /afs/eecs.umich.edu/vlsida/projects/restricted/google/platforms
 #LIB        += $(PLATFORMS)/memory/gf12lp_1rw_lg12_w32_bit.v
 
-#LIB	    = /afs/eecs.umich.edu/vlsida/projects/restricted/google/wenbo/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
-
+##### s8 version of sky130 std cell libraries (deprecated)
 #LIB        = $(GOOGLE)/skywater-src-nda/scs8hd/V0.0.2/verilog/scs8hd_*.v
 #LIB	   += /afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/opentitan_verilog/sky130_fd_sc_hd.v
 #LIB	   += /afs/eecs.umich.edu/kits/ARM/GF12LP/arm/gf/12lp/sc9mcpp84_base_rvt_c14/r0p0/verilog/sc9mcpp84_12lp_base_rvt_c14.v
@@ -92,6 +91,7 @@ TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 # LIB += $(foreach DIR, $(DIR_LIST), $(addsuffix _2.v, skywater-pdk-libs-sky130_fd_sc_hd/cells/$(DIR)/sky130_fd_sc_hd__$(DIR)))
 # LIB += $(foreach DIR, $(DIR_LIST), $(addsuffix _4.v, skywater-pdk-libs-sky130_fd_sc_hd/cells/$(DIR)/sky130_fd_sc_hd__$(DIR)))
 LIB  += sky130_fd_sc_hd.v
+LIB  += primitives.v
 
 
 export OpenROAD = /afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/OpenROAD-flow-scripts/flow
@@ -102,10 +102,10 @@ export OpenROAD = /afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/O
 # LIB        += $(OpenROAD)/opentitan_soc_macros/tempsenseInst_error_inv8_head3/export/tempsenseInst_error_inv8_head3.mapped.v
 
 ##### SKY130 TEMP SENSOR
-LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv6_header9/export/temp_hd_inv6_header9.v
-LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header3/export/temp_hd_inv8_header3.v
-LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header5/export/temp_hd_inv8_header5.v
-LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header7/export/temp_hd_inv8_header7.v
+#LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv6_header9/export/temp_hd_inv6_header9.v
+#LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header3/export/temp_hd_inv8_header3.v
+#LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header5/export/temp_hd_inv8_header5.v
+#LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header7/export/temp_hd_inv8_header7.v
 
 LIB        += $(OpenROAD)/opentitan_soc_macros/SLC_cell/SLC_cell.v
 LIB        += $(OpenROAD)/opentitan_soc_macros/HEAD14/HEAD14.v
@@ -125,94 +125,97 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
 # SYNFILES    =$(OPENTITAN_TOP)/debug/sky130/opentitan_soc_top.mapped.v
 # SYNFILES    =$(OPENTITAN_TOP)/debug/sky130_RAM/verification/opentitan_soc_top.mapped.v
-SYNFILES      =/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/opentitan_verilog/1_synth.v
 
-SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
-SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio_reg_top.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio.sv
+# SYNFILES    =/afs/eecs.umich.edu/vlsida/projects/restricted/google/peijunh/opentitan_verilog/1_synth.v
+SYNFILES    =$(OPENTITAN_ROOT)/1_synth.v
 
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_reg_top.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_gateway.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_target.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic.sv
+# SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
+# SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio_reg_top.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_reg_top.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_gateway.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic_target.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/rv_plic/rtl/rv_plic.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_host_adapter.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_adapter_reg.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_sram_adapter.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err_resp.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_fifo_async.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_fifo_sync.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_socket_1n.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_socket_m1.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_sync.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_async.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/xbar/xbar_periph.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.v
+# # SIMFILES   +=$(OPENTITAN_ROOT)/memory/sram.v
+# # SIMFILES   +=$(OPENTITAN_ROOT)/memory/gf12/gf12lp_1rw_lg12_w32_bit.v
+# # SIMFILES   +=$(OPENTITAN_ROOT)/memory/DFFRAM.sv
+# # SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_tlul.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc_top.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/uart_receiver.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/SPI_slave.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/iccm_controller.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/prim_clock_gating.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_branch_predict.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_alu.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_compressed_decoder.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_controller.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_core.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_top.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_counter.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_cs_registers.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_csr.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_decoder.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_dummy_instr.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_ex_block.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_fetch_fifo.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_icache.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_id_stage.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_if_stage.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_load_store_unit.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_lockstep.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_multdiv_fast.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_multdiv_slow.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_pmp.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_prefetch_buffer.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_register_file_ff.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_register_file_latch.v
+# SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_wb_stage.v
+# 
+# ### Updated missing registers DONE/DREG
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/tempsens/tlul_adapter_tempsensor.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_rx.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_tx.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_core.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_reg_top.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart.sv
+# 
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_arbiter_ppc.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter_ctr.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_gating.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_inv.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_mux2.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_flop_2sync.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_flop.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_intr_hw.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_arb.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
+# SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_host_adapter.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_adapter_reg.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_sram_adapter.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err_resp.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_fifo_async.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_fifo_sync.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_socket_1n.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_socket_m1.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_sync.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_async.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/xbar/xbar_periph.sv
-
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/sram.v
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/gf12/gf12lp_1rw_lg12_w32_bit.v
-SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.v
-# SIMFILES   +=$(OPENTITAN_ROOT)/memory/DFFRAM.sv
-# SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_tlul.sv
-
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/opentitan_soc_top.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/uart_receiver.v
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/SPI_slave.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/iccm_controller.v
-SIMFILES   +=$(OPENTITAN_ROOT)/soc_top/prim_clock_gating.sv
-
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_branch_predict.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_alu.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_compressed_decoder.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_controller.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_core.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_top.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_counter.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_cs_registers.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_csr.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_decoder.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_dummy_instr.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_ex_block.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_fetch_fifo.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_icache.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_id_stage.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_if_stage.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_load_store_unit.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_lockstep.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_multdiv_fast.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_multdiv_slow.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_pmp.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_prefetch_buffer.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_register_file_ff.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_register_file_latch.v
-SIMFILES   +=$(OPENTITAN_ROOT)/ibex/rtl/ibex_wb_stage.v
-
-### Updated missing registers DONE/DREG
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/tempsens/tlul_adapter_tempsensor.sv
-
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_rx.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_tx.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_core.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart_reg_top.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/uart/rtl/uart.sv
-
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_arbiter_ppc.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter_ctr.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_filter.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_gating.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_inv.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_clock_mux2.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_flop_2sync.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_generic_flop.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_intr_hw.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_arb.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
-SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
-
+SIMFILES := $(shell find $(OPENTITAN_ROOT)/opentitan_ibex_sysverilog/ -name '*.v')
 
 # Flags
 # DEBUG_FLAG = -g
@@ -272,7 +275,7 @@ syn:	syn_simv
 
 # Print variables in Makefile
 test:
-	$(error   VAR is $(STD))
+	$(error   VAR is $(SIMFILES))
 
 .PHONY:	clean
 clean:

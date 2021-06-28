@@ -37140,7 +37140,7 @@ module sky130_fd_sc_hd__dlxbn (
     wire D_delayed     ;
     reg  notifier      ;
     wire awake         ;
-    wire 1             ;
+    //wires1             ;
 
     //                                    Name     Output  Other arguments
     not                                   not0    (GATE  , GATE_N_delayed                       );
@@ -37282,7 +37282,7 @@ module sky130_fd_sc_hd__dlxbn (
     wire D_delayed     ;
     reg  notifier      ;
     wire awake         ;
-    wire 1             ;
+    //wires1             ;
 
     //                                    Name     Output  Other arguments
     not                                   not0    (GATE  , GATE_N_delayed                       );
