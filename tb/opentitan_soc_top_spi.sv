@@ -195,6 +195,7 @@ end
     always @(posedge clk_i) begin
         if(system_rst_ni) begin
             if(stop_print == 0) begin         
+		$display("Test to see if enter print loop!!");
                 //print_D2H_header("ICCM");
                 //print_D2H(iccm_to_xbar.d_valid,
                 //        clk_count,
