@@ -15,6 +15,8 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
+`define FUNCTIONAL
+`define UNIT_DELAY
 
 `ifndef SKY130_FD_SC_HD__A2111O_V
 `define SKY130_FD_SC_HD__A2111O_V
@@ -30,7 +32,7 @@
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -66,7 +68,7 @@
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -110,7 +112,7 @@ module sky130_fd_sc_hd__a2111o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -144,7 +146,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -188,7 +190,7 @@ module sky130_fd_sc_hd__a2111o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -226,7 +228,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2111o (
@@ -258,7 +260,7 @@ module sky130_fd_sc_hd__a2111o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -292,7 +294,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2111o (
@@ -330,13 +332,13 @@ module sky130_fd_sc_hd__a2111o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_V
 
 
@@ -374,7 +376,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -462,7 +464,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_1_V
 
 
@@ -500,7 +502,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -588,7 +590,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_2_V
 
 
@@ -626,7 +628,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -714,7 +716,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111O_4_V
 
 
@@ -752,7 +754,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -788,7 +790,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -832,7 +834,7 @@ module sky130_fd_sc_hd__a2111oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -866,7 +868,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -910,7 +912,7 @@ module sky130_fd_sc_hd__a2111oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -948,7 +950,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2111oi (
@@ -980,7 +982,7 @@ module sky130_fd_sc_hd__a2111oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -1014,7 +1016,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2111oi (
@@ -1052,13 +1054,13 @@ module sky130_fd_sc_hd__a2111oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_V
 
 
@@ -1096,7 +1098,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -1184,7 +1186,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_0_V
 
 
@@ -1222,7 +1224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -1310,7 +1312,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_1_V
 
 
@@ -1348,7 +1350,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -1436,7 +1438,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_2_V
 
 
@@ -1474,7 +1476,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -1562,7 +1564,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2111OI_4_V
 
 
@@ -1600,7 +1602,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -1636,7 +1638,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -1678,7 +1680,7 @@ module sky130_fd_sc_hd__a211o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -1712,7 +1714,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -1754,7 +1756,7 @@ module sky130_fd_sc_hd__a211o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -1792,7 +1794,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a211o (
@@ -1822,7 +1824,7 @@ module sky130_fd_sc_hd__a211o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -1856,7 +1858,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a211o (
@@ -1892,13 +1894,13 @@ module sky130_fd_sc_hd__a211o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_V
 
 
@@ -1936,7 +1938,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2018,7 +2020,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_1_V
 
 
@@ -2056,7 +2058,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2138,7 +2140,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_2_V
 
 
@@ -2176,7 +2178,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2258,7 +2260,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211O_4_V
 
 
@@ -2296,7 +2298,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -2332,7 +2334,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -2374,7 +2376,7 @@ module sky130_fd_sc_hd__a211oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -2408,7 +2410,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -2450,7 +2452,7 @@ module sky130_fd_sc_hd__a211oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -2488,7 +2490,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a211oi (
@@ -2518,7 +2520,7 @@ module sky130_fd_sc_hd__a211oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -2552,7 +2554,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a211oi (
@@ -2588,13 +2590,13 @@ module sky130_fd_sc_hd__a211oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_V
 
 
@@ -2632,7 +2634,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2714,7 +2716,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_1_V
 
 
@@ -2752,7 +2754,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2834,7 +2836,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_2_V
 
 
@@ -2872,7 +2874,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -2954,7 +2956,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A211OI_4_V
 
 
@@ -2993,7 +2995,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -3030,7 +3032,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -3070,7 +3072,7 @@ module sky130_fd_sc_hd__a21bo (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -3105,7 +3107,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -3145,7 +3147,7 @@ module sky130_fd_sc_hd__a21bo (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -3184,7 +3186,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21bo (
@@ -3212,7 +3214,7 @@ module sky130_fd_sc_hd__a21bo (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -3247,7 +3249,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21bo (
@@ -3281,13 +3283,13 @@ module sky130_fd_sc_hd__a21bo (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_V
 
 
@@ -3326,7 +3328,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -3402,7 +3404,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_1_V
 
 
@@ -3441,7 +3443,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -3517,7 +3519,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_2_V
 
 
@@ -3556,7 +3558,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -3632,7 +3634,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BO_4_V
 
 
@@ -3671,7 +3673,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -3708,7 +3710,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -3750,7 +3752,7 @@ module sky130_fd_sc_hd__a21boi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -3785,7 +3787,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -3827,7 +3829,7 @@ module sky130_fd_sc_hd__a21boi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -3866,7 +3868,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21boi (
@@ -3896,7 +3898,7 @@ module sky130_fd_sc_hd__a21boi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -3931,7 +3933,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21boi (
@@ -3967,13 +3969,13 @@ module sky130_fd_sc_hd__a21boi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_V
 
 
@@ -4012,7 +4014,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4088,7 +4090,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_0_V
 
 
@@ -4127,7 +4129,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4203,7 +4205,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_1_V
 
 
@@ -4242,7 +4244,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4318,7 +4320,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_2_V
 
 
@@ -4357,7 +4359,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4433,7 +4435,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21BOI_4_V
 
 
@@ -4471,7 +4473,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -4507,7 +4509,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -4547,7 +4549,7 @@ module sky130_fd_sc_hd__a21o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -4581,7 +4583,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -4621,7 +4623,7 @@ module sky130_fd_sc_hd__a21o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -4659,7 +4661,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21o (
@@ -4687,7 +4689,7 @@ module sky130_fd_sc_hd__a21o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -4721,7 +4723,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21o (
@@ -4755,13 +4757,13 @@ module sky130_fd_sc_hd__a21o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_V
 
 
@@ -4799,7 +4801,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4875,7 +4877,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_1_V
 
 
@@ -4913,7 +4915,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -4989,7 +4991,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_2_V
 
 
@@ -5027,7 +5029,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -5103,7 +5105,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21O_4_V
 
 
@@ -5141,7 +5143,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -5177,7 +5179,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -5217,7 +5219,7 @@ module sky130_fd_sc_hd__a21oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -5251,7 +5253,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -5291,7 +5293,7 @@ module sky130_fd_sc_hd__a21oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -5329,7 +5331,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21oi (
@@ -5357,7 +5359,7 @@ module sky130_fd_sc_hd__a21oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -5391,7 +5393,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a21oi (
@@ -5425,13 +5427,13 @@ module sky130_fd_sc_hd__a21oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_V
 
 
@@ -5469,7 +5471,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -5545,7 +5547,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_1_V
 
 
@@ -5583,7 +5585,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -5659,7 +5661,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_2_V
 
 
@@ -5697,7 +5699,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -5773,7 +5775,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A21OI_4_V
 
 
@@ -5811,7 +5813,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -5847,7 +5849,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -5893,7 +5895,7 @@ module sky130_fd_sc_hd__a221o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -5927,7 +5929,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -5973,7 +5975,7 @@ module sky130_fd_sc_hd__a221o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -6011,7 +6013,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a221o (
@@ -6045,7 +6047,7 @@ module sky130_fd_sc_hd__a221o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -6079,7 +6081,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a221o (
@@ -6119,13 +6121,13 @@ module sky130_fd_sc_hd__a221o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_V
 
 
@@ -6163,7 +6165,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -6251,7 +6253,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_1_V
 
 
@@ -6289,7 +6291,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -6377,7 +6379,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_2_V
 
 
@@ -6415,7 +6417,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -6503,7 +6505,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221O_4_V
 
 
@@ -6541,7 +6543,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -6577,7 +6579,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -6623,7 +6625,7 @@ module sky130_fd_sc_hd__a221oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -6657,7 +6659,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -6703,7 +6705,7 @@ module sky130_fd_sc_hd__a221oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -6741,7 +6743,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a221oi (
@@ -6775,7 +6777,7 @@ module sky130_fd_sc_hd__a221oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -6809,7 +6811,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a221oi (
@@ -6849,13 +6851,13 @@ module sky130_fd_sc_hd__a221oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_V
 
 
@@ -6893,7 +6895,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -6981,7 +6983,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_1_V
 
 
@@ -7019,7 +7021,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -7107,7 +7109,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_2_V
 
 
@@ -7145,7 +7147,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -7233,7 +7235,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A221OI_4_V
 
 
@@ -7271,7 +7273,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -7307,7 +7309,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -7357,7 +7359,7 @@ module sky130_fd_sc_hd__a222oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -7391,7 +7393,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -7441,7 +7443,7 @@ module sky130_fd_sc_hd__a222oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -7479,7 +7481,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a222oi (
@@ -7517,7 +7519,7 @@ module sky130_fd_sc_hd__a222oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -7551,7 +7553,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a222oi (
@@ -7595,13 +7597,13 @@ module sky130_fd_sc_hd__a222oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_V
 
 
@@ -7639,7 +7641,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -7733,7 +7735,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A222OI_1_V
 
 
@@ -7771,7 +7773,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -7807,7 +7809,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -7851,7 +7853,7 @@ module sky130_fd_sc_hd__a22o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -7885,7 +7887,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -7929,7 +7931,7 @@ module sky130_fd_sc_hd__a22o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -7967,7 +7969,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a22o (
@@ -7999,7 +8001,7 @@ module sky130_fd_sc_hd__a22o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -8033,7 +8035,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a22o (
@@ -8071,13 +8073,13 @@ module sky130_fd_sc_hd__a22o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_V
 
 
@@ -8115,7 +8117,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -8197,7 +8199,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_1_V
 
 
@@ -8235,7 +8237,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -8317,7 +8319,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_2_V
 
 
@@ -8355,7 +8357,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -8437,7 +8439,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22O_4_V
 
 
@@ -8475,7 +8477,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -8511,7 +8513,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -8555,7 +8557,7 @@ module sky130_fd_sc_hd__a22oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -8589,7 +8591,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -8633,7 +8635,7 @@ module sky130_fd_sc_hd__a22oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -8671,7 +8673,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a22oi (
@@ -8703,7 +8705,7 @@ module sky130_fd_sc_hd__a22oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -8737,7 +8739,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a22oi (
@@ -8775,13 +8777,13 @@ module sky130_fd_sc_hd__a22oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_V
 
 
@@ -8819,7 +8821,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -8901,7 +8903,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_1_V
 
 
@@ -8939,7 +8941,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -9021,7 +9023,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_2_V
 
 
@@ -9059,7 +9061,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -9141,7 +9143,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A22OI_4_V
 
 
@@ -9180,7 +9182,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -9217,7 +9219,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -9261,7 +9263,7 @@ module sky130_fd_sc_hd__a2bb2o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -9296,7 +9298,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -9340,7 +9342,7 @@ module sky130_fd_sc_hd__a2bb2o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -9379,7 +9381,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2bb2o (
@@ -9411,7 +9413,7 @@ module sky130_fd_sc_hd__a2bb2o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -9446,7 +9448,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2bb2o (
@@ -9484,13 +9486,13 @@ module sky130_fd_sc_hd__a2bb2o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_V
 
 
@@ -9529,7 +9531,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -9611,7 +9613,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_1_V
 
 
@@ -9650,7 +9652,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -9732,7 +9734,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_2_V
 
 
@@ -9771,7 +9773,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -9853,7 +9855,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2O_4_V
 
 
@@ -9892,7 +9894,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -9929,7 +9931,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -9973,7 +9975,7 @@ module sky130_fd_sc_hd__a2bb2oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -10008,7 +10010,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -10052,7 +10054,7 @@ module sky130_fd_sc_hd__a2bb2oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -10091,7 +10093,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2bb2oi (
@@ -10123,7 +10125,7 @@ module sky130_fd_sc_hd__a2bb2oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -10158,7 +10160,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a2bb2oi (
@@ -10196,13 +10198,13 @@ module sky130_fd_sc_hd__a2bb2oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_V
 
 
@@ -10241,7 +10243,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -10323,7 +10325,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_1_V
 
 
@@ -10362,7 +10364,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -10444,7 +10446,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_2_V
 
 
@@ -10483,7 +10485,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -10565,7 +10567,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A2BB2OI_4_V
 
 
@@ -10603,7 +10605,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -10639,7 +10641,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -10683,7 +10685,7 @@ module sky130_fd_sc_hd__a311o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -10717,7 +10719,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -10761,7 +10763,7 @@ module sky130_fd_sc_hd__a311o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -10799,7 +10801,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a311o (
@@ -10831,7 +10833,7 @@ module sky130_fd_sc_hd__a311o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -10865,7 +10867,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a311o (
@@ -10903,13 +10905,13 @@ module sky130_fd_sc_hd__a311o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_V
 
 
@@ -10947,7 +10949,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -11035,7 +11037,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_1_V
 
 
@@ -11073,7 +11075,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -11161,7 +11163,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_2_V
 
 
@@ -11199,7 +11201,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -11287,7 +11289,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311O_4_V
 
 
@@ -11325,7 +11327,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -11361,7 +11363,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -11405,7 +11407,7 @@ module sky130_fd_sc_hd__a311oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -11439,7 +11441,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -11483,7 +11485,7 @@ module sky130_fd_sc_hd__a311oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -11521,7 +11523,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a311oi (
@@ -11553,7 +11555,7 @@ module sky130_fd_sc_hd__a311oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -11587,7 +11589,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a311oi (
@@ -11625,13 +11627,13 @@ module sky130_fd_sc_hd__a311oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_V
 
 
@@ -11669,7 +11671,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -11757,7 +11759,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_1_V
 
 
@@ -11795,7 +11797,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -11883,7 +11885,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_2_V
 
 
@@ -11921,7 +11923,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -12009,7 +12011,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A311OI_4_V
 
 
@@ -12047,7 +12049,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -12083,7 +12085,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -12125,7 +12127,7 @@ module sky130_fd_sc_hd__a31o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -12159,7 +12161,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -12201,7 +12203,7 @@ module sky130_fd_sc_hd__a31o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -12239,7 +12241,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a31o (
@@ -12269,7 +12271,7 @@ module sky130_fd_sc_hd__a31o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -12303,7 +12305,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a31o (
@@ -12339,13 +12341,13 @@ module sky130_fd_sc_hd__a31o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_V
 
 
@@ -12383,7 +12385,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -12465,7 +12467,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_1_V
 
 
@@ -12503,7 +12505,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -12585,7 +12587,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_2_V
 
 
@@ -12623,7 +12625,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -12705,7 +12707,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31O_4_V
 
 
@@ -12743,7 +12745,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -12779,7 +12781,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -12821,7 +12823,7 @@ module sky130_fd_sc_hd__a31oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -12855,7 +12857,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -12897,7 +12899,7 @@ module sky130_fd_sc_hd__a31oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -12935,7 +12937,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a31oi (
@@ -12965,7 +12967,7 @@ module sky130_fd_sc_hd__a31oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -12999,7 +13001,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a31oi (
@@ -13035,13 +13037,13 @@ module sky130_fd_sc_hd__a31oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_V
 
 
@@ -13079,7 +13081,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -13161,7 +13163,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_1_V
 
 
@@ -13199,7 +13201,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -13281,7 +13283,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_2_V
 
 
@@ -13319,7 +13321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -13401,7 +13403,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A31OI_4_V
 
 
@@ -13440,7 +13442,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -13477,7 +13479,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -13523,7 +13525,7 @@ module sky130_fd_sc_hd__a32o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -13558,7 +13560,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -13604,7 +13606,7 @@ module sky130_fd_sc_hd__a32o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -13643,7 +13645,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a32o (
@@ -13677,7 +13679,7 @@ module sky130_fd_sc_hd__a32o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -13712,7 +13714,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a32o (
@@ -13752,13 +13754,13 @@ module sky130_fd_sc_hd__a32o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_V
 
 
@@ -13797,7 +13799,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -13885,7 +13887,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_1_V
 
 
@@ -13924,7 +13926,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -14012,7 +14014,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_2_V
 
 
@@ -14051,7 +14053,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -14139,7 +14141,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32O_4_V
 
 
@@ -14178,7 +14180,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -14215,7 +14217,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -14261,7 +14263,7 @@ module sky130_fd_sc_hd__a32oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -14296,7 +14298,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -14342,7 +14344,7 @@ module sky130_fd_sc_hd__a32oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -14381,7 +14383,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a32oi (
@@ -14415,7 +14417,7 @@ module sky130_fd_sc_hd__a32oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -14450,7 +14452,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a32oi (
@@ -14490,13 +14492,13 @@ module sky130_fd_sc_hd__a32oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_V
 
 
@@ -14535,7 +14537,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -14623,7 +14625,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_1_V
 
 
@@ -14662,7 +14664,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -14750,7 +14752,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_2_V
 
 
@@ -14789,7 +14791,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -14877,7 +14879,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A32OI_4_V
 
 
@@ -14915,7 +14917,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -14951,7 +14953,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -14995,7 +14997,7 @@ module sky130_fd_sc_hd__a41o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -15029,7 +15031,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -15073,7 +15075,7 @@ module sky130_fd_sc_hd__a41o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -15111,7 +15113,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a41o (
@@ -15143,7 +15145,7 @@ module sky130_fd_sc_hd__a41o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -15177,7 +15179,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a41o (
@@ -15215,13 +15217,13 @@ module sky130_fd_sc_hd__a41o (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_V
 
 
@@ -15259,7 +15261,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -15347,7 +15349,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_1_V
 
 
@@ -15385,7 +15387,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -15473,7 +15475,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_2_V
 
 
@@ -15511,7 +15513,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -15599,7 +15601,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41O_4_V
 
 
@@ -15637,7 +15639,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -15673,7 +15675,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -15717,7 +15719,7 @@ module sky130_fd_sc_hd__a41oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -15751,7 +15753,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -15795,7 +15797,7 @@ module sky130_fd_sc_hd__a41oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -15833,7 +15835,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a41oi (
@@ -15865,7 +15867,7 @@ module sky130_fd_sc_hd__a41oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -15899,7 +15901,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__a41oi (
@@ -15937,13 +15939,13 @@ module sky130_fd_sc_hd__a41oi (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_V
 
 
@@ -15981,7 +15983,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16069,7 +16071,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_1_V
 
 
@@ -16107,7 +16109,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16195,7 +16197,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_2_V
 
 
@@ -16233,7 +16235,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16321,7 +16323,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__A41OI_4_V
 
 
@@ -16357,7 +16359,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -16391,7 +16393,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -16427,7 +16429,7 @@ module sky130_fd_sc_hd__and2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -16459,7 +16461,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -16495,7 +16497,7 @@ module sky130_fd_sc_hd__and2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -16531,7 +16533,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and2 (
@@ -16555,7 +16557,7 @@ module sky130_fd_sc_hd__and2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -16587,7 +16589,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and2 (
@@ -16617,13 +16619,13 @@ module sky130_fd_sc_hd__and2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_V
 
 
@@ -16659,7 +16661,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16729,7 +16731,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_0_V
 
 
@@ -16765,7 +16767,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16835,7 +16837,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_1_V
 
 
@@ -16871,7 +16873,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -16941,7 +16943,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_2_V
 
 
@@ -16977,7 +16979,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -17047,7 +17049,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2_4_V
 
 
@@ -17083,7 +17085,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -17117,7 +17119,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -17155,7 +17157,7 @@ module sky130_fd_sc_hd__and2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -17187,7 +17189,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -17225,7 +17227,7 @@ module sky130_fd_sc_hd__and2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -17261,7 +17263,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and2b (
@@ -17287,7 +17289,7 @@ module sky130_fd_sc_hd__and2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -17319,7 +17321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and2b (
@@ -17351,13 +17353,13 @@ module sky130_fd_sc_hd__and2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_V
 
 
@@ -17393,7 +17395,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -17463,7 +17465,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_1_V
 
 
@@ -17499,7 +17501,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -17569,7 +17571,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_2_V
 
 
@@ -17605,7 +17607,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -17675,7 +17677,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND2B_4_V
 
 
@@ -17711,7 +17713,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -17745,7 +17747,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -17783,7 +17785,7 @@ module sky130_fd_sc_hd__and3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -17815,7 +17817,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -17853,7 +17855,7 @@ module sky130_fd_sc_hd__and3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -17889,7 +17891,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and3 (
@@ -17915,7 +17917,7 @@ module sky130_fd_sc_hd__and3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -17947,7 +17949,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and3 (
@@ -17979,13 +17981,13 @@ module sky130_fd_sc_hd__and3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_V
 
 
@@ -18021,7 +18023,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18097,7 +18099,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_1_V
 
 
@@ -18133,7 +18135,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18209,7 +18211,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_2_V
 
 
@@ -18245,7 +18247,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18321,7 +18323,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3_4_V
 
 
@@ -18357,7 +18359,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -18391,7 +18393,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -18431,7 +18433,7 @@ module sky130_fd_sc_hd__and3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -18463,7 +18465,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -18503,7 +18505,7 @@ module sky130_fd_sc_hd__and3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -18539,7 +18541,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and3b (
@@ -18567,7 +18569,7 @@ module sky130_fd_sc_hd__and3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -18599,7 +18601,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and3b (
@@ -18633,13 +18635,13 @@ module sky130_fd_sc_hd__and3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_V
 
 
@@ -18675,7 +18677,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18751,7 +18753,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_1_V
 
 
@@ -18787,7 +18789,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18863,7 +18865,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_2_V
 
 
@@ -18899,7 +18901,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -18975,7 +18977,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND3B_4_V
 
 
@@ -19011,7 +19013,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -19045,7 +19047,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -19085,7 +19087,7 @@ module sky130_fd_sc_hd__and4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -19117,7 +19119,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -19157,7 +19159,7 @@ module sky130_fd_sc_hd__and4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -19193,7 +19195,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4 (
@@ -19221,7 +19223,7 @@ module sky130_fd_sc_hd__and4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -19253,7 +19255,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4 (
@@ -19287,13 +19289,13 @@ module sky130_fd_sc_hd__and4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_V
 
 
@@ -19329,7 +19331,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -19411,7 +19413,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_1_V
 
 
@@ -19447,7 +19449,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -19529,7 +19531,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_2_V
 
 
@@ -19565,7 +19567,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -19647,7 +19649,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4_4_V
 
 
@@ -19683,7 +19685,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -19717,7 +19719,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -19759,7 +19761,7 @@ module sky130_fd_sc_hd__and4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -19791,7 +19793,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -19833,7 +19835,7 @@ module sky130_fd_sc_hd__and4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -19869,7 +19871,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4b (
@@ -19899,7 +19901,7 @@ module sky130_fd_sc_hd__and4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -19931,7 +19933,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4b (
@@ -19967,13 +19969,13 @@ module sky130_fd_sc_hd__and4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_V
 
 
@@ -20009,7 +20011,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -20091,7 +20093,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_1_V
 
 
@@ -20127,7 +20129,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -20209,7 +20211,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_2_V
 
 
@@ -20245,7 +20247,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -20327,7 +20329,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4B_4_V
 
 
@@ -20363,7 +20365,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -20397,7 +20399,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -20439,7 +20441,7 @@ module sky130_fd_sc_hd__and4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -20471,7 +20473,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -20513,7 +20515,7 @@ module sky130_fd_sc_hd__and4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -20549,7 +20551,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4bb (
@@ -20579,7 +20581,7 @@ module sky130_fd_sc_hd__and4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -20611,7 +20613,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__and4bb (
@@ -20647,13 +20649,13 @@ module sky130_fd_sc_hd__and4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_V
 
 
@@ -20689,7 +20691,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -20771,7 +20773,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_1_V
 
 
@@ -20807,7 +20809,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -20889,7 +20891,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_2_V
 
 
@@ -20925,7 +20927,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21007,7 +21009,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__AND4BB_4_V
 
 
@@ -21043,7 +21045,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -21077,7 +21079,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -21111,7 +21113,7 @@ module sky130_fd_sc_hd__buf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -21143,7 +21145,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -21177,7 +21179,7 @@ module sky130_fd_sc_hd__buf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -21213,7 +21215,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__buf (
@@ -21235,7 +21237,7 @@ module sky130_fd_sc_hd__buf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -21267,7 +21269,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__buf (
@@ -21295,13 +21297,13 @@ module sky130_fd_sc_hd__buf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_V
 
 
@@ -21337,7 +21339,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21401,7 +21403,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_1_V
 
 
@@ -21437,7 +21439,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21501,7 +21503,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_12_V
 
 
@@ -21537,7 +21539,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21601,7 +21603,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_16_V
 
 
@@ -21637,7 +21639,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21701,7 +21703,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_2_V
 
 
@@ -21737,7 +21739,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21801,7 +21803,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_4_V
 
 
@@ -21837,7 +21839,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -21901,7 +21903,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_6_V
 
 
@@ -21937,7 +21939,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -22001,7 +22003,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUF_8_V
 
 
@@ -22037,7 +22039,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -22071,7 +22073,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -22105,7 +22107,7 @@ module sky130_fd_sc_hd__bufbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -22137,7 +22139,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -22171,7 +22173,7 @@ module sky130_fd_sc_hd__bufbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -22207,7 +22209,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__bufbuf (
@@ -22229,7 +22231,7 @@ module sky130_fd_sc_hd__bufbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -22261,7 +22263,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__bufbuf (
@@ -22289,13 +22291,13 @@ module sky130_fd_sc_hd__bufbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_V
 
 
@@ -22331,7 +22333,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -22395,7 +22397,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_16_V
 
 
@@ -22431,7 +22433,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -22495,7 +22497,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFBUF_8_V
 
 
@@ -22531,7 +22533,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -22565,7 +22567,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -22599,7 +22601,7 @@ module sky130_fd_sc_hd__bufinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -22631,7 +22633,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -22665,7 +22667,7 @@ module sky130_fd_sc_hd__bufinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -22701,7 +22703,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__bufinv (
@@ -22723,7 +22725,7 @@ module sky130_fd_sc_hd__bufinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -22755,7 +22757,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__bufinv (
@@ -22783,13 +22785,13 @@ module sky130_fd_sc_hd__bufinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_V
 
 
@@ -22825,7 +22827,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -22889,7 +22891,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_16_V
 
 
@@ -22925,7 +22927,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -22989,7 +22991,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__BUFINV_8_V
 
 
@@ -23025,7 +23027,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -23059,7 +23061,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -23093,7 +23095,7 @@ module sky130_fd_sc_hd__clkbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -23125,7 +23127,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -23159,7 +23161,7 @@ module sky130_fd_sc_hd__clkbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -23195,7 +23197,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkbuf (
@@ -23217,7 +23219,7 @@ module sky130_fd_sc_hd__clkbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -23249,7 +23251,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkbuf (
@@ -23277,13 +23279,13 @@ module sky130_fd_sc_hd__clkbuf (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_V
 
 
@@ -23319,7 +23321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -23383,7 +23385,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_1_V
 
 
@@ -23419,7 +23421,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -23483,7 +23485,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_16_V
 
 
@@ -23519,7 +23521,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -23583,7 +23585,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_2_V
 
 
@@ -23619,7 +23621,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -23683,7 +23685,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_4_V
 
 
@@ -23719,7 +23721,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -23783,7 +23785,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKBUF_8_V
 
 
@@ -23820,7 +23822,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -23855,7 +23857,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -23889,7 +23891,7 @@ module sky130_fd_sc_hd__clkdlybuf4s15 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -23922,7 +23924,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -23956,7 +23958,7 @@ module sky130_fd_sc_hd__clkdlybuf4s15 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -23993,7 +23995,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s15 (
@@ -24015,7 +24017,7 @@ module sky130_fd_sc_hd__clkdlybuf4s15 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -24048,7 +24050,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s15 (
@@ -24076,13 +24078,13 @@ module sky130_fd_sc_hd__clkdlybuf4s15 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_V
 
 
@@ -24119,7 +24121,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -24183,7 +24185,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_1_V
 
 
@@ -24220,7 +24222,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -24284,7 +24286,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S15_2_V
 
 
@@ -24321,7 +24323,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -24356,7 +24358,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -24390,7 +24392,7 @@ module sky130_fd_sc_hd__clkdlybuf4s18 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -24423,7 +24425,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -24457,7 +24459,7 @@ module sky130_fd_sc_hd__clkdlybuf4s18 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -24494,7 +24496,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s18 (
@@ -24516,7 +24518,7 @@ module sky130_fd_sc_hd__clkdlybuf4s18 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -24549,7 +24551,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s18 (
@@ -24577,13 +24579,13 @@ module sky130_fd_sc_hd__clkdlybuf4s18 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_V
 
 
@@ -24620,7 +24622,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -24684,7 +24686,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_1_V
 
 
@@ -24721,7 +24723,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -24785,7 +24787,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S18_2_V
 
 
@@ -24822,7 +24824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -24857,7 +24859,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -24891,7 +24893,7 @@ module sky130_fd_sc_hd__clkdlybuf4s25 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -24924,7 +24926,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -24958,7 +24960,7 @@ module sky130_fd_sc_hd__clkdlybuf4s25 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -24995,7 +24997,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s25 (
@@ -25017,7 +25019,7 @@ module sky130_fd_sc_hd__clkdlybuf4s25 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -25050,7 +25052,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s25 (
@@ -25078,13 +25080,13 @@ module sky130_fd_sc_hd__clkdlybuf4s25 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_V
 
 
@@ -25121,7 +25123,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -25185,7 +25187,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_1_V
 
 
@@ -25222,7 +25224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -25286,7 +25288,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S25_2_V
 
 
@@ -25323,7 +25325,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -25358,7 +25360,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -25392,7 +25394,7 @@ module sky130_fd_sc_hd__clkdlybuf4s50 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -25425,7 +25427,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -25459,7 +25461,7 @@ module sky130_fd_sc_hd__clkdlybuf4s50 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -25496,7 +25498,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s50 (
@@ -25518,7 +25520,7 @@ module sky130_fd_sc_hd__clkdlybuf4s50 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -25551,7 +25553,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkdlybuf4s50 (
@@ -25579,13 +25581,13 @@ module sky130_fd_sc_hd__clkdlybuf4s50 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_V
 
 
@@ -25622,7 +25624,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -25686,7 +25688,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_1_V
 
 
@@ -25723,7 +25725,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -25787,7 +25789,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKDLYBUF4S50_2_V
 
 
@@ -25823,7 +25825,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -25857,7 +25859,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -25891,7 +25893,7 @@ module sky130_fd_sc_hd__clkinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -25923,7 +25925,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -25957,7 +25959,7 @@ module sky130_fd_sc_hd__clkinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -25993,7 +25995,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkinv (
@@ -26015,7 +26017,7 @@ module sky130_fd_sc_hd__clkinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -26047,7 +26049,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkinv (
@@ -26075,13 +26077,13 @@ module sky130_fd_sc_hd__clkinv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_V
 
 
@@ -26117,7 +26119,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26181,7 +26183,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_1_V
 
 
@@ -26217,7 +26219,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26281,7 +26283,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_16_V
 
 
@@ -26317,7 +26319,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26381,7 +26383,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_2_V
 
 
@@ -26417,7 +26419,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26481,7 +26483,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_4_V
 
 
@@ -26517,7 +26519,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26581,7 +26583,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINV_8_V
 
 
@@ -26617,7 +26619,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -26651,7 +26653,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -26685,7 +26687,7 @@ module sky130_fd_sc_hd__clkinvlp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -26717,7 +26719,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -26751,7 +26753,7 @@ module sky130_fd_sc_hd__clkinvlp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -26787,7 +26789,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkinvlp (
@@ -26809,7 +26811,7 @@ module sky130_fd_sc_hd__clkinvlp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -26841,7 +26843,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__clkinvlp (
@@ -26869,13 +26871,13 @@ module sky130_fd_sc_hd__clkinvlp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_V
 
 
@@ -26911,7 +26913,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -26975,7 +26977,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_2_V
 
 
@@ -27011,7 +27013,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -27075,7 +27077,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CLKINVLP_4_V
 
 
@@ -27111,7 +27113,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -27145,7 +27147,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -27180,7 +27182,7 @@ module sky130_fd_sc_hd__conb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -27212,7 +27214,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -27247,7 +27249,7 @@ module sky130_fd_sc_hd__conb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -27283,7 +27285,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__conb (
@@ -27302,7 +27304,7 @@ module sky130_fd_sc_hd__conb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -27334,7 +27336,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__conb (
@@ -27359,13 +27361,13 @@ module sky130_fd_sc_hd__conb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_V
 
 
@@ -27401,7 +27403,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -27465,7 +27467,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__CONB_1_V
 
 
@@ -27501,7 +27503,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -27535,7 +27537,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__decap (
@@ -27554,7 +27556,7 @@ module sky130_fd_sc_hd__decap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -27586,7 +27588,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__decap (
@@ -27605,7 +27607,7 @@ module sky130_fd_sc_hd__decap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -27641,7 +27643,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__decap ();
@@ -27649,7 +27651,7 @@ module sky130_fd_sc_hd__decap ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -27681,7 +27683,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__decap ();
@@ -27695,13 +27697,13 @@ module sky130_fd_sc_hd__decap ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_V
 
 
@@ -27737,7 +27739,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -27785,7 +27787,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_12_V
 
 
@@ -27821,7 +27823,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -27869,7 +27871,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_3_V
 
 
@@ -27905,7 +27907,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -27953,7 +27955,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_4_V
 
 
@@ -27989,7 +27991,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -28037,7 +28039,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_6_V
 
 
@@ -28073,7 +28075,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -28121,7 +28123,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DECAP_8_V
 
 
@@ -28158,7 +28160,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -28193,7 +28195,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28240,7 +28242,7 @@ module sky130_fd_sc_hd__dfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -28273,7 +28275,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28333,7 +28335,7 @@ module sky130_fd_sc_hd__dfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -28370,7 +28372,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28409,7 +28411,7 @@ module sky130_fd_sc_hd__dfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -28442,7 +28444,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28500,13 +28502,13 @@ module sky130_fd_sc_hd__dfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_V
 
 
@@ -28543,7 +28545,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -28631,7 +28633,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_1_V
 
 
@@ -28668,7 +28670,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -28756,7 +28758,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBN_2_V
 
 
@@ -28793,7 +28795,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -28828,7 +28830,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28873,7 +28875,7 @@ module sky130_fd_sc_hd__dfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -28906,7 +28908,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -28964,7 +28966,7 @@ module sky130_fd_sc_hd__dfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -29001,7 +29003,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29038,7 +29040,7 @@ module sky130_fd_sc_hd__dfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -29071,7 +29073,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29127,13 +29129,13 @@ module sky130_fd_sc_hd__dfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_V
 
 
@@ -29170,7 +29172,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -29258,7 +29260,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFBBP_1_V
 
 
@@ -29294,7 +29296,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -29328,7 +29330,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29369,7 +29371,7 @@ module sky130_fd_sc_hd__dfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -29401,7 +29403,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29451,7 +29453,7 @@ module sky130_fd_sc_hd__dfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -29487,7 +29489,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29520,7 +29522,7 @@ module sky130_fd_sc_hd__dfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -29552,7 +29554,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29600,13 +29602,13 @@ module sky130_fd_sc_hd__dfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_V
 
 
@@ -29642,7 +29644,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -29724,7 +29726,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_1_V
 
 
@@ -29760,7 +29762,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -29842,7 +29844,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRBP_2_V
 
 
@@ -29879,7 +29881,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -29914,7 +29916,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -29954,7 +29956,7 @@ module sky130_fd_sc_hd__dfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -29987,7 +29989,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30037,7 +30039,7 @@ module sky130_fd_sc_hd__dfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -30074,7 +30076,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30106,7 +30108,7 @@ module sky130_fd_sc_hd__dfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -30139,7 +30141,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30187,13 +30189,13 @@ module sky130_fd_sc_hd__dfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_V
 
 
@@ -30230,7 +30232,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -30306,7 +30308,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTN_1_V
 
 
@@ -30342,7 +30344,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -30376,7 +30378,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30414,7 +30416,7 @@ module sky130_fd_sc_hd__dfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -30446,7 +30448,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30494,7 +30496,7 @@ module sky130_fd_sc_hd__dfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -30530,7 +30532,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30560,7 +30562,7 @@ module sky130_fd_sc_hd__dfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+
 `endif  // SKY130_FD_SC_HD__DFRTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -30592,7 +30594,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -30638,13 +30640,13 @@ module sky130_fd_sc_hd__dfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_V
 
 
@@ -30680,7 +30682,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -30756,7 +30758,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_1_V
 
 
@@ -30792,7 +30794,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -30868,7 +30870,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_2_V
 
 
@@ -30904,7 +30906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -30980,7 +30982,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFRTP_4_V
 
 
@@ -31016,7 +31018,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -31050,7 +31052,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31091,7 +31093,7 @@ module sky130_fd_sc_hd__dfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -31123,7 +31125,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31174,7 +31176,7 @@ module sky130_fd_sc_hd__dfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -31210,7 +31212,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31243,7 +31245,7 @@ module sky130_fd_sc_hd__dfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -31275,7 +31277,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31324,13 +31326,13 @@ module sky130_fd_sc_hd__dfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_V
 
 
@@ -31366,7 +31368,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -31448,7 +31450,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_1_V
 
 
@@ -31484,7 +31486,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -31566,7 +31568,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSBP_2_V
 
 
@@ -31602,7 +31604,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -31636,7 +31638,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31674,7 +31676,7 @@ module sky130_fd_sc_hd__dfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -31706,7 +31708,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31754,7 +31756,7 @@ module sky130_fd_sc_hd__dfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -31790,7 +31792,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31820,7 +31822,7 @@ module sky130_fd_sc_hd__dfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -31852,7 +31854,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -31898,13 +31900,13 @@ module sky130_fd_sc_hd__dfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_V
 
 
@@ -31940,7 +31942,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -32016,7 +32018,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_1_V
 
 
@@ -32052,7 +32054,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -32128,7 +32130,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_2_V
 
 
@@ -32164,7 +32166,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -32240,7 +32242,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFSTP_4_V
 
 
@@ -32276,7 +32278,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -32310,7 +32312,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32347,7 +32349,7 @@ module sky130_fd_sc_hd__dfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -32379,7 +32381,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32421,7 +32423,7 @@ module sky130_fd_sc_hd__dfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -32457,7 +32459,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32486,7 +32488,7 @@ module sky130_fd_sc_hd__dfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -32518,7 +32520,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32558,13 +32560,13 @@ module sky130_fd_sc_hd__dfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_V
 
 
@@ -32600,7 +32602,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -32676,7 +32678,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_1_V
 
 
@@ -32712,7 +32714,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -32788,7 +32790,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXBP_2_V
 
 
@@ -32824,7 +32826,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -32858,7 +32860,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32892,7 +32894,7 @@ module sky130_fd_sc_hd__dfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -32924,7 +32926,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -32963,7 +32965,7 @@ module sky130_fd_sc_hd__dfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -32999,7 +33001,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -33025,7 +33027,7 @@ module sky130_fd_sc_hd__dfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -33057,7 +33059,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -33094,13 +33096,13 @@ module sky130_fd_sc_hd__dfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_V
 
 
@@ -33136,7 +33138,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -33206,7 +33208,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_1_V
 
 
@@ -33242,7 +33244,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -33312,7 +33314,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_2_V
 
 
@@ -33348,7 +33350,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -33418,7 +33420,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DFXTP_4_V
 
 
@@ -33454,7 +33456,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -33488,7 +33490,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__diode (
@@ -33509,7 +33511,7 @@ module sky130_fd_sc_hd__diode (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -33541,7 +33543,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__diode (
@@ -33562,7 +33564,7 @@ module sky130_fd_sc_hd__diode (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -33598,7 +33600,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__diode (
@@ -33611,7 +33613,7 @@ module sky130_fd_sc_hd__diode (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -33643,7 +33645,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__diode (
@@ -33662,13 +33664,13 @@ module sky130_fd_sc_hd__diode (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_V
 
 
@@ -33704,7 +33706,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -33762,7 +33764,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DIODE_2_V
 
 
@@ -33798,7 +33800,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -33832,7 +33834,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -33868,7 +33870,7 @@ module sky130_fd_sc_hd__dlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -33900,7 +33902,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -33941,7 +33943,7 @@ module sky130_fd_sc_hd__dlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -33977,7 +33979,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34005,7 +34007,7 @@ module sky130_fd_sc_hd__dlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -34037,7 +34039,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34076,13 +34078,13 @@ module sky130_fd_sc_hd__dlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_V
 
 
@@ -34118,7 +34120,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -34188,7 +34190,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_1_V
 
 
@@ -34224,7 +34226,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -34294,7 +34296,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_2_V
 
 
@@ -34330,7 +34332,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -34400,7 +34402,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLCLKP_4_V
 
 
@@ -34437,7 +34439,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -34472,7 +34474,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34515,7 +34517,7 @@ module sky130_fd_sc_hd__dlrbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -34548,7 +34550,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34602,7 +34604,7 @@ module sky130_fd_sc_hd__dlrbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -34639,7 +34641,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34674,7 +34676,7 @@ module sky130_fd_sc_hd__dlrbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -34707,7 +34709,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -34759,13 +34761,13 @@ module sky130_fd_sc_hd__dlrbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_V
 
 
@@ -34802,7 +34804,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -34884,7 +34886,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_1_V
 
 
@@ -34921,7 +34923,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -35003,7 +35005,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBN_2_V
 
 
@@ -35040,7 +35042,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -35075,7 +35077,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35116,7 +35118,7 @@ module sky130_fd_sc_hd__dlrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -35149,7 +35151,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35201,7 +35203,7 @@ module sky130_fd_sc_hd__dlrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -35238,7 +35240,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35271,7 +35273,7 @@ module sky130_fd_sc_hd__dlrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -35304,7 +35306,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35354,13 +35356,13 @@ module sky130_fd_sc_hd__dlrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_V
 
 
@@ -35397,7 +35399,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -35479,7 +35481,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_1_V
 
 
@@ -35516,7 +35518,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -35598,7 +35600,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRBP_2_V
 
 
@@ -35634,7 +35636,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -35668,7 +35670,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35708,7 +35710,7 @@ module sky130_fd_sc_hd__dlrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -35740,7 +35742,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35791,7 +35793,7 @@ module sky130_fd_sc_hd__dlrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -35827,7 +35829,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35859,7 +35861,7 @@ module sky130_fd_sc_hd__dlrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -35891,7 +35893,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -35940,13 +35942,13 @@ module sky130_fd_sc_hd__dlrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_V
 
 
@@ -35982,7 +35984,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36058,7 +36060,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_1_V
 
 
@@ -36094,7 +36096,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36170,7 +36172,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_2_V
 
 
@@ -36206,7 +36208,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36282,7 +36284,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTN_4_V
 
 
@@ -36319,7 +36321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -36354,7 +36356,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -36392,7 +36394,7 @@ module sky130_fd_sc_hd__dlrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -36425,7 +36427,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -36474,7 +36476,7 @@ module sky130_fd_sc_hd__dlrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -36511,7 +36513,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -36541,7 +36543,7 @@ module sky130_fd_sc_hd__dlrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -36574,7 +36576,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -36621,13 +36623,13 @@ module sky130_fd_sc_hd__dlrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_V
 
 
@@ -36664,7 +36666,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36740,7 +36742,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_1_V
 
 
@@ -36777,7 +36779,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36853,7 +36855,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_2_V
 
 
@@ -36890,7 +36892,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -36966,7 +36968,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLRTP_4_V
 
 
@@ -37002,7 +37004,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -37036,7 +37038,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37075,7 +37077,7 @@ module sky130_fd_sc_hd__dlxbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -37107,7 +37109,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37152,7 +37154,7 @@ module sky130_fd_sc_hd__dlxbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -37188,7 +37190,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37219,7 +37221,7 @@ module sky130_fd_sc_hd__dlxbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -37251,7 +37253,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37294,13 +37296,13 @@ module sky130_fd_sc_hd__dlxbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_V
 
 
@@ -37336,7 +37338,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -37412,7 +37414,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_1_V
 
 
@@ -37448,7 +37450,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -37524,7 +37526,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBN_2_V
 
 
@@ -37560,7 +37562,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -37594,7 +37596,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37631,7 +37633,7 @@ module sky130_fd_sc_hd__dlxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -37663,7 +37665,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37705,7 +37707,7 @@ module sky130_fd_sc_hd__dlxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -37741,7 +37743,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37770,7 +37772,7 @@ module sky130_fd_sc_hd__dlxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -37802,7 +37804,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -37842,13 +37844,13 @@ module sky130_fd_sc_hd__dlxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_V
 
 
@@ -37884,7 +37886,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -37960,7 +37962,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXBP_1_V
 
 
@@ -37996,7 +37998,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -38030,7 +38032,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38066,7 +38068,7 @@ module sky130_fd_sc_hd__dlxtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -38098,7 +38100,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38139,7 +38141,7 @@ module sky130_fd_sc_hd__dlxtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -38175,7 +38177,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38203,7 +38205,7 @@ module sky130_fd_sc_hd__dlxtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -38235,7 +38237,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38274,13 +38276,13 @@ module sky130_fd_sc_hd__dlxtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_V
 
 
@@ -38316,7 +38318,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -38386,7 +38388,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_1_V
 
 
@@ -38422,7 +38424,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -38492,7 +38494,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_2_V
 
 
@@ -38528,7 +38530,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -38598,7 +38600,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTN_4_V
 
 
@@ -38634,7 +38636,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -38668,7 +38670,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38702,7 +38704,7 @@ module sky130_fd_sc_hd__dlxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -38734,7 +38736,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38773,7 +38775,7 @@ module sky130_fd_sc_hd__dlxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -38809,7 +38811,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38835,7 +38837,7 @@ module sky130_fd_sc_hd__dlxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -38867,7 +38869,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -38904,13 +38906,13 @@ module sky130_fd_sc_hd__dlxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_V
 
 
@@ -38946,7 +38948,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -39016,7 +39018,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLXTP_1_V
 
 
@@ -39052,7 +39054,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -39086,7 +39088,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39120,7 +39122,7 @@ module sky130_fd_sc_hd__dlygate4sd1 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -39152,7 +39154,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39186,7 +39188,7 @@ module sky130_fd_sc_hd__dlygate4sd1 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -39222,7 +39224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd1 (
@@ -39244,7 +39246,7 @@ module sky130_fd_sc_hd__dlygate4sd1 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -39276,7 +39278,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd1 (
@@ -39304,13 +39306,13 @@ module sky130_fd_sc_hd__dlygate4sd1 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_V
 
 
@@ -39346,7 +39348,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -39410,7 +39412,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD1_1_V
 
 
@@ -39446,7 +39448,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -39480,7 +39482,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39514,7 +39516,7 @@ module sky130_fd_sc_hd__dlygate4sd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -39546,7 +39548,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39580,7 +39582,7 @@ module sky130_fd_sc_hd__dlygate4sd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -39616,7 +39618,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd2 (
@@ -39638,7 +39640,7 @@ module sky130_fd_sc_hd__dlygate4sd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -39670,7 +39672,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd2 (
@@ -39698,13 +39700,13 @@ module sky130_fd_sc_hd__dlygate4sd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_V
 
 
@@ -39740,7 +39742,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -39804,7 +39806,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD2_1_V
 
 
@@ -39840,7 +39842,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -39874,7 +39876,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39908,7 +39910,7 @@ module sky130_fd_sc_hd__dlygate4sd3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -39940,7 +39942,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -39974,7 +39976,7 @@ module sky130_fd_sc_hd__dlygate4sd3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -40010,7 +40012,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd3 (
@@ -40032,7 +40034,7 @@ module sky130_fd_sc_hd__dlygate4sd3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -40064,7 +40066,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlygate4sd3 (
@@ -40092,13 +40094,13 @@ module sky130_fd_sc_hd__dlygate4sd3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_V
 
 
@@ -40134,7 +40136,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -40198,7 +40200,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYGATE4SD3_1_V
 
 
@@ -40235,7 +40237,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -40270,7 +40272,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -40304,7 +40306,7 @@ module sky130_fd_sc_hd__dlymetal6s2s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -40337,7 +40339,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -40371,7 +40373,7 @@ module sky130_fd_sc_hd__dlymetal6s2s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -40408,7 +40410,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s2s (
@@ -40430,7 +40432,7 @@ module sky130_fd_sc_hd__dlymetal6s2s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -40463,7 +40465,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s2s (
@@ -40491,13 +40493,13 @@ module sky130_fd_sc_hd__dlymetal6s2s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_V
 
 
@@ -40534,7 +40536,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -40598,7 +40600,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S2S_1_V
 
 
@@ -40635,7 +40637,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -40670,7 +40672,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -40704,7 +40706,7 @@ module sky130_fd_sc_hd__dlymetal6s4s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -40737,7 +40739,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -40771,7 +40773,7 @@ module sky130_fd_sc_hd__dlymetal6s4s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -40808,7 +40810,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s4s (
@@ -40830,7 +40832,7 @@ module sky130_fd_sc_hd__dlymetal6s4s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -40863,7 +40865,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s4s (
@@ -40891,13 +40893,13 @@ module sky130_fd_sc_hd__dlymetal6s4s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_V
 
 
@@ -40934,7 +40936,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -40998,7 +41000,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S4S_1_V
 
 
@@ -41035,7 +41037,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -41070,7 +41072,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -41104,7 +41106,7 @@ module sky130_fd_sc_hd__dlymetal6s6s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -41137,7 +41139,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -41171,7 +41173,7 @@ module sky130_fd_sc_hd__dlymetal6s6s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -41208,7 +41210,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s6s (
@@ -41230,7 +41232,7 @@ module sky130_fd_sc_hd__dlymetal6s6s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -41263,7 +41265,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__dlymetal6s6s (
@@ -41291,13 +41293,13 @@ module sky130_fd_sc_hd__dlymetal6s6s (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_V
 
 
@@ -41334,7 +41336,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -41398,7 +41400,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__DLYMETAL6S6S_1_V
 
 
@@ -41434,7 +41436,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -41468,7 +41470,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -41504,7 +41506,7 @@ module sky130_fd_sc_hd__ebufn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -41536,7 +41538,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -41572,7 +41574,7 @@ module sky130_fd_sc_hd__ebufn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -41608,7 +41610,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__ebufn (
@@ -41628,7 +41630,7 @@ module sky130_fd_sc_hd__ebufn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -41660,7 +41662,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__ebufn (
@@ -41686,13 +41688,13 @@ module sky130_fd_sc_hd__ebufn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_V
 
 
@@ -41728,7 +41730,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -41798,7 +41800,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_1_V
 
 
@@ -41834,7 +41836,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -41904,7 +41906,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_2_V
 
 
@@ -41940,7 +41942,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -42010,7 +42012,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_4_V
 
 
@@ -42046,7 +42048,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -42116,7 +42118,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EBUFN_8_V
 
 
@@ -42153,7 +42155,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -42188,7 +42190,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42229,7 +42231,7 @@ module sky130_fd_sc_hd__edfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -42262,7 +42264,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42311,7 +42313,7 @@ module sky130_fd_sc_hd__edfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -42348,7 +42350,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42381,7 +42383,7 @@ module sky130_fd_sc_hd__edfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -42414,7 +42416,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42461,13 +42463,13 @@ module sky130_fd_sc_hd__edfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_V
 
 
@@ -42504,7 +42506,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -42586,7 +42588,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXBP_1_V
 
 
@@ -42623,7 +42625,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -42658,7 +42660,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42696,7 +42698,7 @@ module sky130_fd_sc_hd__edfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -42729,7 +42731,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42775,7 +42777,7 @@ module sky130_fd_sc_hd__edfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -42812,7 +42814,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42842,7 +42844,7 @@ module sky130_fd_sc_hd__edfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -42875,7 +42877,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -42919,13 +42921,13 @@ module sky130_fd_sc_hd__edfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_V
 
 
@@ -42962,7 +42964,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43038,7 +43040,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EDFXTP_1_V
 
 
@@ -43074,7 +43076,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -43108,7 +43110,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -43144,7 +43146,7 @@ module sky130_fd_sc_hd__einvn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -43176,7 +43178,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -43212,7 +43214,7 @@ module sky130_fd_sc_hd__einvn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -43248,7 +43250,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__einvn (
@@ -43268,7 +43270,7 @@ module sky130_fd_sc_hd__einvn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -43300,7 +43302,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__einvn (
@@ -43326,13 +43328,13 @@ module sky130_fd_sc_hd__einvn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_V
 
 
@@ -43368,7 +43370,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43438,7 +43440,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_0_V
 
 
@@ -43474,7 +43476,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43544,7 +43546,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_1_V
 
 
@@ -43580,7 +43582,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43650,7 +43652,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_2_V
 
 
@@ -43686,7 +43688,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43756,7 +43758,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_4_V
 
 
@@ -43792,7 +43794,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -43862,7 +43864,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVN_8_V
 
 
@@ -43898,7 +43900,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -43932,7 +43934,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -43968,7 +43970,7 @@ module sky130_fd_sc_hd__einvp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -44000,7 +44002,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -44036,7 +44038,7 @@ module sky130_fd_sc_hd__einvp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -44072,7 +44074,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__einvp (
@@ -44092,7 +44094,7 @@ module sky130_fd_sc_hd__einvp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -44124,7 +44126,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__einvp (
@@ -44150,13 +44152,13 @@ module sky130_fd_sc_hd__einvp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_V
 
 
@@ -44192,7 +44194,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -44262,7 +44264,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_1_V
 
 
@@ -44298,7 +44300,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -44368,7 +44370,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_2_V
 
 
@@ -44404,7 +44406,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -44474,7 +44476,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_4_V
 
 
@@ -44510,7 +44512,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -44580,7 +44582,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__EINVP_8_V
 
 
@@ -44616,7 +44618,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -44650,7 +44652,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -44707,7 +44709,7 @@ module sky130_fd_sc_hd__fa (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -44739,7 +44741,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -44796,7 +44798,7 @@ module sky130_fd_sc_hd__fa (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -44832,7 +44834,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fa (
@@ -44875,7 +44877,7 @@ module sky130_fd_sc_hd__fa (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -44907,7 +44909,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fa (
@@ -44956,13 +44958,13 @@ module sky130_fd_sc_hd__fa (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_V
 
 
@@ -44998,7 +45000,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -45080,7 +45082,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_1_V
 
 
@@ -45116,7 +45118,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -45198,7 +45200,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_2_V
 
 
@@ -45234,7 +45236,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -45316,7 +45318,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FA_4_V
 
 
@@ -45352,7 +45354,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -45386,7 +45388,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -45437,7 +45439,7 @@ module sky130_fd_sc_hd__fah (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -45469,7 +45471,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -45520,7 +45522,7 @@ module sky130_fd_sc_hd__fah (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -45556,7 +45558,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fah (
@@ -45593,7 +45595,7 @@ module sky130_fd_sc_hd__fah (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -45625,7 +45627,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fah (
@@ -45668,13 +45670,13 @@ module sky130_fd_sc_hd__fah (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_V
 
 
@@ -45710,7 +45712,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -45792,7 +45794,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAH_1_V
 
 
@@ -45828,7 +45830,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -45862,7 +45864,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -45915,7 +45917,7 @@ module sky130_fd_sc_hd__fahcin (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -45947,7 +45949,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -46000,7 +46002,7 @@ module sky130_fd_sc_hd__fahcin (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -46036,7 +46038,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fahcin (
@@ -46075,7 +46077,7 @@ module sky130_fd_sc_hd__fahcin (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -46107,7 +46109,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fahcin (
@@ -46152,13 +46154,13 @@ module sky130_fd_sc_hd__fahcin (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_V
 
 
@@ -46194,7 +46196,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -46276,7 +46278,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCIN_1_V
 
 
@@ -46312,7 +46314,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -46346,7 +46348,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -46397,7 +46399,7 @@ module sky130_fd_sc_hd__fahcon (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -46429,7 +46431,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -46480,7 +46482,7 @@ module sky130_fd_sc_hd__fahcon (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -46516,7 +46518,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fahcon (
@@ -46553,7 +46555,7 @@ module sky130_fd_sc_hd__fahcon (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -46585,7 +46587,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fahcon (
@@ -46628,13 +46630,13 @@ module sky130_fd_sc_hd__fahcon (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_V
 
 
@@ -46670,7 +46672,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -46752,7 +46754,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FAHCON_1_V
 
 
@@ -46788,7 +46790,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -46822,7 +46824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fill (
@@ -46841,7 +46843,7 @@ module sky130_fd_sc_hd__fill (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -46873,7 +46875,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fill (
@@ -46892,7 +46894,7 @@ module sky130_fd_sc_hd__fill (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -46928,7 +46930,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fill ();
@@ -46942,7 +46944,7 @@ module sky130_fd_sc_hd__fill ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -46974,7 +46976,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__fill ();
@@ -46988,13 +46990,13 @@ module sky130_fd_sc_hd__fill ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_V
 
 
@@ -47030,7 +47032,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47078,7 +47080,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_1_V
 
 
@@ -47114,7 +47116,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47162,7 +47164,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_2_V
 
 
@@ -47198,7 +47200,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47246,7 +47248,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_4_V
 
 
@@ -47282,7 +47284,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47330,7 +47332,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__FILL_8_V
 
 
@@ -47366,7 +47368,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -47400,7 +47402,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -47443,7 +47445,7 @@ module sky130_fd_sc_hd__ha (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -47475,7 +47477,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -47518,7 +47520,7 @@ module sky130_fd_sc_hd__ha (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -47554,7 +47556,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__ha (
@@ -47583,7 +47585,7 @@ module sky130_fd_sc_hd__ha (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -47615,7 +47617,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__ha (
@@ -47650,13 +47652,13 @@ module sky130_fd_sc_hd__ha (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_V
 
 
@@ -47692,7 +47694,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47768,7 +47770,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_1_V
 
 
@@ -47804,7 +47806,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47880,7 +47882,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_2_V
 
 
@@ -47916,7 +47918,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -47992,7 +47994,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__HA_4_V
 
 
@@ -48028,7 +48030,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -48062,7 +48064,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -48096,7 +48098,7 @@ module sky130_fd_sc_hd__inv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -48128,7 +48130,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -48162,7 +48164,7 @@ module sky130_fd_sc_hd__inv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -48198,7 +48200,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__inv (
@@ -48220,7 +48222,7 @@ module sky130_fd_sc_hd__inv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -48252,7 +48254,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__inv (
@@ -48280,13 +48282,13 @@ module sky130_fd_sc_hd__inv (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_V
 
 
@@ -48322,7 +48324,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48386,7 +48388,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_1_V
 
 
@@ -48422,7 +48424,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48486,7 +48488,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_12_V
 
 
@@ -48522,7 +48524,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48586,7 +48588,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_16_V
 
 
@@ -48622,7 +48624,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48686,7 +48688,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_2_V
 
 
@@ -48722,7 +48724,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48786,7 +48788,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_4_V
 
 
@@ -48822,7 +48824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48886,7 +48888,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_6_V
 
 
@@ -48922,7 +48924,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -48986,7 +48988,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__INV_8_V
 
 
@@ -49022,7 +49024,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -49049,7 +49051,7 @@ endmodule
 `define SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_PP_V
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_bleeder (
@@ -49069,7 +49071,7 @@ module sky130_fd_sc_hd__lpflow_bleeder (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif	// SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -49094,7 +49096,7 @@ endmodule
 `define SKY130_FD_SC_HD__LPFLOW_BLEEDER_BEHAVIORAL_PP_V
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_bleeder (
@@ -49119,7 +49121,7 @@ module sky130_fd_sc_hd__lpflow_bleeder (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif 	// SKY130_FD_SC_HD__LPFLOW_BLEEDER_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -49148,7 +49150,7 @@ endmodule
 `define SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_bleeder (
@@ -49160,7 +49162,7 @@ module sky130_fd_sc_hd__lpflow_bleeder (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -49185,7 +49187,7 @@ endmodule
 `define SKY130_FD_SC_HD__LPFLOW_BLEEDER_BEHAVIORAL_V
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_bleeder (
@@ -49197,13 +49199,13 @@ module sky130_fd_sc_hd__lpflow_bleeder (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif	// SKY130_FD_SC_HD__LPFLOW_BLEEDER_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_BLEEDER_V
 
 
@@ -49239,7 +49241,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -49297,7 +49299,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_BLEEDER_1_V
 
 
@@ -49333,7 +49335,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -49367,7 +49369,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -49403,7 +49405,7 @@ module sky130_fd_sc_hd__lpflow_clkbufkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -49435,7 +49437,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -49471,7 +49473,7 @@ module sky130_fd_sc_hd__lpflow_clkbufkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -49507,7 +49509,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_clkbufkapwr (
@@ -49529,7 +49531,7 @@ module sky130_fd_sc_hd__lpflow_clkbufkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -49561,7 +49563,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_clkbufkapwr (
@@ -49590,13 +49592,13 @@ module sky130_fd_sc_hd__lpflow_clkbufkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_V
 
 
@@ -49632,7 +49634,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -49700,7 +49702,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_1_V
 
 
@@ -49736,7 +49738,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -49804,7 +49806,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_16_V
 
 
@@ -49840,7 +49842,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -49908,7 +49910,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_2_V
 
 
@@ -49944,7 +49946,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50012,7 +50014,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_4_V
 
 
@@ -50048,7 +50050,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50116,7 +50118,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKBUFKAPWR_8_V
 
 
@@ -50152,7 +50154,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -50186,7 +50188,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -50222,7 +50224,7 @@ module sky130_fd_sc_hd__lpflow_clkinvkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -50254,7 +50256,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -50290,7 +50292,7 @@ module sky130_fd_sc_hd__lpflow_clkinvkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -50326,7 +50328,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_clkinvkapwr (
@@ -50348,7 +50350,7 @@ module sky130_fd_sc_hd__lpflow_clkinvkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -50380,7 +50382,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_clkinvkapwr (
@@ -50409,13 +50411,13 @@ module sky130_fd_sc_hd__lpflow_clkinvkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_V
 
 
@@ -50451,7 +50453,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50519,7 +50521,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_1_V
 
 
@@ -50555,7 +50557,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50623,7 +50625,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_16_V
 
 
@@ -50659,7 +50661,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50727,7 +50729,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_2_V
 
 
@@ -50763,7 +50765,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50831,7 +50833,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_4_V
 
 
@@ -50867,7 +50869,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -50935,7 +50937,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_CLKINVKAPWR_8_V
 
 
@@ -50972,7 +50974,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -51007,7 +51009,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_decapkapwr (
@@ -51028,7 +51030,7 @@ module sky130_fd_sc_hd__lpflow_decapkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -51061,7 +51063,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_decapkapwr (
@@ -51082,7 +51084,7 @@ module sky130_fd_sc_hd__lpflow_decapkapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -51119,7 +51121,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_decapkapwr ();
@@ -51127,7 +51129,7 @@ module sky130_fd_sc_hd__lpflow_decapkapwr ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -51160,7 +51162,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_decapkapwr ();
@@ -51175,13 +51177,13 @@ module sky130_fd_sc_hd__lpflow_decapkapwr ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_V
 
 
@@ -51218,7 +51220,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -51270,7 +51272,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_12_V
 
 
@@ -51308,7 +51310,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -51360,7 +51362,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_3_V
 
 
@@ -51397,7 +51399,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -51449,7 +51451,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_4_V
 
 
@@ -51486,7 +51488,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -51538,7 +51540,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_6_V
 
 
@@ -51575,7 +51577,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -51627,7 +51629,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_DECAPKAPWR_8_V
 
 
@@ -51665,7 +51667,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -51701,7 +51703,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -51735,7 +51737,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -51769,7 +51771,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -51803,7 +51805,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -51841,7 +51843,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso0n (
@@ -51861,7 +51863,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -51895,7 +51897,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso0n (
@@ -51921,13 +51923,13 @@ module sky130_fd_sc_hd__lpflow_inputiso0n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_V
 
 
@@ -51965,7 +51967,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -52035,7 +52037,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0N_1_V
 
 
@@ -52073,7 +52075,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -52109,7 +52111,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -52145,7 +52147,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -52179,7 +52181,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -52215,7 +52217,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -52253,7 +52255,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso0p (
@@ -52277,7 +52279,7 @@ module sky130_fd_sc_hd__lpflow_inputiso0p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -52311,7 +52313,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso0p (
@@ -52341,13 +52343,13 @@ module sky130_fd_sc_hd__lpflow_inputiso0p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_V
 
 
@@ -52385,7 +52387,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -52455,7 +52457,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO0P_1_V
 
 
@@ -52493,7 +52495,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -52529,7 +52531,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -52565,7 +52567,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -52599,7 +52601,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -52635,7 +52637,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -52673,7 +52675,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso1n (
@@ -52697,7 +52699,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -52731,7 +52733,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso1n (
@@ -52761,13 +52763,13 @@ module sky130_fd_sc_hd__lpflow_inputiso1n (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_V
 
 
@@ -52805,7 +52807,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -52875,7 +52877,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1N_1_V
 
 
@@ -52913,7 +52915,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -52949,7 +52951,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -52983,7 +52985,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -53017,7 +53019,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53051,7 +53053,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -53089,7 +53091,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso1p (
@@ -53109,7 +53111,7 @@ module sky130_fd_sc_hd__lpflow_inputiso1p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -53143,7 +53145,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_inputiso1p (
@@ -53169,13 +53171,13 @@ module sky130_fd_sc_hd__lpflow_inputiso1p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_V
 
 
@@ -53213,7 +53215,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -53283,7 +53285,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISO1P_1_V
 
 
@@ -53319,7 +53321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -53353,7 +53355,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53387,7 +53389,7 @@ module sky130_fd_sc_hd__lpflow_inputisolatch (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -53419,7 +53421,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53456,7 +53458,7 @@ module sky130_fd_sc_hd__lpflow_inputisolatch (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -53492,7 +53494,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53518,7 +53520,7 @@ module sky130_fd_sc_hd__lpflow_inputisolatch (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -53550,7 +53552,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53585,13 +53587,13 @@ module sky130_fd_sc_hd__lpflow_inputisolatch (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_V
 
 
@@ -53627,7 +53629,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -53697,7 +53699,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_INPUTISOLATCH_1_V
 
 
@@ -53735,7 +53737,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -53771,7 +53773,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53809,7 +53811,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrc (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -53843,7 +53845,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -53881,7 +53883,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrc (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -53919,7 +53921,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_isobufsrc (
@@ -53945,7 +53947,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrc (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -53979,7 +53981,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_isobufsrc (
@@ -54011,13 +54013,13 @@ module sky130_fd_sc_hd__lpflow_isobufsrc (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_V
 
 
@@ -54055,7 +54057,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -54125,7 +54127,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_1_V
 
 
@@ -54163,7 +54165,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -54233,7 +54235,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_16_V
 
 
@@ -54271,7 +54273,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -54341,7 +54343,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_2_V
 
 
@@ -54379,7 +54381,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -54449,7 +54451,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_4_V
 
 
@@ -54487,7 +54489,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -54557,7 +54559,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRC_8_V
 
 
@@ -54596,7 +54598,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -54633,7 +54635,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -54675,7 +54677,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -54710,7 +54712,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -54752,7 +54754,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -54791,7 +54793,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
@@ -54817,7 +54819,7 @@ module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -54852,7 +54854,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
@@ -54885,13 +54887,13 @@ module sky130_fd_sc_hd__lpflow_isobufsrckapwr (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_V
 
 
@@ -54930,7 +54932,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -55004,7 +55006,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_ISOBUFSRCKAPWR_16_V
 
 
@@ -55043,7 +55045,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -55080,7 +55082,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -55114,7 +55116,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -55149,7 +55151,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -55183,7 +55185,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -55222,7 +55224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
@@ -55240,7 +55242,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -55275,7 +55277,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
@@ -55298,13 +55300,13 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_V
 
 
@@ -55344,7 +55346,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -55408,7 +55410,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_1_V
 
 
@@ -55448,7 +55450,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -55512,7 +55514,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_2_V
 
 
@@ -55552,7 +55554,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -55616,7 +55618,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_HL_ISOWELL_TAP_4_V
 
 
@@ -55654,7 +55656,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -55690,7 +55692,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -55726,7 +55728,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -55760,7 +55762,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -55796,7 +55798,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -55834,7 +55836,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
@@ -55852,7 +55854,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -55886,7 +55888,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
@@ -55910,13 +55912,13 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_V
 
 
@@ -55954,7 +55956,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -56022,7 +56024,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_4_V
 
 
@@ -56060,7 +56062,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -56096,7 +56098,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -56130,7 +56132,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -56164,7 +56166,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -56198,7 +56200,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -56236,7 +56238,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
@@ -56254,7 +56256,7 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -56288,7 +56290,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
@@ -56311,13 +56313,13 @@ module sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_V
 
 
@@ -56356,7 +56358,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -56420,7 +56422,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_1_V
 
 
@@ -56459,7 +56461,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -56523,7 +56525,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_2_V
 
 
@@ -56562,7 +56564,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -56626,7 +56628,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__LPFLOW_LSBUF_LH_ISOWELL_TAP_4_V
 
 
@@ -56664,7 +56666,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -56700,7 +56702,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import sub cells.
 
@@ -56743,7 +56745,7 @@ module sky130_fd_sc_hd__macro_sparecell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MACRO_SPARECELL_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -56777,7 +56779,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import sub cells.
 
@@ -56820,7 +56822,7 @@ module sky130_fd_sc_hd__macro_sparecell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MACRO_SPARECELL_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -56858,7 +56860,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import sub cells.
 
@@ -56893,7 +56895,7 @@ module sky130_fd_sc_hd__macro_sparecell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MACRO_SPARECELL_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -56927,7 +56929,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import sub cells.
 
@@ -56962,13 +56964,13 @@ module sky130_fd_sc_hd__macro_sparecell (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MACRO_SPARECELL_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MACRO_SPARECELL_V
 
 
@@ -57004,7 +57006,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -57038,7 +57040,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57082,7 +57084,7 @@ module sky130_fd_sc_hd__maj3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -57114,7 +57116,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57158,7 +57160,7 @@ module sky130_fd_sc_hd__maj3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -57194,7 +57196,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__maj3 (
@@ -57226,7 +57228,7 @@ module sky130_fd_sc_hd__maj3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -57258,7 +57260,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__maj3 (
@@ -57296,13 +57298,13 @@ module sky130_fd_sc_hd__maj3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_V
 
 
@@ -57338,7 +57340,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -57414,7 +57416,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_1_V
 
 
@@ -57450,7 +57452,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -57526,7 +57528,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_2_V
 
 
@@ -57562,7 +57564,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -57638,7 +57640,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MAJ3_4_V
 
 
@@ -57674,7 +57676,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -57708,7 +57710,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57746,7 +57748,7 @@ module sky130_fd_sc_hd__mux2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -57778,7 +57780,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57816,7 +57818,7 @@ module sky130_fd_sc_hd__mux2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -57852,7 +57854,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57880,7 +57882,7 @@ module sky130_fd_sc_hd__mux2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -57912,7 +57914,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -57946,13 +57948,13 @@ module sky130_fd_sc_hd__mux2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_V
 
 
@@ -57988,7 +57990,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58064,7 +58066,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_1_V
 
 
@@ -58100,7 +58102,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58176,7 +58178,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_2_V
 
 
@@ -58212,7 +58214,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58288,7 +58290,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_4_V
 
 
@@ -58324,7 +58326,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58400,7 +58402,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2_8_V
 
 
@@ -58436,7 +58438,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -58470,7 +58472,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -58508,7 +58510,7 @@ module sky130_fd_sc_hd__mux2i (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -58540,7 +58542,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -58578,7 +58580,7 @@ module sky130_fd_sc_hd__mux2i (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -58614,7 +58616,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -58642,7 +58644,7 @@ module sky130_fd_sc_hd__mux2i (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -58674,7 +58676,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -58708,13 +58710,13 @@ module sky130_fd_sc_hd__mux2i (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_V
 
 
@@ -58750,7 +58752,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58826,7 +58828,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_1_V
 
 
@@ -58862,7 +58864,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -58938,7 +58940,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_2_V
 
 
@@ -58974,7 +58976,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -59050,7 +59052,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX2I_4_V
 
 
@@ -59086,7 +59088,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -59120,7 +59122,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59164,7 +59166,7 @@ module sky130_fd_sc_hd__mux4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -59196,7 +59198,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59240,7 +59242,7 @@ module sky130_fd_sc_hd__mux4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -59276,7 +59278,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59310,7 +59312,7 @@ module sky130_fd_sc_hd__mux4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -59342,7 +59344,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59382,13 +59384,13 @@ module sky130_fd_sc_hd__mux4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_V
 
 
@@ -59424,7 +59426,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -59518,7 +59520,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_1_V
 
 
@@ -59554,7 +59556,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -59648,7 +59650,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_2_V
 
 
@@ -59684,7 +59686,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -59778,7 +59780,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__MUX4_4_V
 
 
@@ -59814,7 +59816,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -59848,7 +59850,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59884,7 +59886,7 @@ module sky130_fd_sc_hd__nand2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -59916,7 +59918,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -59952,7 +59954,7 @@ module sky130_fd_sc_hd__nand2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -59988,7 +59990,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand2 (
@@ -60012,7 +60014,7 @@ module sky130_fd_sc_hd__nand2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -60044,7 +60046,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand2 (
@@ -60074,13 +60076,13 @@ module sky130_fd_sc_hd__nand2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_V
 
 
@@ -60116,7 +60118,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -60186,7 +60188,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_1_V
 
 
@@ -60222,7 +60224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -60292,7 +60294,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_2_V
 
 
@@ -60328,7 +60330,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -60398,7 +60400,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_4_V
 
 
@@ -60434,7 +60436,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -60504,7 +60506,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2_8_V
 
 
@@ -60540,7 +60542,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -60574,7 +60576,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -60612,7 +60614,7 @@ module sky130_fd_sc_hd__nand2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -60644,7 +60646,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -60682,7 +60684,7 @@ module sky130_fd_sc_hd__nand2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -60718,7 +60720,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand2b (
@@ -60744,7 +60746,7 @@ module sky130_fd_sc_hd__nand2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -60776,7 +60778,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand2b (
@@ -60808,13 +60810,13 @@ module sky130_fd_sc_hd__nand2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_V
 
 
@@ -60850,7 +60852,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -60920,7 +60922,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_1_V
 
 
@@ -60956,7 +60958,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -61026,7 +61028,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_2_V
 
 
@@ -61062,7 +61064,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -61132,7 +61134,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND2B_4_V
 
 
@@ -61168,7 +61170,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -61202,7 +61204,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -61240,7 +61242,7 @@ module sky130_fd_sc_hd__nand3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -61272,7 +61274,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -61310,7 +61312,7 @@ module sky130_fd_sc_hd__nand3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -61346,7 +61348,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand3 (
@@ -61372,7 +61374,7 @@ module sky130_fd_sc_hd__nand3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -61404,7 +61406,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand3 (
@@ -61436,13 +61438,13 @@ module sky130_fd_sc_hd__nand3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_V
 
 
@@ -61478,7 +61480,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -61554,7 +61556,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_1_V
 
 
@@ -61590,7 +61592,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -61666,7 +61668,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_2_V
 
 
@@ -61702,7 +61704,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -61778,7 +61780,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3_4_V
 
 
@@ -61814,7 +61816,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -61848,7 +61850,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -61888,7 +61890,7 @@ module sky130_fd_sc_hd__nand3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -61920,7 +61922,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -61960,7 +61962,7 @@ module sky130_fd_sc_hd__nand3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -61996,7 +61998,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand3b (
@@ -62024,7 +62026,7 @@ module sky130_fd_sc_hd__nand3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -62056,7 +62058,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand3b (
@@ -62090,13 +62092,13 @@ module sky130_fd_sc_hd__nand3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_V
 
 
@@ -62132,7 +62134,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -62208,7 +62210,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_1_V
 
 
@@ -62244,7 +62246,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -62320,7 +62322,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_2_V
 
 
@@ -62356,7 +62358,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -62432,7 +62434,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND3B_4_V
 
 
@@ -62468,7 +62470,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -62502,7 +62504,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -62542,7 +62544,7 @@ module sky130_fd_sc_hd__nand4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -62574,7 +62576,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -62614,7 +62616,7 @@ module sky130_fd_sc_hd__nand4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -62650,7 +62652,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4 (
@@ -62678,7 +62680,7 @@ module sky130_fd_sc_hd__nand4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -62710,7 +62712,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4 (
@@ -62744,13 +62746,13 @@ module sky130_fd_sc_hd__nand4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_V
 
 
@@ -62786,7 +62788,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -62868,7 +62870,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_1_V
 
 
@@ -62904,7 +62906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -62986,7 +62988,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_2_V
 
 
@@ -63022,7 +63024,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -63104,7 +63106,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4_4_V
 
 
@@ -63140,7 +63142,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -63174,7 +63176,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -63216,7 +63218,7 @@ module sky130_fd_sc_hd__nand4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -63248,7 +63250,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -63290,7 +63292,7 @@ module sky130_fd_sc_hd__nand4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -63326,7 +63328,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4b (
@@ -63356,7 +63358,7 @@ module sky130_fd_sc_hd__nand4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -63388,7 +63390,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4b (
@@ -63424,13 +63426,13 @@ module sky130_fd_sc_hd__nand4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_V
 
 
@@ -63466,7 +63468,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -63548,7 +63550,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_1_V
 
 
@@ -63584,7 +63586,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -63666,7 +63668,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_2_V
 
 
@@ -63702,7 +63704,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -63784,7 +63786,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4B_4_V
 
 
@@ -63820,7 +63822,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -63854,7 +63856,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -63896,7 +63898,7 @@ module sky130_fd_sc_hd__nand4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -63928,7 +63930,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -63970,7 +63972,7 @@ module sky130_fd_sc_hd__nand4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -64006,7 +64008,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4bb (
@@ -64036,7 +64038,7 @@ module sky130_fd_sc_hd__nand4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -64068,7 +64070,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nand4bb (
@@ -64104,13 +64106,13 @@ module sky130_fd_sc_hd__nand4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_V
 
 
@@ -64146,7 +64148,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -64228,7 +64230,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_1_V
 
 
@@ -64264,7 +64266,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -64346,7 +64348,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_2_V
 
 
@@ -64382,7 +64384,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -64464,7 +64466,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NAND4BB_4_V
 
 
@@ -64500,7 +64502,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -64534,7 +64536,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -64570,7 +64572,7 @@ module sky130_fd_sc_hd__nor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -64602,7 +64604,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -64638,7 +64640,7 @@ module sky130_fd_sc_hd__nor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -64674,7 +64676,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor2 (
@@ -64698,7 +64700,7 @@ module sky130_fd_sc_hd__nor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -64730,7 +64732,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor2 (
@@ -64760,13 +64762,13 @@ module sky130_fd_sc_hd__nor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_V
 
 
@@ -64802,7 +64804,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -64872,7 +64874,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_1_V
 
 
@@ -64908,7 +64910,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -64978,7 +64980,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_2_V
 
 
@@ -65014,7 +65016,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -65084,7 +65086,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_4_V
 
 
@@ -65120,7 +65122,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -65190,7 +65192,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2_8_V
 
 
@@ -65228,7 +65230,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -65264,7 +65266,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -65302,7 +65304,7 @@ module sky130_fd_sc_hd__nor2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -65336,7 +65338,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -65374,7 +65376,7 @@ module sky130_fd_sc_hd__nor2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -65412,7 +65414,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor2b (
@@ -65438,7 +65440,7 @@ module sky130_fd_sc_hd__nor2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -65472,7 +65474,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor2b (
@@ -65504,13 +65506,13 @@ module sky130_fd_sc_hd__nor2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_V
 
 
@@ -65548,7 +65550,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -65618,7 +65620,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_1_V
 
 
@@ -65656,7 +65658,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -65726,7 +65728,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_2_V
 
 
@@ -65764,7 +65766,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -65834,7 +65836,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR2B_4_V
 
 
@@ -65872,7 +65874,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -65908,7 +65910,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -65946,7 +65948,7 @@ module sky130_fd_sc_hd__nor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -65980,7 +65982,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -66018,7 +66020,7 @@ module sky130_fd_sc_hd__nor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -66056,7 +66058,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor3 (
@@ -66082,7 +66084,7 @@ module sky130_fd_sc_hd__nor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -66116,7 +66118,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor3 (
@@ -66148,13 +66150,13 @@ module sky130_fd_sc_hd__nor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_V
 
 
@@ -66192,7 +66194,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -66268,7 +66270,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_1_V
 
 
@@ -66306,7 +66308,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -66382,7 +66384,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_2_V
 
 
@@ -66420,7 +66422,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -66496,7 +66498,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3_4_V
 
 
@@ -66534,7 +66536,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -66570,7 +66572,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -66610,7 +66612,7 @@ module sky130_fd_sc_hd__nor3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -66644,7 +66646,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -66684,7 +66686,7 @@ module sky130_fd_sc_hd__nor3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -66722,7 +66724,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor3b (
@@ -66750,7 +66752,7 @@ module sky130_fd_sc_hd__nor3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -66784,7 +66786,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor3b (
@@ -66818,13 +66820,13 @@ module sky130_fd_sc_hd__nor3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_V
 
 
@@ -66862,7 +66864,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -66938,7 +66940,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_1_V
 
 
@@ -66976,7 +66978,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -67052,7 +67054,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_2_V
 
 
@@ -67090,7 +67092,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -67166,7 +67168,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR3B_4_V
 
 
@@ -67204,7 +67206,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -67240,7 +67242,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -67280,7 +67282,7 @@ module sky130_fd_sc_hd__nor4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -67314,7 +67316,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -67354,7 +67356,7 @@ module sky130_fd_sc_hd__nor4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -67392,7 +67394,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4 (
@@ -67420,7 +67422,7 @@ module sky130_fd_sc_hd__nor4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -67454,7 +67456,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4 (
@@ -67488,13 +67490,13 @@ module sky130_fd_sc_hd__nor4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_V
 
 
@@ -67532,7 +67534,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -67614,7 +67616,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_1_V
 
 
@@ -67652,7 +67654,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -67734,7 +67736,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_2_V
 
 
@@ -67772,7 +67774,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -67854,7 +67856,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4_4_V
 
 
@@ -67890,7 +67892,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -67924,7 +67926,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -67966,7 +67968,7 @@ module sky130_fd_sc_hd__nor4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -67998,7 +68000,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -68040,7 +68042,7 @@ module sky130_fd_sc_hd__nor4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -68076,7 +68078,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4b (
@@ -68106,7 +68108,7 @@ module sky130_fd_sc_hd__nor4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -68138,7 +68140,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4b (
@@ -68174,13 +68176,13 @@ module sky130_fd_sc_hd__nor4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_V
 
 
@@ -68216,7 +68218,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -68298,7 +68300,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_1_V
 
 
@@ -68334,7 +68336,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -68416,7 +68418,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_2_V
 
 
@@ -68452,7 +68454,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -68534,7 +68536,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4B_4_V
 
 
@@ -68570,7 +68572,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -68604,7 +68606,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -68646,7 +68648,7 @@ module sky130_fd_sc_hd__nor4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -68678,7 +68680,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -68720,7 +68722,7 @@ module sky130_fd_sc_hd__nor4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -68756,7 +68758,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4bb (
@@ -68786,7 +68788,7 @@ module sky130_fd_sc_hd__nor4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -68818,7 +68820,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__nor4bb (
@@ -68854,13 +68856,13 @@ module sky130_fd_sc_hd__nor4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_V
 
 
@@ -68896,7 +68898,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -68978,7 +68980,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_1_V
 
 
@@ -69014,7 +69016,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -69096,7 +69098,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_2_V
 
 
@@ -69132,7 +69134,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -69214,7 +69216,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__NOR4BB_4_V
 
 
@@ -69252,7 +69254,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -69288,7 +69290,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -69332,7 +69334,7 @@ module sky130_fd_sc_hd__o2111a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -69366,7 +69368,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -69410,7 +69412,7 @@ module sky130_fd_sc_hd__o2111a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -69448,7 +69450,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2111a (
@@ -69480,7 +69482,7 @@ module sky130_fd_sc_hd__o2111a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -69514,7 +69516,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2111a (
@@ -69552,13 +69554,13 @@ module sky130_fd_sc_hd__o2111a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_V
 
 
@@ -69596,7 +69598,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -69684,7 +69686,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_1_V
 
 
@@ -69722,7 +69724,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -69810,7 +69812,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_2_V
 
 
@@ -69848,7 +69850,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -69936,7 +69938,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111A_4_V
 
 
@@ -69974,7 +69976,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -70010,7 +70012,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -70054,7 +70056,7 @@ module sky130_fd_sc_hd__o2111ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -70088,7 +70090,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -70132,7 +70134,7 @@ module sky130_fd_sc_hd__o2111ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -70170,7 +70172,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2111ai (
@@ -70202,7 +70204,7 @@ module sky130_fd_sc_hd__o2111ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -70236,7 +70238,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2111ai (
@@ -70274,13 +70276,13 @@ module sky130_fd_sc_hd__o2111ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_V
 
 
@@ -70318,7 +70320,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -70406,7 +70408,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_1_V
 
 
@@ -70444,7 +70446,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -70532,7 +70534,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_2_V
 
 
@@ -70570,7 +70572,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -70658,7 +70660,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2111AI_4_V
 
 
@@ -70696,7 +70698,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -70732,7 +70734,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -70774,7 +70776,7 @@ module sky130_fd_sc_hd__o211a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -70808,7 +70810,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -70850,7 +70852,7 @@ module sky130_fd_sc_hd__o211a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -70888,7 +70890,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o211a (
@@ -70918,7 +70920,7 @@ module sky130_fd_sc_hd__o211a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -70952,7 +70954,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o211a (
@@ -70988,13 +70990,13 @@ module sky130_fd_sc_hd__o211a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_V
 
 
@@ -71032,7 +71034,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -71114,7 +71116,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_1_V
 
 
@@ -71152,7 +71154,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -71234,7 +71236,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_2_V
 
 
@@ -71272,7 +71274,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -71354,7 +71356,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211A_4_V
 
 
@@ -71392,7 +71394,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -71428,7 +71430,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -71470,7 +71472,7 @@ module sky130_fd_sc_hd__o211ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -71504,7 +71506,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -71546,7 +71548,7 @@ module sky130_fd_sc_hd__o211ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -71584,7 +71586,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o211ai (
@@ -71614,7 +71616,7 @@ module sky130_fd_sc_hd__o211ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -71648,7 +71650,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o211ai (
@@ -71684,13 +71686,13 @@ module sky130_fd_sc_hd__o211ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_V
 
 
@@ -71728,7 +71730,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -71810,7 +71812,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_1_V
 
 
@@ -71848,7 +71850,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -71930,7 +71932,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_2_V
 
 
@@ -71968,7 +71970,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -72050,7 +72052,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O211AI_4_V
 
 
@@ -72088,7 +72090,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -72124,7 +72126,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -72164,7 +72166,7 @@ module sky130_fd_sc_hd__o21a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -72198,7 +72200,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -72238,7 +72240,7 @@ module sky130_fd_sc_hd__o21a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -72276,7 +72278,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21a (
@@ -72304,7 +72306,7 @@ module sky130_fd_sc_hd__o21a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -72338,7 +72340,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21a (
@@ -72372,13 +72374,13 @@ module sky130_fd_sc_hd__o21a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_V
 
 
@@ -72416,7 +72418,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -72492,7 +72494,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_1_V
 
 
@@ -72530,7 +72532,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -72606,7 +72608,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_2_V
 
 
@@ -72644,7 +72646,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -72720,7 +72722,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21A_4_V
 
 
@@ -72758,7 +72760,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -72794,7 +72796,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -72834,7 +72836,7 @@ module sky130_fd_sc_hd__o21ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -72868,7 +72870,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -72908,7 +72910,7 @@ module sky130_fd_sc_hd__o21ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -72946,7 +72948,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21ai (
@@ -72974,7 +72976,7 @@ module sky130_fd_sc_hd__o21ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -73008,7 +73010,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21ai (
@@ -73042,13 +73044,13 @@ module sky130_fd_sc_hd__o21ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_V
 
 
@@ -73086,7 +73088,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -73162,7 +73164,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_0_V
 
 
@@ -73200,7 +73202,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -73276,7 +73278,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_1_V
 
 
@@ -73314,7 +73316,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -73390,7 +73392,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_2_V
 
 
@@ -73428,7 +73430,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -73504,7 +73506,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21AI_4_V
 
 
@@ -73543,7 +73545,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -73580,7 +73582,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -73620,7 +73622,7 @@ module sky130_fd_sc_hd__o21ba (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -73655,7 +73657,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -73695,7 +73697,7 @@ module sky130_fd_sc_hd__o21ba (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -73734,7 +73736,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21ba (
@@ -73762,7 +73764,7 @@ module sky130_fd_sc_hd__o21ba (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -73797,7 +73799,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21ba (
@@ -73831,13 +73833,13 @@ module sky130_fd_sc_hd__o21ba (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_V
 
 
@@ -73876,7 +73878,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -73952,7 +73954,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_1_V
 
 
@@ -73991,7 +73993,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -74067,7 +74069,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_2_V
 
 
@@ -74106,7 +74108,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -74182,7 +74184,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BA_4_V
 
 
@@ -74221,7 +74223,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -74258,7 +74260,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -74300,7 +74302,7 @@ module sky130_fd_sc_hd__o21bai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -74335,7 +74337,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -74377,7 +74379,7 @@ module sky130_fd_sc_hd__o21bai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -74416,7 +74418,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21bai (
@@ -74446,7 +74448,7 @@ module sky130_fd_sc_hd__o21bai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -74481,7 +74483,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o21bai (
@@ -74517,13 +74519,13 @@ module sky130_fd_sc_hd__o21bai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_V
 
 
@@ -74562,7 +74564,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -74638,7 +74640,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_1_V
 
 
@@ -74677,7 +74679,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -74753,7 +74755,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_2_V
 
 
@@ -74792,7 +74794,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -74868,7 +74870,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O21BAI_4_V
 
 
@@ -74906,7 +74908,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -74942,7 +74944,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -74988,7 +74990,7 @@ module sky130_fd_sc_hd__o221a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -75022,7 +75024,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -75068,7 +75070,7 @@ module sky130_fd_sc_hd__o221a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -75106,7 +75108,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o221a (
@@ -75140,7 +75142,7 @@ module sky130_fd_sc_hd__o221a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -75174,7 +75176,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o221a (
@@ -75214,13 +75216,13 @@ module sky130_fd_sc_hd__o221a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_V
 
 
@@ -75258,7 +75260,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -75346,7 +75348,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_1_V
 
 
@@ -75384,7 +75386,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -75472,7 +75474,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_2_V
 
 
@@ -75510,7 +75512,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -75598,7 +75600,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221A_4_V
 
 
@@ -75636,7 +75638,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -75672,7 +75674,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -75718,7 +75720,7 @@ module sky130_fd_sc_hd__o221ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -75752,7 +75754,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -75798,7 +75800,7 @@ module sky130_fd_sc_hd__o221ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -75836,7 +75838,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o221ai (
@@ -75870,7 +75872,7 @@ module sky130_fd_sc_hd__o221ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -75904,7 +75906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o221ai (
@@ -75944,13 +75946,13 @@ module sky130_fd_sc_hd__o221ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_V
 
 
@@ -75988,7 +75990,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -76076,7 +76078,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_1_V
 
 
@@ -76114,7 +76116,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -76202,7 +76204,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_2_V
 
 
@@ -76240,7 +76242,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -76328,7 +76330,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O221AI_4_V
 
 
@@ -76366,7 +76368,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -76402,7 +76404,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -76446,7 +76448,7 @@ module sky130_fd_sc_hd__o22a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -76480,7 +76482,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -76524,7 +76526,7 @@ module sky130_fd_sc_hd__o22a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -76562,7 +76564,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o22a (
@@ -76594,7 +76596,7 @@ module sky130_fd_sc_hd__o22a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -76628,7 +76630,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o22a (
@@ -76666,13 +76668,13 @@ module sky130_fd_sc_hd__o22a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_V
 
 
@@ -76710,7 +76712,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -76792,7 +76794,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_1_V
 
 
@@ -76830,7 +76832,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -76912,7 +76914,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_2_V
 
 
@@ -76950,7 +76952,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -77032,7 +77034,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22A_4_V
 
 
@@ -77070,7 +77072,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -77106,7 +77108,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -77150,7 +77152,7 @@ module sky130_fd_sc_hd__o22ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -77184,7 +77186,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -77228,7 +77230,7 @@ module sky130_fd_sc_hd__o22ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -77266,7 +77268,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o22ai (
@@ -77298,7 +77300,7 @@ module sky130_fd_sc_hd__o22ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -77332,7 +77334,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o22ai (
@@ -77370,13 +77372,13 @@ module sky130_fd_sc_hd__o22ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_V
 
 
@@ -77414,7 +77416,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -77496,7 +77498,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_1_V
 
 
@@ -77534,7 +77536,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -77616,7 +77618,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_2_V
 
 
@@ -77654,7 +77656,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -77736,7 +77738,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O22AI_4_V
 
 
@@ -77774,7 +77776,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -77810,7 +77812,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -77854,7 +77856,7 @@ module sky130_fd_sc_hd__o2bb2a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -77888,7 +77890,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -77932,7 +77934,7 @@ module sky130_fd_sc_hd__o2bb2a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -77970,7 +77972,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2bb2a (
@@ -78002,7 +78004,7 @@ module sky130_fd_sc_hd__o2bb2a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -78036,7 +78038,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2bb2a (
@@ -78074,13 +78076,13 @@ module sky130_fd_sc_hd__o2bb2a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_V
 
 
@@ -78118,7 +78120,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -78200,7 +78202,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_1_V
 
 
@@ -78238,7 +78240,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -78320,7 +78322,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_2_V
 
 
@@ -78358,7 +78360,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -78440,7 +78442,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2A_4_V
 
 
@@ -78478,7 +78480,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -78514,7 +78516,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -78558,7 +78560,7 @@ module sky130_fd_sc_hd__o2bb2ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -78592,7 +78594,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -78636,7 +78638,7 @@ module sky130_fd_sc_hd__o2bb2ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -78674,7 +78676,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2bb2ai (
@@ -78706,7 +78708,7 @@ module sky130_fd_sc_hd__o2bb2ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -78740,7 +78742,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o2bb2ai (
@@ -78778,13 +78780,13 @@ module sky130_fd_sc_hd__o2bb2ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_V
 
 
@@ -78822,7 +78824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -78904,7 +78906,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_1_V
 
 
@@ -78942,7 +78944,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -79024,7 +79026,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_2_V
 
 
@@ -79062,7 +79064,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -79144,7 +79146,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O2BB2AI_4_V
 
 
@@ -79182,7 +79184,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -79218,7 +79220,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -79262,7 +79264,7 @@ module sky130_fd_sc_hd__o311a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -79296,7 +79298,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -79340,7 +79342,7 @@ module sky130_fd_sc_hd__o311a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -79378,7 +79380,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o311a (
@@ -79410,7 +79412,7 @@ module sky130_fd_sc_hd__o311a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -79444,7 +79446,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o311a (
@@ -79482,13 +79484,13 @@ module sky130_fd_sc_hd__o311a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_V
 
 
@@ -79526,7 +79528,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -79614,7 +79616,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_1_V
 
 
@@ -79652,7 +79654,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -79740,7 +79742,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_2_V
 
 
@@ -79778,7 +79780,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -79866,7 +79868,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311A_4_V
 
 
@@ -79904,7 +79906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -79940,7 +79942,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -79984,7 +79986,7 @@ module sky130_fd_sc_hd__o311ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -80018,7 +80020,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -80062,7 +80064,7 @@ module sky130_fd_sc_hd__o311ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -80100,7 +80102,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o311ai (
@@ -80132,7 +80134,7 @@ module sky130_fd_sc_hd__o311ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -80166,7 +80168,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o311ai (
@@ -80204,13 +80206,13 @@ module sky130_fd_sc_hd__o311ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_V
 
 
@@ -80248,7 +80250,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -80336,7 +80338,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_0_V
 
 
@@ -80374,7 +80376,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -80462,7 +80464,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_1_V
 
 
@@ -80500,7 +80502,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -80588,7 +80590,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_2_V
 
 
@@ -80626,7 +80628,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -80714,7 +80716,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O311AI_4_V
 
 
@@ -80752,7 +80754,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -80788,7 +80790,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -80830,7 +80832,7 @@ module sky130_fd_sc_hd__o31a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -80864,7 +80866,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -80906,7 +80908,7 @@ module sky130_fd_sc_hd__o31a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -80944,7 +80946,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o31a (
@@ -80974,7 +80976,7 @@ module sky130_fd_sc_hd__o31a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -81008,7 +81010,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o31a (
@@ -81044,13 +81046,13 @@ module sky130_fd_sc_hd__o31a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_V
 
 
@@ -81088,7 +81090,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -81170,7 +81172,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_1_V
 
 
@@ -81208,7 +81210,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -81290,7 +81292,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_2_V
 
 
@@ -81328,7 +81330,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -81410,7 +81412,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31A_4_V
 
 
@@ -81448,7 +81450,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -81484,7 +81486,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -81526,7 +81528,7 @@ module sky130_fd_sc_hd__o31ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -81560,7 +81562,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -81602,7 +81604,7 @@ module sky130_fd_sc_hd__o31ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -81640,7 +81642,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o31ai (
@@ -81670,7 +81672,7 @@ module sky130_fd_sc_hd__o31ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -81704,7 +81706,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o31ai (
@@ -81740,13 +81742,13 @@ module sky130_fd_sc_hd__o31ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_V
 
 
@@ -81784,7 +81786,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -81866,7 +81868,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_1_V
 
 
@@ -81904,7 +81906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -81986,7 +81988,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_2_V
 
 
@@ -82024,7 +82026,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -82106,7 +82108,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O31AI_4_V
 
 
@@ -82144,7 +82146,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -82180,7 +82182,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -82226,7 +82228,7 @@ module sky130_fd_sc_hd__o32a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -82260,7 +82262,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -82306,7 +82308,7 @@ module sky130_fd_sc_hd__o32a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -82344,7 +82346,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o32a (
@@ -82378,7 +82380,7 @@ module sky130_fd_sc_hd__o32a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -82412,7 +82414,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o32a (
@@ -82452,13 +82454,13 @@ module sky130_fd_sc_hd__o32a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_V
 
 
@@ -82496,7 +82498,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -82584,7 +82586,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_1_V
 
 
@@ -82622,7 +82624,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -82710,7 +82712,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_2_V
 
 
@@ -82748,7 +82750,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -82836,7 +82838,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32A_4_V
 
 
@@ -82874,7 +82876,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -82910,7 +82912,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -82956,7 +82958,7 @@ module sky130_fd_sc_hd__o32ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -82990,7 +82992,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -83036,7 +83038,7 @@ module sky130_fd_sc_hd__o32ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -83074,7 +83076,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o32ai (
@@ -83108,7 +83110,7 @@ module sky130_fd_sc_hd__o32ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -83142,7 +83144,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o32ai (
@@ -83182,13 +83184,13 @@ module sky130_fd_sc_hd__o32ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_V
 
 
@@ -83226,7 +83228,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -83314,7 +83316,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_1_V
 
 
@@ -83352,7 +83354,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -83440,7 +83442,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_2_V
 
 
@@ -83478,7 +83480,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -83566,7 +83568,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O32AI_4_V
 
 
@@ -83604,7 +83606,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -83640,7 +83642,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -83684,7 +83686,7 @@ module sky130_fd_sc_hd__o41a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -83718,7 +83720,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -83762,7 +83764,7 @@ module sky130_fd_sc_hd__o41a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -83800,7 +83802,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o41a (
@@ -83832,7 +83834,7 @@ module sky130_fd_sc_hd__o41a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -83866,7 +83868,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o41a (
@@ -83904,13 +83906,13 @@ module sky130_fd_sc_hd__o41a (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_V
 
 
@@ -83948,7 +83950,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -84036,7 +84038,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_1_V
 
 
@@ -84074,7 +84076,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -84162,7 +84164,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_2_V
 
 
@@ -84200,7 +84202,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -84288,7 +84290,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41A_4_V
 
 
@@ -84326,7 +84328,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -84362,7 +84364,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -84406,7 +84408,7 @@ module sky130_fd_sc_hd__o41ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -84440,7 +84442,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -84484,7 +84486,7 @@ module sky130_fd_sc_hd__o41ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -84522,7 +84524,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o41ai (
@@ -84554,7 +84556,7 @@ module sky130_fd_sc_hd__o41ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -84588,7 +84590,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__o41ai (
@@ -84626,13 +84628,13 @@ module sky130_fd_sc_hd__o41ai (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_V
 
 
@@ -84670,7 +84672,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -84758,7 +84760,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_1_V
 
 
@@ -84796,7 +84798,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -84884,7 +84886,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_2_V
 
 
@@ -84922,7 +84924,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -85010,7 +85012,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__O41AI_4_V
 
 
@@ -85046,7 +85048,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -85080,7 +85082,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -85116,7 +85118,7 @@ module sky130_fd_sc_hd__or2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -85148,7 +85150,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -85184,7 +85186,7 @@ module sky130_fd_sc_hd__or2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -85220,7 +85222,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or2 (
@@ -85244,7 +85246,7 @@ module sky130_fd_sc_hd__or2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -85276,7 +85278,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or2 (
@@ -85306,13 +85308,13 @@ module sky130_fd_sc_hd__or2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_V
 
 
@@ -85348,7 +85350,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -85418,7 +85420,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_0_V
 
 
@@ -85454,7 +85456,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -85524,7 +85526,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_1_V
 
 
@@ -85560,7 +85562,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -85630,7 +85632,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_2_V
 
 
@@ -85666,7 +85668,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -85736,7 +85738,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2_4_V
 
 
@@ -85772,7 +85774,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -85806,7 +85808,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -85844,7 +85846,7 @@ module sky130_fd_sc_hd__or2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -85876,7 +85878,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -85914,7 +85916,7 @@ module sky130_fd_sc_hd__or2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -85950,7 +85952,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or2b (
@@ -85976,7 +85978,7 @@ module sky130_fd_sc_hd__or2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -86008,7 +86010,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or2b (
@@ -86040,13 +86042,13 @@ module sky130_fd_sc_hd__or2b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_V
 
 
@@ -86082,7 +86084,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -86152,7 +86154,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_1_V
 
 
@@ -86188,7 +86190,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -86258,7 +86260,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_2_V
 
 
@@ -86294,7 +86296,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -86364,7 +86366,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR2B_4_V
 
 
@@ -86400,7 +86402,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -86434,7 +86436,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -86472,7 +86474,7 @@ module sky130_fd_sc_hd__or3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -86504,7 +86506,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -86542,7 +86544,7 @@ module sky130_fd_sc_hd__or3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -86578,7 +86580,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or3 (
@@ -86604,7 +86606,7 @@ module sky130_fd_sc_hd__or3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -86636,7 +86638,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or3 (
@@ -86668,13 +86670,13 @@ module sky130_fd_sc_hd__or3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_V
 
 
@@ -86710,7 +86712,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -86786,7 +86788,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_1_V
 
 
@@ -86822,7 +86824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -86898,7 +86900,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_2_V
 
 
@@ -86934,7 +86936,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -87010,7 +87012,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3_4_V
 
 
@@ -87046,7 +87048,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -87080,7 +87082,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -87120,7 +87122,7 @@ module sky130_fd_sc_hd__or3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -87152,7 +87154,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -87192,7 +87194,7 @@ module sky130_fd_sc_hd__or3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -87228,7 +87230,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or3b (
@@ -87256,7 +87258,7 @@ module sky130_fd_sc_hd__or3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -87288,7 +87290,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or3b (
@@ -87322,13 +87324,13 @@ module sky130_fd_sc_hd__or3b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_V
 
 
@@ -87364,7 +87366,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -87440,7 +87442,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_1_V
 
 
@@ -87476,7 +87478,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -87552,7 +87554,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_2_V
 
 
@@ -87588,7 +87590,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -87664,7 +87666,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR3B_4_V
 
 
@@ -87700,7 +87702,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -87734,7 +87736,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -87774,7 +87776,7 @@ module sky130_fd_sc_hd__or4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -87806,7 +87808,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -87846,7 +87848,7 @@ module sky130_fd_sc_hd__or4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -87882,7 +87884,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4 (
@@ -87910,7 +87912,7 @@ module sky130_fd_sc_hd__or4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -87942,7 +87944,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4 (
@@ -87976,13 +87978,13 @@ module sky130_fd_sc_hd__or4 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_V
 
 
@@ -88018,7 +88020,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -88100,7 +88102,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_1_V
 
 
@@ -88136,7 +88138,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -88218,7 +88220,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_2_V
 
 
@@ -88254,7 +88256,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -88336,7 +88338,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4_4_V
 
 
@@ -88372,7 +88374,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -88406,7 +88408,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -88448,7 +88450,7 @@ module sky130_fd_sc_hd__or4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -88480,7 +88482,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -88522,7 +88524,7 @@ module sky130_fd_sc_hd__or4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -88558,7 +88560,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4b (
@@ -88588,7 +88590,7 @@ module sky130_fd_sc_hd__or4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -88620,7 +88622,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4b (
@@ -88656,13 +88658,13 @@ module sky130_fd_sc_hd__or4b (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_V
 
 
@@ -88698,7 +88700,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -88780,7 +88782,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_1_V
 
 
@@ -88816,7 +88818,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -88898,7 +88900,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_2_V
 
 
@@ -88934,7 +88936,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -89016,7 +89018,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4B_4_V
 
 
@@ -89052,7 +89054,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -89086,7 +89088,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -89128,7 +89130,7 @@ module sky130_fd_sc_hd__or4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -89160,7 +89162,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -89202,7 +89204,7 @@ module sky130_fd_sc_hd__or4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -89238,7 +89240,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4bb (
@@ -89268,7 +89270,7 @@ module sky130_fd_sc_hd__or4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -89300,7 +89302,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__or4bb (
@@ -89336,13 +89338,13 @@ module sky130_fd_sc_hd__or4bb (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_V
 
 
@@ -89378,7 +89380,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -89460,7 +89462,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_1_V
 
 
@@ -89496,7 +89498,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -89578,7 +89580,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_2_V
 
 
@@ -89614,7 +89616,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -89696,7 +89698,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__OR4BB_4_V
 
 
@@ -89732,7 +89734,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -89766,7 +89768,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -89800,7 +89802,7 @@ module sky130_fd_sc_hd__probe_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -89832,7 +89834,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -89866,7 +89868,7 @@ module sky130_fd_sc_hd__probe_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -89902,7 +89904,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__probe_p (
@@ -89924,7 +89926,7 @@ module sky130_fd_sc_hd__probe_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -89956,7 +89958,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__probe_p (
@@ -89984,13 +89986,13 @@ module sky130_fd_sc_hd__probe_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_V
 
 
@@ -90026,7 +90028,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -90090,7 +90092,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBE_P_8_V
 
 
@@ -90126,7 +90128,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -90160,7 +90162,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90194,7 +90196,7 @@ module sky130_fd_sc_hd__probec_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -90226,7 +90228,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90260,7 +90262,7 @@ module sky130_fd_sc_hd__probec_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -90296,7 +90298,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__probec_p (
@@ -90318,7 +90320,7 @@ module sky130_fd_sc_hd__probec_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -90350,7 +90352,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__probec_p (
@@ -90378,13 +90380,13 @@ module sky130_fd_sc_hd__probec_p (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_V
 
 
@@ -90420,7 +90422,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -90484,7 +90486,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__PROBEC_P_8_V
 
 
@@ -90521,7 +90523,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -90556,7 +90558,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90609,7 +90611,7 @@ module sky130_fd_sc_hd__sdfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -90642,7 +90644,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90716,7 +90718,7 @@ module sky130_fd_sc_hd__sdfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -90753,7 +90755,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90798,7 +90800,7 @@ module sky130_fd_sc_hd__sdfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -90831,7 +90833,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -90903,13 +90905,13 @@ module sky130_fd_sc_hd__sdfbbn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_V
 
 
@@ -90946,7 +90948,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -91046,7 +91048,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_1_V
 
 
@@ -91083,7 +91085,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -91183,7 +91185,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBN_2_V
 
 
@@ -91220,7 +91222,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -91255,7 +91257,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91306,7 +91308,7 @@ module sky130_fd_sc_hd__sdfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -91339,7 +91341,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91411,7 +91413,7 @@ module sky130_fd_sc_hd__sdfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -91448,7 +91450,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91491,7 +91493,7 @@ module sky130_fd_sc_hd__sdfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -91524,7 +91526,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91594,13 +91596,13 @@ module sky130_fd_sc_hd__sdfbbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_V
 
 
@@ -91637,7 +91639,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -91737,7 +91739,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFBBP_1_V
 
 
@@ -91774,7 +91776,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -91809,7 +91811,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91856,7 +91858,7 @@ module sky130_fd_sc_hd__sdfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -91889,7 +91891,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -91954,7 +91956,7 @@ module sky130_fd_sc_hd__sdfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -91991,7 +91993,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92030,7 +92032,7 @@ module sky130_fd_sc_hd__sdfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -92063,7 +92065,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92126,13 +92128,13 @@ module sky130_fd_sc_hd__sdfrbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_V
 
 
@@ -92169,7 +92171,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -92263,7 +92265,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_1_V
 
 
@@ -92300,7 +92302,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -92394,7 +92396,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRBP_2_V
 
 
@@ -92431,7 +92433,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -92466,7 +92468,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92512,7 +92514,7 @@ module sky130_fd_sc_hd__sdfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -92545,7 +92547,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92609,7 +92611,7 @@ module sky130_fd_sc_hd__sdfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -92646,7 +92648,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92684,7 +92686,7 @@ module sky130_fd_sc_hd__sdfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -92717,7 +92719,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -92779,13 +92781,13 @@ module sky130_fd_sc_hd__sdfrtn (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_V
 
 
@@ -92822,7 +92824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -92910,7 +92912,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTN_1_V
 
 
@@ -92947,7 +92949,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -92982,7 +92984,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93026,7 +93028,7 @@ module sky130_fd_sc_hd__sdfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -93059,7 +93061,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93121,7 +93123,7 @@ module sky130_fd_sc_hd__sdfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -93158,7 +93160,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93194,7 +93196,7 @@ module sky130_fd_sc_hd__sdfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -93227,7 +93229,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93287,13 +93289,13 @@ module sky130_fd_sc_hd__sdfrtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_V
 
 
@@ -93330,7 +93332,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -93418,7 +93420,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_1_V
 
 
@@ -93455,7 +93457,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -93543,7 +93545,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_2_V
 
 
@@ -93580,7 +93582,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -93668,7 +93670,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFRTP_4_V
 
 
@@ -93705,7 +93707,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -93740,7 +93742,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93787,7 +93789,7 @@ module sky130_fd_sc_hd__sdfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -93820,7 +93822,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93885,7 +93887,7 @@ module sky130_fd_sc_hd__sdfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -93922,7 +93924,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -93961,7 +93963,7 @@ module sky130_fd_sc_hd__sdfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -93994,7 +93996,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -94057,13 +94059,13 @@ module sky130_fd_sc_hd__sdfsbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_V
 
 
@@ -94100,7 +94102,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -94194,7 +94196,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_1_V
 
 
@@ -94231,7 +94233,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -94325,7 +94327,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSBP_2_V
 
 
@@ -94362,7 +94364,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -94397,7 +94399,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -94441,7 +94443,7 @@ module sky130_fd_sc_hd__sdfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -94474,7 +94476,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -94536,7 +94538,7 @@ module sky130_fd_sc_hd__sdfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -94573,7 +94575,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -94609,7 +94611,7 @@ module sky130_fd_sc_hd__sdfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -94642,7 +94644,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -94702,13 +94704,13 @@ module sky130_fd_sc_hd__sdfstp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_V
 
 
@@ -94745,7 +94747,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -94833,7 +94835,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_1_V
 
 
@@ -94870,7 +94872,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -94958,7 +94960,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_2_V
 
 
@@ -94995,7 +94997,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -95083,7 +95085,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFSTP_4_V
 
 
@@ -95119,7 +95121,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -95153,7 +95155,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95196,7 +95198,7 @@ module sky130_fd_sc_hd__sdfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -95228,7 +95230,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95284,7 +95286,7 @@ module sky130_fd_sc_hd__sdfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -95320,7 +95322,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95355,7 +95357,7 @@ module sky130_fd_sc_hd__sdfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -95387,7 +95389,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95441,13 +95443,13 @@ module sky130_fd_sc_hd__sdfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_V
 
 
@@ -95483,7 +95485,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -95571,7 +95573,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_1_V
 
 
@@ -95607,7 +95609,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -95695,7 +95697,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXBP_2_V
 
 
@@ -95731,7 +95733,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -95765,7 +95767,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95805,7 +95807,7 @@ module sky130_fd_sc_hd__sdfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -95837,7 +95839,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95890,7 +95892,7 @@ module sky130_fd_sc_hd__sdfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -95926,7 +95928,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -95958,7 +95960,7 @@ module sky130_fd_sc_hd__sdfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -95990,7 +95992,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -96041,13 +96043,13 @@ module sky130_fd_sc_hd__sdfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_V
 
 
@@ -96083,7 +96085,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -96165,7 +96167,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_1_V
 
 
@@ -96201,7 +96203,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -96283,7 +96285,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_2_V
 
 
@@ -96319,7 +96321,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -96401,7 +96403,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDFXTP_4_V
 
 
@@ -96437,7 +96439,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -96471,7 +96473,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -96513,7 +96515,7 @@ module sky130_fd_sc_hd__sdlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -96545,7 +96547,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -96597,7 +96599,7 @@ module sky130_fd_sc_hd__sdlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -96633,7 +96635,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -96667,7 +96669,7 @@ module sky130_fd_sc_hd__sdlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -96699,7 +96701,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -96749,13 +96751,13 @@ module sky130_fd_sc_hd__sdlclkp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_V
 
 
@@ -96791,7 +96793,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -96867,7 +96869,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_1_V
 
 
@@ -96903,7 +96905,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -96979,7 +96981,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_2_V
 
 
@@ -97015,7 +97017,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -97091,7 +97093,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SDLCLKP_4_V
 
 
@@ -97128,7 +97130,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -97163,7 +97165,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97210,7 +97212,7 @@ module sky130_fd_sc_hd__sedfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -97243,7 +97245,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97304,7 +97306,7 @@ module sky130_fd_sc_hd__sedfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -97341,7 +97343,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97380,7 +97382,7 @@ module sky130_fd_sc_hd__sedfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -97413,7 +97415,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97472,13 +97474,13 @@ module sky130_fd_sc_hd__sedfxbp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_V
 
 
@@ -97515,7 +97517,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -97609,7 +97611,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_1_V
 
 
@@ -97646,7 +97648,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -97740,7 +97742,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXBP_2_V
 
 
@@ -97777,7 +97779,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -97812,7 +97814,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97856,7 +97858,7 @@ module sky130_fd_sc_hd__sedfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -97889,7 +97891,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -97947,7 +97949,7 @@ module sky130_fd_sc_hd__sedfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -97984,7 +97986,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -98020,7 +98022,7 @@ module sky130_fd_sc_hd__sedfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -98053,7 +98055,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -98109,13 +98111,13 @@ module sky130_fd_sc_hd__sedfxtp (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_V
 
 
@@ -98152,7 +98154,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -98240,7 +98242,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_1_V
 
 
@@ -98277,7 +98279,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -98365,7 +98367,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_2_V
 
 
@@ -98402,7 +98404,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -98490,7 +98492,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__SEDFXTP_4_V
 
 
@@ -98526,7 +98528,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -98560,7 +98562,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tap (
@@ -98579,7 +98581,7 @@ module sky130_fd_sc_hd__tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -98611,7 +98613,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tap (
@@ -98630,7 +98632,7 @@ module sky130_fd_sc_hd__tap (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -98666,7 +98668,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tap ();
@@ -98674,7 +98676,7 @@ module sky130_fd_sc_hd__tap ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -98706,7 +98708,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tap ();
@@ -98720,13 +98722,13 @@ module sky130_fd_sc_hd__tap ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_V
 
 
@@ -98762,7 +98764,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -98810,7 +98812,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_1_V
 
 
@@ -98846,7 +98848,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -98894,7 +98896,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAP_2_V
 
 
@@ -98931,7 +98933,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -98966,7 +98968,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd (
@@ -98985,7 +98987,7 @@ module sky130_fd_sc_hd__tapvgnd (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -99018,7 +99020,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd (
@@ -99037,7 +99039,7 @@ module sky130_fd_sc_hd__tapvgnd (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -99074,7 +99076,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd ();
@@ -99082,7 +99084,7 @@ module sky130_fd_sc_hd__tapvgnd ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -99115,7 +99117,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd ();
@@ -99129,13 +99131,13 @@ module sky130_fd_sc_hd__tapvgnd ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_V
 
 
@@ -99172,7 +99174,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -99220,7 +99222,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND_1_V
 
 
@@ -99257,7 +99259,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -99292,7 +99294,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd2 (
@@ -99311,7 +99313,7 @@ module sky130_fd_sc_hd__tapvgnd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -99344,7 +99346,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd2 (
@@ -99363,7 +99365,7 @@ module sky130_fd_sc_hd__tapvgnd2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -99400,7 +99402,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd2 ();
@@ -99408,7 +99410,7 @@ module sky130_fd_sc_hd__tapvgnd2 ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -99441,7 +99443,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvgnd2 ();
@@ -99455,13 +99457,13 @@ module sky130_fd_sc_hd__tapvgnd2 ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_V
 
 
@@ -99498,7 +99500,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -99546,7 +99548,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVGND2_1_V
 
 
@@ -99582,7 +99584,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -99616,7 +99618,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvpwrvgnd (
@@ -99635,7 +99637,7 @@ module sky130_fd_sc_hd__tapvpwrvgnd (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -99667,7 +99669,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvpwrvgnd (
@@ -99686,7 +99688,7 @@ module sky130_fd_sc_hd__tapvpwrvgnd (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -99722,7 +99724,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvpwrvgnd ();
@@ -99730,7 +99732,7 @@ module sky130_fd_sc_hd__tapvpwrvgnd ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -99762,7 +99764,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__tapvpwrvgnd ();
@@ -99776,13 +99778,13 @@ module sky130_fd_sc_hd__tapvpwrvgnd ();
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_V
 
 
@@ -99818,7 +99820,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -99866,7 +99868,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__TAPVPWRVGND_1_V
 
 
@@ -99904,7 +99906,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -99940,7 +99942,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -99976,7 +99978,7 @@ module sky130_fd_sc_hd__xnor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -100010,7 +100012,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -100046,7 +100048,7 @@ module sky130_fd_sc_hd__xnor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -100084,7 +100086,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xnor2 (
@@ -100108,7 +100110,7 @@ module sky130_fd_sc_hd__xnor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -100142,7 +100144,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xnor2 (
@@ -100172,13 +100174,13 @@ module sky130_fd_sc_hd__xnor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_V
 
 
@@ -100216,7 +100218,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -100286,7 +100288,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_1_V
 
 
@@ -100324,7 +100326,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -100394,7 +100396,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_2_V
 
 
@@ -100432,7 +100434,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -100502,7 +100504,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR2_4_V
 
 
@@ -100538,7 +100540,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -100572,7 +100574,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -100610,7 +100612,7 @@ module sky130_fd_sc_hd__xnor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -100642,7 +100644,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -100680,7 +100682,7 @@ module sky130_fd_sc_hd__xnor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -100716,7 +100718,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xnor3 (
@@ -100742,7 +100744,7 @@ module sky130_fd_sc_hd__xnor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -100774,7 +100776,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xnor3 (
@@ -100806,13 +100808,13 @@ module sky130_fd_sc_hd__xnor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_V
 
 
@@ -100848,7 +100850,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -100924,7 +100926,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_1_V
 
 
@@ -100960,7 +100962,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -101036,7 +101038,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_2_V
 
 
@@ -101072,7 +101074,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -101148,7 +101150,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XNOR3_4_V
 
 
@@ -101186,7 +101188,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -101222,7 +101224,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -101258,7 +101260,7 @@ module sky130_fd_sc_hd__xor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -101292,7 +101294,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -101328,7 +101330,7 @@ module sky130_fd_sc_hd__xor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -101366,7 +101368,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xor2 (
@@ -101390,7 +101392,7 @@ module sky130_fd_sc_hd__xor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -101424,7 +101426,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xor2 (
@@ -101454,13 +101456,13 @@ module sky130_fd_sc_hd__xor2 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_V
 
 
@@ -101498,7 +101500,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -101568,7 +101570,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_1_V
 
 
@@ -101606,7 +101608,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -101676,7 +101678,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_2_V
 
 
@@ -101714,7 +101716,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -101784,7 +101786,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR2_4_V
 
 
@@ -101822,7 +101824,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `ifdef USE_POWER_PINS
 
@@ -101858,7 +101860,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -101896,7 +101898,7 @@ module sky130_fd_sc_hd__xor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_FUNCTIONAL_PP_V
 `else  // FUNCTIONAL
 /*
@@ -101930,7 +101932,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 // Import user defined primitives.
 
@@ -101968,7 +101970,7 @@ module sky130_fd_sc_hd__xor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_BEHAVIORAL_PP_V
 `endif // FUNCTIONAL
 
@@ -102006,7 +102008,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xor3 (
@@ -102032,7 +102034,7 @@ module sky130_fd_sc_hd__xor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_FUNCTIONAL_V
 `else  // FUNCTIONAL
 /*
@@ -102066,7 +102068,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 `celldefine
 module sky130_fd_sc_hd__xor3 (
@@ -102098,13 +102100,13 @@ module sky130_fd_sc_hd__xor3 (
 endmodule
 `endcelldefine
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_BEHAVIORAL_V
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_V
 
 
@@ -102142,7 +102144,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -102218,7 +102220,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_1_V
 
 
@@ -102256,7 +102258,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -102332,7 +102334,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_2_V
 
 
@@ -102370,7 +102372,7 @@ endmodule
  */
 
 `timescale 1ns / 1ps
-`default_nettype none
+//`default_nettype none
 
 
 `ifdef USE_POWER_PINS
@@ -102446,7 +102448,7 @@ endmodule
 /*********************************************************/
 `endif // USE_POWER_PINS
 
-`default_nettype wire
+//`default_nettype wire
 `endif  // SKY130_FD_SC_HD__XOR3_4_V
 
 

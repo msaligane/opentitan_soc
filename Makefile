@@ -92,7 +92,7 @@ TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
 # LIB += $(foreach DIR, $(DIR_LIST), $(addsuffix _4.v, skywater-pdk-libs-sky130_fd_sc_hd/cells/$(DIR)/sky130_fd_sc_hd__$(DIR)))
 LIB  += sky130_fd_sc_hd.v
 LIB  += primitives.v
-
+LIB  +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.v
 
 export OpenROAD = /afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/OpenROAD-flow-scripts/flow
 ##### GF12 TEMP SENSOR
@@ -240,7 +240,7 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 
 VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
-			+memcbk +vcs+dumparrays +sdfverbose\
+			+memcbk +notimingcheck +vcs+dumparrays +sdfverbose\
 			+define+DEBUG +define+DUMP_VCD=1 +define+ARM_UD_MODEL 
 
 ################################################################################
@@ -292,6 +292,7 @@ clean:
 
 .PHONY:	nuke
 nuke:   clean
+	@rm -rf DVE_sessions
 	@rm -rf syn_simv syn_simv.daidir
 	@rm -rf synth/*.vg synth/*.rep synth/*.ddc synth/*.chk synth/*.log synth/*.syn synth/*.res
 	@rm -rf synth/*.out synth/*.db synth/*.svf synth/*.mr synth/*.pvl
