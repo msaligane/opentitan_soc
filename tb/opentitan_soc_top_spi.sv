@@ -1,5 +1,6 @@
 `timescale 1ns/100ps
-//`define DEBUG
+`define DEBUG
+`define BEHAVIORAL
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -35,15 +36,19 @@ logic [7:0] gpio_o;
 `ifdef DEBUG
     logic                   system_rst_ni;
     
-    logic  [51:0] iccm_to_xbar;
-    logic  [51:0] dccm_to_xbar;
-    logic  [85:0] xbar_to_iccm;
-    logic  [85:0] xbar_to_dccm;
-
-    //tlul_pkg::tl_d2h_t      iccm_to_xbar;
-    //tlul_pkg::tl_d2h_t      dccm_to_xbar;
-    //tlul_pkg::tl_d2h_t      iccm_to_xbar;
-    //tlul_pkg::tl_d2h_t      dccm_to_xbar;
+    `ifndef BEHAVIORAL
+        logic  [51:0] iccm_to_xbar;
+        logic  [51:0] dccm_to_xbar;
+        logic  [85:0] xbar_to_iccm;
+        logic  [85:0] xbar_to_dccm;
+    `endif
+    
+    `ifdef BEHAVIORAL
+        tlul_pkg::tl_d2h_t      iccm_to_xbar;
+        tlul_pkg::tl_d2h_t      dccm_to_xbar;
+        tlul_pkg::tl_d2h_t      iccm_to_xbar;
+        tlul_pkg::tl_d2h_t      dccm_to_xbar;
+    `endif
     
     logic  [15:0]           r_Clock_Count;
     logic  [2:0]            r_Bit_Index;
@@ -85,27 +90,27 @@ ot_soc_top
     .gpio_o           (gpio_o)
 
     `ifdef DEBUG
-        ,.system_rst_ni     (system_rst_ni)
+        ,.system_rst_ni      (system_rst_ni)
         
-        ,.iccm_to_xbar      (iccm_to_xbar)
-        ,.dccm_to_xbar      (dccm_to_xbar)
-        ,.xbar_to_iccm      (xbar_to_iccm)
-        ,.xbar_to_dccm      (xbar_to_dccm)
+        ,.iccm_to_xbar       (iccm_to_xbar)
+        ,.dccm_to_xbar       (dccm_to_xbar)
+        ,.xbar_to_iccm       (xbar_to_iccm)
+        ,.xbar_to_dccm       (xbar_to_dccm)
         
-        ,.r_Clock_Count     (r_Clock_Count)
-        ,.r_Bit_Index       (r_Bit_Index)
-        ,.r_SM_Main         (r_SM_Main)
-        ,.r_Rx_Byte         (r_Rx_Byte)
-        ,.r_Rx_DV           (r_Rx_DV)
-        ,.r_Rx_Data_R       (r_Rx_Data_R)
-        ,.r_Rx_Data         (r_Rx_Data)
+        ,.r_Clock_Count      (r_Clock_Count)
+        ,.r_Bit_Index        (r_Bit_Index)
+        ,.r_SM_Main          (r_SM_Main)
+        ,.r_Rx_Byte          (r_Rx_Byte)
+        ,.r_Rx_DV            (r_Rx_DV)
+        ,.r_Rx_Data_R        (r_Rx_Data_R)
+        ,.r_Rx_Data          (r_Rx_Data)
         
-        ,.rx_spi_inst_i     (rx_spi_inst_i)
-        ,.rx_spi_valid_i    (rx_spi_valid_i)
-        ,.command           (command)
-        ,.data_out          (data_out)
-        ,.rcv_bit_count     (rcv_bit_count)
-        ,.prev_rcv_bit_count(prev_rcv_bit_count)
+        ,.rx_spi_inst_i      (rx_spi_inst_i)
+        ,.rx_spi_valid_i     (rx_spi_valid_i)
+        ,.command            (command)
+        ,.data_out           (data_out)
+        ,.rcv_bit_count      (rcv_bit_count)
+        ,.prev_rcv_bit_count (prev_rcv_bit_count)
     `endif
 );
 
@@ -195,29 +200,33 @@ end
     always @(posedge clk_i) begin
         if(system_rst_ni) begin
             if(stop_print == 0) begin         
-		$display("Test to see if enter print loop!!");
-                //print_D2H_header("ICCM");
-                //print_D2H(iccm_to_xbar.d_valid,
-                //        clk_count,
-                //        iccm_to_xbar.d_data);
-                //print_D2H_header("DCCM");
-                //print_D2H(dccm_to_xbar.d_valid,
-                //        clk_count,
-                //        dccm_to_xbar.d_data);
-                //if(dccm_to_xbar.d_data == 'h5a) begin
-                //    stop_print = 'b1;
-                //end                
-		print_D2H_header("ICCM");
-                print_D2H(iccm_to_xbar[0],
-                        clk_count,
-                        iccm_to_xbar[49:18]);
-                print_D2H_header("DCCM");
-                print_D2H(dccm_to_xbar[0],
-                        clk_count,
-                        dccm_to_xbar[49:18]);
-                if(dccm_to_xbar[49:18] == 'h5a) begin
-                    stop_print = 'b1;
-                end
+		`ifdef BEHAVIORAL
+                    print_D2H_header("ICCM");
+                    print_D2H(iccm_to_xbar.d_valid,
+                            clk_count,
+                            iccm_to_xbar.d_data);
+                    print_D2H_header("DCCM");
+                    print_D2H(dccm_to_xbar.d_valid,
+                            clk_count,
+                            dccm_to_xbar.d_data);
+                    if(dccm_to_xbar.d_data == 'h5a) begin
+                        stop_print = 'b1;
+                    end                
+		`endif
+
+		`ifndef BEHAVIORAL
+		    print_D2H_header("ICCM");
+                    print_D2H(iccm_to_xbar[0],
+                            clk_count,
+                            iccm_to_xbar[49:18]);
+                    print_D2H_header("DCCM");
+                    print_D2H(dccm_to_xbar[0],
+                            clk_count,
+                            dccm_to_xbar[49:18]);
+                    if(dccm_to_xbar[49:18] == 'h5a) begin
+                        stop_print = 'b1;
+                    end
+		`endif
             end
         end
     end
