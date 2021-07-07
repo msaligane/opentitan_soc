@@ -168,8 +168,8 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNFILES    =$(OPENTITAN_TOP)/debug/sky130/opentitan_soc_top.mapped.v
 # SYNFILES    =$(OPENTITAN_TOP)/debug/sky130_RAM/verification/opentitan_soc_top.mapped.v
 # SYNFILES    =$(OPENTITAN_ROOT)/1_synth.v
-# SYNFILES    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.v
-SYNFILES    =$(OPENTITAN_ROOT)/6_final.v
+SYNFILES    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.v
+# SYNFILES    =$(OPENTITAN_ROOT)/6_final.v
 
 ##########################################################################################
 #
@@ -313,7 +313,7 @@ syn:	syn_simv
 
 # Print variables in Makefile
 test:
-	$(error   VAR is $(SIMFILES))
+	$(error   VAR is $(LIB))
 
 .PHONY:	clean
 clean:

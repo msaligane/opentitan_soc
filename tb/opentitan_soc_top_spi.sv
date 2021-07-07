@@ -1,6 +1,5 @@
 `timescale 1ns/100ps
 `define DEBUG
-`define BEHAVIORAL
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -46,8 +45,8 @@ logic [7:0] gpio_o;
     `ifdef BEHAVIORAL
         tlul_pkg::tl_d2h_t      iccm_to_xbar;
         tlul_pkg::tl_d2h_t      dccm_to_xbar;
-        tlul_pkg::tl_d2h_t      iccm_to_xbar;
-        tlul_pkg::tl_d2h_t      dccm_to_xbar;
+        tlul_pkg::tl_h2d_t      xbar_to_iccm;
+        tlul_pkg::tl_h2d_t      xbar_to_dccm;
     `endif
     
     logic  [15:0]           r_Clock_Count;
