@@ -1,5 +1,6 @@
 `timescale 1ns/100ps
 `define DEBUG
+`define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/opentitan_soc_top.mapped.sdf"
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -12,6 +13,13 @@ module spi_tb #(
 )();
 
 real CLOCK = 10;
+
+
+// For gate-level simulation only
+`ifdef SDF
+    initial $sdf_annotate(`SDFFILE, ot_soc_top);
+    initial #1 $display("SDF File %s were used for this simulation.", `SDFFILE);
+`endif
 
 logic clk_i;
 logic rst_ni;
@@ -64,6 +72,7 @@ logic [7:0] gpio_o;
     logic  [4:0]            rcv_bit_count;
     logic  [4:0]            prev_rcv_bit_count;
 `endif
+
 
 opentitan_soc_top #(
     .DATA_WIDTH   (DATA_WIDTH)

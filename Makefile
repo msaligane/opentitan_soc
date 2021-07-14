@@ -169,7 +169,6 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNFILES    =$(OPENTITAN_TOP)/debug/sky130_RAM/verification/opentitan_soc_top.mapped.v
 # SYNFILES    =$(OPENTITAN_ROOT)/1_synth.v
 SYNFILES    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.v
-# SYNFILES    =$(OPENTITAN_ROOT)/6_final.v
 
 ##########################################################################################
 #
@@ -267,6 +266,20 @@ SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.
 
 ##########################################################################################
 #
+# TIMING INFORMATION (SDF) FILES 
+#
+##########################################################################################
+SDFFILE    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.sdf
+
+##########################################################################################
+#
+# FINAL NETLIST FILES 
+#
+##########################################################################################
+FINALFILE  =$(OPENTITAN_ROOT)/6_final.v
+
+##########################################################################################
+#
 # COMMAND SHORT-HANDS 
 #
 ##########################################################################################
@@ -280,6 +293,11 @@ VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
 			+memcbk +notimingcheck +vcs+dumparrays +sdfverbose\
 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG
+
+VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+			+memcbk +vcs+dumparrays +sdfverbose\
+			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
 
 ################################################################################
 ## RULES
@@ -310,6 +328,18 @@ syn_dve:	syn_simv
 	
 syn:	syn_simv
 	./syn_simv | tee syn_program.out
+
+.PHONY: final final_simv
+final_simv:	$(FINALFILE) $(TESTBENCH) 
+	sed -i 's#["].*sdf["]#"$(SDFFILE)"#' $(TESTBENCH)
+	$(VCS_final) $^ $(LIB) -o final_simv 
+
+final_dve:	final_simv
+	./final_simv -gui &
+	
+final:	final_simv
+	./final_simv | tee final_program.out
+
 
 # Print variables in Makefile
 test:
