@@ -1,6 +1,8 @@
 `timescale 1ns/100ps
 `define DEBUG
-`define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/opentitan_soc_top.mapped.sdf"
+`define SDF
+`define VCD
+`define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/post_process/opentitan_soc_top.mapped.sdf"
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -12,7 +14,7 @@ module spi_tb #(
     parameter DATA_WIDTH = 'd32
 )();
 
-real CLOCK = 10;
+real CLOCK = 48;
 
 
 // For gate-level simulation only
@@ -305,13 +307,18 @@ initial begin
 	
     #((totalLines+1)*36*CLOCK);
 
-    #1000;
+    #5000;
     en_i     = 1;
 
     #5000;
 
-	$finish;
     print_close();
+    $finish;
+end
+
+initial begin
+	$dumpfile("iverilog_OT.vcd");
+	$dumpvars(0, spi_tb);
 end
 
 endmodule

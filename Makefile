@@ -4,10 +4,10 @@
 #
 ##########################################################################################
 
-OPENTITAN_TOP  = $(OPENTITAN_ROOT)/soc_top
-OPENTITAN_TB   = $(OPENTITAN_ROOT)/tb
-OPENTITAN_IBEX = $(OPENTITAN_ROOT)/ibex
-OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
+export OPENTITAN_TOP=$(OPENTITAN_ROOT)/soc_top
+export OPENTITAN_TB=$(OPENTITAN_ROOT)/tb
+export OPENTITAN_IBEX=$(OPENTITAN_ROOT)/ibex
+export OPENTITAN_PKGS=$(OPENTITAN_ROOT)/ip
 
 ##########################################################################################
 #
@@ -32,7 +32,6 @@ OPENTITAN_PKGS = $(OPENTITAN_ROOT)/ip
 ### SPI Testbench
 TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
 TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
-# TESTBENCH   = $(OPENTITAN_ROOT)/spi/tb/SPI_test.v
 # TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
 # TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp
 
@@ -134,10 +133,10 @@ export OpenROAD = /afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/O
 ########################################
 ##### SKY130 TEMP SENSOR
 ########################################
-# LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv6_header9/export/temp_hd_inv6_header9.v
-# LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header3/export/temp_hd_inv8_header3.v
-# LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header5/export/temp_hd_inv8_header5.v
-# LIB        += $(OPENTITAN_ROOT)/temp_sense/sky130/blocks/temp_hd_inv8_header7/export/temp_hd_inv8_header7.v
+# LIB        += $(OPENTITAN_ROOT)/opentitan_soc_macros/temp_sense/sky130/blocks/temp_hd_inv6_header9/export/temp_hd_inv6_header9.v
+# LIB        += $(OPENTITAN_ROOT)/opentitan_soc_macros/temp_sense/sky130/blocks/temp_hd_inv8_header3/export/temp_hd_inv8_header3.v
+# LIB        += $(OPENTITAN_ROOT)/opentitan_soc_macros/temp_sense/sky130/blocks/temp_hd_inv8_header5/export/temp_hd_inv8_header5.v
+# LIB        += $(OPENTITAN_ROOT)/opentitan_soc_macros/temp_sense/sky130/blocks/temp_hd_inv8_header7/export/temp_hd_inv8_header7.v
 
 LIB        += $(OpenROAD)/opentitan_soc_macros/SLC_cell/SLC_cell.v
 LIB        += $(OpenROAD)/opentitan_soc_macros/HEAD14/HEAD14.v
@@ -164,11 +163,8 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNTHESIS NETLIST / POST-APR NETLIST
 #
 ##########################################################################################
-# SYNFILES    =$(OPENTITAN_TOP)/debug/opentitan_soc_top.mapped.v
-# SYNFILES    =$(OPENTITAN_TOP)/debug/sky130/opentitan_soc_top.mapped.v
-# SYNFILES    =$(OPENTITAN_TOP)/debug/sky130_RAM/verification/opentitan_soc_top.mapped.v
-# SYNFILES    =$(OPENTITAN_ROOT)/1_synth.v
-SYNFILES    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.v
+# SYNFILES    =$(OPENTITAN_ROOT)/post_process/1_synth.v
+SYNFILES    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.v
 
 ##########################################################################################
 #
@@ -269,14 +265,14 @@ SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.
 # TIMING INFORMATION (SDF) FILES 
 #
 ##########################################################################################
-SDFFILE    =$(OPENTITAN_ROOT)/opentitan_soc_top.mapped.sdf
+SDFFILE    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.sdf
 
 ##########################################################################################
 #
 # FINAL NETLIST FILES 
 #
 ##########################################################################################
-FINALFILE  =$(OPENTITAN_ROOT)/6_final.v
+FINALFILE  =$(OPENTITAN_ROOT)/post_process/6_final.v
 
 ##########################################################################################
 #
@@ -291,14 +287,25 @@ VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 
 VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
-			+memcbk +notimingcheck +vcs+dumparrays +sdfverbose\
-			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG
+			+memcbk +typdelays +neg_tchk +vcs+dumparrays +sdfverbose\
+			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
+
+# VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+# 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+# 			+memcbk +notimingcheck +vcs+dumparrays +sdfverbose\
+# 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+FUNCTIONAL +define+UNIT_DELAY
+
+# VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+# 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+# 			+memcbk +vcs+dumparrays +sdfverbose\
+# 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
 
 VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
 			+memcbk +vcs+dumparrays +sdfverbose\
-			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
+			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+FUNCTIONAL +define+UNIT_DELAY
 
+IVERILOG_SYN = iverilog -g2005 -c iverilog.flist -v
 ################################################################################
 ## RULES
 ################################################################################
@@ -320,7 +327,7 @@ dve:	sim
 
 .PHONY: syn syn_simv
 # Post-synthesis verification targets:
-syn_simv:	$(HEADERS) $(SYNFILES) $(TESTBENCH)
+syn_simv:	$(SYNFILES) $(TESTBENCH)
 	$(VCS_debug) $^ $(LIB) -o syn_simv 
 
 syn_dve:	syn_simv
@@ -340,7 +347,13 @@ final_dve:	final_simv
 final:	final_simv
 	./final_simv | tee final_program.out
 
-
+.PHONY: iverilog_syn_simv iverilog_syn_dve iverilog_syn
+iverilog_syn_simv:	$(SYNFILES) $(TESTBENCH) iverilog.flist
+	$(IVERILOG_SYN) -o iverilog_syn.bin
+	
+iverilog_syn:	iverilog_syn_simv
+	vvp -v iverilog_syn.bin -sdf-verbose
+	
 # Print variables in Makefile
 test:
 	$(error   VAR is $(LIB))

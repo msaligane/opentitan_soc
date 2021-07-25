@@ -16,8 +16,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-`define FUNCTIONAL
-`define UNIT_DELAY
+// `define FUNCTIONAL
+// `define UNIT_DELAY
 
 `ifndef SKY130_FD_SC_HD__A2111O_V
 `define SKY130_FD_SC_HD__A2111O_V
