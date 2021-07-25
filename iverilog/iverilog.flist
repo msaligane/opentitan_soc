@@ -1,0 +1,12 @@
++define+DEBUG 
++define+SDF
++define+VCD
+
+./post_process/opentitan_soc_top.mapped.v
+
+$(OpenROAD)/opentitan_soc_macros/SLC_cell/SLC_cell.v
+$(OpenROAD)/opentitan_soc_macros/HEAD14/HEAD14.v
+
+./sky130/sajjad_sky130_fd_sc_hd.v
+./sky130/primitives.v
+./memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.v
