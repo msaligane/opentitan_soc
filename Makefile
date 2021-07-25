@@ -172,6 +172,7 @@ SYNFILES    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.v
 #
 ##########################################################################################
 SIMFILES    =$(OPENTITAN_TOP)/opentitan_soc_top.sv
+SIMFILES   +=$(OPENTITAN_TOP)/opentitan_soc_core.sv
 SIMFILES   +=$(OPENTITAN_TOP)/rstmgr.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio_reg_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/gpio/rtl/gpio.sv
@@ -250,6 +251,7 @@ SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg_ext.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/ip/prim/rtl/prim_subreg.sv
 
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
+SIMFILES   +=$(OPENTITAN_ROOT)/memory/inst_mem_tlul.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
 SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.v
 # SIMFILES   +=$(OPENTITAN_ROOT)/memory/sram.v
@@ -283,7 +285,12 @@ FINALFILE  =$(OPENTITAN_ROOT)/post_process/6_final.v
 VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
 		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
-		+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+BEHAVIORAL
+		+define+DUMP_VCD=1 +define+ARM_UD_MODEL 
+
+#VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+#		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
+#		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
+#		+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+BEHAVIORAL
 
 VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\

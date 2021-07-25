@@ -1,8 +1,7 @@
 `timescale 1ns/100ps
-`define DEBUG
-`define SDF
-`define VCD
-`define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/post_process/opentitan_soc_top.mapped.sdf"
+// `define SDF
+// `define VCD
+// `define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/post_process/opentitan_soc_top.mapped.sdf"
 
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
@@ -316,9 +315,9 @@ initial begin
     $finish;
 end
 
-initial begin
-	$dumpfile("iverilog_OT.vcd");
-	$dumpvars(0, spi_tb);
-end
+// initial begin
+// 	$dumpfile("iverilog_OT.vcd");
+// 	$dumpvars(0, spi_tb);
+// end
 
 endmodule
