@@ -30,8 +30,9 @@ export OPENTITAN_PKGS=$(OPENTITAN_ROOT)/ip
 # TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_dpi.c
 
 ### SPI Testbench
-TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
+TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi_reorg.sv
 TESTBENCH  += $(OPENTITAN_TB)/opentitan_soc_top_spi.cpp
+# TESTBENCH   = $(OPENTITAN_TB)/opentitan_soc_top_spi.sv
 # TESTBENCH   = $(OPENTITAN_ROOT)/SPI_tb.sv
 # TESTBENCH  += $(OPENTITAN_ROOT)/SPI_tb.cpp
 
@@ -282,15 +283,11 @@ FINALFILE  =$(OPENTITAN_ROOT)/post_process/6_final.v
 #
 ##########################################################################################
 # VCS command shorthand
+
 VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
 		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
-		+define+DUMP_VCD=1 +define+ARM_UD_MODEL 
-
-#VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
-#		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
-#		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
-#		+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+BEHAVIORAL
+		+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+BEHAVIORAL
 
 VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
