@@ -164,8 +164,15 @@ HEADERS    += $(OPENTITAN_PKGS)/gpio/rtl/gpio_reg_pkg.sv
 # SYNTHESIS NETLIST / POST-APR NETLIST
 #
 ##########################################################################################
-# SYNFILES    =$(OPENTITAN_ROOT)/post_process/1_synth.v
-SYNFILES    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.v
+SYNFILES    =$(OPENTITAN_ROOT)/post_process/1_synth.v
+# SYNFILES    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.v
+SYNFILES   +=$(OPENTITAN_PKGS)/tlul/rtl/tlul_pkg.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/memory/inst_mem_tlul.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_sram_adapter.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err.sv
+SYNFILES   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_sync.sv
 
 ##########################################################################################
 #
@@ -270,12 +277,21 @@ SIMFILES   +=$(OPENTITAN_ROOT)/memory/sky130/sky130_sram_4kbyte_1rw1r_32x1024_8.
 ##########################################################################################
 SDFFILE    =$(OPENTITAN_ROOT)/post_process/opentitan_soc_top.mapped.sdf
 
+
+
 ##########################################################################################
 #
 # FINAL NETLIST FILES 
 #
 ##########################################################################################
 FINALFILE  =$(OPENTITAN_ROOT)/post_process/6_final.v
+FINALFILE   +=$(OPENTITAN_PKGS)/tlul/rtl/tlul_pkg.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/memory/inst_mem_tlul.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/memory/data_mem_tlul.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/memory/instr_mem_top.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_sram_adapter.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/tlul_err.sv
+FINALFILE   +=$(OPENTITAN_ROOT)/ip/tlul/rtl/fifo_sync.sv
 
 ##########################################################################################
 #
@@ -284,30 +300,36 @@ FINALFILE  =$(OPENTITAN_ROOT)/post_process/6_final.v
 ##########################################################################################
 # VCS command shorthand
 
+
 VCS = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 		+vc +v2k -Mupdate -line -full64 -timescale=1ps/1fs \
 		+notimingcheck +memcbk +vcs+dumparrays +sdfverbose\
 		+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+BEHAVIORAL
 
+ifeq ($(timing), 1)
 VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
 			+memcbk +typdelays +neg_tchk +vcs+dumparrays +sdfverbose\
 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
 
-# VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
-# 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
-# 			+memcbk +notimingcheck +vcs+dumparrays +sdfverbose\
-# 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+FUNCTIONAL +define+UNIT_DELAY
-
-# VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
-# 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
-# 			+memcbk +vcs+dumparrays +sdfverbose\
-# 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
-
 VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
 			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
 			+memcbk +vcs+dumparrays +sdfverbose\
+			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+SDF
+else
+
+VCS_debug = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+			+memcbk +notimingcheck +vcs+dumparrays\
 			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+FUNCTIONAL +define+UNIT_DELAY
+
+VCS_final = SW_VCS=2017.12-SP2-1 vcs -sverilog -debug_pp\
+			+vc +v2k -Mupdate -line -full64  -timescale=1ps/1fs\
+			+memcbk +notimingcheck +vcs+dumparrays\
+			+define+DUMP_VCD=1 +define+ARM_UD_MODEL +define+DEBUG +define+FUNCTIONAL +define+UNIT_DELAY
+endif
+
+
 
 IVERILOG_SYN = iverilog -g2005 -c iverilog.flist -v
 ################################################################################
@@ -329,6 +351,8 @@ simv:  $(HEADERS) $(SIMFILES) $(TESTBENCH)
 dve:	sim
 	./simv -gui &
 
+
+
 .PHONY: syn syn_simv
 # Post-synthesis verification targets:
 syn_simv:	$(SYNFILES) $(TESTBENCH)
@@ -340,9 +364,13 @@ syn_dve:	syn_simv
 syn:	syn_simv
 	./syn_simv | tee syn_program.out
 
+
+
 .PHONY: final final_simv
 final_simv:	$(FINALFILE) $(TESTBENCH) 
-	sed -i 's#["].*sdf["]#"$(SDFFILE)"#' $(TESTBENCH)
+	ifeq($(timing), 1)
+		sed -i 's#["].*sdf["]#"$(SDFFILE)"#' $(TESTBENCH)
+	endif
 	$(VCS_final) $^ $(LIB) -o final_simv 
 
 final_dve:	final_simv
@@ -351,13 +379,17 @@ final_dve:	final_simv
 final:	final_simv
 	./final_simv | tee final_program.out
 
+
+
 .PHONY: iverilog_syn_simv iverilog_syn_dve iverilog_syn
 iverilog_syn_simv:	$(SYNFILES) $(TESTBENCH) iverilog.flist
 	$(IVERILOG_SYN) -o iverilog_syn.bin
 	
 iverilog_syn:	iverilog_syn_simv
 	vvp -v iverilog_syn.bin -sdf-verbose
-	
+
+
+
 # Print variables in Makefile
 test:
 	$(error   VAR is $(LIB))

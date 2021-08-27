@@ -1,5 +1,7 @@
 `timescale 1ns/100ps
 
+`define SDFFILE "/afs/eecs.umich.edu/vlsida/projects/restricted/google/khtaur/opentitan_soc/post_process/opentitan_soc_top.mapped.sdf"
+
 import "DPI-C" function int  rfile();
 import "DPI-C" function void init_out();
 import "DPI-C" function void print_D2H_header(string TYPE);
